@@ -11,7 +11,7 @@ class FibonacciSequence
         {
             decimal thirdNumber = number + secondNumber;
             
-            Console.WriteLine(thirdNumber + ", ");
+            Console.WriteLine(thirdNumber);
             number = secondNumber;
             secondNumber = thirdNumber;
             
