@@ -1,0 +1,6 @@
+E:\Games\Dropbox\C#\CsharpCourse1\Tests\catalan\bin\Debug\catalan.exe.config
+E:\Games\Dropbox\C#\CsharpCourse1\Tests\catalan\bin\Debug\catalan.exe
+E:\Games\Dropbox\C#\CsharpCourse1\Tests\catalan\bin\Debug\catalan.pdb
+E:\Games\Dropbox\C#\CsharpCourse1\Tests\catalan\obj\Debug\catalan.csprojResolveAssemblyReference.cache
+E:\Games\Dropbox\C#\CsharpCourse1\Tests\catalan\obj\Debug\catalan.exe
+E:\Games\Dropbox\C#\CsharpCourse1\Tests\catalan\obj\Debug\catalan.pdb

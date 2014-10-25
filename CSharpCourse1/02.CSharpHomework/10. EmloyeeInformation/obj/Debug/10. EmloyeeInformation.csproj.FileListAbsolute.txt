@@ -1,0 +1,6 @@
+C:\Users\puh\Dropbox\02.CSharpHomework\10. EmloyeeInformation\bin\Debug\_10.EmloyeeInformation.exe.config
+C:\Users\puh\Dropbox\02.CSharpHomework\10. EmloyeeInformation\bin\Debug\_10.EmloyeeInformation.exe
+C:\Users\puh\Dropbox\02.CSharpHomework\10. EmloyeeInformation\bin\Debug\_10.EmloyeeInformation.pdb
+C:\Users\puh\Dropbox\02.CSharpHomework\10. EmloyeeInformation\obj\Debug\10. EmloyeeInformation.csprojResolveAssemblyReference.cache
+C:\Users\puh\Dropbox\02.CSharpHomework\10. EmloyeeInformation\obj\Debug\_10.EmloyeeInformation.exe
+C:\Users\puh\Dropbox\02.CSharpHomework\10. EmloyeeInformation\obj\Debug\_10.EmloyeeInformation.pdb

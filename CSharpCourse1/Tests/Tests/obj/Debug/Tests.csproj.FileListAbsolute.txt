@@ -1,0 +1,9 @@
+E:\Games\Dropbox\C#\CsharpCourse1\Tests\Tests\bin\Debug\Tests.exe.config
+E:\Games\Dropbox\C#\CsharpCourse1\Tests\Tests\bin\Debug\Tests.exe
+E:\Games\Dropbox\C#\CsharpCourse1\Tests\Tests\bin\Debug\Tests.pdb
+E:\Games\Dropbox\C#\CsharpCourse1\Tests\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
+E:\Games\Dropbox\C#\CsharpCourse1\Tests\Tests\obj\Debug\Tests.exe
+E:\Games\Dropbox\C#\CsharpCourse1\Tests\Tests\obj\Debug\Tests.pdb
+C:\Users\puh\Dropbox\C#\CsharpCourse1\Tests\Tests\bin\Debug\Tests.exe.config
+C:\Users\puh\Dropbox\C#\CsharpCourse1\Tests\Tests\obj\Debug\Tests.exe
+C:\Users\puh\Dropbox\C#\CsharpCourse1\Tests\Tests\obj\Debug\Tests.pdb

@@ -1,0 +1,5 @@
+C:\Users\puh\Dropbox\04.CsharpHomework\05.GreaterNumber\bin\Debug\05.GreaterNumber.exe.config
+C:\Users\puh\Dropbox\04.CsharpHomework\05.GreaterNumber\bin\Debug\05.GreaterNumber.exe
+C:\Users\puh\Dropbox\04.CsharpHomework\05.GreaterNumber\bin\Debug\05.GreaterNumber.pdb
+C:\Users\puh\Dropbox\04.CsharpHomework\05.GreaterNumber\obj\Debug\05.GreaterNumber.exe
+C:\Users\puh\Dropbox\04.CsharpHomework\05.GreaterNumber\obj\Debug\05.GreaterNumber.pdb

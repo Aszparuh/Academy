@@ -1,0 +1,6 @@
+C:\Users\puh\Dropbox\02.CSharpHomework\BankAccount\bin\Debug\BankAccount.exe.config
+C:\Users\puh\Dropbox\02.CSharpHomework\BankAccount\bin\Debug\BankAccount.exe
+C:\Users\puh\Dropbox\02.CSharpHomework\BankAccount\bin\Debug\BankAccount.pdb
+C:\Users\puh\Dropbox\02.CSharpHomework\BankAccount\obj\Debug\14.BankAccount.csprojResolveAssemblyReference.cache
+C:\Users\puh\Dropbox\02.CSharpHomework\BankAccount\obj\Debug\BankAccount.exe
+C:\Users\puh\Dropbox\02.CSharpHomework\BankAccount\obj\Debug\BankAccount.pdb

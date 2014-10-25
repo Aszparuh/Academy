@@ -1,0 +1,6 @@
+C:\Users\puh\Dropbox\02.CSharpHomework\07. TwoStringsObject\bin\Debug\_07.TwoStringsObject.exe.config
+C:\Users\puh\Dropbox\02.CSharpHomework\07. TwoStringsObject\bin\Debug\_07.TwoStringsObject.exe
+C:\Users\puh\Dropbox\02.CSharpHomework\07. TwoStringsObject\bin\Debug\_07.TwoStringsObject.pdb
+C:\Users\puh\Dropbox\02.CSharpHomework\07. TwoStringsObject\obj\Debug\07. TwoStringsObject.csprojResolveAssemblyReference.cache
+C:\Users\puh\Dropbox\02.CSharpHomework\07. TwoStringsObject\obj\Debug\_07.TwoStringsObject.exe
+C:\Users\puh\Dropbox\02.CSharpHomework\07. TwoStringsObject\obj\Debug\_07.TwoStringsObject.pdb

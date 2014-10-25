@@ -1,0 +1,9 @@
+E:\Games\Dropbox\03.CSharpHomework\11.ExtractBinaryValue\bin\Debug\11.ExtractBinaryValue.exe.config
+E:\Games\Dropbox\03.CSharpHomework\11.ExtractBinaryValue\bin\Debug\11.ExtractBinaryValue.exe
+E:\Games\Dropbox\03.CSharpHomework\11.ExtractBinaryValue\bin\Debug\11.ExtractBinaryValue.pdb
+E:\Games\Dropbox\03.CSharpHomework\11.ExtractBinaryValue\obj\Debug\11.ExtractBinaryValue.csprojResolveAssemblyReference.cache
+E:\Games\Dropbox\03.CSharpHomework\11.ExtractBinaryValue\obj\Debug\11.ExtractBinaryValue.exe
+E:\Games\Dropbox\03.CSharpHomework\11.ExtractBinaryValue\obj\Debug\11.ExtractBinaryValue.pdb
+C:\Users\puh\Dropbox\03.CSharpHomework\11.ExtractBinaryValue\bin\Debug\11.ExtractBinaryValue.exe.config
+C:\Users\puh\Dropbox\03.CSharpHomework\11.ExtractBinaryValue\obj\Debug\11.ExtractBinaryValue.exe
+C:\Users\puh\Dropbox\03.CSharpHomework\11.ExtractBinaryValue\obj\Debug\11.ExtractBinaryValue.pdb

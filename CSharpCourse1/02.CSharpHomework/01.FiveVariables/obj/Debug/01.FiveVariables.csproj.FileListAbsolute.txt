@@ -1,0 +1,12 @@
+c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\01.FiveVariables\bin\Debug\01.FiveVariables.exe.config
+c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\01.FiveVariables\bin\Debug\01.FiveVariables.exe
+c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\01.FiveVariables\bin\Debug\01.FiveVariables.pdb
+c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\01.FiveVariables\obj\Debug\01.FiveVariables.csprojResolveAssemblyReference.cache
+c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\01.FiveVariables\obj\Debug\01.FiveVariables.exe
+c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\01.FiveVariables\obj\Debug\01.FiveVariables.pdb
+E:\Games\Dropbox\02.CSharpHomework\01.FiveVariables\bin\Debug\01.FiveVariables.exe.config
+E:\Games\Dropbox\02.CSharpHomework\01.FiveVariables\obj\Debug\01.FiveVariables.exe
+E:\Games\Dropbox\02.CSharpHomework\01.FiveVariables\obj\Debug\01.FiveVariables.pdb
+C:\Users\puh\Dropbox\02.CSharpHomework\01.FiveVariables\bin\Debug\01.FiveVariables.exe.config
+C:\Users\puh\Dropbox\02.CSharpHomework\01.FiveVariables\obj\Debug\01.FiveVariables.exe
+C:\Users\puh\Dropbox\02.CSharpHomework\01.FiveVariables\obj\Debug\01.FiveVariables.pdb

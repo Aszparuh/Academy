@@ -1,0 +1,12 @@
+E:\Games\Dropbox\06.CsharpHomework\02.NumbersNotDivisibleBy3And7\bin\Debug\02.NumbersNotDivisibleBy3And7.exe.config
+E:\Games\Dropbox\06.CsharpHomework\02.NumbersNotDivisibleBy3And7\bin\Debug\02.NumbersNotDivisibleBy3And7.exe
+E:\Games\Dropbox\06.CsharpHomework\02.NumbersNotDivisibleBy3And7\bin\Debug\02.NumbersNotDivisibleBy3And7.pdb
+E:\Games\Dropbox\06.CsharpHomework\02.NumbersNotDivisibleBy3And7\obj\Debug\02.NumbersNotDivisibleBy3And7.csprojResolveAssemblyReference.cache
+E:\Games\Dropbox\06.CsharpHomework\02.NumbersNotDivisibleBy3And7\obj\Debug\02.NumbersNotDivisibleBy3And7.exe
+E:\Games\Dropbox\06.CsharpHomework\02.NumbersNotDivisibleBy3And7\obj\Debug\02.NumbersNotDivisibleBy3And7.pdb
+E:\Games\Dropbox\C#\CsharpCourse1\06.CsharpHomework\02.NumbersNotDivisibleBy3And7\bin\Debug\02.NumbersNotDivisibleBy3And7.exe.config
+E:\Games\Dropbox\C#\CsharpCourse1\06.CsharpHomework\02.NumbersNotDivisibleBy3And7\obj\Debug\02.NumbersNotDivisibleBy3And7.exe
+E:\Games\Dropbox\C#\CsharpCourse1\06.CsharpHomework\02.NumbersNotDivisibleBy3And7\obj\Debug\02.NumbersNotDivisibleBy3And7.pdb
+C:\Users\puh\Dropbox\C#\CsharpCourse1\06.CsharpHomework\02.NumbersNotDivisibleBy3And7\bin\Debug\02.NumbersNotDivisibleBy3And7.exe.config
+C:\Users\puh\Dropbox\C#\CsharpCourse1\06.CsharpHomework\02.NumbersNotDivisibleBy3And7\obj\Debug\02.NumbersNotDivisibleBy3And7.exe
+C:\Users\puh\Dropbox\C#\CsharpCourse1\06.CsharpHomework\02.NumbersNotDivisibleBy3And7\obj\Debug\02.NumbersNotDivisibleBy3And7.pdb

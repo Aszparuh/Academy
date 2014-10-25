@@ -1,0 +1,12 @@
+C:\Users\puh\Dropbox\C#\CsharpCourse1\06.CsharpHomework\08.GreatestCommonDivisor\bin\Debug\08.GreatestCommonDivisor.exe.config
+C:\Users\puh\Dropbox\C#\CsharpCourse1\06.CsharpHomework\08.GreatestCommonDivisor\bin\Debug\08.GreatestCommonDivisor.exe
+C:\Users\puh\Dropbox\C#\CsharpCourse1\06.CsharpHomework\08.GreatestCommonDivisor\bin\Debug\08.GreatestCommonDivisor.pdb
+C:\Users\puh\Dropbox\C#\CsharpCourse1\06.CsharpHomework\08.GreatestCommonDivisor\obj\Debug\08.GreatestCommonDivisor.csprojResolveAssemblyReference.cache
+C:\Users\puh\Dropbox\C#\CsharpCourse1\06.CsharpHomework\08.GreatestCommonDivisor\obj\Debug\08.GreatestCommonDivisor.exe
+C:\Users\puh\Dropbox\C#\CsharpCourse1\06.CsharpHomework\08.GreatestCommonDivisor\obj\Debug\08.GreatestCommonDivisor.pdb
+E:\Games\Dropbox\C#\CsharpCourse1\06.CsharpHomework\08.GreatestCommonDivisor\bin\Debug\08.GreatestCommonDivisor.exe.config
+E:\Games\Dropbox\C#\CsharpCourse1\06.CsharpHomework\08.GreatestCommonDivisor\obj\Debug\08.GreatestCommonDivisor.exe
+E:\Games\Dropbox\C#\CsharpCourse1\06.CsharpHomework\08.GreatestCommonDivisor\obj\Debug\08.GreatestCommonDivisor.pdb
+E:\Games\Dropbox\C#\CsharpCourse1\06.CsharpHomework\08.GreatestCommonDivisor\bin\Debug\08.GreatestCommonDivisor.exe
+E:\Games\Dropbox\C#\CsharpCourse1\06.CsharpHomework\08.GreatestCommonDivisor\bin\Debug\08.GreatestCommonDivisor.pdb
+E:\Games\Dropbox\C#\CsharpCourse1\06.CsharpHomework\08.GreatestCommonDivisor\obj\Debug\08.GreatestCommonDivisor.csprojResolveAssemblyReference.cache

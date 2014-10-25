@@ -1,0 +1,9 @@
+E:\Games\Dropbox\03.CSharpHomework\12.ChangeBitValue\bin\Debug\12.ChangeBitValue.exe.config
+E:\Games\Dropbox\03.CSharpHomework\12.ChangeBitValue\bin\Debug\12.ChangeBitValue.exe
+E:\Games\Dropbox\03.CSharpHomework\12.ChangeBitValue\bin\Debug\12.ChangeBitValue.pdb
+E:\Games\Dropbox\03.CSharpHomework\12.ChangeBitValue\obj\Debug\12.ChangeBitValue.csprojResolveAssemblyReference.cache
+E:\Games\Dropbox\03.CSharpHomework\12.ChangeBitValue\obj\Debug\12.ChangeBitValue.exe
+E:\Games\Dropbox\03.CSharpHomework\12.ChangeBitValue\obj\Debug\12.ChangeBitValue.pdb
+C:\Users\puh\Dropbox\03.CSharpHomework\12.ChangeBitValue\bin\Debug\12.ChangeBitValue.exe.config
+C:\Users\puh\Dropbox\03.CSharpHomework\12.ChangeBitValue\obj\Debug\12.ChangeBitValue.exe
+C:\Users\puh\Dropbox\03.CSharpHomework\12.ChangeBitValue\obj\Debug\12.ChangeBitValue.pdb

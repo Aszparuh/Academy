@@ -1,0 +1,5 @@
+c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\03.CompareNumbers\bin\Debug\03.CompareNumbers.exe.config
+c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\03.CompareNumbers\bin\Debug\03.CompareNumbers.exe
+c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\03.CompareNumbers\bin\Debug\03.CompareNumbers.pdb
+c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\03.CompareNumbers\obj\Debug\03.CompareNumbers.exe
+c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\03.CompareNumbers\obj\Debug\03.CompareNumbers.pdb

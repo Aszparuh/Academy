@@ -1,0 +1,9 @@
+C:\Users\puh\Dropbox\05.CSharpHomework\05. DigitsInEnlish\bin\Debug\_05.DigitsInEnlish.exe.config
+C:\Users\puh\Dropbox\05.CSharpHomework\05. DigitsInEnlish\bin\Debug\_05.DigitsInEnlish.exe
+C:\Users\puh\Dropbox\05.CSharpHomework\05. DigitsInEnlish\bin\Debug\_05.DigitsInEnlish.pdb
+C:\Users\puh\Dropbox\05.CSharpHomework\05. DigitsInEnlish\obj\Debug\05. DigitsInEnlish.csprojResolveAssemblyReference.cache
+C:\Users\puh\Dropbox\05.CSharpHomework\05. DigitsInEnlish\obj\Debug\_05.DigitsInEnlish.exe
+C:\Users\puh\Dropbox\05.CSharpHomework\05. DigitsInEnlish\obj\Debug\_05.DigitsInEnlish.pdb
+E:\Games\Dropbox\05.CSharpHomework\05. DigitsInEnlish\bin\Debug\_05.DigitsInEnlish.exe.config
+E:\Games\Dropbox\05.CSharpHomework\05. DigitsInEnlish\obj\Debug\_05.DigitsInEnlish.exe
+E:\Games\Dropbox\05.CSharpHomework\05. DigitsInEnlish\obj\Debug\_05.DigitsInEnlish.pdb

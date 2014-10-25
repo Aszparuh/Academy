@@ -1,0 +1,6 @@
+C:\Users\puh\Dropbox\05.CSharpHomework\02.ProductOfThreeNumbers\bin\Debug\02.ProductOfThreeNumbers.exe.config
+C:\Users\puh\Dropbox\05.CSharpHomework\02.ProductOfThreeNumbers\bin\Debug\02.ProductOfThreeNumbers.exe
+C:\Users\puh\Dropbox\05.CSharpHomework\02.ProductOfThreeNumbers\bin\Debug\02.ProductOfThreeNumbers.pdb
+C:\Users\puh\Dropbox\05.CSharpHomework\02.ProductOfThreeNumbers\obj\Debug\02.ProductOfThreeNumbers.exe
+C:\Users\puh\Dropbox\05.CSharpHomework\02.ProductOfThreeNumbers\obj\Debug\02.ProductOfThreeNumbers.pdb
+C:\Users\puh\Dropbox\05.CSharpHomework\02.ProductOfThreeNumbers\obj\Debug\02.ProductOfThreeNumbers.csprojResolveAssemblyReference.cache

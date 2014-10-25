@@ -1,0 +1,6 @@
+C:\Users\puh\Dropbox\04.CsharpHomework\04. NumbersBetween\bin\Debug\_04.NumbersBetween.exe.config
+C:\Users\puh\Dropbox\04.CsharpHomework\04. NumbersBetween\obj\Debug\04. NumbersBetween.csprojResolveAssemblyReference.cache
+C:\Users\puh\Dropbox\04.CsharpHomework\04. NumbersBetween\bin\Debug\_04.NumbersBetween.exe
+C:\Users\puh\Dropbox\04.CsharpHomework\04. NumbersBetween\bin\Debug\_04.NumbersBetween.pdb
+C:\Users\puh\Dropbox\04.CsharpHomework\04. NumbersBetween\obj\Debug\_04.NumbersBetween.exe
+C:\Users\puh\Dropbox\04.CsharpHomework\04. NumbersBetween\obj\Debug\_04.NumbersBetween.pdb

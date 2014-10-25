@@ -1,0 +1,8 @@
+c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\05.CharVariable\bin\Debug\05.CharVariable.exe.config
+c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\05.CharVariable\bin\Debug\05.CharVariable.exe
+c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\05.CharVariable\bin\Debug\05.CharVariable.pdb
+c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\05.CharVariable\obj\Debug\05.CharVariable.exe
+c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\05.CharVariable\obj\Debug\05.CharVariable.pdb
+C:\Users\puh\Dropbox\02.CSharpHomework\05.CharVariable\bin\Debug\05.CharVariable.exe.config
+C:\Users\puh\Dropbox\02.CSharpHomework\05.CharVariable\obj\Debug\05.CharVariable.exe
+C:\Users\puh\Dropbox\02.CSharpHomework\05.CharVariable\obj\Debug\05.CharVariable.pdb

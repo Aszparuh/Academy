@@ -1,0 +1,5 @@
+C:\Users\puh\Dropbox\02.CSharpHomework\08.QuotationEscaping\bin\Debug\08.QuotationEscaping.exe.config
+C:\Users\puh\Dropbox\02.CSharpHomework\08.QuotationEscaping\bin\Debug\08.QuotationEscaping.exe
+C:\Users\puh\Dropbox\02.CSharpHomework\08.QuotationEscaping\bin\Debug\08.QuotationEscaping.pdb
+C:\Users\puh\Dropbox\02.CSharpHomework\08.QuotationEscaping\obj\Debug\08.QuotationEscaping.exe
+C:\Users\puh\Dropbox\02.CSharpHomework\08.QuotationEscaping\obj\Debug\08.QuotationEscaping.pdb

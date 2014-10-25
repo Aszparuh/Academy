@@ -1,0 +1,6 @@
+C:\Users\puh\Dropbox\03.CSharpHomework\09. InOrOutCircleRectangle\bin\Debug\_09.InOrOutCircleRectangle.exe.config
+C:\Users\puh\Dropbox\03.CSharpHomework\09. InOrOutCircleRectangle\bin\Debug\_09.InOrOutCircleRectangle.exe
+C:\Users\puh\Dropbox\03.CSharpHomework\09. InOrOutCircleRectangle\bin\Debug\_09.InOrOutCircleRectangle.pdb
+C:\Users\puh\Dropbox\03.CSharpHomework\09. InOrOutCircleRectangle\obj\Debug\09. InOrOutCircleRectangle.csprojResolveAssemblyReference.cache
+C:\Users\puh\Dropbox\03.CSharpHomework\09. InOrOutCircleRectangle\obj\Debug\_09.InOrOutCircleRectangle.exe
+C:\Users\puh\Dropbox\03.CSharpHomework\09. InOrOutCircleRectangle\obj\Debug\_09.InOrOutCircleRectangle.pdb
