@@ -1,0 +1,12 @@
+C:\Users\puh\Dropbox\03.CSharpHomework\08.TrapezoidArea\bin\Debug\08.TrapezoidArea.exe.config
+C:\Users\puh\Dropbox\03.CSharpHomework\08.TrapezoidArea\bin\Debug\08.TrapezoidArea.exe
+C:\Users\puh\Dropbox\03.CSharpHomework\08.TrapezoidArea\bin\Debug\08.TrapezoidArea.pdb
+C:\Users\puh\Dropbox\03.CSharpHomework\08.TrapezoidArea\obj\Debug\08.TrapezoidArea.csprojResolveAssemblyReference.cache
+C:\Users\puh\Dropbox\03.CSharpHomework\08.TrapezoidArea\obj\Debug\08.TrapezoidArea.exe
+C:\Users\puh\Dropbox\03.CSharpHomework\08.TrapezoidArea\obj\Debug\08.TrapezoidArea.pdb
+E:\Games\Dropbox\03.CSharpHomework\08.TrapezoidArea\bin\Debug\08.TrapezoidArea.exe.config
+E:\Games\Dropbox\03.CSharpHomework\08.TrapezoidArea\obj\Debug\08.TrapezoidArea.exe
+E:\Games\Dropbox\03.CSharpHomework\08.TrapezoidArea\obj\Debug\08.TrapezoidArea.pdb
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\03.OperatorsAndExpressions\08.TrapezoidArea\bin\Debug\08.TrapezoidArea.exe.config
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\03.OperatorsAndExpressions\08.TrapezoidArea\obj\Debug\08.TrapezoidArea.exe
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\03.OperatorsAndExpressions\08.TrapezoidArea\obj\Debug\08.TrapezoidArea.pdb

@@ -1,0 +1,11 @@
+E:\Games\Dropbox\03.CSharpHomework\03.RectagleArea\bin\Debug\03.RectagleArea.exe.config
+E:\Games\Dropbox\03.CSharpHomework\03.RectagleArea\bin\Debug\03.RectagleArea.exe
+E:\Games\Dropbox\03.CSharpHomework\03.RectagleArea\bin\Debug\03.RectagleArea.pdb
+E:\Games\Dropbox\03.CSharpHomework\03.RectagleArea\obj\Debug\03.RectagleArea.exe
+E:\Games\Dropbox\03.CSharpHomework\03.RectagleArea\obj\Debug\03.RectagleArea.pdb
+C:\Users\puh\Dropbox\03.CSharpHomework\03.RectagleArea\bin\Debug\03.RectagleArea.exe.config
+C:\Users\puh\Dropbox\03.CSharpHomework\03.RectagleArea\obj\Debug\03.RectagleArea.exe
+C:\Users\puh\Dropbox\03.CSharpHomework\03.RectagleArea\obj\Debug\03.RectagleArea.pdb
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\03.OperatorsAndExpressions\03.RectagleArea\bin\Debug\03.RectagleArea.exe.config
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\03.OperatorsAndExpressions\03.RectagleArea\obj\Debug\03.RectagleArea.exe
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\03.OperatorsAndExpressions\03.RectagleArea\obj\Debug\03.RectagleArea.pdb

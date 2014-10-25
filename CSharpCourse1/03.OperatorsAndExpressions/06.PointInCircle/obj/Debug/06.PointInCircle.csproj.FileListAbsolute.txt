@@ -1,0 +1,12 @@
+E:\Games\Dropbox\03.CSharpHomework\06.PointInCircle\bin\Debug\06.PointInCircle.exe.config
+E:\Games\Dropbox\03.CSharpHomework\06.PointInCircle\bin\Debug\06.PointInCircle.exe
+E:\Games\Dropbox\03.CSharpHomework\06.PointInCircle\bin\Debug\06.PointInCircle.pdb
+E:\Games\Dropbox\03.CSharpHomework\06.PointInCircle\obj\Debug\06.PointInCircle.csprojResolveAssemblyReference.cache
+E:\Games\Dropbox\03.CSharpHomework\06.PointInCircle\obj\Debug\06.PointInCircle.exe
+E:\Games\Dropbox\03.CSharpHomework\06.PointInCircle\obj\Debug\06.PointInCircle.pdb
+C:\Users\puh\Dropbox\03.CSharpHomework\06.PointInCircle\bin\Debug\06.PointInCircle.exe.config
+C:\Users\puh\Dropbox\03.CSharpHomework\06.PointInCircle\obj\Debug\06.PointInCircle.exe
+C:\Users\puh\Dropbox\03.CSharpHomework\06.PointInCircle\obj\Debug\06.PointInCircle.pdb
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\03.OperatorsAndExpressions\06.PointInCircle\bin\Debug\06.PointInCircle.exe.config
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\03.OperatorsAndExpressions\06.PointInCircle\obj\Debug\06.PointInCircle.exe
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\03.OperatorsAndExpressions\06.PointInCircle\obj\Debug\06.PointInCircle.pdb

@@ -1,0 +1,10 @@
+C:\Users\puh\Dropbox\03.CSharpHomework\13.ExchangeBits\bin\Debug\13.ExchangeBits.exe.config
+E:\Games\Dropbox\03.CSharpHomework\13.ExchangeBits\bin\Debug\13.ExchangeBits.exe.config
+E:\Games\Dropbox\03.CSharpHomework\13.ExchangeBits\bin\Debug\13.ExchangeBits.exe
+E:\Games\Dropbox\03.CSharpHomework\13.ExchangeBits\bin\Debug\13.ExchangeBits.pdb
+E:\Games\Dropbox\03.CSharpHomework\13.ExchangeBits\obj\Debug\13.ExchangeBits.csprojResolveAssemblyReference.cache
+E:\Games\Dropbox\03.CSharpHomework\13.ExchangeBits\obj\Debug\13.ExchangeBits.exe
+E:\Games\Dropbox\03.CSharpHomework\13.ExchangeBits\obj\Debug\13.ExchangeBits.pdb
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\03.OperatorsAndExpressions\13.ExchangeBits\bin\Debug\13.ExchangeBits.exe.config
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\03.OperatorsAndExpressions\13.ExchangeBits\obj\Debug\13.ExchangeBits.exe
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\03.OperatorsAndExpressions\13.ExchangeBits\obj\Debug\13.ExchangeBits.pdb
