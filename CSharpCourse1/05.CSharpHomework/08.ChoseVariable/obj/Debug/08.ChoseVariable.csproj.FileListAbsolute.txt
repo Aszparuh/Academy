@@ -1,9 +1,0 @@
-C:\Users\puh\Dropbox\05.CSharpHomework\08.ChoseVariable\bin\Debug\08.ChoseVariable.exe.config
-C:\Users\puh\Dropbox\05.CSharpHomework\08.ChoseVariable\bin\Debug\08.ChoseVariable.exe
-C:\Users\puh\Dropbox\05.CSharpHomework\08.ChoseVariable\bin\Debug\08.ChoseVariable.pdb
-C:\Users\puh\Dropbox\05.CSharpHomework\08.ChoseVariable\obj\Debug\08.ChoseVariable.csprojResolveAssemblyReference.cache
-C:\Users\puh\Dropbox\05.CSharpHomework\08.ChoseVariable\obj\Debug\08.ChoseVariable.exe
-C:\Users\puh\Dropbox\05.CSharpHomework\08.ChoseVariable\obj\Debug\08.ChoseVariable.pdb
-E:\Games\Dropbox\05.CSharpHomework\08.ChoseVariable\bin\Debug\08.ChoseVariable.exe.config
-E:\Games\Dropbox\05.CSharpHomework\08.ChoseVariable\obj\Debug\08.ChoseVariable.exe
-E:\Games\Dropbox\05.CSharpHomework\08.ChoseVariable\obj\Debug\08.ChoseVariable.pdb
