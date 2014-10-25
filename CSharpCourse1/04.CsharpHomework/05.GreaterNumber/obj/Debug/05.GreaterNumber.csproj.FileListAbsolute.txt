@@ -3,3 +3,6 @@ C:\Users\puh\Dropbox\04.CsharpHomework\05.GreaterNumber\bin\Debug\05.GreaterNumb
 C:\Users\puh\Dropbox\04.CsharpHomework\05.GreaterNumber\bin\Debug\05.GreaterNumber.pdb
 C:\Users\puh\Dropbox\04.CsharpHomework\05.GreaterNumber\obj\Debug\05.GreaterNumber.exe
 C:\Users\puh\Dropbox\04.CsharpHomework\05.GreaterNumber\obj\Debug\05.GreaterNumber.pdb
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\05.GreaterNumber\bin\Debug\05.GreaterNumber.exe.config
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\05.GreaterNumber\obj\Debug\05.GreaterNumber.exe
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\05.GreaterNumber\obj\Debug\05.GreaterNumber.pdb

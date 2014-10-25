@@ -4,3 +4,6 @@ C:\Users\puh\Dropbox\04.CsharpHomework\04. NumbersBetween\bin\Debug\_04.NumbersB
 C:\Users\puh\Dropbox\04.CsharpHomework\04. NumbersBetween\bin\Debug\_04.NumbersBetween.pdb
 C:\Users\puh\Dropbox\04.CsharpHomework\04. NumbersBetween\obj\Debug\_04.NumbersBetween.exe
 C:\Users\puh\Dropbox\04.CsharpHomework\04. NumbersBetween\obj\Debug\_04.NumbersBetween.pdb
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\04. NumbersBetween\bin\Debug\_04.NumbersBetween.exe.config
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\04. NumbersBetween\obj\Debug\_04.NumbersBetween.exe
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\04. NumbersBetween\obj\Debug\_04.NumbersBetween.pdb

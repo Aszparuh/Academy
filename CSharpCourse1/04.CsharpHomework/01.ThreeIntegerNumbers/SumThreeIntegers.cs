@@ -1,4 +1,5 @@
 ﻿using System;
+
 class SumThreeIntegers
 {
     static void Main()

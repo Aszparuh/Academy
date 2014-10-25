@@ -10,3 +10,9 @@ C:\Users\puh\Dropbox\04.CsharpHomework\02. AreaPerimeterOfCircle\obj\Debug\_02.A
 C:\Users\puh\Dropbox\04.CsharpHomework\02. AreaPerimeterOfCircle\bin\Debug\_02.AreaPerimeterOfCircle.exe
 C:\Users\puh\Dropbox\04.CsharpHomework\02. AreaPerimeterOfCircle\bin\Debug\_02.AreaPerimeterOfCircle.pdb
 C:\Users\puh\Dropbox\04.CsharpHomework\02. AreaPerimeterOfCircle\obj\Debug\02. AreaPerimeterOfCircle.csprojResolveAssemblyReference.cache
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\02. AreaPerimeterOfCircle\bin\Debug\_02.AreaPerimeterOfCircle.exe.config
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\02. AreaPerimeterOfCircle\obj\Debug\_02.AreaPerimeterOfCircle.exe
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\02. AreaPerimeterOfCircle\obj\Debug\_02.AreaPerimeterOfCircle.pdb
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\02. AreaPerimeterOfCircle\bin\Debug\_02.AreaPerimeterOfCircle.exe
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\02. AreaPerimeterOfCircle\bin\Debug\_02.AreaPerimeterOfCircle.pdb
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\02. AreaPerimeterOfCircle\obj\Debug\02. AreaPerimeterOfCircle.csprojResolveAssemblyReference.cache

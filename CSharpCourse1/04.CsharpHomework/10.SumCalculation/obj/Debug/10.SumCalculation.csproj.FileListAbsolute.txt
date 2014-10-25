@@ -4,3 +4,6 @@ E:\Games\Dropbox\04.CsharpHomework\10.SumCalculation\bin\Debug\10.SumCalculation
 E:\Games\Dropbox\04.CsharpHomework\10.SumCalculation\obj\Debug\10.SumCalculation.csprojResolveAssemblyReference.cache
 E:\Games\Dropbox\04.CsharpHomework\10.SumCalculation\obj\Debug\10.SumCalculation.exe
 E:\Games\Dropbox\04.CsharpHomework\10.SumCalculation\obj\Debug\10.SumCalculation.pdb
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\10.SumCalculation\bin\Debug\10.SumCalculation.exe.config
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\10.SumCalculation\obj\Debug\10.SumCalculation.exe
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\10.SumCalculation\obj\Debug\10.SumCalculation.pdb

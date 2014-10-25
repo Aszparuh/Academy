@@ -7,3 +7,6 @@ C:\Users\puh\Dropbox\04.CsharpHomework\08.FromOneToN\obj\Debug\08.FromOneToN.pdb
 E:\Games\Dropbox\04.CsharpHomework\08.FromOneToN\bin\Debug\08.FromOneToN.exe.config
 E:\Games\Dropbox\04.CsharpHomework\08.FromOneToN\obj\Debug\08.FromOneToN.exe
 E:\Games\Dropbox\04.CsharpHomework\08.FromOneToN\obj\Debug\08.FromOneToN.pdb
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\08.FromOneToN\bin\Debug\08.FromOneToN.exe.config
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\08.FromOneToN\obj\Debug\08.FromOneToN.exe
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\08.FromOneToN\obj\Debug\08.FromOneToN.pdb
