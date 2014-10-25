@@ -1,0 +1,6 @@
+E:\Games\Dropbox\C#\ExamDecember2013Evening\test\bin\Debug\test.exe.config
+E:\Games\Dropbox\C#\ExamDecember2013Evening\test\bin\Debug\test.exe
+E:\Games\Dropbox\C#\ExamDecember2013Evening\test\bin\Debug\test.pdb
+E:\Games\Dropbox\C#\ExamDecember2013Evening\test\obj\Debug\test.csprojResolveAssemblyReference.cache
+E:\Games\Dropbox\C#\ExamDecember2013Evening\test\obj\Debug\test.exe
+E:\Games\Dropbox\C#\ExamDecember2013Evening\test\obj\Debug\test.pdb

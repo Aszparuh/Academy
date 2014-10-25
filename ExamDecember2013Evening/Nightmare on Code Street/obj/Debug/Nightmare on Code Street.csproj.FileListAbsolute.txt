@@ -1,0 +1,6 @@
+E:\Games\Dropbox\C#\ExamDecember2013Evening\Nightmare on Code Street\bin\Debug\Nightmare on Code Street.exe.config
+E:\Games\Dropbox\C#\ExamDecember2013Evening\Nightmare on Code Street\bin\Debug\Nightmare on Code Street.exe
+E:\Games\Dropbox\C#\ExamDecember2013Evening\Nightmare on Code Street\bin\Debug\Nightmare on Code Street.pdb
+E:\Games\Dropbox\C#\ExamDecember2013Evening\Nightmare on Code Street\obj\Debug\Nightmare on Code Street.csprojResolveAssemblyReference.cache
+E:\Games\Dropbox\C#\ExamDecember2013Evening\Nightmare on Code Street\obj\Debug\Nightmare on Code Street.exe
+E:\Games\Dropbox\C#\ExamDecember2013Evening\Nightmare on Code Street\obj\Debug\Nightmare on Code Street.pdb
