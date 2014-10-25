@@ -1,9 +1,0 @@
-E:\Games\Dropbox\03.CSharpHomework\07. PrimeOrNot\bin\Debug\_07.PrimeOrNot.exe.config
-C:\Users\puh\Dropbox\03.CSharpHomework\07. PrimeOrNot\bin\Debug\_07.PrimeOrNot.exe.config
-C:\Users\puh\Dropbox\03.CSharpHomework\07. PrimeOrNot\bin\Debug\_07.PrimeOrNot.exe
-C:\Users\puh\Dropbox\03.CSharpHomework\07. PrimeOrNot\bin\Debug\_07.PrimeOrNot.pdb
-C:\Users\puh\Dropbox\03.CSharpHomework\07. PrimeOrNot\obj\Debug\07. PrimeOrNot.csprojResolveAssemblyReference.cache
-C:\Users\puh\Dropbox\03.CSharpHomework\07. PrimeOrNot\obj\Debug\_07.PrimeOrNot.exe
-C:\Users\puh\Dropbox\03.CSharpHomework\07. PrimeOrNot\obj\Debug\_07.PrimeOrNot.pdb
-E:\Games\Dropbox\03.CSharpHomework\07. PrimeOrNot\obj\Debug\_07.PrimeOrNot.exe
-E:\Games\Dropbox\03.CSharpHomework\07. PrimeOrNot\obj\Debug\_07.PrimeOrNot.pdb
