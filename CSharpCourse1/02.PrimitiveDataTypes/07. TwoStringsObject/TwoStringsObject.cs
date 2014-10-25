@@ -1,4 +1,5 @@
 ﻿using System;
+
 class TwoStringsObject
 {
     static void Main()

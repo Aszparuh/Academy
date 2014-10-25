@@ -1,4 +1,5 @@
 ﻿using System;
+
 class Table
 {
     static void Main()

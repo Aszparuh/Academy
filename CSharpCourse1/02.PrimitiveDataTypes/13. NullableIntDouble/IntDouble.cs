@@ -1,4 +1,5 @@
 ﻿using System;
+
 class IntDouble
 {
     static void Main()

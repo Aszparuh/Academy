@@ -1,4 +1,5 @@
 ﻿using System;
+
 class FloatOrDouble
 {
     static void Main()

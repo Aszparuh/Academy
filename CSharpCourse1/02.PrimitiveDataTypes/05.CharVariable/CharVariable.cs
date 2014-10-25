@@ -1,4 +1,5 @@
 ﻿using System;
+
 class CharVariable
 {
     static void Main()

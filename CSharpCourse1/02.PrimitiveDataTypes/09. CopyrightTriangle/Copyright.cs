@@ -1,4 +1,5 @@
 ﻿using System;
+
 class Copyright
 {
     static void Main()

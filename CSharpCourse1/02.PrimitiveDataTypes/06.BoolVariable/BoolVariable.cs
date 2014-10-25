@@ -1,4 +1,5 @@
 ﻿using System;
+
 class BoolVariable
 {
     static void Main()

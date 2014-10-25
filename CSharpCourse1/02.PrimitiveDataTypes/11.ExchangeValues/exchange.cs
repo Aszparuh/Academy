@@ -1,5 +1,6 @@
 ﻿using System;
-class exchange
+
+class Exchange
 {
     static void Main()
     {

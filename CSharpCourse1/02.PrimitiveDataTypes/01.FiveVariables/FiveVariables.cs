@@ -1,4 +1,5 @@
 ﻿using System;
+
 class FiveVariables
 {
     static void Main()

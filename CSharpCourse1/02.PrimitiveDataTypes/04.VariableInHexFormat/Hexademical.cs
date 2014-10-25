@@ -1,4 +1,5 @@
 ﻿using System;
+
 class Hexademical
 {
     static void Main()
