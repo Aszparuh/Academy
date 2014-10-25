@@ -13,3 +13,6 @@ E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\01.ThreeIntegerN
 E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.ConsoleInputOutput\01.ThreeIntegerNumbers\bin\Debug\01.ThreeIntegerNumbers.exe.config
 E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.ConsoleInputOutput\01.ThreeIntegerNumbers\obj\Debug\01.ThreeIntegerNumbers.exe
 E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.ConsoleInputOutput\01.ThreeIntegerNumbers\obj\Debug\01.ThreeIntegerNumbers.pdb
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.ConsoleInputOutput\01.ThreeIntegerNumbers\bin\Debug\01.ThreeIntegerNumbers.exe
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.ConsoleInputOutput\01.ThreeIntegerNumbers\bin\Debug\01.ThreeIntegerNumbers.pdb
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.ConsoleInputOutput\01.ThreeIntegerNumbers\obj\Debug\01.ThreeIntegerNumbers.csprojResolveAssemblyReference.cache
