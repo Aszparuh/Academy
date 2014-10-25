@@ -10,3 +10,6 @@ E:\Games\Dropbox\04.CsharpHomework\09.FibonacciSequence\obj\Debug\09.FibonacciSe
 E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\09.FibonacciSequence\bin\Debug\09.FibonacciSequence.exe.config
 E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\09.FibonacciSequence\obj\Debug\09.FibonacciSequence.exe
 E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\09.FibonacciSequence\obj\Debug\09.FibonacciSequence.pdb
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\09.FibonacciSequence\bin\Debug\09.FibonacciSequence.exe
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\09.FibonacciSequence\bin\Debug\09.FibonacciSequence.pdb
+E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\09.FibonacciSequence\obj\Debug\09.FibonacciSequence.csprojResolveAssemblyReference.cache
