@@ -1,2 +1,0 @@
-E:\Games\Dropbox\05.CSharpHomework\10.BonusScore\bin\Debug\10.BonusScore.exe.config
-E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\05.CSharpHomework\10.BonusScore\bin\Debug\10.BonusScore.exe.config

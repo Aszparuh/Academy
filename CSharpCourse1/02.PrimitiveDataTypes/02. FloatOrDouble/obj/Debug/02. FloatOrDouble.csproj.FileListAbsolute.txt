@@ -1,8 +1,0 @@
-c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\02. FloatOrDouble\bin\Debug\_02.FloatOrDouble.exe.config
-c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\02. FloatOrDouble\bin\Debug\_02.FloatOrDouble.exe
-c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\02. FloatOrDouble\bin\Debug\_02.FloatOrDouble.pdb
-c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\02. FloatOrDouble\obj\Debug\_02.FloatOrDouble.exe
-c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\02. FloatOrDouble\obj\Debug\_02.FloatOrDouble.pdb
-C:\Users\puh\Dropbox\02.CSharpHomework\02. FloatOrDouble\bin\Debug\_02.FloatOrDouble.exe.config
-C:\Users\puh\Dropbox\02.CSharpHomework\02. FloatOrDouble\obj\Debug\_02.FloatOrDouble.exe
-C:\Users\puh\Dropbox\02.CSharpHomework\02. FloatOrDouble\obj\Debug\_02.FloatOrDouble.pdb

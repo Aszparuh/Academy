@@ -1,5 +1,0 @@
-C:\Users\puh\Dropbox\02.CSharpHomework\09. CopyrightTriangle\bin\Debug\_09.CopyrightTriangle.exe.config
-C:\Users\puh\Dropbox\02.CSharpHomework\09. CopyrightTriangle\bin\Debug\_09.CopyrightTriangle.exe
-C:\Users\puh\Dropbox\02.CSharpHomework\09. CopyrightTriangle\bin\Debug\_09.CopyrightTriangle.pdb
-C:\Users\puh\Dropbox\02.CSharpHomework\09. CopyrightTriangle\obj\Debug\_09.CopyrightTriangle.exe
-C:\Users\puh\Dropbox\02.CSharpHomework\09. CopyrightTriangle\obj\Debug\_09.CopyrightTriangle.pdb

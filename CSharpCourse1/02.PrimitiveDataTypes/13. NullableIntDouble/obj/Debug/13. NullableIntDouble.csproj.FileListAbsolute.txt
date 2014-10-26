@@ -1,5 +1,0 @@
-C:\Users\puh\Dropbox\02.CSharpHomework\13. NullableIntDouble\bin\Debug\_13.NullableIntDouble.exe.config
-C:\Users\puh\Dropbox\02.CSharpHomework\13. NullableIntDouble\bin\Debug\_13.NullableIntDouble.exe
-C:\Users\puh\Dropbox\02.CSharpHomework\13. NullableIntDouble\bin\Debug\_13.NullableIntDouble.pdb
-C:\Users\puh\Dropbox\02.CSharpHomework\13. NullableIntDouble\obj\Debug\_13.NullableIntDouble.exe
-C:\Users\puh\Dropbox\02.CSharpHomework\13. NullableIntDouble\obj\Debug\_13.NullableIntDouble.pdb

@@ -1,9 +1,0 @@
-E:\Games\Dropbox\C#\CsharpCourse1\06.CsharpHomework\04.FactorialDevidedByFactorial\bin\Debug\04.FactorialDevidedByFactorial.exe.config
-E:\Games\Dropbox\C#\CsharpCourse1\06.CsharpHomework\04.FactorialDevidedByFactorial\bin\Debug\04.FactorialDevidedByFactorial.exe
-E:\Games\Dropbox\C#\CsharpCourse1\06.CsharpHomework\04.FactorialDevidedByFactorial\bin\Debug\04.FactorialDevidedByFactorial.pdb
-E:\Games\Dropbox\C#\CsharpCourse1\06.CsharpHomework\04.FactorialDevidedByFactorial\obj\Debug\04.FactorialDevidedByFactorial.csprojResolveAssemblyReference.cache
-E:\Games\Dropbox\C#\CsharpCourse1\06.CsharpHomework\04.FactorialDevidedByFactorial\obj\Debug\04.FactorialDevidedByFactorial.exe
-E:\Games\Dropbox\C#\CsharpCourse1\06.CsharpHomework\04.FactorialDevidedByFactorial\obj\Debug\04.FactorialDevidedByFactorial.pdb
-C:\Users\puh\Dropbox\C#\CsharpCourse1\06.CsharpHomework\04.FactorialDevidedByFactorial\bin\Debug\04.FactorialDevidedByFactorial.exe.config
-C:\Users\puh\Dropbox\C#\CsharpCourse1\06.CsharpHomework\04.FactorialDevidedByFactorial\obj\Debug\04.FactorialDevidedByFactorial.exe
-C:\Users\puh\Dropbox\C#\CsharpCourse1\06.CsharpHomework\04.FactorialDevidedByFactorial\obj\Debug\04.FactorialDevidedByFactorial.pdb

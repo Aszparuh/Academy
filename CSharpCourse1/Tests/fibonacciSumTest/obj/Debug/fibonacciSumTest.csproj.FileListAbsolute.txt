@@ -1,6 +1,0 @@
-C:\Users\puh\Dropbox\C#\CsharpCourse1\Tests\fibonacciSumTest\bin\Debug\fibonacciSumTest.exe.config
-C:\Users\puh\Dropbox\C#\CsharpCourse1\Tests\fibonacciSumTest\obj\Debug\fibonacciSumTest.csprojResolveAssemblyReference.cache
-C:\Users\puh\Dropbox\C#\CsharpCourse1\Tests\fibonacciSumTest\bin\Debug\fibonacciSumTest.exe
-C:\Users\puh\Dropbox\C#\CsharpCourse1\Tests\fibonacciSumTest\bin\Debug\fibonacciSumTest.pdb
-C:\Users\puh\Dropbox\C#\CsharpCourse1\Tests\fibonacciSumTest\obj\Debug\fibonacciSumTest.exe
-C:\Users\puh\Dropbox\C#\CsharpCourse1\Tests\fibonacciSumTest\obj\Debug\fibonacciSumTest.pdb

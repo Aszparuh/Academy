@@ -1,2 +1,0 @@
-C:\Users\puh\Dropbox\05.CSharpHomework\09.SubsetSum\bin\Debug\09.SubsetSum.exe.config
-E:\Games\Dropbox\05.CSharpHomework\09.SubsetSum\bin\Debug\09.SubsetSum.exe.config

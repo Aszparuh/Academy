@@ -1,8 +1,0 @@
-C:\Users\puh\Dropbox\02.CSharpHomework\12. ASCIITable\bin\Debug\_12.ASCIITable.exe.config
-C:\Users\puh\Dropbox\02.CSharpHomework\12. ASCIITable\bin\Debug\_12.ASCIITable.exe
-C:\Users\puh\Dropbox\02.CSharpHomework\12. ASCIITable\bin\Debug\_12.ASCIITable.pdb
-C:\Users\puh\Dropbox\02.CSharpHomework\12. ASCIITable\obj\Debug\_12.ASCIITable.exe
-C:\Users\puh\Dropbox\02.CSharpHomework\12. ASCIITable\obj\Debug\_12.ASCIITable.pdb
-E:\Games\Dropbox\02.CSharpHomework\12. ASCIITable\bin\Debug\_12.ASCIITable.exe.config
-E:\Games\Dropbox\02.CSharpHomework\12. ASCIITable\obj\Debug\_12.ASCIITable.exe
-E:\Games\Dropbox\02.CSharpHomework\12. ASCIITable\obj\Debug\_12.ASCIITable.pdb

@@ -1,6 +1,0 @@
-C:\Users\puh\Dropbox\C#\CsharpCourse1\06.CsharpHomework\12.MatrixIncrease\bin\Debug\12.MatrixIncrease.exe.config
-C:\Users\puh\Dropbox\C#\CsharpCourse1\06.CsharpHomework\12.MatrixIncrease\bin\Debug\12.MatrixIncrease.exe
-C:\Users\puh\Dropbox\C#\CsharpCourse1\06.CsharpHomework\12.MatrixIncrease\bin\Debug\12.MatrixIncrease.pdb
-C:\Users\puh\Dropbox\C#\CsharpCourse1\06.CsharpHomework\12.MatrixIncrease\obj\Debug\12.MatrixIncrease.csprojResolveAssemblyReference.cache
-C:\Users\puh\Dropbox\C#\CsharpCourse1\06.CsharpHomework\12.MatrixIncrease\obj\Debug\12.MatrixIncrease.exe
-C:\Users\puh\Dropbox\C#\CsharpCourse1\06.CsharpHomework\12.MatrixIncrease\obj\Debug\12.MatrixIncrease.pdb

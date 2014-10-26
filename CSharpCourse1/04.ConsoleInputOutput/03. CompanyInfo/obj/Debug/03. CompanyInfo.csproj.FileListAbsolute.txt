@@ -1,9 +1,0 @@
-C:\Users\puh\Dropbox\04.CsharpHomework\03. CompanyInfo\bin\Debug\_03.CompanyInfo.exe.config
-C:\Users\puh\Dropbox\04.CsharpHomework\03. CompanyInfo\obj\Debug\03. CompanyInfo.csprojResolveAssemblyReference.cache
-C:\Users\puh\Dropbox\04.CsharpHomework\03. CompanyInfo\bin\Debug\_03.CompanyInfo.exe
-C:\Users\puh\Dropbox\04.CsharpHomework\03. CompanyInfo\bin\Debug\_03.CompanyInfo.pdb
-C:\Users\puh\Dropbox\04.CsharpHomework\03. CompanyInfo\obj\Debug\_03.CompanyInfo.exe
-C:\Users\puh\Dropbox\04.CsharpHomework\03. CompanyInfo\obj\Debug\_03.CompanyInfo.pdb
-E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\03. CompanyInfo\bin\Debug\_03.CompanyInfo.exe.config
-E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\03. CompanyInfo\obj\Debug\_03.CompanyInfo.exe
-E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\03. CompanyInfo\obj\Debug\_03.CompanyInfo.pdb

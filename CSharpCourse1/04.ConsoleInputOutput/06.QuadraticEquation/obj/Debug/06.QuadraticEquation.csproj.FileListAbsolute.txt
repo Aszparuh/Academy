@@ -1,9 +1,0 @@
-C:\Users\puh\Dropbox\04.CsharpHomework\06.QuadraticEquation\bin\Debug\06.QuadraticEquation.exe.config
-C:\Users\puh\Dropbox\04.CsharpHomework\06.QuadraticEquation\bin\Debug\06.QuadraticEquation.exe
-C:\Users\puh\Dropbox\04.CsharpHomework\06.QuadraticEquation\bin\Debug\06.QuadraticEquation.pdb
-C:\Users\puh\Dropbox\04.CsharpHomework\06.QuadraticEquation\obj\Debug\06.QuadraticEquation.csprojResolveAssemblyReference.cache
-C:\Users\puh\Dropbox\04.CsharpHomework\06.QuadraticEquation\obj\Debug\06.QuadraticEquation.exe
-C:\Users\puh\Dropbox\04.CsharpHomework\06.QuadraticEquation\obj\Debug\06.QuadraticEquation.pdb
-E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\06.QuadraticEquation\bin\Debug\06.QuadraticEquation.exe.config
-E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\06.QuadraticEquation\obj\Debug\06.QuadraticEquation.exe
-E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\06.QuadraticEquation\obj\Debug\06.QuadraticEquation.pdb

@@ -1,9 +1,0 @@
-C:\Users\puh\Dropbox\04.CsharpHomework\07.SumMore\bin\Debug\07.SumMore.exe.config
-C:\Users\puh\Dropbox\04.CsharpHomework\07.SumMore\bin\Debug\07.SumMore.exe
-C:\Users\puh\Dropbox\04.CsharpHomework\07.SumMore\bin\Debug\07.SumMore.pdb
-C:\Users\puh\Dropbox\04.CsharpHomework\07.SumMore\obj\Debug\07.SumMore.csprojResolveAssemblyReference.cache
-C:\Users\puh\Dropbox\04.CsharpHomework\07.SumMore\obj\Debug\07.SumMore.exe
-C:\Users\puh\Dropbox\04.CsharpHomework\07.SumMore\obj\Debug\07.SumMore.pdb
-E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\07.SumMore\bin\Debug\07.SumMore.exe.config
-E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\07.SumMore\obj\Debug\07.SumMore.exe
-E:\Games\Dropbox\C#\LearnCSharp\CSharpCourse1\04.CsharpHomework\07.SumMore\obj\Debug\07.SumMore.pdb

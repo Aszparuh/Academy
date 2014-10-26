@@ -1,6 +1,0 @@
-c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\04.VariableInHexFormat\bin\Debug\04.VariableInHexFormat.exe.config
-c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\04.VariableInHexFormat\bin\Debug\04.VariableInHexFormat.exe
-c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\04.VariableInHexFormat\bin\Debug\04.VariableInHexFormat.pdb
-c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\04.VariableInHexFormat\obj\Debug\04.VariableInHexFormat.csprojResolveAssemblyReference.cache
-c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\04.VariableInHexFormat\obj\Debug\04.VariableInHexFormat.exe
-c:\users\puh\documents\visual studio 2013\Projects\02.CSharpHomework\04.VariableInHexFormat\obj\Debug\04.VariableInHexFormat.pdb
