@@ -26,7 +26,7 @@ class MaximalSumThreeByThree
             }
         }
         int sum;
-        int maximalSum = 0;
+        int maximalSum = int.MinValue;
         //Find maximal sequence sum
         for (int row = 0; row < matrix.GetLength(0) - 2; row++)
         {
