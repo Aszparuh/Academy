@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxSequence", "MaxSequence\MaxSequence.csproj", "{BDB318DB-F9E9-4FFF-BB68-EAB6706A2ADB}"
 EndProject
@@ -26,8 +26,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12. AlphabetArray", "12. AlphabetArray\12. AlphabetArray.csproj", "{50413539-3E9B-4483-9D48-5CC8650D6768}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15. SieveOfEratosthenes", "15. SieveOfEratosthenes\15. SieveOfEratosthenes.csproj", "{2A743789-7850-4A8B-ADBD-6C4B0ADA78D9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20.VariationOfElements", "VariationOfElements\20.VariationOfElements.csproj", "{DA803889-E109-4F94-9B22-2821BF0A2AE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,10 +81,6 @@ Global
 		{2A743789-7850-4A8B-ADBD-6C4B0ADA78D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A743789-7850-4A8B-ADBD-6C4B0ADA78D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A743789-7850-4A8B-ADBD-6C4B0ADA78D9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DA803889-E109-4F94-9B22-2821BF0A2AE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DA803889-E109-4F94-9B22-2821BF0A2AE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DA803889-E109-4F94-9B22-2821BF0A2AE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DA803889-E109-4F94-9B22-2821BF0A2AE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
