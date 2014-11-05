@@ -3,67 +3,79 @@ using System.Collections.Generic;
 
 class AddArraysOfDigits
 {
-    static void Main()
+    static int FindGreatestLength(string first, string second)
     {
-        Console.Write("Enter number: ");
-        string firstString = Console.ReadLine();
-        Console.Write("Enter second number: ");
-        string secondString = Console.ReadLine();
-        string smallerString;
-        string biggerString;
-
-        if (firstString.Length < secondString.Length)
+        if (first.Length > second.Length)
         {
-            smallerString = firstString;
-            biggerString = secondString;
-        }
-        else if (secondString.Length < firstString.Length)
-        {
-            smallerString = secondString;
-            biggerString = firstString;
+            return first.Length;
         }
         else
         {
-            smallerString = firstString;
-            biggerString = secondString;
+            return second.Length;
         }
-        int[] shortArray = new int[smallerString.Length];
-        int[] longArray = new int[biggerString.Length];
-        for (int i = 0; i < shortArray.Length; i++)
-        {
-            shortArray[i] = Convert.ToInt32(smallerString[i] - 48);
-        }
-        for (int i = 0; i < longArray.Length; i++)
-        {
-            longArray[i] = Convert.ToInt32(biggerString[i] - 48);
-        }
-        //test
-        int[] resultArray = AddArrays(shortArray, longArray);
-        for (int i = 0; i < resultArray.Length; i++)
-        {
-            Console.Write(resultArray[i]);
-        }
-        Console.WriteLine();
     }
-    static int[] AddArrays(int[] shortArray, int[] longArray)
+    static int[] ConvertToArray(string anyString, int length)
     {
-        int[] resultArray = new int[longArray.Length + 1];
-        int carry = 0;
-        for (int i = shortArray.Length - 1; i >= 0; i--)
+        int[] stringToArray = new int[length];
+        if (anyString.Length < length)
         {
-            resultArray[i + 1] = shortArray[i] + longArray[i] + carry;
-            if (resultArray[i + 1] >= 10)
+            for (int i = 0; i < anyString.Length; i++)
             {
-                carry = 1;
-                resultArray[i + 1] = resultArray[i + 1] % 10;
+                stringToArray[i] = Convert.ToInt32(anyString[i] - 48);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < length; i++)
+            {
+                stringToArray[i] = Convert.ToInt32(anyString[i] - 48);
+            }
+        }
+        return stringToArray;
+    }
+    static List<int> AddArrays(int[] firstArray, int[] secondArray)
+    {
+        List<int> sumArray = new List<int>();
+        int residue = 0;
+        for (int i = firstArray.Length - 1; i >= 0; i--)
+        {
+            sumArray.Add(firstArray[i] + secondArray[i] + residue);
+            if ((firstArray[i] + secondArray[i] + residue) >= 10)
+            {
+                residue = 1;
+                sumArray[i] = sumArray[i] % 10;
             }
             else
             {
-                carry = 0;
-                resultArray[i + 1] = resultArray[i + 1] % 10;
+                residue = 0;
+            }
+            if (i == firstArray.Length - 1 && residue == 1)
+            {
+                sumArray.Add(1);
             }
         }
-        return resultArray;
+        return sumArray;
     }
+    static void PrintArray(List<int> arrayToPrint)
+    {
+        for (int i = 0; i < arrayToPrint.Count; i++)
+        {
+            Console.Write(arrayToPrint[i]);
+        }
+    }
+    static void Main()
+    {
+        Console.Write("Enter first number: ");
+        string firstString = Console.ReadLine();
+        Console.Write("Enter second number: ");
+        string secondString = Console.ReadLine();
+        int greatestLength = FindGreatestLength(firstString, secondString);
+        int[] firstArray = ConvertToArray(firstString, greatestLength);
+        int[] secondArray = ConvertToArray(secondString, greatestLength);
+        List<int> result = AddArrays(firstArray, secondArray);
+        PrintArray(result);
+
+    }
+  
 }
 
