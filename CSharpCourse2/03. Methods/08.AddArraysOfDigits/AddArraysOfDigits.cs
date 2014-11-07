@@ -1,6 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
+/*Write a method that adds two positive integer
+numbers represented as arrays of digits (each array
+element arr[i] contains a digit; the last digit is
+kept in arr[0]). Each of the numbers that will be
+added could have up to 10 000 digits.*/
+
 class AddArraysOfDigits
 {
     static int[] StringToArray(string anyString)
@@ -50,19 +56,19 @@ class AddArraysOfDigits
         {
             resultArray.Add(1);
         }
+        resultArray.Reverse();
         return resultArray;
-    }
-    static void PrintReverse(List<int> listToPrint)
-    {
-        for (int i = listToPrint.Count - 1; i >= 0; i--)
-        {
-            Console.Write(listToPrint[i]);
-        }
-        Console.WriteLine();
     }
     static void PrintArray(int[] array)
     {
         for (int i = 0; i < array.Length; i++)
+        {
+            Console.Write(array[i]);
+        }
+    }
+    static void PrintArray(List<int> array)
+    {
+        for (int i = 0; i < array.Count; i++)
         {
             Console.Write(array[i]);
         }
@@ -75,6 +81,7 @@ class AddArraysOfDigits
         string secondString = Console.ReadLine();
         string shortString;
         string longString;
+        
         if (firstString.Length <= secondString.Length)
         {
             shortString = firstString;
@@ -85,6 +92,7 @@ class AddArraysOfDigits
             shortString = secondString;
             longString = firstString;
         }
+       
         int[] shortArray = StringToArray(shortString);
         int[] longArray = StringToArray(longString);
         PrintArray(shortArray);
@@ -92,7 +100,8 @@ class AddArraysOfDigits
         PrintArray(longArray);
         Console.Write(" = ");
         List<int> result = AddArrays(shortArray, longArray);
-        PrintReverse(result);
+        PrintArray(result);
+        Console.WriteLine();
     }
 }
 
