@@ -55,7 +55,7 @@ namespace tests
 
             for (int i = 0; i < shortArray.Length; i++)
             {
-                resultArray[i] = shortArray[i] + longArray[i] + carry;
+                resultArray.Add (shortArray[i] + longArray[i] + carry;
                 if (resultArray[i] >= 10)
                 {
                     carry = 1;

@@ -3,64 +3,68 @@ using System.Collections.Generic;
 
 class AddArraysOfDigits
 {
-    static int FindGreatestLength(string first, string second)
+    static int[] StringToArray(string anyString)
     {
-        if (first.Length > second.Length)
+        int[] array = new int[anyString.Length];
+        for (int i = 0; i < anyString.Length; i++)
         {
-            return first.Length;
+            array[i] = (int)(anyString[i] - 48);
         }
-        else
-        {
-            return second.Length;
-        }
+        return array;
     }
-    static int[] ConvertToArray(string anyString, int length)
+    static List<int> AddArrays(int[] shortArray, int[] longArray)
     {
-        int[] stringToArray = new int[length];
-        if (anyString.Length < length)
-        {
-            for (int i = 0; i < anyString.Length; i++)
-            {
-                stringToArray[i] = Convert.ToInt32(anyString[i] - 48);
-            }
-        }
-        else
-        {
-            for (int i = 0; i < length; i++)
-            {
-                stringToArray[i] = Convert.ToInt32(anyString[i] - 48);
-            }
-        }
-        return stringToArray;
-    }
-    static List<int> AddArrays(int[] firstArray, int[] secondArray)
-    {
-        List<int> sumArray = new List<int>();
+        Array.Reverse(shortArray);
+        Array.Reverse(longArray);
+        List<int> resultArray = new List<int>();
+
         int residue = 0;
-        for (int i = firstArray.Length - 1; i >= 0; i--)
+        for (int i = 0; i < shortArray.Length; i++)
         {
-            sumArray.Add(firstArray[i] + secondArray[i] + residue);
-            if ((firstArray[i] + secondArray[i] + residue) >= 10)
+            resultArray.Add(shortArray[i] + longArray[i] + residue);
+            if (resultArray[i] > 9)
             {
                 residue = 1;
-                sumArray[i] = sumArray[i] % 10;
+                resultArray[i] %= 10;
             }
             else
             {
                 residue = 0;
             }
-            if (i == firstArray.Length - 1 && residue == 1)
+        }
+        for (int i = shortArray.Length; i < longArray.Length; i++)
+        {
+            resultArray.Add(longArray[i] + residue);
+            if (resultArray[i] > 9)
             {
-                sumArray.Add(1);
+                residue = 1;
+                resultArray[i] %= 10;
+            }
+            else
+            {
+                residue = 0;
             }
         }
-        return sumArray;
-    }
-    static void PrintArray(List<int> arrayToPrint)
-    {
-        for (int i = 0; i < arrayToPrint.Count; i++)
+        
+        if (residue == 1)
         {
-            Console.Write(arrayToPrint[i]);
+            resultArray.Add(1);
+        }
+        return resultArray;
+    }
+    static void PrintReverse(List<int> listToPrint)
+    {
+        for (int i = listToPrint.Count - 1; i >= 0; i--)
+        {
+            Console.Write(listToPrint[i]);
+        }
+        Console.WriteLine();
+    }
+    static void PrintArray(int[] array)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            Console.Write(array[i]);
         }
     }
     static void Main()
@@ -69,13 +73,26 @@ class AddArraysOfDigits
         string firstString = Console.ReadLine();
         Console.Write("Enter second number: ");
         string secondString = Console.ReadLine();
-        int greatestLength = FindGreatestLength(firstString, secondString);
-        int[] firstArray = ConvertToArray(firstString, greatestLength);
-        int[] secondArray = ConvertToArray(secondString, greatestLength);
-        List<int> result = AddArrays(firstArray, secondArray);
-        PrintArray(result);
-
+        string shortString;
+        string longString;
+        if (firstString.Length <= secondString.Length)
+        {
+            shortString = firstString;
+            longString = secondString;
+        }
+        else
+        {
+            shortString = secondString;
+            longString = firstString;
+        }
+        int[] shortArray = StringToArray(shortString);
+        int[] longArray = StringToArray(longString);
+        PrintArray(shortArray);
+        Console.Write(" + ");
+        PrintArray(longArray);
+        Console.Write(" = ");
+        List<int> result = AddArrays(shortArray, longArray);
+        PrintReverse(result);
     }
-  
 }
 
