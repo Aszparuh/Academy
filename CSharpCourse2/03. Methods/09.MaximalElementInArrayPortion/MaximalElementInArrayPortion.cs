@@ -7,12 +7,12 @@ ascending / descending order.*/
 
 class MaximalElementInArrayPortion
 {
-    static int MaximalElement(int[] array, int statrtIndex)
+    static int MaximalElement(int[] array, int startIndex)
     {
-        int maxElementPosition = statrtIndex;
-        for (int i = statrtIndex; i < array.Length - 1; i++)
+        int maxElementPosition = startIndex;
+        for (int i = startIndex + 1; i < array.Length; i++)
         {
-            if (array[i] > array[i + 1])
+            if (array[i] > array[maxElementPosition])
             {
                 maxElementPosition = i;
             }
@@ -22,10 +22,9 @@ class MaximalElementInArrayPortion
     static void Main()
     {
         int[] input = { 1, 22, 54, 2, 5, 76, 2, 178, 3, 4, 7, 8, 9, 23, 6, 3, 89, 3, 4, 67, 23, };
-        int startIndex = 9;
+        int startIndex = 8;
         int positionMaxElement = MaximalElement(input, startIndex);
-        Console.WriteLine(" The element on position {0} has the maximal value strating from position {1}", 
-            positionMaxElement, startIndex);
+        Console.WriteLine(" The element on position {0} has the maximal value strating from position {1}", positionMaxElement, startIndex);
         Console.WriteLine("The maximal value is {0}", input[positionMaxElement]);
     }
 }
