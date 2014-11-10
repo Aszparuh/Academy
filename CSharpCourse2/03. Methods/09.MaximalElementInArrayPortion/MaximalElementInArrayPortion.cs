@@ -10,10 +10,9 @@ class MaximalElementInArrayPortion
     static int MaximalElement(int[] array, int statrtIndex)
     {
         int maxElementPosition = statrtIndex;
-        int maxElementValue = array[statrtIndex];
         for (int i = statrtIndex; i < array.Length - 1; i++)
         {
-            if (maxElementValue > array[i + 1])
+            if (array[i] > array[i + 1])
             {
                 maxElementPosition = i;
             }
