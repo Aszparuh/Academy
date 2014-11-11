@@ -95,6 +95,7 @@ class AddArraysOfDigits
        
         int[] shortArray = StringToArray(shortString);
         int[] longArray = StringToArray(longString);
+        Console.WriteLine();
         PrintArray(shortArray);
         Console.Write(" + ");
         PrintArray(longArray);
