@@ -1,9 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading;
+
+/*Write a program to calculate n! for each n in the
+range [1..100]. Hint: Implement first a method
+that multiplies a number represented as array of
+digits by given integer number.*/
 
 class CalculateFactorial
 {
-    static List<int> MultiplyByDigit(int position, int[] shortArray, int[] longArray)
+    static List<int> MultiplyByDigit(int position, List<int> shortArray, List<int> longArray)
     {
 
         List<int> result = new List<int>();
@@ -13,7 +20,7 @@ class CalculateFactorial
         {
             result.Add(0);
         }
-        for (int i = 0; i < longArray.Length; i++)
+        for (int i = 0; i < longArray.Count; i++)
         {
             current = shortArray[position] * longArray[i] + residue;
             if (current > 9)
@@ -75,10 +82,10 @@ class CalculateFactorial
         }
         return resultArray;
     }
-    static List<int> SumResultDigitMultiplication(int[] shortArray, int[] longArray)
+    static List<int> SumResultDigitMultiplication(List<int> shortArray, List<int> longArray)
     {
         List<int> result = new List<int>();
-        for (int i = 0; i < shortArray.Length; i++)
+        for (int i = 0; i < shortArray.Count; i++)
         {
             result = AddArrays(result, MultiplyByDigit(i,shortArray,longArray));
         }
@@ -94,20 +101,44 @@ class CalculateFactorial
             }
             else
             {
-                Console.Write(array[i] + ", ");
+                Console.Write(array[i]);
             }
         }
         Console.WriteLine();
     }
+    static List<int> StringToList(string anyString)
+    {
+        List<int> array = new List<int>();
+        for (int i = 0; i < anyString.Length; i++)
+        {
+            array.Add ((int)(anyString[i] - 48));
+        }
+        return array;
+    }
     static void Main()
     {
-        int[] firstArray = { 1, 4, 6, 7, 8 };
-        int[] secondArray = { 2, 3 };
-        Array.Reverse(firstArray);
-        Array.Reverse(secondArray);
-        PrintArray(MultiplyByDigit(0, secondArray, firstArray));
-        PrintArray(MultiplyByDigit(1, secondArray, firstArray));
-        PrintArray(SumResultDigitMultiplication(secondArray, firstArray));
+        Console.WriteLine("Calculate Factorial");
+        Console.Write("Enter number: ");
+        string number = Console.ReadLine();
+        Stopwatch timer = new Stopwatch();
+        timer.Start();
+        int numberAsInteger = int.Parse(number);
+        List<int> firstArray = StringToList(number);
+        firstArray.Reverse();
+        for (int i = numberAsInteger - 1; i > 0; i--)
+        {
+            string nextNumber = i.ToString();
+            List<int> secondArray = StringToList(nextNumber);
+            secondArray.Reverse();
+            firstArray = SumResultDigitMultiplication(firstArray, secondArray);
+        }
+        timer.Stop();
+        Console.WriteLine();
+        Console.Write(number + "!" + " " + "= ");
+        firstArray.Reverse();
+        PrintArray(firstArray);
+        Console.WriteLine();
+        Console.WriteLine(timer.Elapsed);
     }
 }
 
