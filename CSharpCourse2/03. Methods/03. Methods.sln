@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.MaximalElementInArrayPor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.CalculateFactorial", "10.CalculateFactorial\10.CalculateFactorial.csproj", "{F4D848D1-5BDC-4CA1-8CF3-F05839D6E8B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.AddPolinomials", "11.AddPolinomials\11.AddPolinomials.csproj", "{81EB25D9-3425-4DF1-9446-1DD5C235FAAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{F4D848D1-5BDC-4CA1-8CF3-F05839D6E8B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4D848D1-5BDC-4CA1-8CF3-F05839D6E8B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4D848D1-5BDC-4CA1-8CF3-F05839D6E8B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81EB25D9-3425-4DF1-9446-1DD5C235FAAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81EB25D9-3425-4DF1-9446-1DD5C235FAAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81EB25D9-3425-4DF1-9446-1DD5C235FAAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81EB25D9-3425-4DF1-9446-1DD5C235FAAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
