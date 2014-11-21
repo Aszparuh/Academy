@@ -28,7 +28,7 @@ class AddPolinomials
         {
             result[i] = firstPolnomial[i] + secondPolinomial[i];
         }
-        for (int i = firstPolnomial.Length - 1; i < secondPolinomial.Length; i++)
+        for (int i = firstPolnomial.Length; i < secondPolinomial.Length; i++)
         {
             result[i] = secondPolinomial[i];
         }
