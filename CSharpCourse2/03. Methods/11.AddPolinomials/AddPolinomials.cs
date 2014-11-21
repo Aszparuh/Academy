@@ -12,9 +12,10 @@ class AddPolinomials
         decimal[] array = new decimal[degree + 1];
         for (int i = array.Length - 1; i >= 0; i--)
         {
-            Console.Write("Enter coefficient on {0} degree", i);
+            Console.Write("Enter coefficient on {0} degree: ", i);
             array[i] = int.Parse(Console.ReadLine());
         }
+        Console.WriteLine();
         return array;
     }
     static decimal[] AddTwoPolinomials(decimal[] firstPolnomial, decimal[] secondPolinomial)
@@ -38,13 +39,42 @@ class AddPolinomials
     {
         for (int i = polinomial.Length - 1; i >= 0; i--)
         {
-            if (i < polinomial.Length - 1 && polinomial[i] > 0)
+            if (polinomial[i] < 0)
             {
-                Console.Write(" + " + polinomial[i] + "x^" + i);
+                if (i == 0)
+                {
+                    Console.Write("{0}", polinomial[i]);
+                }
+                else if (i == 1)
+                {
+                    Console.Write("{0}x", polinomial[i]);
+                }
+                else
+                {
+                    Console.Write("{0}x^{1}", polinomial[i], i);
+                }
             }
-            else
+            else if (polinomial[i] > 0)
             {
-                Console.Write(polinomial[i] + "x^" + i);
+                if (i == polinomial.Length - 1)
+                {
+                    Console.Write("{0}x^{1}", polinomial[i], i);
+                }
+                else
+                {
+                    if (i == 0)
+                    {
+                        Console.Write("+{0}", polinomial[i]);
+                    }
+                    else if (i == 1)
+                    {
+                        Console.Write("+{0}x", polinomial[i]);
+                    }
+                    else
+                    {
+                        Console.Write("+{0}x^{1}", polinomial[i], i);
+                    }
+                }
             }
         }
         Console.WriteLine();
@@ -55,10 +85,13 @@ class AddPolinomials
         int firstDegree = int.Parse(Console.ReadLine());
         Console.Write("Enter degree for second polinomial: ");
         int secondDegree = int.Parse(Console.ReadLine());
+        Console.WriteLine();
         decimal[] firstPolinomial = GetCoefficients(firstDegree);
         decimal[] secondPolinomial = GetCoefficients(secondDegree);
         PrintPolinomial(firstPolinomial);
+        Console.WriteLine("+");
         PrintPolinomial(secondPolinomial);
+        Console.WriteLine("=");
         PrintPolinomial(AddTwoPolinomials(firstPolinomial, secondPolinomial));
     }
 }
