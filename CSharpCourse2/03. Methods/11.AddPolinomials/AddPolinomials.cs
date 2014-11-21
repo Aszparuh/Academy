@@ -37,45 +37,46 @@ class AddPolinomials
     }
     static void PrintPolinomial(decimal[] polinomial)
     {
-        for (int i = polinomial.Length - 1; i >= 0; i--)
+        for (int i = polinomial.Length - 1; i > 0; i--)
         {
+            if (polinomial[i] > 0)
+            {
+                if (polinomial[i] == 1 || i == polinomial.Length - 1)
+                {
+                    Console.Write("x^{0}", i);
+                }
+                else if (polinomial[i] == 1)
+                {
+                    Console.Write("+x^{0}", i);
+                }
+                else
+                {
+                    Console.Write("+{0}x^{1}", polinomial[i], i);
+                }
+            }
             if (polinomial[i] < 0)
             {
-                if (i == 0)
+                if (polinomial[i] == 1 || i == polinomial.Length - 1)
                 {
-                    Console.Write("{0}", polinomial[i]);
+                    Console.Write("x^{0}", i);
                 }
-                else if (i == 1)
+                else if (polinomial[i] == 1)
                 {
-                    Console.Write("{0}x", polinomial[i]);
+                    Console.Write("x^{0}", i);
                 }
                 else
                 {
                     Console.Write("{0}x^{1}", polinomial[i], i);
                 }
             }
-            else if (polinomial[i] > 0)
-            {
-                if (i == polinomial.Length - 1)
-                {
-                    Console.Write("{0}x^{1}", polinomial[i], i);
-                }
-                else
-                {
-                    if (i == 0)
-                    {
-                        Console.Write("+{0}", polinomial[i]);
-                    }
-                    else if (i == 1)
-                    {
-                        Console.Write("+{0}x", polinomial[i]);
-                    }
-                    else
-                    {
-                        Console.Write("+{0}x^{1}", polinomial[i], i);
-                    }
-                }
-            }
+        }
+        if (polinomial[0] > 0)
+        {
+            Console.Write("+" + polinomial[0]);
+        }
+        if (polinomial[0] < 0)
+        {
+            Console.Write(polinomial[0]);
         }
         Console.WriteLine();
     }
