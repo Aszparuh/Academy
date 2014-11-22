@@ -37,68 +37,68 @@ class AddPolinomials
     }
     static void PrintPolinomial(decimal[] polinomial)
     {
-        for (int i = polinomial.Length - 1; i > 0; i--)
+        for (int i = polinomial.Length - 1; i >= 0; i--)
         {
-           if(i == polinomial.Length - 1)
-           {
-               if (polinomial[i] == 1)
-               {
-                   Console.Write("x^{0}", i);
-               }
-               else if (polinomial[i] > 1)
-               {
-                   Console.Write("{0}x^{1}", polinomial[i], i);
-               }
-               else if (polinomial[i] < -1)
-               {
-                   Console.Write("{0}x^{1}", polinomial[i], i);
-               }
-               else if (polinomial[i] == -1)
-               {
-                   Console.Write("-x^{0}", i);
-               }
+            if (i == polinomial.Length - 1)
+            {
+                if (polinomial[i] == 1)
+                {
+                    Console.Write("x^{0}", i);
+                }
+                else if (polinomial[i] > 1)
+                {
+                    Console.Write("{0}x^{1}", polinomial[i], i);
+                }
+                else if (polinomial[i] < -1)
+                {
+                    Console.Write("{0}x^{1}", polinomial[i], i);
+                }
+                else if (polinomial[i] == -1)
+                {
+                    Console.Write("-x^{0}", i);
+                }
             }
-           else if (i < polinomial.Length - 1 && i > 1)
-           {
-               if (polinomial[i] == 1)
-               {
-                   Console.Write("+x^{0}", i);
-               }
-               else if (polinomial[i] > 1)
-               {
-                   Console.Write("+{0}x^{1}", polinomial[i], i);
-               }
-               else if (polinomial[i] < -1)
-               {
-                   Console.Write("{0}x^{1}", polinomial[i], i);
-               }
-               else if (polinomial[i] == -1)
-               {
-                   Console.Write("-x^{0}", i);
-               }
-           }
-           else if (i == 1)
-           {
-               if (polinomial[i] > 0)
-               {
-                   Console.Write("+{0}x", polinomial[i]);
-               }
-               else if (polinomial[i] < 0)
-               {
-                   Console.Write("{0}x", polinomial[i]);
-               }
-           }
-           else if (i == 0)
-           {
-               if (polinomial[i] > 0)
-               {
-                   Console.Write("+{0}", polinomial[i]);
-               }
-               else if (polinomial[i] < 0)
-               {
-                   Console.Write(polinomial[i]);
-               }
-           }
+            else if (i < polinomial.Length - 1 && i > 1)
+            {
+                if (polinomial[i] == 1)
+                {
+                    Console.Write("+x^{0}", i);
+                }
+                else if (polinomial[i] > 1)
+                {
+                    Console.Write("+{0}x^{1}", polinomial[i], i);
+                }
+                else if (polinomial[i] < -1)
+                {
+                    Console.Write("{0}x^{1}", polinomial[i], i);
+                }
+                else if (polinomial[i] == -1)
+                {
+                    Console.Write("-x^{0}", i);
+                }
+            }
+            else if (i == 1)
+            {
+                if (polinomial[i] > 0)
+                {
+                    Console.Write("+{0}x", polinomial[i]);
+                }
+                else if (polinomial[i] < 0)
+                {
+                    Console.Write("{0}x", polinomial[i]);
+                }
+            }
+            else if (i == 0)
+            {
+                if (polinomial[i] > 0)
+                {
+                    Console.Write("+{0}", polinomial[i]);
+                }
+                else if (polinomial[i] < 0)
+                {
+                    Console.Write(polinomial[i]);
+                }
+            }
         }
         Console.WriteLine();
     }
