@@ -37,7 +37,7 @@ class AddPolinomials
     }
     static void PrintPolinomial(decimal[] polinomial)
     {
-        for (int i = polinomial.Length - 1; i >= 0; i--)
+        for (int i = polinomial.Length - 1; i > 0; i--)
         {
            if(i == polinomial.Length - 1)
            {
