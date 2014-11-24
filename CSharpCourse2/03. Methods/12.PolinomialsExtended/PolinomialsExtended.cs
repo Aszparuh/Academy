@@ -50,14 +50,12 @@ class PolinomialsExtended
     static decimal[] MultiplyPlonomials(decimal[] firstPolinomial, decimal[] secondPolinomial)
     {
         decimal[] result = new decimal[firstPolinomial.Length + secondPolinomial.Length];
-        decimal[] temp = new decimal[result.Length];
         for (int i = 0; i < firstPolinomial.Length; i++)
         {
             for (int j = 0; j < secondPolinomial.Length; j++)
             {
-                temp[i + j] = firstPolinomial[i] * secondPolinomial[j];
+                result[i + j] += (firstPolinomial[i] * secondPolinomial[j]);
             }
-            result = AddTwoPolinomials(result, temp);
         }
         return result;
     }
@@ -136,27 +134,27 @@ class PolinomialsExtended
         Console.WriteLine();
         decimal[] firstPolinomial = GetCoefficients(firstDegree);
         decimal[] secondPolinomial = GetCoefficients(secondDegree);
-        PrintPolinomial(firstPolinomial);
-        Console.Write(" + ");
-        PrintPolinomial(secondPolinomial);
-        Console.Write(" = ");
-        PrintPolinomial(AddTwoPolinomials(firstPolinomial, secondPolinomial));
-        Console.WriteLine();
-        Console.WriteLine();
-        PrintPolinomial(firstPolinomial);
-        Console.Write(" - ");
-        Console.Write("(");
-        PrintPolinomial(secondPolinomial);
-        Console.Write(") = ");
-        PrintPolinomial(SubstractPolinomials(firstPolinomial, secondPolinomial));
-        Console.WriteLine();
-        Console.Write("(");
-        PrintPolinomial(firstPolinomial);
-        Console.Write(")");
-        Console.Write(" * ");
-        Console.Write("(");
-        PrintPolinomial(secondPolinomial);
-        Console.Write(") = ");
+        //PrintPolinomial(firstPolinomial);
+        //Console.Write(" + ");
+        //PrintPolinomial(secondPolinomial);
+        //Console.Write(" = ");
+        //PrintPolinomial(AddTwoPolinomials(firstPolinomial, secondPolinomial));
+        //Console.WriteLine();
+        //Console.WriteLine();
+        //PrintPolinomial(firstPolinomial);
+        //Console.Write(" - ");
+        //Console.Write("(");
+        //PrintPolinomial(secondPolinomial);
+        //Console.Write(") = ");
+        //PrintPolinomial(SubstractPolinomials(firstPolinomial, secondPolinomial));
+        //Console.WriteLine();
+        //Console.Write("(");
+        //PrintPolinomial(firstPolinomial);
+        //Console.Write(")");
+        //Console.Write(" * ");
+        //Console.Write("(");
+        //PrintPolinomial(secondPolinomial);
+        //Console.Write(") = ");
         PrintPolinomial(MultiplyPlonomials(firstPolinomial, secondPolinomial));
         Console.WriteLine();
     }
