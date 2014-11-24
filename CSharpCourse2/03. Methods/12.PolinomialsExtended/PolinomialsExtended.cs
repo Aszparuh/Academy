@@ -47,6 +47,20 @@ class PolinomialsExtended
         decimal[] result = AddTwoPolinomials(firstPolinomial, secondPolinomial);
         return result;
     }
+    static decimal[] MultiplyPlonomials(decimal[] firstPolinomial, decimal[] secondPolinomial)
+    {
+        decimal[] result = new decimal[firstPolinomial.Length + secondPolinomial.Length];
+        decimal[] temp = new decimal[result.Length];
+        for (int i = 0; i < firstPolinomial.Length; i++)
+        {
+            for (int j = 0; j < secondPolinomial.Length; j++)
+            {
+                temp[i + j] = firstPolinomial[i] * secondPolinomial[j];
+            }
+            result = AddTwoPolinomials(result, temp);
+        }
+        return result;
+    }
     static void PrintPolinomial(decimal[] polinomial)
     {
         for (int i = polinomial.Length - 1; i >= 0; i--)
@@ -133,8 +147,17 @@ class PolinomialsExtended
         Console.Write(" - ");
         Console.Write("(");
         PrintPolinomial(secondPolinomial);
-        Console.Write(")  = ");
+        Console.Write(") = ");
         PrintPolinomial(SubstractPolinomials(firstPolinomial, secondPolinomial));
+        Console.WriteLine();
+        Console.Write("(");
+        PrintPolinomial(firstPolinomial);
+        Console.Write(")");
+        Console.Write(" * ");
+        Console.Write("(");
+        PrintPolinomial(secondPolinomial);
+        Console.Write(") = ");
+        PrintPolinomial(MultiplyPlonomials(firstPolinomial, secondPolinomial));
         Console.WriteLine();
     }
 }
