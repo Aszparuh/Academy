@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.AddPolinomials", "11.Add
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.PolinomialsExtended", "12.PolinomialsExtended\12.PolinomialsExtended.csproj", "{FD0DEBFA-2EA3-43F3-BDA7-0C1E0977F1D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.SolveThreeTasks", "13.SolveThreeTasks\13.SolveThreeTasks.csproj", "{D3AB6698-D973-43BE-9D11-031FBA993E61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{FD0DEBFA-2EA3-43F3-BDA7-0C1E0977F1D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD0DEBFA-2EA3-43F3-BDA7-0C1E0977F1D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD0DEBFA-2EA3-43F3-BDA7-0C1E0977F1D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3AB6698-D973-43BE-9D11-031FBA993E61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3AB6698-D973-43BE-9D11-031FBA993E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3AB6698-D973-43BE-9D11-031FBA993E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3AB6698-D973-43BE-9D11-031FBA993E61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
