@@ -40,6 +40,13 @@ class SolveTasks
         decimal x = -b / a;
         return x;
     }
+    static void PrintMenu()
+    {
+        Console.WriteLine("Choose one of the three tasks");
+        Console.WriteLine("Enter 1 to reverse the digits of a number.");
+        Console.WriteLine("Enter 2 to calculate the average of a sequence of integers.");
+        Console.WriteLine("Enter 3 to solve a linear equation a * x + b = 0.");
+    }
     static void Main()
     {
     }
