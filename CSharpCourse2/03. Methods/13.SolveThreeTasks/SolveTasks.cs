@@ -14,9 +14,44 @@ Validate the input data:
 
 class SolveTasks
 {
+    static bool ValidateUserInput(int number)
+    {
+        if (number < 0)
+        {
+            Console.WriteLine("The number must be possitive");
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    static bool ValidateUserInput(decimal[] sequence)
+    {
+        if (sequence.Length >= 0)
+        {
+            Console.WriteLine("The sequence must not be empty");
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    static bool ValidateUserInput(decimal a)
+    {
+        if (a == 0)
+        {
+            Console.WriteLine("A must not be equal to 0");
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
     static int ReverseNumber(int number)
     {
-        Console.Write("Enter number: ");
         int reversedNumber = 0;
         while (number > 0)
         {
@@ -58,9 +93,12 @@ class SolveTasks
             Console.Clear();
             Console.Write("Enter the number: ");
             int number = int.Parse(Console.ReadLine());
-            Console.Write("Your number reversed is: ");
-            Console.Write(ReverseNumber(number));
-            Console.WriteLine();
+            if (ValidateUserInput(number))
+            {
+                Console.Write("Your number reversed is: ");
+                Console.Write(ReverseNumber(number));
+                Console.WriteLine();
+            }
         }
         else if (choice == 2)
         {
@@ -73,9 +111,12 @@ class SolveTasks
                 Console.Write("Enter value on position {0}", i);
                 sequence[i] = decimal.Parse(Console.ReadLine());
             }
-            Console.Write("The average in your sequence is: ");
-            Console.Write(CalculateAverage(sequence));
-            Console.WriteLine();
+            if (ValidateUserInput(sequence))
+            {
+                Console.Write("The average in your sequence is: ");
+                Console.Write(CalculateAverage(sequence));
+                Console.WriteLine();
+            }
         }
         else if (choice == 3)
         {
@@ -85,8 +126,11 @@ class SolveTasks
             decimal a = decimal.Parse(Console.ReadLine());
             Console.Write("Enter value for b: ");
             decimal b = decimal.Parse(Console.ReadLine());
-            Console.Write("X = ");
-            Console.Write(SolveEquation(a, b));
+            if (ValidateUserInput(a))
+            {
+                Console.Write("X = ");
+                Console.Write(SolveEquation(a, b));
+            }
         }
         else if (choice == 0)
         {
