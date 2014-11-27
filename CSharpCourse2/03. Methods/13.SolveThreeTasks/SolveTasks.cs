@@ -28,7 +28,7 @@ class SolveTasks
     }
     static bool ValidateUserInput(decimal[] sequence)
     {
-        if (sequence.Length >= 0)
+        if (sequence.Length <= 0)
         {
             Console.WriteLine("The sequence must not be empty");
             return false;
@@ -98,24 +98,32 @@ class SolveTasks
                 Console.Write("Your number reversed is: ");
                 Console.Write(ReverseNumber(number));
                 Console.WriteLine();
+                Main();
             }
+            else Main();
         }
         else if (choice == 2)
         {
             Console.Clear();
-            Console.WriteLine("Enter the length of your sequence: ");
+            Console.Write("Enter the length of your sequence: ");
             int length = int.Parse(Console.ReadLine());
             decimal[] sequence = new decimal[length];
             for (int i = 0; i < length; i++)
             {
-                Console.Write("Enter value on position {0}", i);
+                Console.Write("Enter value on position {0}: ", i);
                 sequence[i] = decimal.Parse(Console.ReadLine());
             }
             if (ValidateUserInput(sequence))
             {
+                Console.Clear();
                 Console.Write("The average in your sequence is: ");
                 Console.Write(CalculateAverage(sequence));
                 Console.WriteLine();
+                Main();
+            }
+            else
+            {
+                Main();
             }
         }
         else if (choice == 3)
@@ -128,8 +136,13 @@ class SolveTasks
             decimal b = decimal.Parse(Console.ReadLine());
             if (ValidateUserInput(a))
             {
-                Console.Write("X = ");
+                Console.WriteLine("X = ");
                 Console.Write(SolveEquation(a, b));
+                Main();
+            }
+            else
+            {
+                Main();
             }
         }
         else if (choice == 0)
