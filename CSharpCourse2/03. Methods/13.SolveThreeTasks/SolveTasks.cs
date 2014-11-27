@@ -46,9 +46,58 @@ class SolveTasks
         Console.WriteLine("Enter 1 to reverse the digits of a number.");
         Console.WriteLine("Enter 2 to calculate the average of a sequence of integers.");
         Console.WriteLine("Enter 3 to solve a linear equation a * x + b = 0.");
+        Console.WriteLine("Enter 0 to exit");
+        Console.Write("===>");
     }
     static void Main()
     {
+        PrintMenu();
+        int choice = int.Parse(Console.ReadLine());
+        if (choice == 1)
+        {
+            Console.Clear();
+            Console.Write("Enter the number: ");
+            int number = int.Parse(Console.ReadLine());
+            Console.Write("Your number reversed is: ");
+            Console.Write(ReverseNumber(number));
+            Console.WriteLine();
+        }
+        else if (choice == 2)
+        {
+            Console.Clear();
+            Console.WriteLine("Enter the length of your sequence: ");
+            int length = int.Parse(Console.ReadLine());
+            decimal[] sequence = new decimal[length];
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write("Enter value on position {0}", i);
+                sequence[i] = decimal.Parse(Console.ReadLine());
+            }
+            Console.Write("The average in your sequence is: ");
+            Console.Write(CalculateAverage(sequence));
+            Console.WriteLine();
+        }
+        else if (choice == 3)
+        {
+            Console.Clear();
+            Console.WriteLine("a * x + b = 0");
+            Console.Write("Enter value for a: ");
+            decimal a = decimal.Parse(Console.ReadLine());
+            Console.Write("Enter value for b: ");
+            decimal b = decimal.Parse(Console.ReadLine());
+            Console.Write("X = ");
+            Console.Write(SolveEquation(a, b));
+        }
+        else if (choice == 0)
+        {
+            Environment.Exit(0);
+        }
+        else
+        {
+            Console.Clear();
+            Console.WriteLine("Invalid option");
+            Main();
+        }
     }
 }
 
