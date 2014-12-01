@@ -17,6 +17,18 @@ class ConvertDecimalNumberToBinary
         }
         return array;
     }
+    static byte[] NegNumberToBinary(int number)
+    {
+        byte[] array = new byte[32];
+        int temp = int.MinValue + number;
+        for (int i = 0; temp > 0; i++)
+        {
+            array[i] = Convert.ToByte(temp & 1);
+            temp >>= 1;
+        }
+        array[31] = 1;
+        return array;
+    }
     static void PrintBinaryRepresentation(byte[] array)
     {
         for (int i = array.Length - 1; i >= 0; i--)
@@ -29,7 +41,14 @@ class ConvertDecimalNumberToBinary
         Console.Write("Enter decimal number: ");
         int number = int.Parse(Console.ReadLine());
         Console.WriteLine("The binary representation of the chosen number is: ");
-        PrintBinaryRepresentation(PosNumberToBinary(number));
+        if (number >= 0)
+        {
+            PrintBinaryRepresentation(PosNumberToBinary(number));
+        }
+        else
+        {
+            PrintBinaryRepresentation(NegNumberToBinary(number));
+        }
         Console.WriteLine();
     }
 }
