@@ -1,24 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
+
 
 /*Write a program to convert decimal numbers to their
 binary representation.*/
 
 class ConvertDecimalNumberToBinary
 {
-    static List<byte> NumberToBinary(int number)
+    static byte[] PosNumberToBinary(int number)
     {
-        List<byte> array = new List<byte>();
-        while (number > 0)
+        byte[] array = new byte[32];
+        for (int i = 0; number > 0; i++)
         {
-            array.Add(Convert.ToByte(number & 1));
+
+            array[i] = Convert.ToByte(number & 1);
             number >>= 1;
         }
         return array;
     }
-    static void PrintBinaryRepresentation(List<byte> array)
+    static void PrintBinaryRepresentation(byte[] array)
     {
-        for (int i = array.Count - 1; i >= 0; i--)
+        for (int i = array.Length - 1; i >= 0; i--)
         {
             Console.Write(array[i]);
         }
@@ -27,8 +28,8 @@ class ConvertDecimalNumberToBinary
     {
         Console.Write("Enter decimal number: ");
         int number = int.Parse(Console.ReadLine());
-        Console.Write("The binary representation of the chosen number is: ");
-        PrintBinaryRepresentation(NumberToBinary(number));
+        Console.WriteLine("The binary representation of the chosen number is: ");
+        PrintBinaryRepresentation(PosNumberToBinary(number));
         Console.WriteLine();
     }
 }
