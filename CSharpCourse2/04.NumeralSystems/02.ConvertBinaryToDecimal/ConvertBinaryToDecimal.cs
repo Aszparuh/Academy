@@ -5,10 +5,10 @@ decimal representation.*/
 
 class ConvertBinaryToDecimal
 {
-    static int[] StingToArray(string binaryNumber)
+    static int[] StringToArray(string binaryNumber)
     {
         int[] array = new int[binaryNumber.Length];
-        for (int i = binaryNumber.Length - 1; i >= 0; i--)
+        for (int i = 0; i < binaryNumber.Length; i++)
         {
             if (binaryNumber[i] == '0')
             {
@@ -25,15 +25,36 @@ class ConvertBinaryToDecimal
         }
         return array;
     }
-    //static int ConverToDecimal(int[] array)
-    //{
-    //    int result = 0;
-
-    //}
+    static int ConvertToDecimal(int[] array)
+    {
+        int result = 0;
+        int temp = 1;
+        for (int i = 0; i < array.Length; i++)
+        {
+            if(array[i] == 1)
+            {
+                for (int j = 0; j == i; j++)
+                {
+                    temp *= 2;
+                }
+            }
+            result += temp;
+        }
+        if (array[0] == 1)
+        {
+            return result + 1;
+        }
+        else
+        {
+            return result;
+        }
+    }
     static void Main()
     {
         Console.Write("Enter number in binary: ");
         string binaryNumber = Console.ReadLine();
+        Console.Write("The number in decimal is: ");
+        Console.Write(ConvertToDecimal(StringToArray(binaryNumber)));
         
     }
 }
