@@ -23,22 +23,24 @@ class ConvertBinaryToDecimal
                 Console.WriteLine("The number is not valid in binary");
             }
         }
+        Array.Reverse(array);
         return array;
     }
     static int ConvertToDecimal(int[] array)
     {
         int result = 0;
         int temp = 1;
-        for (int i = 0; i < array.Length; i++)
+        for (int i = 1; i < array.Length; i++)
         {
             if(array[i] == 1)
             {
-                for (int j = 0; j == i; j++)
+                for (int j = 1; j < i; j++)
                 {
                     temp *= 2;
                 }
             }
             result += temp;
+            temp = 1;
         }
         if (array[0] == 1)
         {
@@ -49,10 +51,19 @@ class ConvertBinaryToDecimal
             return result;
         }
     }
+    static void PrintArray(int[] array)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            Console.Write(array[i]);
+        }
+        Console.WriteLine();
+    }
     static void Main()
     {
         Console.Write("Enter number in binary: ");
         string binaryNumber = Console.ReadLine();
+        PrintArray(StringToArray(binaryNumber));
         Console.Write("The number in decimal is: ");
         Console.Write(ConvertToDecimal(StringToArray(binaryNumber)));
         
