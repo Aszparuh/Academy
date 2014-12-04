@@ -34,12 +34,17 @@ class ConvertBinaryToDecimal
         {
             if(array[i] == 1)
             {
-                for (int j = 1; j < i; j++)
+                int j = i;
+                while (j > 0)
                 {
                     temp *= 2;
+                    j--;
                 }
             }
-            result += temp;
+            if (temp > 1)
+            {
+                result += temp;
+            }
             temp = 1;
         }
         if (array[0] == 1)
@@ -51,21 +56,13 @@ class ConvertBinaryToDecimal
             return result;
         }
     }
-    static void PrintArray(int[] array)
-    {
-        for (int i = 0; i < array.Length; i++)
-        {
-            Console.Write(array[i]);
-        }
-        Console.WriteLine();
-    }
     static void Main()
     {
         Console.Write("Enter number in binary: ");
         string binaryNumber = Console.ReadLine();
-        PrintArray(StringToArray(binaryNumber));
         Console.Write("The number in decimal is: ");
         Console.Write(ConvertToDecimal(StringToArray(binaryNumber)));
+        Console.WriteLine();
         
     }
 }
