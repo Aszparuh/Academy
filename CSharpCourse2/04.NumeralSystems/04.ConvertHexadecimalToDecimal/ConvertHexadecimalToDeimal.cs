@@ -13,7 +13,14 @@ class ConvertHexadecimalToDeimal
             numberAsString = numberAsString.Substring(2);
         }
         Console.WriteLine(numberAsString);
+        numberAsString.ToUpper();
         return 0;
+    }
+    static string ReverseString(string anyString)
+    {
+        char[] array = anyString.ToCharArray();
+        Array.Reverse(array);
+        return new string(array);
     }
     static void Main()
     {
