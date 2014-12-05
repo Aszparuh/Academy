@@ -6,7 +6,7 @@ their decimal representation.*/
 
 class ConvertHexadecimalToDeimal
 {
-    static int ConvertToDecimal(string numberAsString)
+    static int FormatString(string numberAsString)
     {
         if (numberAsString[0] == '0' && numberAsString[1] == 'x')
         {
@@ -47,7 +47,7 @@ class ConvertHexadecimalToDeimal
     {
         Console.Write("Enter number in hexadecimal: ");
         string numberHex = Console.ReadLine();
-        ConvertToDecimal(numberHex);
+        
 
     }
 }
