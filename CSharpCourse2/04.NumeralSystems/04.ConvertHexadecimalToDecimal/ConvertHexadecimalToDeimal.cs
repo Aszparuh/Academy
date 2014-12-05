@@ -14,7 +14,28 @@ class ConvertHexadecimalToDeimal
         }
         Console.WriteLine(numberAsString);
         numberAsString.ToUpper();
+        ReverseString(numberAsString);
         return 0;
+    }
+    static int CalculatePower(int number, int power)
+    {
+        int result = 1;
+        if (power == 0)
+        {
+            result = 1;
+        }
+        else if (power == 1)
+        {
+            result = number;
+        }
+        else
+        {
+            for (int i = power; i > 0; i--)
+            {
+                result *= number;
+            }
+        }
+        return result;
     }
     static string ReverseString(string anyString)
     {
