@@ -6,16 +6,19 @@ their decimal representation.*/
 
 class ConvertHexadecimalToDeimal
 {
-    static int FormatString(string numberAsString)
+    static string FormatString(string numberAsString)
     {
         if (numberAsString[0] == '0' && numberAsString[1] == 'x')
         {
             numberAsString = numberAsString.Substring(2);
         }
-        Console.WriteLine(numberAsString);
         numberAsString.ToUpper();
         ReverseString(numberAsString);
-        return 0;
+        return numberAsString;
+    }
+    static int ConvertToDecimal(string formatedString)
+    {
+
     }
     static int CalculatePower(int number, int power)
     {
