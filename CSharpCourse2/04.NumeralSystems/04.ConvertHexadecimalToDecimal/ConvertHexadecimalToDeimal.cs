@@ -16,9 +16,26 @@ class ConvertHexadecimalToDeimal
         ReverseString(numberAsString);
         return numberAsString;
     }
-    static int ConvertToDecimal(string formatedString)
+    static int ConvertToDecimal(string formattedString)
     {
-
+        int result = 0;
+        for (int i = 0; i < formattedString.Length; i++)
+        {
+            int digit = 0;
+            switch (formattedString[i])
+            {
+                case 'A': digit = 10; break;
+                case 'B': digit = 11; break;
+                case 'C': digit = 12; break;
+                case 'D': digit = 13; break;
+                case 'E': digit = 14; break;
+                case 'F': digit = 15; break;
+                default: digit = int.Parse(Convert.ToString(formattedString[i]));
+                    break;
+            }
+            result += CalculatePower(digit, i);
+        }
+        return result;
     }
     static int CalculatePower(int number, int power)
     {
@@ -50,7 +67,10 @@ class ConvertHexadecimalToDeimal
     {
         Console.Write("Enter number in hexadecimal: ");
         string numberHex = Console.ReadLine();
-        
+        string formatted = FormatString(numberHex);
+        Console.Write("Your number in decimal is: ");
+        Console.Write(ConvertToDecimal(formatted));
+        Console.WriteLine();
 
     }
 }
