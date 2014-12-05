@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
+/*Write a program to convert decimal numbers to their
+hexadecimal representation.*/
+
 class ConvertDecimalToHexadecimal
 {
     static List<char> ConvertToHexadecimal(int number)
