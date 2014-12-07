@@ -13,15 +13,14 @@ class ConvertHexadecimalToDeimal
             numberAsString = numberAsString.Substring(2);
         }
         numberAsString.ToUpper();
-        ReverseString(numberAsString);
-        return numberAsString;
+        return ReverseString(numberAsString);
     }
     static int ConvertToDecimal(string formattedString)
     {
         int result = 0;
         for (int i = 0; i < formattedString.Length; i++)
         {
-            int digit = 0;
+            int digit;
             switch (formattedString[i])
             {
                 case 'A': digit = 10; break;
@@ -33,7 +32,7 @@ class ConvertHexadecimalToDeimal
                 default: digit = int.Parse(Convert.ToString(formattedString[i]));
                     break;
             }
-            result += CalculatePower(digit, i);
+            result += digit * (CalculatePower(16, i));
         }
         return result;
     }
@@ -71,7 +70,6 @@ class ConvertHexadecimalToDeimal
         Console.Write("Your number in decimal is: ");
         Console.Write(ConvertToDecimal(formatted));
         Console.WriteLine();
-
     }
 }
 
