@@ -35,7 +35,7 @@ class ConvertHexadecimalToDeimal
                     break;
                 case 'F': digit = 15; 
                     break;
-                default: digit = formattedString[i] - '0';
+                default: digit = formattedString[i] - 48; // default: digit = int.Parse(Convert.ToString(formattedString[i]));
                     break;
             }
 
