@@ -11,8 +11,10 @@ class ConvertHexadecimalToDeimal
         {
             numberAsString = numberAsString.Substring(2);
         }
+
         return ReverseString(numberAsString.ToUpper());
     }
+
     static int ConvertToDecimal(string formattedString)
     {
         int result = 0;
@@ -21,19 +23,28 @@ class ConvertHexadecimalToDeimal
             int digit;
             switch (formattedString[i])
             {
-                case 'A': digit = 10; break;
-                case 'B': digit = 11; break;
-                case 'C': digit = 12; break;
-                case 'D': digit = 13; break;
-                case 'E': digit = 14; break;
-                case 'F': digit = 15; break;
+                case 'A': digit = 10; 
+                    break;
+                case 'B': digit = 11; 
+                    break;
+                case 'C': digit = 12; 
+                    break;
+                case 'D': digit = 13; 
+                    break;
+                case 'E': digit = 14; 
+                    break;
+                case 'F': digit = 15; 
+                    break;
                 default: digit = int.Parse(Convert.ToString(formattedString[i]));
                     break;
             }
-            result += digit * (CalculatePower(16, i));
+
+            result += digit * CalculatePower(16, i);
         }
+
         return result;
     }
+
     static int CalculatePower(int number, int power)
     {
         int result = 1;
@@ -52,14 +63,17 @@ class ConvertHexadecimalToDeimal
                 result *= number;
             }
         }
+
         return result;
     }
+
     static string ReverseString(string anyString)
     {
         char[] array = anyString.ToCharArray();
         Array.Reverse(array);
         return new string(array);
     }
+
     static void Main()
     {
         Console.Write("Enter number in hexadecimal: ");
