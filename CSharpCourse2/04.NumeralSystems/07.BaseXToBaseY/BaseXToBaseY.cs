@@ -106,16 +106,23 @@ class BaseXToBaseY
         return result;
     }
 
+    static string ReverseString(string anyString)
+    {
+        char[] array = anyString.ToCharArray();
+        Array.Reverse(array);
+        return new string(array);
+    }
+
     static void Main()
     {
-        Console.Write("Enter the numeral system to convert from: ");
-        int startBase = int.Parse(Console.ReadLine());
-        Console.Write("Enter the numeral system to convert to: ");
-        int endBase = int.Parse(Console.ReadLine());
-        Console.WriteLine("Enter the number: ");
-        string numberAsString = Console.ReadLine();
-        int asDecimal = ConvertFromAnyToDecimal(numberAsString, startBase);
-        Console.WriteLine(ConvertFormDecimalToAny(asDecimal, endBase));
+        //Console.Write("Enter the numeral system to convert from: ");
+        //int startBase = int.Parse(Console.ReadLine());
+        //Console.Write("Enter the numeral system to convert to: ");
+        //int endBase = int.Parse(Console.ReadLine());
+        //Console.WriteLine("Enter the number: ");
+        //string numberAsString = Console.ReadLine();
+        //int asDecimal = ConvertFromAnyToDecimal(numberAsString, startBase);
+        //Console.WriteLine(ConvertFormDecimalToAny(asDecimal, endBase));
+        Console.WriteLine(ConvertFromAnyToDecimal("001100001", 2));
     }
 }
-
