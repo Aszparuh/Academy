@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 /*Write a program to convert from any numeral system
 of given base s to any other numeral system of base
@@ -115,6 +114,8 @@ class BaseXToBaseY
         int endBase = int.Parse(Console.ReadLine());
         Console.WriteLine("Enter the number: ");
         string numberAsString = Console.ReadLine();
+        int asDecimal = ConvertFromAnyToDecimal(numberAsString, startBase);
+        Console.WriteLine(ConvertFormDecimalToAny(asDecimal, endBase));
     }
 }
 
