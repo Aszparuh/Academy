@@ -115,14 +115,13 @@ class BaseXToBaseY
 
     static void Main()
     {
-        //Console.Write("Enter the numeral system to convert from: ");
-        //int startBase = int.Parse(Console.ReadLine());
-        //Console.Write("Enter the numeral system to convert to: ");
-        //int endBase = int.Parse(Console.ReadLine());
-        //Console.WriteLine("Enter the number: ");
-        //string numberAsString = Console.ReadLine();
-        //int asDecimal = ConvertFromAnyToDecimal(numberAsString, startBase);
-        //Console.WriteLine(ConvertFormDecimalToAny(asDecimal, endBase));
-        Console.WriteLine(ConvertFormDecimalToAny(268, 2));
+        Console.Write("Enter the numeral system to convert from: ");
+        int startBase = int.Parse(Console.ReadLine());
+        Console.Write("Enter the numeral system to convert to: ");
+        int endBase = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter the number: ");
+        string numberAsString = ReverseString(Console.ReadLine());
+        int asDecimal = ConvertFromAnyToDecimal(numberAsString, startBase);
+        Console.WriteLine(ConvertFormDecimalToAny(asDecimal, endBase));
     }
 }
