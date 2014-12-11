@@ -51,7 +51,7 @@ class BaseXToBaseY
             }
             number /= baseForm;
         }
-        return result;
+        return ReverseString(result);
     }
 
     static int ConvertFromAnyToDecimal(string numberAsString, int baseFrom)
