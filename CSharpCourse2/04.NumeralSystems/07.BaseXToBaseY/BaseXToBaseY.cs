@@ -5,7 +5,7 @@ of given base s to any other numeral system of base
 d (2 ≤ s, d ≤ 16).*/
 
 class BaseXToBaseY
-{ 
+{
     static string ConvertFormDecimalToAny(int number, int baseForm)
     {
         string result = string.Empty;
@@ -18,33 +18,33 @@ class BaseXToBaseY
                     break;
                 case 1: result += "1";
                     break;
-                case 2: result += "2"; 
+                case 2: result += "2";
                     break;
-                case 3: result += "3"; 
+                case 3: result += "3";
                     break;
-                case 4: result += "4"; 
+                case 4: result += "4";
                     break;
-                case 5: result += "5"; 
+                case 5: result += "5";
                     break;
-                case 6: result += "6"; 
+                case 6: result += "6";
                     break;
-                case 7: result += "7"; 
+                case 7: result += "7";
                     break;
-                case 8: result += "8"; 
+                case 8: result += "8";
                     break;
-                case 9: result += "9"; 
+                case 9: result += "9";
                     break;
-                case 10: result += "A"; 
+                case 10: result += "A";
                     break;
-                case 11: result += "B"; 
+                case 11: result += "B";
                     break;
-                case 12: result += "C"; 
+                case 12: result += "C";
                     break;
-                case 13: result += "D"; 
+                case 13: result += "D";
                     break;
-                case 14: result += "E"; 
+                case 14: result += "E";
                     break;
-                case 15: result += "F"; 
+                case 15: result += "F";
                     break;
                 default: Console.WriteLine("Error");
                     break;
@@ -123,6 +123,6 @@ class BaseXToBaseY
         //string numberAsString = Console.ReadLine();
         //int asDecimal = ConvertFromAnyToDecimal(numberAsString, startBase);
         //Console.WriteLine(ConvertFormDecimalToAny(asDecimal, endBase));
-        Console.WriteLine(ConvertFromAnyToDecimal("001100001", 2));
+        Console.WriteLine(ConvertFormDecimalToAny(268, 2));
     }
 }
