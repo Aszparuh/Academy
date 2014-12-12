@@ -115,17 +115,18 @@ class BaseXToBaseY
     static bool ValidateInput(string numberAsString, int startBase)
     {
         bool isValid = true;
-        char[] numbersArray = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
-        for (int i = 0; i < numberAsString.Length; i++)
+        int digit = 0;
+        foreach (var item in numberAsString)
         {
-            for (int j = 0; j < numbersArray.Length; j++)
+            digit = item - 48;
+            if (digit < 0 || digit >= startBase)
             {
-                if (j >= startBase && numbersArray[i] == numberAsString[j])
-                {
-                    Console.WriteLine("The number is not valid in the chosen numeral system");
-                    isValid = false;
-                }
+                isValid = false;
             }
+        }
+        if (!isValid)
+        {
+            Console.WriteLine("The number is not valid in the current numeral system");
         }
         return isValid;
     }
@@ -142,8 +143,9 @@ class BaseXToBaseY
         if (ValidateInput(numberAsString, startBase))
         {
             int asDecimal = ConvertFromAnyToDecimal(numberAsString, startBase);
-        Console.Write("The converted number is: ");
-        Console.Write(ConvertFormDecimalToAny(asDecimal, endBase));
+            Console.Write("The converted number is: ");
+            Console.Write(ConvertFormDecimalToAny(asDecimal, endBase));
+            Console.WriteLine();
         }
     }
 }
