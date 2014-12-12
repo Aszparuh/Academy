@@ -112,6 +112,23 @@ class BaseXToBaseY
         Array.Reverse(array);
         return new string(array);
     }
+    static bool ValidateInput(string numberAsString, int startBase)
+    {
+        bool isValid = true;
+        char[] numbersArray = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
+        for (int i = 0; i < numberAsString.Length; i++)
+        {
+            for (int j = 0; j < numbersArray.Length; j++)
+            {
+                if (j >= startBase && numbersArray[i] == numberAsString[j])
+                {
+                    Console.WriteLine("The number is not valid in the chosen numeral system");
+                    isValid = false;
+                }
+            }
+        }
+        return isValid;
+    }
 
     static void Main()
     {
@@ -120,8 +137,13 @@ class BaseXToBaseY
         Console.Write("Enter the numeral system to convert to: ");
         int endBase = int.Parse(Console.ReadLine());
         Console.WriteLine("Enter the number: ");
-        string numberAsString = ReverseString(Console.ReadLine());
-        int asDecimal = ConvertFromAnyToDecimal(numberAsString, startBase);
-        Console.WriteLine(ConvertFormDecimalToAny(asDecimal, endBase));
+        string inputString = ReverseString(Console.ReadLine());
+        string numberAsString = inputString.ToUpper();
+        if (ValidateInput(numberAsString, startBase))
+        {
+            int asDecimal = ConvertFromAnyToDecimal(numberAsString, startBase);
+        Console.Write("The converted number is: ");
+        Console.Write(ConvertFormDecimalToAny(asDecimal, endBase));
+        }
     }
 }
