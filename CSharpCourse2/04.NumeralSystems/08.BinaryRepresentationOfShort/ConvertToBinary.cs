@@ -19,6 +19,15 @@ class ConvertToBinary
         return array;
     }
 
+    static byte[] PosConvertToBinary(short number)
+    {
+        byte[] array = new byte[16];
+        for (int i = 0; i < length; i++)
+        {
+            
+        }
+    }
+
     static void PrintBinaryRepresentation(byte[] array)
     {
         for (int i = array.Length - 1; i >= 0; i--)
