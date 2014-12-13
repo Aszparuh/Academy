@@ -22,10 +22,12 @@ class ConvertToBinary
     static byte[] PosConvertToBinary(short number)
     {
         byte[] array = new byte[16];
-        for (int i = 0; i < length; i++)
+        for (int i = 0; number> 0; i++)
         {
-            
+            array[i] = Convert.ToByte(number & 1);
+            number >>= 1;
         }
+        return array;
     }
 
     static void PrintBinaryRepresentation(byte[] array)
@@ -40,9 +42,15 @@ class ConvertToBinary
     {
         Console.WriteLine("Enter number: ");
         short number = short.Parse(Console.ReadLine());
+        Console.Write("The binary representation of {0} is: ", number);
         if (number < 0)
         {
             PrintBinaryRepresentation(NegConvertToBinary(number));
         }
+        else
+        {
+            PrintBinaryRepresentation(PosConvertToBinary(number));
+        }
+        Console.WriteLine();
     }
 }
