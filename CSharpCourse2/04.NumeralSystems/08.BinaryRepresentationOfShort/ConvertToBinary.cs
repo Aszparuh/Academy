@@ -19,6 +19,14 @@ class ConvertToBinary
         return array;
     }
 
+    static void PrintBinaryRepresentation(byte[] array)
+    {
+        for (int i = array.Length - 1; i >= 0; i--)
+        {
+            Console.Write(array[i]);
+        }
+    }
+
     static void Main()
     {
         Console.WriteLine("Enter number: ");
