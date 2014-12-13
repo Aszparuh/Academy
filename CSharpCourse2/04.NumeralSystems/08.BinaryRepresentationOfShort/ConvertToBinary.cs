@@ -9,7 +9,7 @@ class ConvertToBinary
     static byte[] NegConvertToBinary(short number)
     {
         byte[] array = new byte[16];
-        short temp = (short)(short.MaxValue + number);
+        short temp = (short)(short.MaxValue + number + 1);
         for (int i = 0; temp > 0; i++)
         {
             array[i] = Convert.ToByte(temp & 1);
@@ -31,6 +31,9 @@ class ConvertToBinary
     {
         Console.WriteLine("Enter number: ");
         short number = short.Parse(Console.ReadLine());
+        if (number < 0)
+        {
+            PrintBinaryRepresentation(NegConvertToBinary(number));
+        }
     }
 }
-

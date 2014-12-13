@@ -20,7 +20,7 @@ class ConvertDecimalNumberToBinary
     static byte[] NegNumberToBinary(int number)
     {
         byte[] array = new byte[32];
-        int temp = int.MaxValue + number;
+        int temp = int.MaxValue + number + 1;
         for (int i = 0; temp > 0; i++)
         {
             array[i] = Convert.ToByte(temp & 1);
