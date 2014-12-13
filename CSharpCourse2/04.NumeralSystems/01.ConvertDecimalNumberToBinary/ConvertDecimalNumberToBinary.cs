@@ -52,4 +52,3 @@ class ConvertDecimalNumberToBinary
         Console.WriteLine();
     }
 }
-
