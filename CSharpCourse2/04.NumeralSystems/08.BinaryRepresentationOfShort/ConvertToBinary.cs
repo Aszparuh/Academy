@@ -15,6 +15,7 @@ class ConvertToBinary
             array[i] = Convert.ToByte(temp & 1);
             temp >>= 1;
         }
+
         array[15] = 1;
         return array;
     }
@@ -22,11 +23,12 @@ class ConvertToBinary
     static byte[] PosConvertToBinary(short number)
     {
         byte[] array = new byte[16];
-        for (int i = 0; number> 0; i++)
+        for (int i = 0; number > 0; i++)
         {
             array[i] = Convert.ToByte(number & 1);
             number >>= 1;
         }
+
         return array;
     }
 
@@ -51,6 +53,7 @@ class ConvertToBinary
         {
             PrintBinaryRepresentation(PosConvertToBinary(number));
         }
+
         Console.WriteLine();
     }
 }
