@@ -11,4 +11,3 @@ class DayOfTheWeek
         Console.WriteLine("Today is " + today.DayOfWeek + ".");
     }
 }
-
