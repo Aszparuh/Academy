@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 /*Write a method that calculates the number of
 workdays between today and given date, passed as
@@ -34,6 +35,25 @@ class NumberOfWorkDays
             }
         }
         return workingDays;
+    }
+
+    static List<DateTime> GenerateRandomHolidays(DateTime startDate, DateTime endDate, int frequencyInMonth)
+    {
+        List<DateTime> holidays = new List<DateTime>();
+        Random randomGenerator = new Random();
+        DateTime randomDate = startDate;
+        int numberOfMonths = (endDate - startDate).Days;
+        for (int i = 0; i <= numberOfMonths; i++)
+        {
+            for (int j = frequencyInMonth; j > 0; j--)
+            {
+            randomDate = randomDate.AddDays(randomGenerator.Next(1, 31));
+            randomDate = randomDate.AddMonths(i);
+            holidays.Add(randomDate);
+            }
+        }
+
+        return holidays;
     }
 
     static void Main()
