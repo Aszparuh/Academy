@@ -45,13 +45,13 @@ class NumberOfWorkDays
         int numberOfMonths = ((endDate.Year - startDate.Year) * 12) + endDate.Month - startDate.Month;
         for (int i = 0; i < numberOfMonths; i++)
         {
-            randomDate = randomDate.AddMonths(1);
             for (int j = frequencyInMonth; j > 0; j--)
             {
                 DateTime startOfEveryMont = new DateTime(randomDate.Year, randomDate.Month, 1);
                 randomDate = startOfEveryMont.AddDays(randomGenerator.Next(0, 30));
                 holidays.Add(randomDate);
             }
+            randomDate = randomDate.AddMonths(1);
         }
 
         return holidays;
