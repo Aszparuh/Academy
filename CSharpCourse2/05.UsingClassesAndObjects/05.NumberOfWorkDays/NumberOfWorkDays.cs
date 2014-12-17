@@ -21,7 +21,7 @@ class NumberOfWorkDays
         return endDate;
     }
 
-    static int CountWorkingDays(DateTime startDate, DateTime endDate)
+    static int RemoveWeekends(DateTime startDate, DateTime endDate)
     {
         int numberOfDays = (endDate - startDate).Days;
         int workingDays = 0;
@@ -35,6 +35,24 @@ class NumberOfWorkDays
             }
         }
         return workingDays;
+    }
+
+    static int RemoveHolidays(DateTime startDate, DateTime endDate, int daysWithoutWeekends, List<DateTime> holidays)
+    {
+        int numberOfDays = (endDate - startDate).Days;
+        DateTime tempDate = new DateTime();
+        for (int i = 0; i < numberOfDays; i++)
+        {
+            tempDate = startDate.AddDays(i);
+            for (int j = 0; j < holidays.Count; j++)
+            {
+                if (tempDate == holidays[j] && holidays[j].DayOfWeek != DayOfWeek.Saturday && holidays[j].DayOfWeek != DayOfWeek.Sunday)
+                {
+                    daysWithoutWeekends--;
+                }
+            }
+        }
+        return daysWithoutWeekends;
     }
 
     static List<DateTime> GenerateRandomHolidays(DateTime startDate, DateTime endDate, int frequencyInMonth)
@@ -60,8 +78,13 @@ class NumberOfWorkDays
     static void Main()
     {
         DateTime endDate = GetEndDate();
-        Console.WriteLine(endDate);
-        int workingDays = CountWorkingDays(DateTime.Today, endDate);
+        Console.Write("Enter frequency of holidays per month: ");
+        int holidaysPerMonth = int.Parse(Console.ReadLine());
+        Console.Clear();
+        Console.WriteLine("Holidays are ranodmly generated");
+        List<DateTime> holidays = GenerateRandomHolidays(DateTime.Today, endDate, holidaysPerMonth);
+        int daysWithoutWeekends = RemoveWeekends(DateTime.Today, endDate);
+        int workingDays = RemoveHolidays(DateTime.Today, endDate, daysWithoutWeekends, holidays);
         Console.WriteLine("There are {0} working days to the chosen date.", workingDays);
     }
 }
