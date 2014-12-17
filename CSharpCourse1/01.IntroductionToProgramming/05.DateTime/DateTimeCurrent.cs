@@ -6,4 +6,3 @@ class DateTimeCurrent
         Console.WriteLine(DateTime.Now);
     }
 }
-
