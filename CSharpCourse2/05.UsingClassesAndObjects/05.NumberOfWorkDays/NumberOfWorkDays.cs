@@ -41,15 +41,16 @@ class NumberOfWorkDays
     {
         List<DateTime> holidays = new List<DateTime>();
         Random randomGenerator = new Random();
-        DateTime randomDate = startDate;
-        int numberOfMonths = (endDate - startDate).Days;
-        for (int i = 0; i <= numberOfMonths; i++)
+        DateTime randomDate = new DateTime(startDate.Year, startDate.Month, 1);
+        int numberOfMonths = ((endDate.Year - startDate.Year) * 12) + endDate.Month - startDate.Month;
+        for (int i = 0; i < numberOfMonths; i++)
         {
-            randomDate = randomDate.AddMonths(i);
+            randomDate = randomDate.AddMonths(1);
             for (int j = frequencyInMonth; j > 0; j--)
             {
-            randomDate = randomDate.AddDays(randomGenerator.Next(1, 31));
-            holidays.Add(randomDate);
+                DateTime startOfEveryMont = new DateTime(randomDate.Year, randomDate.Month, 1);
+                randomDate = startOfEveryMont.AddDays(randomGenerator.Next(0, 30));
+                holidays.Add(randomDate);
             }
         }
 
