@@ -1,20 +1,21 @@
 ﻿using System;
-class DateTimeCurrent
+
+class FirstTen
 {
-static void Main()
+    static void Main()
     {
-        for (i = 2; i < 12; i++) ;
+        for (int i = 2; i < 12; i++)
         {
-            if (i % 2 == 0) ;
+            if (i % 2 == 0)
             {
-            Console.WriteLine({0}, i);
+                Console.Write(i + ", ");
             }
-        else
-            }
-            Console.WriteLine({0}, -i);
+            else
+            {
+                Console.Write(-i + ", ");
             }
         }
-        Console.WriteLine();
+
+          Console.WriteLine();
     }
 }
-
