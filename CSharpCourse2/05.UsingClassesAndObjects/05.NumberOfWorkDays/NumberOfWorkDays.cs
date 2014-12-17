@@ -20,9 +20,27 @@ class NumberOfWorkDays
         return endDate;
     }
 
+    static int CountWorkingDays(DateTime startDate, DateTime endDate)
+    {
+        int numberOfDays = (endDate - startDate).Days;
+        int workingDays = 0;
+        DateTime tempDate = new DateTime();
+        for (int i = 0; i <= numberOfDays; i++)
+        {
+            tempDate = startDate.AddDays(i);
+            if (tempDate.DayOfWeek != DayOfWeek.Saturday && tempDate.DayOfWeek != DayOfWeek.Sunday)
+            {
+                workingDays++;
+            }
+        }
+        return workingDays;
+    }
+
     static void Main()
     {
         DateTime endDate = GetEndDate();
         Console.WriteLine(endDate);
+        int workingDays = CountWorkingDays(DateTime.Today, endDate);
+        Console.WriteLine("There are {0} working days to the chosen date.", workingDays);
     }
 }
