@@ -19,10 +19,8 @@ class GiveANumber
                 int lineNumber = 1;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    
                     writer.WriteLine(lineNumber + ". " + line);
                     lineNumber++;
-                    
                 }
             }
         }
