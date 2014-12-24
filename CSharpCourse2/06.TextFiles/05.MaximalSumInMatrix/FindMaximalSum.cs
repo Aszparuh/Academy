@@ -18,6 +18,7 @@ class FindMaximalSum
 {
     static void Main()
     {
-
+        string matrixPath = @"../../TextFiles/matrix.txt";
+        string resultPath = @"../../TextFiles/result.txt";
     }
 }
