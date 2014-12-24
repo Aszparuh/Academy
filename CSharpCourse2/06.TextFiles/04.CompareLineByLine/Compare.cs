@@ -17,7 +17,7 @@ class Compare
             using (StreamReader secondFileReader = new StreamReader(secondFile))
             {
                 string firstFileLine = string.Empty;
-                while ((firstFileLine = firstFileReader.ReadLine()) != null)
+                while ((firstFileLine = firstFileReader.ReadLine()) != null) //Assume equal number of lines
                 {
                     string secondFileLine = secondFileReader.ReadLine();
                     if (firstFileLine == secondFileLine)
