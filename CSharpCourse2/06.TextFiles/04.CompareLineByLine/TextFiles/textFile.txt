@@ -1,0 +1,24 @@
+Stream is the natural way to transfer data in
+the computer world
+To read or write a file, we open a stream
+connected to the file and access the data
+through the stream
+Streams are used for reading and writing data
+into and from devices
+Streams are ordered sequences of bytes
+Provide consecutive access to its elements
+Different types of streams are available to
+access different data sources:
+File access, network access, memory streams
+and others
+Streams are open before using them and
+closed after that.
+System.IO.StreamReader
+The easiest way to read a text file
+Implements methods for reading text lines and
+sequences of characters
+Constructed by file name or other stream
+Can specify the text encoding (for Cyrillic use
+windows-1251)
+Works like Console.Read() / ReadLine() but
+over text files
