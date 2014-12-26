@@ -29,8 +29,9 @@ class Concatenate
 
     static void Main()
     {
-        string inputPath = @"../../TextFiles/firstFile.txt";
         string outputPath = @"../../TextFiles/finalFile.txt";
+        string inputPath = @"../../TextFiles/firstFile.txt";
+        File.Delete(outputPath);
         WriteFile(ReadFile(inputPath), outputPath);
         inputPath = @"../../TextFiles/secondFile.txt";
         WriteFile(ReadFile(inputPath), outputPath);
