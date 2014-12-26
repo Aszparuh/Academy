@@ -16,9 +16,44 @@ single number in a separate text file. Example:
 
 class FindMaximalSum
 {
+    static int[,] GetMatrixFromTextFile(string matrixPath)
+    {
+        StreamReader reader = new StreamReader(matrixPath);
+        using (reader)
+        {
+            int N = int.Parse(reader.ReadLine());
+            int[,] matrix = new int[N, N];
+            for (int row = 0; row < N; row++)
+            {
+                string currentRow = reader.ReadLine();
+                string[] numbersAsStrings = currentRow.Split(' ');
+                for (int col = 0; col < numbersAsStrings.Length; col++)
+                {
+                    matrix[row, col] = int.Parse(numbersAsStrings[col]);
+                }
+            }
+
+            return matrix;
+        }
+    }
+
+    static void PrintMatrix(int[,] matrix)
+    {
+        for (int row = 0; row < matrix.GetLength(0); row++)
+        {
+            for (int col = 0; col < matrix.GetLength(1); col++)
+            {
+                Console.Write(matrix[row, col]);
+            }
+            Console.WriteLine();
+        }
+    }
+
     static void Main()
     {
         string matrixPath = @"../../TextFiles/matrix.txt";
         string resultPath = @"../../TextFiles/result.txt";
+        int[,] matrix = GetMatrixFromTextFile(matrixPath);
+        PrintMatrix(matrix);
     }
 }
