@@ -32,11 +32,11 @@ class CharArraysComparison
         }
         if (PrintFirstArray)
         {
-            Console.WriteLine("{0} is lexicografically before {1}",firstWord ,seconWord);
+            Console.WriteLine("{0} is lexicographically before {1}",firstWord ,seconWord);
         }
         else
         {
-            Console.WriteLine("{0} is lexicografically before {1}", seconWord, firstWord);
+            Console.WriteLine("{0} is lexicographically before {1}", seconWord, firstWord);
         }
     }
 }
