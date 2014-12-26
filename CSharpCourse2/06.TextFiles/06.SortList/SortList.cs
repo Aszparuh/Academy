@@ -9,7 +9,7 @@ Peter  Ivan
 Maria  Maria
 George  Peter*/
 
-class Program
+class SortList
 {
     static void Main()
     {
