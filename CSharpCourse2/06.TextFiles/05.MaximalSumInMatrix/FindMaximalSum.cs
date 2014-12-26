@@ -37,6 +37,33 @@ class FindMaximalSum
         }
     }
 
+    static int FindMaxSum(int[,] matrix)
+    {
+        int maximalSum = int.MinValue;
+        int tempSum = 0;
+        for (int row = 0; row < matrix.GetLength(0) - 1; row++)
+        {
+            for (int col = 0; col < matrix.GetLength(1)- 1; col++)
+            {
+                tempSum = matrix[row, col] + matrix[row, col + 1] + matrix[row + 1, col] + matrix[row + 1, col + 1];
+                if (tempSum > maximalSum)
+                {
+                    maximalSum = tempSum;
+                }
+            }
+        }
+        return maximalSum;
+    }
+
+    static void WriteResultToFile(int result, string filePath)
+    {
+        StreamWriter writer = new StreamWriter(filePath);
+        using (writer)
+        {
+            writer.WriteLine(result);
+        }
+    }
+
     static void PrintMatrix(int[,] matrix)
     {
         for (int row = 0; row < matrix.GetLength(0); row++)
@@ -54,6 +81,9 @@ class FindMaximalSum
         string matrixPath = @"../../TextFiles/matrix.txt";
         string resultPath = @"../../TextFiles/result.txt";
         int[,] matrix = GetMatrixFromTextFile(matrixPath);
+        Console.WriteLine("The matrix in the text file is: ");
         PrintMatrix(matrix);
+        WriteResultToFile((FindMaxSum(matrix)), resultPath);
+        Console.WriteLine("The maximal sum in area 2x2 is written to result.txt");
     }
 }
