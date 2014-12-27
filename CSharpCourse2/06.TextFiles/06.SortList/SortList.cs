@@ -28,7 +28,35 @@ class SortList
         return listArr;
     }
 
+    static List<string> SortElements(List<string> anyStringList)
+    {
+        for (int i = 0; i < anyStringList.Count - 1; i++)
+        {
+            for (int j = i + 1; j < anyStringList.Count; j++)
+            {
+                if (anyStringList[i][0] > anyStringList[j][0])
+                {
+                    string temp = anyStringList[i];
+                    anyStringList[i] = anyStringList[j];
+                    anyStringList[j] = temp;
+                }
+            }
+        }
 
+        return anyStringList;
+    }
+
+    static void WriteResult(List<string> resultList, string path)
+    {
+        StreamWriter writer = new StreamWriter(path);
+        using (writer)
+        {
+            for (int i = 0; i < resultList.Count; i++)
+            {
+                writer.WriteLine(resultList[i]);
+            }
+        }
+    }
 
     static void Main()
     {
