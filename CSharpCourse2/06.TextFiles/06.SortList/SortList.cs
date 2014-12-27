@@ -34,7 +34,7 @@ class SortList
         {
             for (int j = i + 1; j < anyStringList.Count; j++)
             {
-                if (anyStringList[i][0] > anyStringList[j][0])
+                if (char.ToUpper(anyStringList[i][0]) > char.ToUpper(anyStringList[j][0])) //ignore the case of the char
                 {
                     string temp = anyStringList[i];
                     anyStringList[i] = anyStringList[j];
@@ -61,6 +61,8 @@ class SortList
     static void Main()
     {
         string inputPath = @"../../TextFiles/inputFile.txt";
-        string outputPath = @"../../TextFile/outputFile.txt";
+        string outputPath = @"../../TextFiles/outputFile.txt";
+        List<string> listToSort = GetStringArr(inputPath);
+        WriteResult(SortElements(listToSort), outputPath);
     }
 }
