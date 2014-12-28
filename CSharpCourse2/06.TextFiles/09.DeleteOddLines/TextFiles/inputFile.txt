@@ -1,0 +1,7 @@
+1.Write a program that reads a text file containing a
+2.square matrix of numbers and finds in the matrix an
+3.area of size 2 x 2 with a maximal sum of its
+4.elements. The first line in the input file contains the
+5.size of matrix N. Each of the next N lines contain N
+6.numbers separated by space. The output should be a
+7.single number in a separate text file. Example:
