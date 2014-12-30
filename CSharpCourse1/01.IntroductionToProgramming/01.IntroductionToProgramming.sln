@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.FirstTenOfSequence", "07
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.HelloCSharp", "01.HelloCsharp\01.HelloCSharp.csproj", "{AFC19398-5A84-4FE6-8BFE-932D66BD716F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.AgeAfterTenYears", "08.AgeAfterTenYears\08.AgeAfterTenYears.csproj", "{E84CF53B-D7A2-4ABE-B4E3-AA32F914E8A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{AFC19398-5A84-4FE6-8BFE-932D66BD716F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFC19398-5A84-4FE6-8BFE-932D66BD716F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFC19398-5A84-4FE6-8BFE-932D66BD716F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E84CF53B-D7A2-4ABE-B4E3-AA32F914E8A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E84CF53B-D7A2-4ABE-B4E3-AA32F914E8A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E84CF53B-D7A2-4ABE-B4E3-AA32F914E8A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E84CF53B-D7A2-4ABE-B4E3-AA32F914E8A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
