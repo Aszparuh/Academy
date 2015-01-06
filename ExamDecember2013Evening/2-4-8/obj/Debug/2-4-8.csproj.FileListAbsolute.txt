@@ -1,6 +1,0 @@
-E:\Games\Dropbox\C#\ExamDecember2013Evening\2-4-8\bin\Debug\2-4-8.exe.config
-E:\Games\Dropbox\C#\ExamDecember2013Evening\2-4-8\bin\Debug\2-4-8.exe
-E:\Games\Dropbox\C#\ExamDecember2013Evening\2-4-8\bin\Debug\2-4-8.pdb
-E:\Games\Dropbox\C#\ExamDecember2013Evening\2-4-8\obj\Debug\2-4-8.csprojResolveAssemblyReference.cache
-E:\Games\Dropbox\C#\ExamDecember2013Evening\2-4-8\obj\Debug\2-4-8.exe
-E:\Games\Dropbox\C#\ExamDecember2013Evening\2-4-8\obj\Debug\2-4-8.pdb
