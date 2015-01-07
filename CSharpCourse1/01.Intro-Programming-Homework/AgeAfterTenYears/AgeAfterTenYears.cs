@@ -28,19 +28,6 @@ class AgeAfterTenYears
             Console.WriteLine("Error");
         }
         Console.WriteLine("You are {0} years old.",age);
-
-        //Calculate age in ten years
-        today = today.AddYears(10);
-
-        age = today.Year - birthDate.Year;
-        if (age > 0)
-        {
-            age -= Convert.ToInt32(today.Date < birthDate.Date.AddYears(age));
-        }
-        else
-        {
-            Console.WriteLine("Error");
-        }
-        Console.WriteLine("In ten years you will be {0} years old",age);
+        Console.WriteLine("You will be {0} years old in ten years", age + 10);
     }
 }
