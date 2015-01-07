@@ -1,0 +1,50 @@
+1.PHP
+Server-side interpreted, non-compiled, scripting language. It can be written within HTML, because
+the code is executed by the server, the result is displayed to the user as plan HTML.
+PHP can:
+-Generate dynamic content.
+-Create, open, read, write and close files on the server
+-Collect data.
+-send, receive cookies.
+-Add, delete, modify data in a database.
+-Restrict users to access some pages on your website.
+-encrypt data.
+ The main difference between C# and PHP is that C# needs to be compiled. PHP is interpreted.
+
+2.Java
+Java is a programming language expressly designed for use in the distributed environment of the Internet. 
+It was designed to have the "look and feel" of the C++ language, but it is simpler to use than C++ and enforces 
+an object-oriented programming model. Java can be used to create complete applications that may run on a single 
+computer or be distributed among servers and clients in a network. It can also be used to build a small application 
+module or applet for use as part of a Web page. Applets make it possible for a Web page user to interact with the page.
+
+Java is very similar to C# but it does not depend on the operating system. There are also differences in syntax and 
+small differrence in the basic data types.
+
+3.Python
+Another server-side interepreted, open-source, scripting language.
+Python can:
+-Provide database access
+-build websites
+-build desktop graphical user inerfaces.
+-build software and games.
+
+The difference here is again that C# needs to be compiled, Python interpreted. Python can be used on different 
+platforms.
+
+4.Objective C
+Object oriented programming language, based on C and used by Apple developers.Objective-C inherits the syntax, 
+primitive types, and flow control statements of C and adds syntax for defining classes and methods. 
+It also adds language-level support for object graph management and object literals while providing 
+dynamic typing and binding, deferring many responsibilities until runtime.
+
+The main difference is the platform.The syntax between the two languages looks very different, 
+presumably because Objective-C has its origins in C and C# has its origins in Java/C++.
+
+5.JavaScript
+JavaScritp is know as the programming language of the web, because it is embedded in most web browsers.
+It is dynamic and uses client-side scripts to interact with the user.It is also used in server-side network 
+programming with runtime environments such as Node.js, game development and the creation of desktop and mobile applications.
+
+JavaScript is again cross-platform and is not compiled like C#. C# requires a browser plugin like Silverlight to act as JavaScript. 
+Even though it's running on a client machine.

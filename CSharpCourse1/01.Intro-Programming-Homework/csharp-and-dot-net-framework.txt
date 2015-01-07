@@ -1,0 +1,8 @@
+.NET Framework is a software framework  developed by Microsoft. It consist of common language
+runtime(CLR) and the .NET Framework class library. CLR manges the code at execusion time, providing
+core services such as memory management, thread management. the class library provides user interface,
+data access, database connectivity, cryptography etc. It supports languages as C#, Visual Basic .NET, F#
+and many more.
+
+C# is one of the programming languages supported by .NET Framework. It is intended to be simple, modern,
+general-purpose, object-oriented programming language.It's syntax is similar to C and C++.  
