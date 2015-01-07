@@ -1,0 +1,50 @@
+1. Eclipse
+Eclipse is a platform that has been designed from the ground up for building integrated web 
+and application development tooling. By design, the platform does not provide a great deal 
+of end user functionality by itself. The value of the platform is what it encourages: rapid 
+development of integrated features based on a plug-in model.
+
+Eclipse provides a common user interface (UI) model for working with tools.  
+It is designed to run on multiple operating systems while providing robust integration with 
+each underlying OS.  Plug-ins can program to the Eclipse portable APIs and run unchanged on 
+any of the supported operating systems. 
+
+At the core of Eclipse is an architecture for dynamic discovery, loading, and running of plug-ins. 
+The platform handles the logistics of finding and running the right code. The platform UI provides 
+a standard user navigation model.  Each plug-in can then focus on doing a small number of tasks well. 
+What kinds of tasks? Defining, testing, animating, publishing, compiling, debugging, diagramming...
+the only limit is your imagination.
+
+2. Xcode
+Xcode is an integrated development environment (IDE) containing a suite of software development tools 
+developed by Apple for developing software for OS X and iOS. First released in 2003, the latest stable 
+release is version 6.1 and is available via the Mac App Store free of charge for Mac OS X Lion, OS X 
+Mountain Lion, OS X Mavericks and OS X Yosemite users.[1] Registered developers can download preview 
+releases and previous versions of the suite through the Apple Developer website.[2] However, Apple recently 
+made a beta version of version 6.x of the software available to those of the public with Apple Developer accounts.
+
+3.Rad Studio
+RAD Studio is an integrated development environment (IDE) for building Win32 applications. The RAD Studio IDE 
+provides a comprehensive set of tools that streamline and simplify the development life cycle.AD Studio is the 
+complete software development solution for rapidly building native applications for Windows, OS X, iOS and Android 
+from a single codebase. Modernize existing Windows applications and create highly connected apps for gadgets and wearables. 
+Deliver high performance, compiled native applications that easily connect with enterprise data, cloud services, devices, sensors, and gadgets.
+
+4.Net Beans
+NetBeans is an integrated development environment (IDE) for developing primarily with Java, but also with 
+other languages, in particular PHP, C/C++, and HTML5.[3] It is also an application platform framework for 
+Java desktop applications and others.
+
+The NetBeans IDE is written in Java and can run on Windows, OS X, Linux, Solaris and other platforms supporting 
+a compatible JVM.
+
+The NetBeans Platform allows applications to be developed from a set of modular software components called modules. 
+Applications based on the NetBeans Platform (including the NetBeans IDE itself) can be extended by third party developers.
+
+5.FlashDevelop
+FlashDevelop is an integrated development environment (IDE) for development of Adobe Flash websites, web applications and 
+desktop applications. The resulting applications run in Adobe Flash Player or the Adobe Integrated Runtime, on Microsoft Windows, 
+Mac OS X, Android or iOS.
+
+FlashDevelop is free and open source software, mostly written in C# and is built on the efficient Scintilla editor component.
+ It is extensible with a plugin architecture and is a .NET Framework 2.0 application only available for Microsoft Windows.
