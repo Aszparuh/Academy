@@ -13,7 +13,11 @@ class PrintASCIITable
         for (int i = 0; i <= 255; i++)
         {
             char letter = (char)i;
-            Console.WriteLine("Character number {0} in ASCII table is {1}", i, letter);
+
+            if (char.IsLetterOrDigit(letter) || char.IsSymbol(letter))
+            {
+                Console.WriteLine("Character number {0} in ASCII table is {1}", i, letter);
+            }
         }
     }
 }
