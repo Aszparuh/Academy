@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.OddOrEven", "OddOrEven\01.OddOrEven.csproj", "{D6D29ADC-68FF-4F86-929F-BB14470233E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.MoonGravitation", "MoonGravitation\02.MoonGravitation.csproj", "{35E8190F-5EB1-49D0-9DFD-F48CBC207781}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivideBy7And5", "DivideBy7And5\DivideBy7And5.csproj", "{9F562BBB-4969-47B8-8FC1-26566721DD38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D6D29ADC-68FF-4F86-929F-BB14470233E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6D29ADC-68FF-4F86-929F-BB14470233E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6D29ADC-68FF-4F86-929F-BB14470233E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35E8190F-5EB1-49D0-9DFD-F48CBC207781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35E8190F-5EB1-49D0-9DFD-F48CBC207781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35E8190F-5EB1-49D0-9DFD-F48CBC207781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35E8190F-5EB1-49D0-9DFD-F48CBC207781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F562BBB-4969-47B8-8FC1-26566721DD38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F562BBB-4969-47B8-8FC1-26566721DD38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F562BBB-4969-47B8-8FC1-26566721DD38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F562BBB-4969-47B8-8FC1-26566721DD38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
