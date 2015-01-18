@@ -28,5 +28,34 @@ class ExchangeBits
         {
             Console.WriteLine("out of range");
         }
+        else
+        {
+            Console.WriteLine("Chosen number in binary: " + Convert.ToString(n, 2).PadLeft(32, '0'));
+            int result = n;
+            for (int i = 0; i < k; i++)
+            {
+                int bitP = (result & (result << p)) >> p;
+                int bitQ = (result & (result << q)) >> q;
+
+                if (bitP != bitQ)
+                {
+                    if (bitP == 1 && bitQ == 0)
+                    {
+                        result = result & (~(1 << p));
+                        result = result | (1 << q);
+                    }
+                    else
+                    {
+                        result = result & (~(1 << q));
+                        result = result | (1 << p);
+                    }
+                }
+
+                p++;
+                q++;
+            }
+
+            Console.WriteLine(result);
+        }
     }
 }
