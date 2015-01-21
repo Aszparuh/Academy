@@ -33,11 +33,11 @@ class ExchangeBits
             }
         }
         // Check if it is out of range
-        if (q < 0 || q + k > 32)
+        if (q < 0 || q + k - 1 > 32)
         {
             Console.WriteLine("out of range");
         }
-        else if (p < 0 || p + k > 32)
+        else if (p < 0 || p + k - 1 > 32)
         {
             Console.WriteLine("out of range");
         }
