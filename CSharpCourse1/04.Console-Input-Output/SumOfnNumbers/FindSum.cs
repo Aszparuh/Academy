@@ -7,10 +7,9 @@ class FindSum
     static void Main()
     {
         Console.Write("Enter number: ");
-        float n = float.Parse(Console.ReadLine());
+        int n = int.Parse(Console.ReadLine());
         float sum = 0;
         float number = 0;
-
 
         for (float i = 0; i < n; i++)
         {
@@ -19,7 +18,6 @@ class FindSum
             sum = sum + number;
         }
 
-        Console.WriteLine("The sum is {0}", sum);
-        
+        Console.WriteLine("The sum is {0}", sum);       
     }
 }

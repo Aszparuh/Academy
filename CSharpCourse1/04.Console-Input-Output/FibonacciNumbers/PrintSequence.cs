@@ -19,8 +19,6 @@ class PrintSequence
             if (i == lenght - 1)
             {
                 Console.Write(thirdNumber);
-                number = secondNumber;
-                secondNumber = thirdNumber;
                 Console.WriteLine();
             }
             else
