@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.PrintDeckOfCards", "Prin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.CalculateFormula", "CalculateFormula\05.CalculateFormula.csproj", "{12C5FB25-B7ED-4560-83EB-455CB720466E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.FactorialDividedByFactorial", "FactorialDividedByFactorial\06.FactorialDividedByFactorial.csproj", "{6CC3A54E-62A8-4756-9BE3-848E240B70D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.FactorialFormula", "FactorialFormula\07.FactorialFormula.csproj", "{09CE7B33-6347-45D1-B3D4-2E7EE215494E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{12C5FB25-B7ED-4560-83EB-455CB720466E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12C5FB25-B7ED-4560-83EB-455CB720466E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12C5FB25-B7ED-4560-83EB-455CB720466E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CC3A54E-62A8-4756-9BE3-848E240B70D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CC3A54E-62A8-4756-9BE3-848E240B70D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CC3A54E-62A8-4756-9BE3-848E240B70D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CC3A54E-62A8-4756-9BE3-848E240B70D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09CE7B33-6347-45D1-B3D4-2E7EE215494E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09CE7B33-6347-45D1-B3D4-2E7EE215494E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09CE7B33-6347-45D1-B3D4-2E7EE215494E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09CE7B33-6347-45D1-B3D4-2E7EE215494E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
