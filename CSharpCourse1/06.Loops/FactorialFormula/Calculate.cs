@@ -18,7 +18,7 @@ class Calculate
         BigInteger factorialN = 1;
         BigInteger factorialK = 1;
         BigInteger factorialDifference = 1;
-        int differenceKN = k - n;
+        int differenceKN = n - k;
 
         if (k < n && n < 1)
         {
@@ -42,8 +42,7 @@ class Calculate
                 differenceKN--;
             } while (differenceKN > 0);
 
-            Console.WriteLine("N!*K! / (K-N)! = {0}", factorialN * factorialK / factorialDifference);
-
+            Console.WriteLine("N! / (K! * (N-K)!) = {0}", factorialN / (factorialK * factorialDifference));
         }
     }
 }
