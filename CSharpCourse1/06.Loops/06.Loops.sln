@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.FromOneToN", "FromOneToN\01.FromOneToN.csproj", "{382B21E4-2362-4923-BD67-BE950C9E16F5}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.FactorialDividedByFactorial", "FactorialDividedByFactorial\06.FactorialDividedByFactorial.csproj", "{6CC3A54E-62A8-4756-9BE3-848E240B70D0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.FactorialFormula", "FactorialFormula\07.FactorialFormula.csproj", "{09CE7B33-6347-45D1-B3D4-2E7EE215494E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.CatalanNumbers", "CatalanNumbers\08.CatalanNumbers.csproj", "{430188B6-A5AB-4CE4-903C-5ABE93200597}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{09CE7B33-6347-45D1-B3D4-2E7EE215494E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09CE7B33-6347-45D1-B3D4-2E7EE215494E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09CE7B33-6347-45D1-B3D4-2E7EE215494E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{430188B6-A5AB-4CE4-903C-5ABE93200597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{430188B6-A5AB-4CE4-903C-5ABE93200597}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{430188B6-A5AB-4CE4-903C-5ABE93200597}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{430188B6-A5AB-4CE4-903C-5ABE93200597}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
