@@ -41,5 +41,7 @@ class PrintRandom
         {
             Console.Write(numbers[i] + " ");
         }
+
+        Console.WriteLine();
     }
 }
