@@ -12,7 +12,7 @@ class PrintSequence
         int lenght = int.Parse(Console.ReadLine());
         int number = 0;
         int secondNumber = 1;
-
+        Console.Write("0, 1, ");
         for (int i = 0; i < lenght; i++)
         {
             int thirdNumber = number + secondNumber;
