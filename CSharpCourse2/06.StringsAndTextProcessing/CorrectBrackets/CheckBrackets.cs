@@ -6,44 +6,39 @@
 
     class CheckBrackets
     {
-        static bool Check(string expr)
+        static int Check(string expr)
         {
-            bool emptyBrackets = false;
-            bool inBrackets = false;
+            int balance = 0;
+
             for (int i = 0; i < expr.Length; i++)
             {
                 if (expr[i] == '(')
                 {
-                    inBrackets = true;
+                    balance++;
                 }
                 if (expr[i] == ')')
                 {
-                    if (inBrackets)
-                    {
-                        inBrackets = false;  
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    balance--;
                 }
             }
 
-            if (!inBrackets)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return balance;
         }
 
         static void Main()
         {
             Console.Write("Enter expression with brackets: ");
             string expression = Console.ReadLine();
-            Console.WriteLine(Check(expression));
+            int balance = Check(expression);
+
+            if (balance == 0)
+            {
+                Console.WriteLine("The brackets are correct");
+            }
+            else
+            {
+                Console.WriteLine("The brackets are not correct");
+            }
         }
     }
 }
