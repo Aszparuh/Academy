@@ -19,17 +19,22 @@
                 inputArray[i] = int.Parse(Console.ReadLine());
             }
 
+            int min;
+            int temp;
             for (int i = 0; i < inputArray.Length - 1; i++)
             {
+                min = i;
                 for (int j = i + 1; j < inputArray.Length; j++)
                 {
-                    if (inputArray[i] > inputArray[j])
+                    if (inputArray[j] < inputArray[min])
                     {
-                        int temp = inputArray[i];
-                        inputArray[i] = inputArray[j];
-                        inputArray[j] = temp;
+                        min = j;
                     }
                 }
+
+                temp = inputArray[i];
+                inputArray[i] = inputArray[min];
+                inputArray[min] = temp;
             }
 
             for (int i = 0; i < inputArray.Length; i++)
