@@ -15,6 +15,7 @@
             {
                 array[i] = i * 5;
             }
+
             Console.WriteLine(string.Join(", ", array));
         }
     }
