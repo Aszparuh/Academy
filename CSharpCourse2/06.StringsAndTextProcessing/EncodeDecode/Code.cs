@@ -22,6 +22,7 @@
                 {
                     keyPosition = 0;
                 }
+
                 sb.Append((char)((int)text[i] ^ (int)key[keyPosition]));
                 keyPosition++;
             }
