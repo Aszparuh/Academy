@@ -8,14 +8,16 @@
     {
         static void Main()
         {
-            Console.Write("Enter the length of the array: ");
-            int length = int.Parse(Console.ReadLine());
-            int[] array = new int[length];
-            for (int i = 0; i < length; i++)
-            {
-                Console.Write("Enter the element on position {0}: ", i);
-                array[i] = int.Parse(Console.ReadLine());
-            }
+            //Console.Write("Enter the length of the array: ");
+            //int length = int.Parse(Console.ReadLine());
+            //int[] array = new int[length];
+            //for (int i = 0; i < length; i++)
+            //{
+            //    Console.Write("Enter the element on position {0}: ", i);
+            //    array[i] = int.Parse(Console.ReadLine());
+            //}
+
+            int[] array = new int[]{2, 3, -6, -1, 2, -1, 6, 4, -8, 8};
 
             int currentSum = array[0];
             int startIndex = 0;
