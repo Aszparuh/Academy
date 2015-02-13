@@ -21,11 +21,15 @@
             words.Add("CLR", "managed execution environment for .NET");
             words.Add("namespace", "hierarchical organization of classes");
 
+            Console.Write("Enter word: ");
+            string word = Console.ReadLine();
+
             foreach (var item in words)
             {
-                Console.WriteLine("{0}", item.Key);
-                Console.WriteLine("Definition: {0}", item.Value);
-                Console.WriteLine();
+                if (word.ToUpper() == item.Key.ToUpper())
+                {
+                    Console.WriteLine(item.Value);
+                }
             }
         }
     }
