@@ -6,7 +6,7 @@
       a sequence of given sum S (if present). Example: 
      {4, 3, 1, 4, 2, 5, 8}, S=11   {4, 2, 5}*/
 
-    class Program
+    class FindSum
     {
         static void Main()
         {
