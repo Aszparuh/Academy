@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.MergeSort", "MergeSort\1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.PrimeNumbers", "PrimeNumbers\15.PrimeNumbers.csproj", "{3275B7F6-5097-49F3-8508-4277BCEB36A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16.SubsetWithSumS", "SubsetWithSumS\16.SubsetWithSumS.csproj", "{9F907C55-28E8-426A-A0CE-30E0370F813D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{3275B7F6-5097-49F3-8508-4277BCEB36A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3275B7F6-5097-49F3-8508-4277BCEB36A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3275B7F6-5097-49F3-8508-4277BCEB36A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F907C55-28E8-426A-A0CE-30E0370F813D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F907C55-28E8-426A-A0CE-30E0370F813D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F907C55-28E8-426A-A0CE-30E0370F813D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F907C55-28E8-426A-A0CE-30E0370F813D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
