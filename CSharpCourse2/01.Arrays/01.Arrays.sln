@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17.SubsetKWithSumS", "Subse
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18.RemoveElementsFromArray", "RemoveElementsFromArray\18.RemoveElementsFromArray.csproj", "{8D06F278-4ABE-434D-B080-B45AB3E9BEC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19.PermutationsOfSet", "PermutationsOfSet\19.PermutationsOfSet.csproj", "{DABC5365-A954-45E3-93E8-B3EF38649CEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{8D06F278-4ABE-434D-B080-B45AB3E9BEC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D06F278-4ABE-434D-B080-B45AB3E9BEC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D06F278-4ABE-434D-B080-B45AB3E9BEC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DABC5365-A954-45E3-93E8-B3EF38649CEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DABC5365-A954-45E3-93E8-B3EF38649CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DABC5365-A954-45E3-93E8-B3EF38649CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DABC5365-A954-45E3-93E8-B3EF38649CEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
