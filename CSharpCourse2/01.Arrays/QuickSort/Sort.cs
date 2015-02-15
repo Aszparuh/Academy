@@ -6,56 +6,71 @@
 
     class Sort
     {
-        static void Main()
+        static void Main(string[] args)
         {
-            int[] array = new int[] { 1, 6, 9, 13, 67, 89, 3, 15, 43, 25, 31, 9, 54 };
+            // Create an unsorted array of string elements
+            int[] unsorted = { 1,5,8,9,14,3,7,9,34,57};
 
-            Console.WriteLine("Unsorted Array");
-            Console.WriteLine(string.Join(", ", array));
+            // Print the unsorted array
+            for (int i = 0; i < unsorted.Length; i++)
+            {
+                Console.Write(unsorted[i] + " ");
+            }
 
-            QuickSort(array, 0, array.Length - 1);
+            Console.WriteLine();
 
-            Console.WriteLine("Sorted Array");
-            Console.WriteLine(string.Join(", ", array));
+            // Sort the array
+            Quicksort(unsorted, 0, unsorted.Length - 1);
+
+            // Print the sorted array
+            for (int i = 0; i < unsorted.Length; i++)
+            {
+                Console.Write(unsorted[i] + " ");
+            }
+
+            Console.WriteLine();
+
+            Console.ReadLine();
         }
 
-        private static void QuickSort(int[] array, int startIndex, int endIndex)
+        public static void Quicksort(int[] elements, int left, int right)
         {
-            int i = startIndex;
-            int j = endIndex;
-            int pivot = array[array.Length / 2];
+            int i = left, j = right;
+            IComparable pivot = elements[(left + right) / 2];
 
             while (i <= j)
             {
-                while (array[i] < pivot)
+                while (elements[i].CompareTo(pivot) < 0)
                 {
                     i++;
                 }
 
-                while(array[j] > pivot)
+                while (elements[j].CompareTo(pivot) > 0)
                 {
                     j--;
                 }
 
                 if (i <= j)
                 {
-                    int temp = array[i];
-                    array[i] = array[j];
-                    array[j] = temp;
+                    // Swap
+                    int tmp = elements[i];
+                    elements[i] = elements[j];
+                    elements[j] = tmp;
+
                     i++;
                     j--;
                 }
             }
 
-            //Recursion
-            if (startIndex < j)
+            // Recursive calls
+            if (left < j)
             {
-                QuickSort(array, startIndex, j);
+                Quicksort(elements, left, j);
             }
 
-            if (i > endIndex)
+            if (i < right)
             {
-                QuickSort(array, i, endIndex);
+                Quicksort(elements, i, right);
             }
         }
     }
