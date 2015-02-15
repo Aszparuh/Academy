@@ -2,7 +2,8 @@
 {
     using System;
 
-    /*Write a program that reads a number N and generates and prints all the permutations of the numbers [1 … N].
+    /*Write a program that reads a number N and generates and prints all the permutations of 
+     * the numbers [1 … N].
         Example:
 
         N	result
@@ -48,7 +49,15 @@
 
         static void Main()
         {
-            int[] arr = { 1, 2, 3 };
+            Console.Write("Enter N: ");
+            int length = int.Parse(Console.ReadLine());
+            int[] arr = new int[length];
+            //int[] arr = { 1, 2, 3 };
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = i + 1;
+            }
             GeneratePermutations(arr, 0);
         }
     }
