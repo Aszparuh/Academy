@@ -6,7 +6,7 @@
 
     class Sort
     {
-        static void Main(string[] args)
+        static void Main()
         {
             // Create an unsorted array of string elements
             int[] unsorted = { 1,5,8,9,14,3,7,9,34,57};
@@ -36,7 +36,7 @@
         public static void Quicksort(int[] elements, int left, int right)
         {
             int i = left, j = right;
-            IComparable pivot = elements[(left + right) / 2];
+            int pivot = elements[(left + right) / 2];
 
             while (i <= j)
             {
