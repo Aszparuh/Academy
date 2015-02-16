@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.MaximalSum", "MaximalSum
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.SequenceNMatrix", "SequenceNMatrix\03.SequenceNMatrix.csproj", "{0B263EAB-C415-4C86-B79A-0D7F3ABE36DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.BinarySearch", "BinarySearch\04.BinarySearch.csproj", "{0C8C943C-6DD2-402F-B317-91D576500149}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0B263EAB-C415-4C86-B79A-0D7F3ABE36DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B263EAB-C415-4C86-B79A-0D7F3ABE36DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B263EAB-C415-4C86-B79A-0D7F3ABE36DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C8C943C-6DD2-402F-B317-91D576500149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C8C943C-6DD2-402F-B317-91D576500149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C8C943C-6DD2-402F-B317-91D576500149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C8C943C-6DD2-402F-B317-91D576500149}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
