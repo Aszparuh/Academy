@@ -38,6 +38,7 @@ class CalculateMinMaxAvgProduct
         {
             product *= array[i];
         }
+
         return product;
     }
 
@@ -48,6 +49,7 @@ class CalculateMinMaxAvgProduct
         {
             sum += array[i];
         }
+
         decimal average = sum / array.Length;
         return average;
     }
