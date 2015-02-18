@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.FillTheMatrix", "FillTheMatrix\01.FillTheMatrix.csproj", "{D8CD7669-D9F0-4913-8F6A-EF9D16CC479E}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.BinarySearch", "BinarySearch\04.BinarySearch.csproj", "{0C8C943C-6DD2-402F-B317-91D576500149}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.SortByStringLength", "SortByStringLength\05.SortByStringLength.csproj", "{C10B6906-7195-4C54-B18D-F54D3632D528}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.MatrixClass", "MatrixClass\06.MatrixClass.csproj", "{FD4ADD87-F84B-4502-8E91-9BF841B59DF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{C10B6906-7195-4C54-B18D-F54D3632D528}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C10B6906-7195-4C54-B18D-F54D3632D528}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C10B6906-7195-4C54-B18D-F54D3632D528}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD4ADD87-F84B-4502-8E91-9BF841B59DF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD4ADD87-F84B-4502-8E91-9BF841B59DF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD4ADD87-F84B-4502-8E91-9BF841B59DF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD4ADD87-F84B-4502-8E91-9BF841B59DF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
