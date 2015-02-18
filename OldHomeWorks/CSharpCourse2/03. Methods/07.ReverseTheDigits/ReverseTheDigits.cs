@@ -7,6 +7,7 @@ class ReverseTheDigits
         Console.Write("Enter your number: ");
         return int.Parse(Console.ReadLine());
     }
+
     static int ReverseNumber()
     {
         int number = TakeInput();
@@ -19,9 +20,9 @@ class ReverseTheDigits
         }
         return reversedNumber;
     }
+
     static void Main()
     {
         Console.WriteLine("Your number reversed is {0}", ReverseNumber());
     }
 }
-

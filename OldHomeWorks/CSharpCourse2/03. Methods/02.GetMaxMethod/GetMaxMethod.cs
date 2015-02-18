@@ -22,6 +22,7 @@ class GetMaxMethod
             return firstNumber;
         }
     }
+
     static void Main()
     {
         Console.Write("Enter first number: ");
@@ -33,4 +34,3 @@ class GetMaxMethod
         Console.WriteLine("The biggest number is {0}.", GetMax(GetMax(firstNum, secondNum), thirdNum));  
     }
 }
-

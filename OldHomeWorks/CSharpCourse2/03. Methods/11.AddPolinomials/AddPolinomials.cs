@@ -18,6 +18,7 @@ class AddPolinomials
         Console.WriteLine();
         return array;
     }
+
     static decimal[] AddTwoPolinomials(decimal[] firstPolnomial, decimal[] secondPolinomial)
     {
         if (secondPolinomial.Length < firstPolnomial.Length)
@@ -35,6 +36,7 @@ class AddPolinomials
         }
         return result;
     }
+
     static void PrintPolinomial(decimal[] polinomial)
     {
         for (int i = polinomial.Length - 1; i >= 0; i--)
@@ -102,6 +104,7 @@ class AddPolinomials
         }
         Console.WriteLine();
     }
+
     static void Main()
     {
         Console.Write("Enter degree for first polinomial: ");
@@ -118,4 +121,3 @@ class AddPolinomials
         PrintPolinomial(AddTwoPolinomials(firstPolinomial, secondPolinomial));
     }
 }
-

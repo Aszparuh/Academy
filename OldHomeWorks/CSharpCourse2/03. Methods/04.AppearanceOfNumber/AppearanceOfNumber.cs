@@ -16,8 +16,10 @@ public class AppearanceOfNumber
                 counter++;
             }
         }
+
         return counter;
     }
+
     static void Main()
     {
         Console.Write("Enter the length of the array: ");
@@ -41,4 +43,3 @@ public class AppearanceOfNumber
         }   
     }
 }
-

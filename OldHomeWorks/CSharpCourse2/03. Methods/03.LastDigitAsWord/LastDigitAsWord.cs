@@ -25,6 +25,7 @@ class LastDigitAsWord
 
         }
     }
+
     static void Main()
     {
         Console.Write("Enter number: ");
@@ -33,4 +34,3 @@ class LastDigitAsWord
         Console.WriteLine("The last digit is {0}.", DigitToWord(number));
     }
 }
-

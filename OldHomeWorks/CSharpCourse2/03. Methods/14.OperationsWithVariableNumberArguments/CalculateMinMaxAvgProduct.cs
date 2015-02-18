@@ -11,22 +11,26 @@ class CalculateMinMaxAvgProduct
     {
         return array;
     }
+
     static decimal[] GetDecimalArray(params decimal[] array)
     {
         return array;
     }
+
     static int FindMax(int[] array)
     {
         Array.Sort(array);
         int max = array[array.Length - 1];
         return max;
     }
+
     static int FindMin(int[] array)
     {
         Array.Sort(array);
         int min = array[0];
         return min;
     }
+
     static BigInteger FindProduct(int[] array)
     {
         BigInteger product = 1;
@@ -36,6 +40,7 @@ class CalculateMinMaxAvgProduct
         }
         return product;
     }
+
     static decimal FindAverage(decimal[] array)
     {
         decimal sum = 0;
@@ -46,6 +51,7 @@ class CalculateMinMaxAvgProduct
         decimal average = sum / array.Length;
         return average;
     }
+
     static void Main()
     {
         Console.WriteLine("The maximal element is {0}",FindMax(GetIntArray(1, 2, 3, 4)));
@@ -55,4 +61,3 @@ class CalculateMinMaxAvgProduct
 
     }
 }
-
