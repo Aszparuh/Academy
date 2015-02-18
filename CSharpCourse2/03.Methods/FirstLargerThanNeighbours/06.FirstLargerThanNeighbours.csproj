@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{43C25270-C7F5-40B1-847C-6685D6B89E84}</ProjectGuid>
+    <ProjectGuid>{8BD91A34-3037-497F-AA3A-545B42FC3C49}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LargerThanNeighbours</RootNamespace>
-    <AssemblyName>LargerThanNeighbours</AssemblyName>
+    <RootNamespace>FirstLargerThanNeighbours</RootNamespace>
+    <AssemblyName>FirstLargerThanNeighbours</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,11 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Find.cs" />
+    <Compile Include="FindFirst.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LargerThanNeighbours\05.LargerThanNeighbours.csproj">
+      <Project>{43c25270-c7f5-40b1-847c-6685d6b89e84}</Project>
+      <Name>05.LargerThanNeighbours</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
