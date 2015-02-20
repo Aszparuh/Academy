@@ -18,6 +18,7 @@ class AddArraysOfDigits
         }
         return array;
     }
+
     static List<int> AddArrays(int[] shortArray, int[] longArray)
     {
         Array.Reverse(shortArray);
@@ -59,6 +60,7 @@ class AddArraysOfDigits
         resultArray.Reverse();
         return resultArray;
     }
+
     static void PrintArray(int[] array)
     {
         for (int i = 0; i < array.Length; i++)
@@ -66,6 +68,7 @@ class AddArraysOfDigits
             Console.Write(array[i]);
         }
     }
+
     static void PrintArray(List<int> array)
     {
         for (int i = 0; i < array.Count; i++)
@@ -73,6 +76,7 @@ class AddArraysOfDigits
             Console.Write(array[i]);
         }
     }
+
     static void Main()
     {
         Console.Write("Enter first number: ");
@@ -105,4 +109,3 @@ class AddArraysOfDigits
         Console.WriteLine();
     }
 }
-

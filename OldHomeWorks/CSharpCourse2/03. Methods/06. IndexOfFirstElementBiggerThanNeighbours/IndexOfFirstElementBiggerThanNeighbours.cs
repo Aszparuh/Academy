@@ -1,5 +1,8 @@
 ﻿using System;
 
+/*Write a method that returns the index of the first element in 
+array that is larger than its neighbours, or -1, if there’s no such element.
+Use the method from the previous exercise.*/
 
 class IndexOfFirstElementBiggerThanNeighbours
 {
@@ -12,6 +15,7 @@ class IndexOfFirstElementBiggerThanNeighbours
                 return i;
             }
         }
+
         return -1;
     }
     static void Main()

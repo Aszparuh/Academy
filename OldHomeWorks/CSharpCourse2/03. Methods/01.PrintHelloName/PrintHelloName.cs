@@ -12,9 +12,9 @@ class PrintHelloName
         string name = Console.ReadLine();
         Console.WriteLine("Hello, " + name + "!");
     }
+
     static void Main()
     {
         AskAndPrintName();
     }
 }
-

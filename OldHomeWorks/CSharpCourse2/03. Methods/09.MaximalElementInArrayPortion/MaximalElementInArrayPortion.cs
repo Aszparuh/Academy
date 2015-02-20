@@ -19,6 +19,7 @@ class MaximalElementInArrayPortion
         }
         return maxElementPosition;
     }
+
     static int[] SortAscending(int[] array)
     {
         int[] sortedArray = new int[array.Length];
@@ -29,6 +30,7 @@ class MaximalElementInArrayPortion
         }
         return sortedArray;
     }
+
     static int[] SortDescending(int[] array)
     {
         int[] sortedArray = new int[array.Length];
@@ -39,6 +41,7 @@ class MaximalElementInArrayPortion
         }
         return sortedArray;
     }
+
     static void PrintArray(int[] array)
     {
         for (int i = 0; i < array.Length; i++)
@@ -54,6 +57,7 @@ class MaximalElementInArrayPortion
         }
         Console.WriteLine();
     }
+
     static void Main()
     {
         int[] input = { 1, 22, 54, 2, 5, 76, 2, 178, 3, 4, 7, 8, 9, 23, 6, 3, 89, 3, 4, 67, 23 };
@@ -71,4 +75,3 @@ class MaximalElementInArrayPortion
         Console.WriteLine();
     }
 }
-
