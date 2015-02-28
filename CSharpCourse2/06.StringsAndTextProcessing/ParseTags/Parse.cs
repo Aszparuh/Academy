@@ -38,7 +38,7 @@
         {
             Console.Write("Enter the text: ");
             //string text = Console.ReadLine();
-            string text = "We are living in a <upcase>yellow submarine</upcase>. We don't have <upcase>anything</upcase> else."
+            string text = "We are living in a <upcase>yellow submarine</upcase>. We don't have <upcase>anything</upcase> else.";
             Console.WriteLine(ToUpperCase(text));
         }
     }
