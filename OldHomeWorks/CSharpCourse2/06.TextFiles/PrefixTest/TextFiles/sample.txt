@@ -1,0 +1,2 @@
+Write a program that deletes from a text file testall words that start testwith the prefix test.
+Words contain only the symbols 0…9, a…z, A…Z, _.

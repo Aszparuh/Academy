@@ -7,33 +7,49 @@ all the text without the tags.*/
 
 class RemoveTags
 {
-    static string RemoveTags(string line)
-    {
-        string lineWithoutTags;
-        int startPos = 0;
-        int endPos = 0;
-        for (int i = 0; i < line.Length; i++)
-        {
-            
-        }
-    }
-
-    static List<string> ReadLine(string filePath)
-    {
-        List<string> textWithoutTags = new List<string>();
-        StreamReader reader = new StreamReader(filePath);
-        using (reader)
-        {
-            string line;
-            while ((line = reader.ReadLine()) != null)
-            {
-                
-            }
-        }
-    }
-
     static void Main()
     {
-        string filePath = @"../../TextFiles/textTags.txt";
+        string s;
+        int closedBrackedPos = 0;
+        int openBrackedPos = 0;
+        try
+        {
+
+            using (StreamReader sr = new StreamReader("../../TextFiles/textTags.txt"))
+            {
+                while (!sr.EndOfStream)
+                {
+                    closedBrackedPos = 0;
+                    openBrackedPos = 0;
+                    s = sr.ReadLine().Trim();
+                    while (!s.EndsWith(">"))
+                    {
+                        s = s + " " + sr.ReadLine().Trim(); 
+                    }
+
+                    closedBrackedPos = s.IndexOf('>');
+                    while (closedBrackedPos > -1 && closedBrackedPos < s.Length - 1)
+                    {
+                        openBrackedPos = s.IndexOf('<', closedBrackedPos + 1);
+                        if (s[closedBrackedPos + 1] != '<')
+                        {
+                            Console.WriteLine(s.Substring(closedBrackedPos + 1, openBrackedPos - closedBrackedPos - 1));
+                            Console.WriteLine(new string('-', 50));
+                        }
+                        s = s.Substring(openBrackedPos);
+                        closedBrackedPos = s.IndexOf('>');
+                    }
+                }
+            }
+        }
+        catch (FileNotFoundException)
+        {
+            Console.WriteLine("Cannot fint input file.");
+            return;
+        }
+        catch (ArgumentOutOfRangeException)
+        {
+            Console.WriteLine("ERROR!!!. Wrong file format.");
+        }
     }
 }

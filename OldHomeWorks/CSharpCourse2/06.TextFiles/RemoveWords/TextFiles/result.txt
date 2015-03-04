@@ -1,0 +1,2 @@
+Write a program that removes from a file all words listed in given another file.
+Handle all exceptions in your methods.
