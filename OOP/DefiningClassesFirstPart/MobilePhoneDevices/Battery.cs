@@ -18,12 +18,12 @@ namespace MobilePhoneDevices
             this.Model = model;
         }
 
-        public Battery(string model, double hoursIdle, double hoursTalk, BatteryType type)
+        public Battery(string model, double hoursIdle, double hoursTalk)
         {
             this.Model = model;
             this.HoursIdle = hoursIdle;
             this.hoursTalk = hoursTalk;
-            this.type = type;
+            this.type = Type;
         }
 
         public string Model
@@ -42,6 +42,12 @@ namespace MobilePhoneDevices
         {
             get { return this.hoursTalk; }
             set { this.hoursTalk = value; }
+        }
+
+        public BatteryType Type
+        {
+            get { return this.type; }
+            set { this.type = value; }
         }
     }
 }

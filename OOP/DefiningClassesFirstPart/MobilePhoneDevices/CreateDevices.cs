@@ -10,7 +10,8 @@ namespace MobilePhoneDevices
     {
         static void Main()
         {
-            
+            var gm = new GSM("asdad", "sdasdasd");
+            Console.WriteLine(gm.ToString());
         }
     }
 }
