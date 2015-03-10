@@ -11,17 +11,19 @@ namespace MobilePhoneDevices
         private string model;
         private double? hoursIdle;
         private double? hoursTalk;
+        private BatteryType type;
 
         public Battery(string model)
         {
             this.Model = model;
         }
 
-        public Battery(string model, double hoursIdle, double hoursTalk)
+        public Battery(string model, double hoursIdle, double hoursTalk, BatteryType type)
         {
             this.Model = model;
             this.HoursIdle = hoursIdle;
             this.hoursTalk = hoursTalk;
+            this.type = type;
         }
 
         public string Model
