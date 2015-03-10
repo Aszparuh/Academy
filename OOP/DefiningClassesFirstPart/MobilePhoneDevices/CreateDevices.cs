@@ -10,8 +10,12 @@ namespace MobilePhoneDevices
     {
         static void Main()
         {
-            var gm = new GSM("asdad", "sdasdasd");
-            Console.WriteLine(gm.ToString());
-        }
+            //test
+            string mod = "HTC567";
+            string man = "HTc";
+            var gg = new GSM(mod, man);
+            Console.WriteLine(gg.ToString());
+
+        }   
     }
 }
