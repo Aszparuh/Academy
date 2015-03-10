@@ -19,10 +19,16 @@ namespace MobilePhoneDevices
         {
             this.Manufacturer = manufacturer;
             this.Model = model;
-            this.owner = null;
-            this.price = null;
-            this.battery = null;
-            this.display = null;
+        }
+
+        public GSM(string manufacturer, string model, string owner, decimal price, Battery anyBattery, Display anyDisplay)
+        {
+            this.Manufacturer = manufacturer;
+            this.Model = model;
+            this.Owner = owner;
+            this.Price = price;
+            this.Battery = anyBattery;
+            this.Display = anyDisplay;
         }
 
         public string Model
@@ -41,6 +47,24 @@ namespace MobilePhoneDevices
         {
             get { return this.owner; }
             set { this.owner = value; }
+        }
+
+        public decimal Price
+        {
+            get { return this.Price; }
+            set { this.price = value; }
+        }
+
+        public Battery Battery
+        {
+            get { return this.battery; }
+            set { this.battery = value; }
+        }
+
+        public Display Display
+        {
+            get { return this.display; }
+            set { this.display = value; }
         }
     }
 }
