@@ -29,19 +29,49 @@ namespace MobilePhoneDevices
         public string Model
         {
             get { return this.model; }
-            set { this.model = value; }
+            set 
+            {
+                if (value == null || value == string.Empty)
+                {
+                    throw new ArgumentException("Invalid model.");
+                }
+                else
+                {
+                    this.model = value;
+                }
+            }
         }
 
         public double? HoursIdle
         {
             get { return this.hoursIdle; }
-            set { this.hoursIdle = value; }
+            set 
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("Hours Idle can not be negative.");
+                }
+                else
+                {
+                    this.hoursIdle = value;
+                }
+            }
         }
 
         public double? HoursTalk
         {
             get { return this.hoursTalk; }
-            set { this.hoursTalk = value; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("Hours Talk can not be negative.");
+                }
+                else
+                {
+                    this.hoursTalk = value;
+                }
+            }
         }
 
         public BatteryType Type
