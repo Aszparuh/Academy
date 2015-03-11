@@ -109,7 +109,10 @@ namespace MobilePhoneDevices
 
         public Battery Battery
         {
-            get { return this.battery; }
+            get 
+            {
+                return new Battery(this.battery.Model, this.battery.HoursIdle, this.battery.HoursTalk, this.battery.Type);
+            }
             set { this.battery = value; }
         }
 

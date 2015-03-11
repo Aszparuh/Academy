@@ -18,7 +18,7 @@ namespace MobilePhoneDevices
             this.Model = model;
         }
 
-        public Battery(string model, double hoursIdle, double hoursTalk)
+        public Battery(string model, double? hoursIdle, double? hoursTalk)
         {
             this.Model = model;
             this.HoursIdle = hoursIdle;
@@ -26,7 +26,7 @@ namespace MobilePhoneDevices
             this.type = Type;
         }
 
-        public Battery(string model, double hoursIdle, double hoursTalk, BatteryType type) 
+        public Battery(string model, double? hoursIdle, double? hoursTalk, BatteryType type) 
             : this(model, hoursIdle, hoursTalk)
         {
             this.Type = type;
