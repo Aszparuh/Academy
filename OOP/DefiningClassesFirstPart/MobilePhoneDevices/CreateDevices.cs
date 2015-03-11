@@ -11,7 +11,7 @@ namespace MobilePhoneDevices
         static void Main()
         {
             //test
-            string mod = "HTC567";
+            string mod = "";
             string man = "HTc";
             var gg = new GSM(mod, man);
             Console.WriteLine(gg.ToString());

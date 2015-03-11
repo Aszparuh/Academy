@@ -17,21 +17,39 @@ namespace MobilePhoneDevices
 
         public GSM(string manufacturer, string model)
         {
-            this.Manufacturer = manufacturer;
-            this.Model = model;
+            if (manufacturer == null || manufacturer == string.Empty)
+            {
+                throw new ArgumentException("Invalid manufacturer.");
+            }
+            else
+            {
+                this.Manufacturer = manufacturer;
+            }
+
+            if (model == null || model == string.Empty)
+            {
+                throw new ArgumentException("Invalid model.");
+            }
+            else
+            {
+                this.Model = model;
+            }
+            
         }
 
-        public GSM(string manufacturer, string model, string owner, decimal price) : this(manufacturer, model)
+        public GSM(string manufacturer, string model, string owner, decimal price)
+            : this(manufacturer, model)
         {
             this.Owner = owner;
             this.Price = price;
         }
-        
-        public GSM(string manufacturer, string model, string owner, decimal price, Battery anyBattery) : this(manufacturer, model, owner, price)
+
+        public GSM(string manufacturer, string model, string owner, decimal price, Battery anyBattery)
+            : this(manufacturer, model, owner, price)
         {
             this.Battery = anyBattery;
         }
-        
+
         public GSM(string manufacturer, string model, string owner, decimal price, Battery anyBattery, Display anyDisplay)
             : this(manufacturer, model, owner, price, anyBattery)
         {
@@ -41,25 +59,65 @@ namespace MobilePhoneDevices
         public string Model
         {
             get { return this.model; }
-            set { this.model = value; }
+            set
+            {
+                if (value == null || value == string.Empty)
+                {
+                    throw new ArgumentException("Invalid model name.");
+                }
+                else
+                {
+                    this.model = value;
+                }
+            }
         }
 
         public string Manufacturer
         {
             get { return this.manufacturer; }
-            set { this.manufacturer = value; }
+            set
+            {
+                if (value == null || value == string.Empty)
+                {
+                    throw new ArgumentException("Invalid manufacturer.");
+                }
+                else
+                {
+                    this.manufacturer = value;
+                }
+            }
         }
 
         public string Owner
         {
-            get { return this.owner; }
+            get
+            {
+                if (this.owner == null || this.owner == string.Empty)
+                {
+                    return "Unknown";
+                }
+                else
+                {
+                    return this.owner;
+                }
+            }
             set { this.owner = value; }
         }
 
         public decimal? Price
         {
             get { return this.Price; }
-            set { this.price = value; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("Invalid price.");
+                }
+                else
+                {
+                    this.price = value;
+                }
+            }
         }
 
         public Battery Battery
@@ -89,7 +147,7 @@ namespace MobilePhoneDevices
             {
                 sb.Append(string.Format("Owner: {0}", "Unknown"));
             }
-            
+
             sb.Append(Environment.NewLine);
             if (this.price != null)
             {
@@ -99,7 +157,7 @@ namespace MobilePhoneDevices
             {
                 sb.Append(string.Format("Price: {0}", "N/a"));
             }
-            
+
             sb.Append(Environment.NewLine);
             if (this.Battery != null)
             {

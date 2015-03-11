@@ -22,7 +22,7 @@ namespace MobilePhoneDevices
         {
             this.Model = model;
             this.HoursIdle = hoursIdle;
-            this.hoursTalk = hoursTalk;
+            this.HoursTalk = hoursTalk;
             this.type = Type;
         }
 
