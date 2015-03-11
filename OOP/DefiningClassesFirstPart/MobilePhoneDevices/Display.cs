@@ -39,7 +39,17 @@ namespace MobilePhoneDevices
         public byte Size
         {
             get { return this.size; }
-            set { this.size = value; }
+            set
+            {
+                if (value < 1)
+                {
+                    throw new ArgumentException("Invalid size for the Display");
+                }
+                else
+                {
+                    this.size = value;
+                }
+            }
         }
         /// <summary>
         /// Gets or sets the number of the colours. 
@@ -47,7 +57,17 @@ namespace MobilePhoneDevices
         public uint NumberOfColours
         {
             get { return this.numberOfColours; }
-            set { this.numberOfColours = value; }
+            set
+            {
+                if (value < 2)
+                {
+                    throw new ArgumentException("Colours can not be less than two.");
+                }
+                else
+                {
+                    this.numberOfColours = value;
+                }
+            }
         }
     }
 }
