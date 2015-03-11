@@ -26,6 +26,13 @@ namespace MobilePhoneDevices
             this.type = Type;
         }
 
+        public Battery(string model, double hoursIdle, double hoursTalk, BatteryType type) 
+            : this(model, hoursIdle, hoursTalk)
+        {
+            this.Type = type;
+        }
+      
+        
         public string Model
         {
             get { return this.model; }

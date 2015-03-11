@@ -8,13 +8,8 @@ namespace MobilePhoneDevices
 {
     class Display
     {
-        private byte size;
+        private float? size;
         private uint numberOfColours;
-
-        public Display()
-        {
-
-        }
 
         public Display(byte size)
         {
@@ -26,7 +21,7 @@ namespace MobilePhoneDevices
             this.NumberOfColours = number;
         }
 
-        public Display(byte size, uint number)
+        public Display(float? size, uint number)
         {
             this.Size = size;
             this.NumberOfColours = number;
@@ -36,7 +31,7 @@ namespace MobilePhoneDevices
         /// <summary>
         /// Gets or sets the size of the display. 
         /// </summary>
-        public byte Size
+        public float? Size
         {
             get { return this.size; }
             set

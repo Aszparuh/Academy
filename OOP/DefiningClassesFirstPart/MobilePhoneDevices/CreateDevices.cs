@@ -11,11 +11,8 @@ namespace MobilePhoneDevices
         static void Main()
         {
             //test
-            string mod = "";
-            string man = "HTc";
-            var gg = new GSM(mod, man);
-            Console.WriteLine(gg.ToString());
-
+            
+            Console.WriteLine(GSM.iPhone4s);
         }   
     }
 }

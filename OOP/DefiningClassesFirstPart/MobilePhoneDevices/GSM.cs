@@ -8,6 +8,9 @@ namespace MobilePhoneDevices
 {
     class GSM
     {
+        public static readonly GSM iPhone4s = new GSM("Apple", "4s", string.Empty, (decimal)489.50, 
+            new Battery("Non-removable 1432 mAh battery (5.3 Wh)", 200, 14, BatteryType.LiPo), 
+            new Display((float)3.5, 16000000));
         private string manufacturer;
         private string model;
         private string owner;
@@ -106,7 +109,7 @@ namespace MobilePhoneDevices
 
         public decimal? Price
         {
-            get { return this.Price; }
+            get { return this.price; }
             set
             {
                 if (value < 0)
