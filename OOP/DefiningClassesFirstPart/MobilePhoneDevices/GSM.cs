@@ -20,24 +20,8 @@ namespace MobilePhoneDevices
 
         public GSM(string manufacturer, string model)
         {
-            if (manufacturer == null || manufacturer == string.Empty)
-            {
-                throw new ArgumentException("Invalid manufacturer.");
-            }
-            else
-            {
-                this.Manufacturer = manufacturer;
-            }
-
-            if (model == null || model == string.Empty)
-            {
-                throw new ArgumentException("Invalid model.");
-            }
-            else
-            {
-                this.Model = model;
-            }
-            
+            this.Manufacturer = manufacturer;
+            this.Model = model; 
         }
 
         public GSM(string manufacturer, string model, string owner, decimal price)
