@@ -26,9 +26,7 @@ namespace MobilePhoneDevices
             {
                 Console.WriteLine(phone.ToString());
                 Console.WriteLine();
-            }
-            
-            
+            }    
         }  
     }
 }

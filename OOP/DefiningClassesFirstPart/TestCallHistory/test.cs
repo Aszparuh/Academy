@@ -19,6 +19,7 @@ namespace TestCallHistory
                 start = start.AddMinutes(3);
                 history.Add(new Call("08845382948", start, end));
             }
+
             //test duration
             //foreach (var item in history)
             //{
@@ -30,6 +31,14 @@ namespace TestCallHistory
                 testDevice.AddCallInHistory(history[i]);
             }
 
+            //Display call information
+            var callHistoryTestDev = testDevice.CallHistory;
+            Console.WriteLine("Call History");
+            foreach (var call in callHistoryTestDev)
+            {
+                Console.WriteLine("Dialed number: {0}, Duration: {1} seconds.", call.DialedNumber, call.Duration);
+            }
+            Console.WriteLine();
 
             //Calculate Price
             var price = testDevice.CalculateCallTotalPrice((decimal)0.37);
