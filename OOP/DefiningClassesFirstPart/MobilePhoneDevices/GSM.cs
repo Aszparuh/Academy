@@ -111,7 +111,7 @@ namespace MobilePhoneDevices
         {
             get 
             {
-                return new Battery(this.battery.Model, this.battery.HoursIdle, this.battery.HoursTalk, this.battery.Type);
+                return this.battery;
             }
             set { this.battery = value; }
         }
