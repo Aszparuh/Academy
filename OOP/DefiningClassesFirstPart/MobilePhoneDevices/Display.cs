@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MobilePhoneDevices
 {
-    class Display
+    public class Display
     {
         private float? size;
         private uint numberOfColours;

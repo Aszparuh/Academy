@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MobilePhoneDevices
 {
-    class Battery
+    public class Battery
     {
         private string model;
         private double? hoursIdle;

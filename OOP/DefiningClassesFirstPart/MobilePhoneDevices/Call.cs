@@ -2,7 +2,7 @@
 
 namespace MobilePhoneDevices
 {
-    class Call
+    public class Call
     {
         private string dialedNumber;
         private DateTime callStart;
@@ -14,7 +14,7 @@ namespace MobilePhoneDevices
             int reslut = DateTime.Compare(start, end);
             if (reslut >= 0)
             {
-                throw new ArgumentException("The date of the start of the call shuold be earlier than the end")
+                throw new ArgumentException("The date of the start of the call shuold be earlier than the end");
             }
 
             this.DialedNumber = dialedNumber;

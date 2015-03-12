@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace MobilePhoneDevices
 {
-    class GSM
+    public class GSM
     {
         public static readonly GSM iPhone4s = new GSM("Apple", "4s", string.Empty, (decimal)489.50, 
             new Battery("Non-removable 1432 mAh battery (5.3 Wh)", 200, 14, BatteryType.LiPo), 
@@ -17,6 +16,7 @@ namespace MobilePhoneDevices
         private decimal? price;
         private Battery battery;
         private Display display;
+        private List<Call> callHistory = new List<Call>();
 
         public GSM(string manufacturer, string model)
         {
@@ -122,6 +122,12 @@ namespace MobilePhoneDevices
             set { this.display = value; }
         }
 
+        public List<Call> CallHistory
+        {
+            get { return this.callHistory; }
+        }
+            
+
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
@@ -173,6 +179,54 @@ namespace MobilePhoneDevices
             }
 
             return sb.ToString();
+        }
+
+        public void AddCallInHistory(Call call)
+        {
+            this.callHistory.Add(call);
+        }
+
+        public void DeleteCallFromHistory(int index)
+        {
+            if (index > -1 && index < this.callHistory.Count)
+            {
+                this.callHistory.RemoveAt(index);
+            }
+            else
+            {
+                throw new IndexOutOfRangeException("Invalid call history index");
+            }
+        }
+
+        public void ClearCallHistory()
+        {
+            this.callHistory.Clear();
+        }
+
+        public void PrintCallHistory()
+        {
+            if (this.callHistory.Count == 0)
+            {
+                Console.WriteLine("Call history is empty");
+            }
+            else
+            {
+                foreach (Call call in this.callHistory)
+                {
+                    Console.WriteLine(call);
+                }
+            }
+        }
+
+        public decimal CalculateCallTotalPrice(decimal pricePerMinute)
+        {
+            int totalDuration = 0;
+            foreach (Call call in this.callHistory)
+            {
+                totalDuration = totalDuration + call.Duration;
+            }
+
+            return totalDuration / 60 * pricePerMinute;
         }
     }
 }
