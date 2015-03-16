@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Point
+﻿namespace Point
 {
+    using System.Collections.Generic;
+
     public class Path
     {
         private List<Point3D> pathList;
@@ -10,6 +9,11 @@ namespace Point
         public Path()
         {
             this.pathList = new List<Point3D>();
+        }
+
+        public List<Point3D> GetPath
+        {
+            get { return this.pathList; }
         }
 
         public void AddPoint(Point3D point)
@@ -20,11 +24,6 @@ namespace Point
         public void ClearPath()
         {
             this.pathList.Clear();
-        }
-
-        public List<Point3D> GetPath()
-        {
-            return this.pathList;
         }
     }
 }
