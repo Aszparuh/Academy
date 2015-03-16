@@ -34,7 +34,7 @@ namespace TestCallHistory
             //Display call information
             var callHistoryTestDev = testDevice.CallHistory;
             Console.WriteLine("Call History");
-            foreach (var call in callHistoryTestDev)
+            foreach (var call in testDevice.CallHistory)
             {
                 Console.WriteLine("Dialed number: {0}, Duration: {1} seconds.", call.DialedNumber, call.Duration);
             }
