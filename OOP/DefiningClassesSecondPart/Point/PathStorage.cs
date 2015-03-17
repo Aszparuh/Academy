@@ -19,7 +19,7 @@
             }
         }
 
-        public static Path LoadPath(string filePath)
+        public static Path LoadPath()
         {
             var path = new Path();
             using (StreamReader reader = new StreamReader(@"../../storage.txt"))
@@ -27,7 +27,7 @@
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    string[] str = line.Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
+                    string[] str = line.Split(new char[] { ' ', ',', ')', '(' }, StringSplitOptions.RemoveEmptyEntries);
                     var pointCoordinates = new double[3];
 
                     for (int i = 0; i < str.Length; i++)
