@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPoint", "TestPoint\Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point", "Point\Point.csproj", "{F40862D6-82C2-4ABD-9839-008C2AB6480A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGenericClass", "TestGenericClass\TestGenericClass.csproj", "{38ECBB70-EFB9-42CF-9424-CA2DC195BCBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericList", "GenericList\GenericList.csproj", "{467C5BAB-D568-4892-93BA-810801E393B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{F40862D6-82C2-4ABD-9839-008C2AB6480A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F40862D6-82C2-4ABD-9839-008C2AB6480A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F40862D6-82C2-4ABD-9839-008C2AB6480A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38ECBB70-EFB9-42CF-9424-CA2DC195BCBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38ECBB70-EFB9-42CF-9424-CA2DC195BCBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38ECBB70-EFB9-42CF-9424-CA2DC195BCBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38ECBB70-EFB9-42CF-9424-CA2DC195BCBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{467C5BAB-D568-4892-93BA-810801E393B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{467C5BAB-D568-4892-93BA-810801E393B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{467C5BAB-D568-4892-93BA-810801E393B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{467C5BAB-D568-4892-93BA-810801E393B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
