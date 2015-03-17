@@ -21,7 +21,7 @@
 
         public override string ToString()
         {
-            return string.Format("(x = {0}, y = {1}, z = {2})", this.X, this.Y, this.Z);
+            return string.Format("({0},{1},{2})", this.X, this.Y, this.Z);
         }
     }
 }
