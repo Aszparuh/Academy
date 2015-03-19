@@ -111,6 +111,7 @@
             return result;
         }
 
+        //Operators
         public static GenMatrix<T> operator +(GenMatrix<T> matrix1, GenMatrix<T> matrix2)
         {
             if (matrix1.Rows != matrix2.Rows || matrix1.Cols != matrix2.Cols)
