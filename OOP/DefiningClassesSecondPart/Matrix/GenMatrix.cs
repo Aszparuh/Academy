@@ -153,5 +153,22 @@
 
             return resultMatrix;
         }
+
+        public static bool operator true(GenMatrix<T> matrix)
+        {
+
+            for (int i = 0; i < matrix.Rows; i++)
+            {
+                for (int j = 0; j < matrix.Cols; j++)
+                {
+                    if (matrix[i, j] == (dynamic)0)
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
     }
 }
