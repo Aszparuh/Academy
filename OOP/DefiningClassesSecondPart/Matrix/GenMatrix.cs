@@ -3,6 +3,7 @@
     using System;
     using System.Text;
 
+    [Version(1,5)]
     public class GenMatrix<T> where T : struct
     {
         //fields
@@ -60,6 +61,7 @@
         }
 
         //Indexer
+        [Version(1,3)]
         public T this[int indexRows, int indexCols]
         {
             get
