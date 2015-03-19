@@ -1,6 +1,7 @@
 ﻿namespace Matrix
 {
     using System;
+    using System.Text;
 
     public class GenMatrix<T> where T : struct
     {
@@ -185,6 +186,22 @@
             }
 
             return true;
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < this.Rows; i++)
+            {
+                for (int j = 0; j < this.Cols; j++)
+                {
+                    sb.Append(string.Format("{0} ", this.myMatrix[i, j]));
+                }
+
+                sb.Append(Environment.NewLine);
+            }
+
+            return sb.ToString();
         }
     }
 }
