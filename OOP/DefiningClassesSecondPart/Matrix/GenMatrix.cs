@@ -128,5 +128,30 @@
 
             return result;
         }
+
+        public static GenMatrix<T> operator *(GenMatrix<T> matrix1, GenMatrix<T> matrix2)
+        {
+            if (matrix1.Cols != matrix2.Rows)
+            {
+                throw new InvalidOperationException("Matrix sizes mismatch");
+            }
+            GenMatrix<T> resultMatrix = new GenMatrix<T>(matrix1.Rows, matrix2.Cols);
+            T result = (dynamic)0;
+            for (int i = 0; i < matrix1.Rows; i++)
+            {
+                for (int j = 0; j < matrix2.Cols; j++)
+                {
+                    for (int k = 0; k < matrix1.Cols; k++)
+                    {
+                        result += (dynamic)matrix1[i, k] * matrix2[k, j];
+                    }
+
+                    resultMatrix[i, j] = result;
+                    result = (dynamic)0;
+                }
+            }
+
+            return resultMatrix;
+        }
     }
 }
