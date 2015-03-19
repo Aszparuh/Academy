@@ -170,5 +170,21 @@
 
             return true;
         }
+
+        public static bool operator false(GenMatrix<T> matrix)
+        {
+            for (int i = 0; i < matrix.Rows; i++)
+            {
+                for (int j = 0; j < matrix.Cols; j++)
+                {
+                    if (matrix[i, j] == (dynamic)0)
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
     }
 }
