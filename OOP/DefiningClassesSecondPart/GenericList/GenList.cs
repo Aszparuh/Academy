@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Text;
 
-    public class GenList<T>
+    public class GenList<T> where T : IComparable
     {
         const int initialCapacity = 8;
         private int index;
@@ -126,6 +126,34 @@
             }
 
             return sb.ToString();
+        }
+
+        public T Min()
+        {
+            T min = this.data[0];
+            for (int i = 0; i < this.index; i++)
+            {
+                if (this.data[i].CompareTo(min) < 0)
+                {
+                    min = this.data[i];
+                }
+            }
+
+            return min;
+        }
+
+        public T Max()
+        {
+            T max = this.data[0];
+            for (int i = 0; i < this.index; i++)
+            {
+                if (this.data[i].CompareTo(max) > 0)
+                {
+                    max = this.data[i];
+                }
+            }
+
+            return max;
         }
     }
 }
