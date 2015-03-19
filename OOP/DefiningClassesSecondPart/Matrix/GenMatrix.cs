@@ -90,5 +90,43 @@
                 this.myMatrix[indexRows, indexCols] = value;
             }
         }
+
+        public static GenMatrix<T> operator -(GenMatrix<T> matrix1, GenMatrix<T> matrix2)
+        {
+            if (matrix1.Rows != matrix2.Rows || matrix1.Cols != matrix2.Cols)
+            {
+                throw new InvalidOperationException("Matrix sizes mismatch");
+            }
+            GenMatrix<T> result = new GenMatrix<T>(matrix1.Rows, matrix1.Cols);
+
+            for (int i = 0; i < result.Rows; i++)
+            {
+                for (int j = 0; j < result.Cols; j++)
+                {
+                    result[i, j] = (dynamic)matrix1[i, j] - matrix2[i, j];
+                }
+            }
+
+            return result;
+        }
+
+        public static GenMatrix<T> operator +(GenMatrix<T> matrix1, GenMatrix<T> matrix2)
+        {
+            if (matrix1.Rows != matrix2.Rows || matrix1.Cols != matrix2.Cols)
+            {
+                throw new InvalidOperationException("Matrix sizes mismatch");
+            }
+            GenMatrix<T> result = new GenMatrix<T>(matrix1.Rows, matrix1.Cols);
+
+            for (int i = 0; i < result.Rows; i++)
+            {
+                for (int j = 0; j < result.Cols; j++)
+                {
+                    result[i, j] = (dynamic)matrix1[i, j] + matrix2[i, j];
+                }
+            }
+
+            return result;
+        }
     }
 }
