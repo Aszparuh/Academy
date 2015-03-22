@@ -76,7 +76,8 @@
                 this.data[i] = this.data[i - 1];
             }
 
-            this.data[index] = element; 
+            this.data[index] = element;
+            this.index++;
         }
 
         public void Clear()
