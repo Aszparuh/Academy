@@ -37,6 +37,11 @@
             index++;
         }
 
+        public int Length()
+        {
+            return this.index;
+        }
+
         public void RemoveAt(int index)
         {
             if (index < 0 || index > this.index)
