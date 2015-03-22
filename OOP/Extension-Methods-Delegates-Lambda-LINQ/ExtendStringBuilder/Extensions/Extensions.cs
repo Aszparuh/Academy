@@ -7,9 +7,13 @@
     {
         public static StringBuilder Substring(this StringBuilder sb, int startIndex, int length)
         {
-            if (startIndex >= sb.Length || startIndex + length > sb.Length)
+            if (startIndex >= sb.Length || startIndex + length > sb.Length || startIndex < 0)
             {
                 throw new IndexOutOfRangeException("Invalid index or length");
+            }
+            if (length <= 0)
+            {
+                throw new IndexOutOfRangeException("Length should be possitive number");
             }
 
             var sbAsString = sb.ToString();
