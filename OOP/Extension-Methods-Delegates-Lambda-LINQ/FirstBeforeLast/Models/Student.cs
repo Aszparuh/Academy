@@ -17,7 +17,7 @@
 
         public override string ToString()
         {
-            return string.Format("First name: {0} Last name: {1}", this.FirstName, this.LastName);
+            return string.Format("First name: {0} | Last name: {1}", this.FirstName, this.LastName);
         }
     }
 }
