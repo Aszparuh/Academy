@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.ExtendStringBuilder", "E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.IEnumerableExtensions", "IEnumerableExtensions\02.IEnumerableExtensions.csproj", "{A15BFFA4-054C-4B66-8EA4-9F8184558A72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.FirstBeforeLast", "FirstBeforeLast\03.FirstBeforeLast.csproj", "{56800847-A90F-4D48-9E9A-FFE235B375B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 - 05.FirstBeforeLast", "FirstBeforeLast\03 - 05.FirstBeforeLast.csproj", "{56800847-A90F-4D48-9E9A-FFE235B375B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.DivisibleBy7And3", "DivisibleBy7And3\06.DivisibleBy7And3.csproj", "{57897027-94DF-40D8-A152-B1B33E266CA7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{56800847-A90F-4D48-9E9A-FFE235B375B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56800847-A90F-4D48-9E9A-FFE235B375B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56800847-A90F-4D48-9E9A-FFE235B375B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57897027-94DF-40D8-A152-B1B33E266CA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57897027-94DF-40D8-A152-B1B33E266CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57897027-94DF-40D8-A152-B1B33E266CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57897027-94DF-40D8-A152-B1B33E266CA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
