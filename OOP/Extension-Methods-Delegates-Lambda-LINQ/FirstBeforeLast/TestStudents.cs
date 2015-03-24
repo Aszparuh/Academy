@@ -68,7 +68,6 @@
             {
                 Console.WriteLine(student);
             }
-
         }   
     }
 }
