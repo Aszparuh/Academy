@@ -13,7 +13,7 @@
         private string fNumber;
         private string tel;
         private string email;
-        private Dictionary<string, double> marks;
+        private Dictionary<string, double> marks = new Dictionary<string,double>();
         private int groupNumber;
 
         public Student(string firstName, string lastName, string fNumber, string tel, string email, int group)
