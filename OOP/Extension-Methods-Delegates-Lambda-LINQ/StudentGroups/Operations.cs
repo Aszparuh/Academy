@@ -22,12 +22,13 @@
             someStudents.Add(new Student("Angel", "Atansov", "1216065", "+359898666666", "abvbgr@outlook.com", 1));
             someStudents.Add(new Student("Stoimil", "Goshev", "3116125", "0287777777", "exampl2@abv.bg", 1));
 
-            //Add some marks
+            //Add some marks for tests
             someStudents[1].AddMark("Biology", 6);
             someStudents[1].AddMark("Math", 4);
             someStudents[2].AddMark("Biology", 3);
             someStudents[2].AddMark("Math", 6);
             someStudents[3].AddMark("Biology", 4);
+            someStudents[5].AddMark("Biology", 4.5);
 
             Console.WriteLine("All Students:");
             foreach (var student in someStudents)

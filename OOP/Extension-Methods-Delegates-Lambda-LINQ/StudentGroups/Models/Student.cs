@@ -110,7 +110,7 @@
             set {this.groupNumber = value;}
         }
 
-        public void AddMark(string discipline, int grade)
+        public void AddMark(string discipline, double grade)
         {
             marks.Add(discipline, grade);
         }
