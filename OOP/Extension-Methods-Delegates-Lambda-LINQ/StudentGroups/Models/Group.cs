@@ -1,5 +1,6 @@
 ﻿namespace StudentGroups.Models
 {
+
     class Group
     {
         public Group(int number, string name)

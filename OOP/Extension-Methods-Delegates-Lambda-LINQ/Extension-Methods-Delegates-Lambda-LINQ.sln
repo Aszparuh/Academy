@@ -13,9 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.DivisibleBy7And3", "Divi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.Timer", "Timer\07.Timer.csproj", "{E1804F6E-DB09-4FA5-8A08-2DE2D509C0D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.StudentGroups", "StudentGroups\09.StudentGroups.csproj", "{4FC144F9-DC67-4752-9BDD-F7CDB6DCD836}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09 - 16.StudentGroups", "StudentGroups\09 - 16.StudentGroups.csproj", "{4FC144F9-DC67-4752-9BDD-F7CDB6DCD836}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestString", "LongestString\LongestString.csproj", "{40C696DB-339F-4889-AE63-EAF7E2AB37A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17.LongestString", "LongestString\17.LongestString.csproj", "{40C696DB-339F-4889-AE63-EAF7E2AB37A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18-19.GroupedByGroupNumber", "GroupedByGroupNumber\18-19.GroupedByGroupNumber.csproj", "{EAC932DC-AE4E-4833-B129-4AC9A64D6139}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{40C696DB-339F-4889-AE63-EAF7E2AB37A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40C696DB-339F-4889-AE63-EAF7E2AB37A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40C696DB-339F-4889-AE63-EAF7E2AB37A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAC932DC-AE4E-4833-B129-4AC9A64D6139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC932DC-AE4E-4833-B129-4AC9A64D6139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAC932DC-AE4E-4833-B129-4AC9A64D6139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAC932DC-AE4E-4833-B129-4AC9A64D6139}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
