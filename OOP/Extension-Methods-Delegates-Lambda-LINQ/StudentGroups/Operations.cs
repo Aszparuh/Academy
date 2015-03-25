@@ -8,6 +8,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using StudentGroups.Models;
 
     class Operations
     {
@@ -146,7 +147,35 @@
                     pair.Key,
                     pair.Value);
                 }
-            }     
+            }
+
+            /*eate a class Group with properties GroupNumber and DepartmentName.
+            Introduce a property GroupNumber in the Student class.
+            Extract all students from "Mathematics" department.
+            Use the Join operator.*/
+
+            Console.WriteLine();
+            Console.WriteLine("All students in Mathematics Department:");
+            Group group1 = new Group(1, "Mathematics");
+            Group group2 = new Group(2, "Biology");
+            Group group3 = new Group(3, "Science");
+
+            List<Group> groups = new List<Group> { group1, group2, group3 };
+
+            var studentsDptMath =
+                from agroup in groups
+                where agroup.GroupNumber == 1
+                join student in someStudents on agroup.GroupNumber equals student.Group
+                select new 
+                {          
+                    Name = student.FirstName + " " + student.LastName,
+                    Department = agroup.DepartmentName
+                };
+
+            foreach (var student in studentsDptMath)
+            {
+                Console.WriteLine("{0} {1}", student.Name, student.Department);
+            }
         }
     }
 }

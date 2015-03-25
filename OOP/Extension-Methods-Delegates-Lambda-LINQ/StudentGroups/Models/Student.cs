@@ -1,4 +1,4 @@
-﻿namespace StudentGroups
+﻿namespace StudentGroups.Models
 {
     /*Create a class Student with properties 
       FirstName, LastName, FN, Tel, Email, Marks (a List), GroupNumber.*/
