@@ -27,8 +27,26 @@
             }
         }
 
-        public abstract void AddComment(string comment);
+        public void AddComment(Comment newComment)
+        {
+            this.comments.Add(newComment);
+        }
 
-        public abstract void RemoveComment(int number);
+        public void RemoveComment(int index)
+        {
+            if (index > -1 && index < this.comments.Count)
+            {
+                this.comments.RemoveAt(index);
+            }
+            else
+            {
+                throw new IndexOutOfRangeException("Invalid commet index");
+            }
+        }
+
+        public List<Comment> GetAllComments()
+        {
+            return new List<Comment>(this.comments);
+        }
     }
 }

@@ -9,6 +9,8 @@
             Person testPerson = new Person("Gosho", "Petrov");
 
             System.Console.WriteLine(testPerson.Name);
+
+            testPerson.AddComment(new Comment("AS"));
         }
     }
 }

@@ -2,7 +2,7 @@
 {
     using System;
 
-    class Comment : IComparable
+    public class Comment : IComparable
     {
         private string text;
         private DateTime dateCreated;
@@ -10,7 +10,7 @@
         public Comment(string text)
         {
             this.Text = text;
-            this.dateCreated = DateTime.Now;
+            this.dateCreated = DateCreated;
         }
 
         public string Text
@@ -24,6 +24,15 @@
                 }
 
                 this.text = value;
+            }
+        }
+
+        public DateTime DateCreated
+        {
+            get { return this.dateCreated; }
+            private set 
+            {
+                this.dateCreated = DateTime.Now;
             }
         }
 

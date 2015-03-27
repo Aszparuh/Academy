@@ -3,16 +3,24 @@
   <Class Name="SchoolSysytemLib.Models.BaseSchoolAbs" Collapsed="true">
     <Position X="8" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAAAIBAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAgAAAIBAAAAABAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\BaseSchoolAbs.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SchoolSysytemLib.Models.Person" Collapsed="true">
     <Position X="8" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIBAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAg=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAg=</HashCode>
       <FileName>Models\Person.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolSysytemLib.Models.Comment" Collapsed="true">
+    <Position X="5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQIAAAECAAAAAA=</HashCode>
+      <FileName>Models\Comment.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

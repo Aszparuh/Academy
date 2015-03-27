@@ -24,15 +24,5 @@
                 this.lastName = value;
             }
         }
-
-        public override void AddComment(string comment)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void RemoveComment(int number)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
