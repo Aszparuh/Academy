@@ -41,7 +41,9 @@
   <ItemGroup>
     <Compile Include="Models\BaseSchoolAbs.cs" />
     <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\Discipline.cs" />
     <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\SchoolClass.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\UniqueClassNumberStorage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

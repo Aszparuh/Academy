@@ -6,7 +6,12 @@
 
         public Student(string firstName, string lastName) : base(firstName, lastName)
         {
-            this.uniqueClassNumber = UniqueClassNumberStorage.CreateNewUnique();
+            this.uniqueClassNumber = UniqueClassNumberStorage.CreateNewUniqueStud();
         }
+
+        public string Number 
+        {
+            get { return this.uniqueClassNumber; }
+        } 
     }
 }

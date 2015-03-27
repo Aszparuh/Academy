@@ -6,9 +6,10 @@
 
     public static class UniqueClassNumberStorage
     {
-        private static List<string> numberStorage = new List<string>();
+        private static List<string> studentNumberStorage = new List<string>();
+        private static List<string> classNumberStorage = new List<string>();
 
-        public static string CreateNewUnique()
+        public static string CreateNewUniqueStud()
         {
             int nextNumber = 0;
             DateTime today = DateTime.Now;
@@ -26,20 +27,37 @@
             return sb.ToString();
         }
 
+        public static string CreateNewUniqueClass()
+        {
+            int nextNumber = 0;
+            DateTime today = DateTime.Now;
+            StringBuilder sb = new StringBuilder();
+            sb.Append(today.Year.ToString());
+            sb.Append(today.Month);
+            sb.Append(nextNumber);
+            while (CheckIfExist(sb.ToString()))
+            {
+                nextNumber++;
+                sb.Clear();
+                sb.Append(today.Year.ToString());
+                sb.Append(today.Month);
+                sb.Append(nextNumber);
+            }
 
+            return sb.ToString();
+        }
 
         private static bool CheckIfExist(string nextNumber)
         {
-            if (numberStorage.Contains(nextNumber))
+            if (studentNumberStorage.Contains(nextNumber))
             {
                 return false;
             }
             else
             {
-                numberStorage.Add(nextNumber);
+                studentNumberStorage.Add(nextNumber);
                 return true;
             }
         }
-
     }
 }
