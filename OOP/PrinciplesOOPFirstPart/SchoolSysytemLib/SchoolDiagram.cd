@@ -1,26 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="SchoolSysytemLib.Models.BaseSchoolAbs" Collapsed="true">
-    <Position X="8" Y="1.5" Width="1.5" />
+    <Position X="6" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgAAAIBAAAAABAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\BaseSchoolAbs.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SchoolSysytemLib.Models.Person" Collapsed="true">
-    <Position X="8" Y="3.5" Width="1.5" />
+    <Position X="6" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAg=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAACAAAAAg=</HashCode>
       <FileName>Models\Person.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SchoolSysytemLib.Models.Comment" Collapsed="true">
-    <Position X="5" Y="2.25" Width="1.5" />
+    <Position X="11.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQIAAAECAAAAAA=</HashCode>
       <FileName>Models\Comment.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SchoolSysytemLib.Models.Student" Collapsed="true">
+    <Position X="8.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolSysytemLib.Models.Teacher" Collapsed="true">
+    <Position X="3.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAECAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Models\Teacher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolSysytemLib.Models.UniqueClassNumberStorage" Collapsed="true">
+    <Position X="11.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAAAAABAAAAAI=</HashCode>
+      <FileName>Models\UniqueClassNumberStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolSysytemLib.Models.Discipline" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAEAAAAAAAIAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Models\Discipline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolSysytemLib.Models.SchoolClass" Collapsed="true">
+    <Position X="3.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAEAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Models\SchoolClass.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

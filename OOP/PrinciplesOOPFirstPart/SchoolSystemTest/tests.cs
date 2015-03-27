@@ -8,7 +8,7 @@
         {
             Student testPerson = new Student("Gosho", "Petrov");
 
-            System.Console.WriteLine(testPerson.Number);
+            System.Console.WriteLine(testPerson);
         }
     }
 }

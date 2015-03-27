@@ -35,7 +35,7 @@
             sb.Append(today.Year.ToString());
             sb.Append(today.Month);
             sb.Append(nextNumber);
-            while (CheckIfExist(sb.ToString()))
+            while (!CheckIfExist(sb.ToString()))
             {
                 nextNumber++;
                 sb.Clear();
