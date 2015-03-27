@@ -46,6 +46,11 @@
 
         public List<Comment> GetAllComments()
         {
+            if (this.comments.Count == 0)
+            {
+                throw new InvalidOperationException("There are no comments.");
+            }
+
             return new List<Comment>(this.comments);
         }
     }
