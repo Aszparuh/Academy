@@ -6,9 +6,9 @@
     {
         static void Main()
         {
-            Person testPerson = new Person("Gosho", "Petrov");
+            Teacher testPerson = new Teacher("Gosho", "Petrov");
 
-            System.Console.WriteLine(testPerson.Name);
+            System.Console.WriteLine(testPerson);
 
             testPerson.AddComment(new Comment("AS"));
         }

@@ -2,7 +2,7 @@
 {
     using System;
 
-    class Discipline : BaseSchoolAbs
+    public class Discipline : BaseSchoolAbs
     {
         private int numberOfLectures;
         private int numberOfExercises;

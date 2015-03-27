@@ -3,12 +3,18 @@
     using System;
     using System.Collections.Generic;
 
-    class Teacher : Person
+    public class Teacher : Person
     {
         private List<Discipline> disciplines = new List<Discipline>();
 
         public Teacher(string firstName, string lastName) : base(firstName, lastName)
         { }
+
+        public Teacher(string firstName, string lastName, Discipline anyDiscipline)
+            : this(firstName, lastName)
+        {
+            this.AddDiscipline(anyDiscipline);
+        }
 
         public void AddDiscipline(Discipline newDisc)
         {
