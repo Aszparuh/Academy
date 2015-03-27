@@ -10,7 +10,7 @@
         public Comment(string text)
         {
             this.Text = text;
-            this.dateCreated = DateCreated;
+            this.dateCreated = DateTime.Now;
         }
 
         public string Text
@@ -30,10 +30,7 @@
         public DateTime DateCreated
         {
             get { return this.dateCreated; }
-            private set 
-            {
-                this.dateCreated = DateTime.Now;
-            }
+            
         }
 
         public int CompareTo(object other)
@@ -52,6 +49,11 @@
             {
                 throw new ArgumentException("Object is not a Temperature");
             }
+        }
+
+        public override string ToString()
+        {
+            return string.Format("{0} {1}", this.dateCreated.ToString(), this.text);
         }
     }
 }

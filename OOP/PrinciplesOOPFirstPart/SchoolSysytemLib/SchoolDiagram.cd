@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="SchoolSysytemLib.Models.BaseSchoolAbs" Collapsed="true">
-    <Position X="6" Y="0.5" Width="1.5" />
+    <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgAAAIBAAAAABAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\BaseSchoolAbs.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SchoolSysytemLib.Models.Person" Collapsed="true">
-    <Position X="6" Y="2.5" Width="1.5" />
+    <Position X="6.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAACAAAAAg=</HashCode>
       <FileName>Models\Person.cs</FileName>
@@ -23,14 +23,14 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SchoolSysytemLib.Models.Student" Collapsed="true">
-    <Position X="8.75" Y="4.25" Width="1.5" />
+    <Position X="8.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Student.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SchoolSysytemLib.Models.Teacher" Collapsed="true">
-    <Position X="3.5" Y="4.25" Width="1.5" />
+    <Position X="4" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAAAAAAAAAAAECAAAAAAAAAAAAEAAAAAAA=</HashCode>
       <FileName>Models\Teacher.cs</FileName>
@@ -44,17 +44,24 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SchoolSysytemLib.Models.Discipline" Collapsed="true">
-    <Position X="8.75" Y="1.5" Width="1.5" />
+    <Position X="8.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAABAAAEAAAAAAAIAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
       <FileName>Models\Discipline.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SchoolSysytemLib.Models.SchoolClass" Collapsed="true">
-    <Position X="3.5" Y="1.5" Width="1.5" />
+    <Position X="4" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAAAAAAAAEAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAEAQAAAkAAAAEAAAAAAAAAAAAQIBQAAAAAA=</HashCode>
       <FileName>Models\SchoolClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolSysytemLib.Models.School" Collapsed="true">
+    <Position X="1.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAABAAAAAAAAAAAEAAAAAAAAQA=</HashCode>
+      <FileName>Models\School.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Text;
 
     public class SchoolClass : BaseSchoolAbs
     {
@@ -11,12 +12,12 @@
 
         #region CONSTRUCTORS
 
-        public SchoolClass(string name, string uniqueIdentifier) : base(name)
+        public SchoolClass(string name) : base(name)
         {
             this.uniqueClassIdentifier = UniqueClassNumberStorage.CreateNewUniqueClass();
         }
 
-        public SchoolClass(string name, string uniqueIdentifier, Teacher aTeacher) : this(name, uniqueIdentifier)
+        public SchoolClass(string name, Teacher aTeacher) : this(name)
         {
             this.AddTeacher(aTeacher);
         }
@@ -81,6 +82,28 @@
 
             return new List<Student>(this.studentsInClass);
         }
+
         #endregion
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(string.Format("Class Name: {0}", this.Name));
+            sb.AppendLine(string.Format("Class Identifier: {0}", this.uniqueClassIdentifier));
+            sb.AppendLine();
+            sb.AppendLine("Teachers:");
+            foreach (var teacher in this.GetAllTeachers())
+            {
+                sb.AppendLine(teacher.ToString());
+            }
+            sb.AppendLine();
+            sb.AppendLine("Students:");
+            foreach (var student in this.GetAllStudents())
+            {
+                sb.AppendLine(student.ToString());
+            }
+
+            return sb.ToString();
+        }
     }
 }
