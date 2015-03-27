@@ -6,7 +6,7 @@
     public abstract class BaseSchoolAbs
     {
         private string name;
-        private List<string> comments = new List<string>();
+        private List<Comment> comments = new List<Comment>();
 
         protected BaseSchoolAbs(string name)
         {
