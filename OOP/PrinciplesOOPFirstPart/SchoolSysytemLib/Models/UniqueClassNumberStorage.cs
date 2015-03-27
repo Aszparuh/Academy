@@ -16,7 +16,7 @@
             StringBuilder sb = new StringBuilder();
             sb.Append(today.Year.ToString());
             sb.Append(nextNumber);
-            while (CheckIfExist(sb.ToString()))
+            while (!CheckIfExist(sb.ToString()))
             {
                 nextNumber++;
                 sb.Clear();

@@ -6,11 +6,9 @@
     {
         static void Main()
         {
-            Teacher testPerson = new Teacher("Gosho", "Petrov");
+            Student testPerson = new Student("Gosho", "Petrov");
 
-            System.Console.WriteLine(testPerson);
-
-            testPerson.AddComment(new Comment("AS"));
+            System.Console.WriteLine(testPerson.Number);
         }
     }
 }
