@@ -17,7 +17,7 @@
   <Class Name="SchoolSysytemLib.Models.Comment" Collapsed="true">
     <Position X="11.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQIAAAECAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAQEAAAAAAAAAAAAAAQIAAAECAAAAAA=</HashCode>
       <FileName>Models\Comment.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
