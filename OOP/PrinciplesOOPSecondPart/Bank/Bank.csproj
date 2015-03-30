@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Bank</RootNamespace>
     <AssemblyName>Bank</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,7 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IDepositable.cs" />
+    <Compile Include="Interfaces\IWithdrawable.cs" />
     <Compile Include="Models\Account.cs" />
+    <Compile Include="Enums\AccountType.cs" />
+    <Compile Include="Models\CompanyCustomer.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\DepositAccount.cs" />
+    <Compile Include="Models\IndividualCustomer.cs" />
+    <Compile Include="Models\LoanAccount.cs" />
+    <Compile Include="Models\MortgageAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.Shapes", "01.Shapes", "{9C616AEF-D4CC-4DC4-AA15-E2829DFD8F64}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.BankSystem", "02.BankSystem", "{87C88427-41EF-4826-8A9E-6C9A955548AA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank", "Bank\Bank.csproj", "{23713F1A-A84C-426F-9BAB-D6CB84C65317}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBankSystem", "TestBankSystem\TestBankSystem.csproj", "{6AD6C061-7939-47E2-8FCB-B62F4545E356}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{23713F1A-A84C-426F-9BAB-D6CB84C65317}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23713F1A-A84C-426F-9BAB-D6CB84C65317}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23713F1A-A84C-426F-9BAB-D6CB84C65317}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AD6C061-7939-47E2-8FCB-B62F4545E356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AD6C061-7939-47E2-8FCB-B62F4545E356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AD6C061-7939-47E2-8FCB-B62F4545E356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AD6C061-7939-47E2-8FCB-B62F4545E356}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,5 +45,6 @@ Global
 		{713100C2-AE13-4D79-8E46-35B02D41D191} = {9C616AEF-D4CC-4DC4-AA15-E2829DFD8F64}
 		{71EDB693-7CF1-4FE7-8467-7EE635D92B40} = {9C616AEF-D4CC-4DC4-AA15-E2829DFD8F64}
 		{23713F1A-A84C-426F-9BAB-D6CB84C65317} = {87C88427-41EF-4826-8A9E-6C9A955548AA}
+		{6AD6C061-7939-47E2-8FCB-B62F4545E356} = {87C88427-41EF-4826-8A9E-6C9A955548AA}
 	EndGlobalSection
 EndGlobal
