@@ -4,7 +4,7 @@
     using Bank.Interfaces;
     using Bank.Enums;
 
-    class LoanAccount : Account, IDepositable
+    public class LoanAccount : Account, IDepositable
     {
         public LoanAccount(Customer owner, decimal balance, decimal interestRate)
             : base(owner, balance, interestRate)

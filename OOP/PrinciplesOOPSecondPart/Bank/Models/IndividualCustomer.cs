@@ -2,7 +2,7 @@
 {
     using System;
 
-    class IndividualCustomer : Customer
+    public class IndividualCustomer : Customer
     {
         private string lastName;
 

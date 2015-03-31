@@ -44,6 +44,7 @@
     <Compile Include="Interfaces\IWithdrawable.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Enums\AccountType.cs" />
+    <Compile Include="Models\Banks.cs" />
     <Compile Include="Models\CompanyCustomer.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DepositAccount.cs" />
