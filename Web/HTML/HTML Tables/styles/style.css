@@ -1,0 +1,23 @@
+table{
+	border-style: solid;
+	background-color: #99da68;
+}
+input{
+	font-size: larger;
+	background-color: #99da68;
+}
+input[type=button]{
+	width:60px;
+	height:60px;
+	float: left;
+}
+input[name="zero"]{
+	width: 125px;
+}
+
+input[type=text]{
+	border: 0px;
+	width: 250px;
+	height: 50px;
+	text-align: right;
+}
