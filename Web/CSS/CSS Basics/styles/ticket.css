@@ -1,0 +1,61 @@
+table {
+	background-color: #595959;
+	width: 305px;
+	height: 205px;
+	font-family: arial;
+}
+
+tr th {
+	font-weight: normal;
+	text-align: left;
+	color: #A4AEAC;
+	padding: 5px;
+}
+
+td {
+	font-size: 0.7em;
+	font-style: italic;
+	color: white;
+}
+
+a {
+	padding-left: 130px;
+	text-decoration: none;
+	font-style: normal;
+	color: #DFBC83;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#red {
+	color: red;
+	font-style: normal;
+	padding-left: 130px;
+	vertical-align: top;
+}
+
+.name:before {
+	content:url(../images/dot.png);
+	display: inline;
+	position: relative;
+	left: -2px;
+}
+
+.yellow {
+	color: #DFBC83;
+	font-size: 0.7em;
+	font-style: normal;
+}
+
+.lightgray {
+	color: #A4AEAC;
+	font-style: normal;
+}
+
+#orange {
+	color: #C06928;
+	font-style: normal;
+	font-weight: bold;
+}
