@@ -1,0 +1,58 @@
+body {
+	font-family: arial;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+	padding: 5px;
+	font-size: 0.8em;
+}
+
+th {
+	background-color: #52B506;
+	color: white;
+	text-align: left;
+	font-weight: normal;
+	border-right: 1px solid #3C8D0F;
+	border-left: 1px solid #3C8D0F;
+	border-bottom: 1px solid #3C8D0F;;
+}
+
+td {
+	border-left: 1px solid #D5D4C2;
+	padding-right: 50px;
+}
+
+tr:last-child {
+	border-bottom: 1px solid #D5D4C2;
+}
+
+th:last-child {
+	border-right: none;
+}
+
+th:first-child {
+	border-left: none;
+}
+
+tbody tr:nth-child(2n) {
+	background-color: #ECECD8;
+}
+
+.mexico:before {
+	content:url(../images/mexico.jpg);
+	vertical-align: -25%;
+}
+
+.germany:before {
+	content:url(../images/germany.jpg);
+	vertical-align: -25%;
+}
+
+.uk:before {
+	content:url(../images/uk.jpg);
+	vertical-align: -25%;
+}
