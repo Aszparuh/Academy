@@ -1,13 +1,17 @@
 //task1
 var integer = 5,
-    floating = 5.5,
-//task2
-    string = '\'How you doin\'?\', Joey said\'',
-    array = ['first', 'second', 'third'],
-    boolean = true,
-    car = {brand: "Fiat", model: 500, color: "white"},
-    valueNull = null,
-    valueUndefined = undefined;
+	floating = 5.5,
+	//task2
+	string = '\'How you doin\'?\', Joey said\'',
+	array = ['first', 'second', 'third'],
+	boolean = true,
+	car = {
+		brand: "Fiat",
+		model: 500,
+		color: "white"
+	},
+	valueNull = null,
+	valueUndefined = undefined;
 //task3
 jsConsole.writeLine(typeof integer + ' ' + integer);
 jsConsole.writeLine(typeof floating + ' ' + floating);
