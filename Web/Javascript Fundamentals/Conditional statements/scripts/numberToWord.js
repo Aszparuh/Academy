@@ -8,40 +8,40 @@ function Convert() {
 
     var hundreds = Math.floor( number / 100);
     var tens = Math.floor(number / 10)% 10;
-    var digits = number % 10;
-    var special = 10 + digits;
-    var specialText = "";
+    var digit = number % 10;
+    var teen = 10 + digit;
+    var teenCase = "";
     var hundredsText = "";
     var tensText = "";
-    var digitsText;
+    var digitText;
 
-    switch (special) {
+    switch (teen) {
         case 11:
-            specialText = "eleven";
+            teenCase = "eleven";
             break;
         case 12:
-            specialText = "twelve";
+            teenCase = "twelve";
             break;
         case 13:
-            specialText = "thirteen";
+            teenCase = "thirteen";
             break;
         case 14:
-            specialText = "fourteen";
+            teenCase = "fourteen";
             break;
         case 15:
-            specialText = "fifteen";
+            teenCase = "fifteen";
             break;
         case 16:
-            specialText = "sixteen";
+            teenCase = "sixteen";
             break;
         case 17:
-            specialText = "seventeen";
+            teenCase = "seventeen";
             break;
         case 18:
-            specialText = "eighteen";
+            teenCase = "eighteen";
             break;
         case 19:
-            specialText = "nineteen";
+            teenCase = "nineteen";
             break;
     }
 
@@ -80,9 +80,9 @@ function Convert() {
     if (number % 100 !== 0 && number >= 100) {
         hundredsText = hundredsText + ' and ';
     }
-    if (tens === 1 && digits > 0) {
-        jsConsole.writeLine(hundredsText + specialText);
-        console.log(hundredsText + specialText);
+    if (tens === 1 && digit > 0) {
+        jsConsole.writeLine(hundredsText + teenCase);
+        console.log(hundredsText + teenCase);
         hundredsText = '';
         tensText = '';
     }
@@ -120,36 +120,36 @@ function Convert() {
             break;
     }
 
-    switch (digits) {
+    switch (digit) {
         case 1:
-            digitsText = 'one';
+            digitText = 'one';
             break;
         case 2:
-            digitsText = 'two';
+            digitText = 'two';
             break;
         case 3:
-            digitsText = 'three';
+            digitText = 'three';
             break;
         case 4:
-            digitsText = 'four';
+            digitText = 'four';
             break;
         case 5:
-            digitsText = 'five';
+            digitText = 'five';
             break;
         case 6:
-            digitsText = 'six';
+            digitText = 'six';
             break;
         case 7:
-            digitsText = 'seven';
+            digitText = 'seven';
             break;
         case 8:
-            digitsText = 'eight';
+            digitText = 'eight';
             break;
         case 9:
-            digitsText = 'nine';
+            digitText = 'nine';
             break;
         default:
-            digitsText = '';
+            digitText = '';
             break;
     }
 
@@ -158,10 +158,10 @@ function Convert() {
         console.log('Zero');
         hundredsText = '';
         tensText = '';
-        digitsText = '';
+        digitText = '';
     }
     if (number <= 10 || number >= 20) {
-        jsConsole.writeLine(hundredsText + tensText + ' ' + digitsText);
-        console.log(hundredsText + tensText + ' ' + digitsText);
+        jsConsole.writeLine(hundredsText + tensText + ' ' + digitText);
+        console.log(hundredsText + tensText + ' ' + digitText);
     }
 }
