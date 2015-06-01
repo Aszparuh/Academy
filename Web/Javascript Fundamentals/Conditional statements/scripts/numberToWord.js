@@ -1,5 +1,4 @@
 function Convert() {
-    debugger;
     var number = jsConsole.readFloat("#number");
 
     if (isNaN(number) || (number > 999) || (number < 0)) {
