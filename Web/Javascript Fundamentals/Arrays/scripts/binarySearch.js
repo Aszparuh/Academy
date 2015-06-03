@@ -7,7 +7,10 @@ function Find() {
         binarySearch(sortedArr, search, 0, sortedArr.length - 1);
 
         function binarySearch(values, target, start, end) {
-          if (start > end) { return -1; } //does not exist
+          if (start > end) {
+              jsConsole.writeLine("Not found.");
+              return;
+          }
 
           var middle = Math.floor((start + end) / 2);
           var value = values[middle];
