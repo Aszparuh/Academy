@@ -28,6 +28,6 @@ function findNumbers() {
         jsConsole.writeLine("The most frequent number is " + finalElement + " and it appears " + finalCount + " times!");
     }
     else {
-        jsConsole.writeLine("The most frequent number is " + arrayInt[0] + " and it appears 1 time!");
+        jsConsole.writeLine("There is no repetition of numbers");
     }
 }
