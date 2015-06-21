@@ -8,8 +8,20 @@
 
 */
 
-function sum() {
+function sum(args) {
+	if (args.length === 0) {
+		return null;
+	}
 	
+	var sum = args.reduce(function (total, num) {
+		num = +num;
+		if (isNaN(num)) {
+			throw new Error();	
+		}
+		
+		return total + num;
+	}, 0);
+	return sum;
 }
 
 module.exports = sum;
