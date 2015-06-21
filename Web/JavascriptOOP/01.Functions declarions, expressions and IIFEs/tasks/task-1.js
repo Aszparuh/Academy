@@ -9,11 +9,14 @@
 */
 
 function sum(args) {
+	if (args === undefined) {
+		throw new Error();
+	}
 	if (args.length === 0) {
 		return null;
 	}
 	
-	var sum = args.reduce(function (total, num) {
+	var sumAll = args.reduce(function (total, num) {
 		num = +num;
 		if (isNaN(num)) {
 			throw new Error();	
@@ -21,7 +24,7 @@ function sum(args) {
 		
 		return total + num;
 	}, 0);
-	return sum;
+	return sumAll;
 }
 
 module.exports = sum;
