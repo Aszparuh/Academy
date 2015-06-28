@@ -60,46 +60,76 @@ Outputs:
 <html><head><meta charset="utf-8"></meta></head><body bgcolor="#012345" id="cuki"><div style="font-size: 42px">Hello, world!</div></body></html>
 */
 
+debugger;
 
-function solve() {
+  Array.prototype.sortOn = function(key){
+    this.sort(function(a, b){
+        if(a[key] < b[key]){
+            return -1;
+        }else if(a[key] > b[key]){
+            return 1;
+        }
+        return 0;
+    });
+};
+
 	var domElement = (function () {
     
-    function checkType(value) {
+    function checkTypeName(value, itemToCheck) {
       if (typeof value !== 'string') {
         throw 'Type should be string';
       }
       if (value === '') {
         throw 'Type should not be empty string';
       }
-      if (!(/^[a-zA-Z]+$/.test(value))) {
-        throw 'Type contains bad characters';
+      if (itemToCheck === 'type') {
+          if (!(/^[a-zA-Z]+$/.test(value))) {
+            throw 'Type contains bad characters';
+          }
       }
+      else {
+        if (/\d/.test(value)) {
+          throw 'Name contains digits';
+        }
+      }
+      
       return true;
     }
     
 		var domElement = {
-			init: function(type) {
-        checkType(type);
-        this.type = type;
-			},
-			appendChild: function(child) {
-			},
-			addAttribute: function(name, value) {
-        
-			},
-      removeAttribute: function() {
-        
-      },
-      get innerHTML(){
-        
-      },
-      toString: function() {
-        return '<' + this.type + '></' + this.type + '>';
-      }
-		};
-		return domElement;
-	} ());
+		init: function(type) {
+      this.type = type;
+      this.attributes = [];
+      return this;
+		},
+    get type(){
+      return this._type;
+    },
+    set type(value){
+      checkTypeName(value, 'type');
+      this._type = value;
+    },
+		appendChild: function(child) {
+		},
+		addAttribute: function(name, value) {
+      checkTypeName(name, 'name');
+      this.attributes.push({key: name, value: value});
+      this.attributes.sortOn('key');
+		},
+    removeAttribute: function() {
+      
+    },
+    get innerHTML(){
+      return '<' + this.type + '></' + this.type + '>';
+    }
+	};
 	return domElement;
-}
+} ());
 
-module.exports = solve;
+
+var div = Object.create(domElement).init('div');
+console.log(div.toString());
+div.addAttribute('style', 'test');
+div.addAttribute('asty le', 'ztest');
+div.addAttribute('asty le', '1234');
+
