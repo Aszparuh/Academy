@@ -62,18 +62,7 @@ Outputs:
 
 
 function solve() {
-  Array.prototype.sortOn = function(key){
-    this.sort(function(a, b){
-        if(a[key] < b[key]){
-            return -1;
-        }else if(a[key] > b[key]){
-            return 1;
-        }
-        return 0;
-    });
-};
-
-	var domElement = (function () {
+ 	var domElement = (function () {
     
     function checkTypeName(value, itemToCheck) {
       if (typeof value !== 'string') {
@@ -95,13 +84,9 @@ function solve() {
       
       return true;
     }
-    
+
 		var domElement = {
-		init: function(type) {
-      this.type = type;
-      this.attributes = [];
-      return this;
-		},
+      //properties
     get type(){
       return this._type;
     },
@@ -109,23 +94,35 @@ function solve() {
       checkTypeName(value, 'type');
       this._type = value;
     },
+    get innerHTML(){
+      
+      return '<' + this.type + '></' + this.type + '>';
+    },
+    
+    //methods
+		init: function(type) {
+      this.type = type;
+      this.attributes = {};
+      return this;
+		},
 		appendChild: function(child) {
 		},
 		addAttribute: function(name, value) {
       checkTypeName(name, 'name');
-      this.attributes.push({key: name, value: value});
-      this.attributes.sortOn('key');
+      this.attributes[name] = value;
+      return this;
 		},
-    removeAttribute: function() {
-      
-    },
-    get innerHTML(){
-      return '<' + this.type + '></' + this.type + '>';
+    removeAttribute: function(name) {
+      if (this.attributes[name]) {
+        delete this.attributes[name];
+        return this;
+      }
+      throw 'Attribute does not exist';
     }
 	};
 	return domElement;
 } ());
-  return domElement;
+ return domElement;
 }
 
 module.exports = solve;

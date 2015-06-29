@@ -62,17 +62,6 @@ Outputs:
 
 debugger;
 
-  Array.prototype.sortOn = function(key){
-    this.sort(function(a, b){
-        if(a[key] < b[key]){
-            return -1;
-        }else if(a[key] > b[key]){
-            return 1;
-        }
-        return 0;
-    });
-};
-
 	var domElement = (function () {
     
     function checkTypeName(value, itemToCheck) {
@@ -95,13 +84,9 @@ debugger;
       
       return true;
     }
-    
+
 		var domElement = {
-		init: function(type) {
-      this.type = type;
-      this.attributes = [];
-      return this;
-		},
+      //properties
     get type(){
       return this._type;
     },
@@ -109,27 +94,49 @@ debugger;
       checkTypeName(value, 'type');
       this._type = value;
     },
+    get innerHTML(){
+      var html = '<' + this.type,
+          key,
+          keys = [];
+          
+      if(!(Object.getOwnPropertyNames(this.attributes).length === 0)){
+        for (key in this.attributes) {
+          if (this.attributes.hasOwnProperty(key)) {
+            keys[key] = this.attributes[key];
+          }
+        }
+      }
+      
+      
+    },
+    
+    //methods
+		init: function(type) {
+      this.type = type;
+      this.attributes = {};
+      return this;
+		},
 		appendChild: function(child) {
 		},
 		addAttribute: function(name, value) {
       checkTypeName(name, 'name');
-      this.attributes.push({key: name, value: value});
-      this.attributes.sortOn('key');
+      this.attributes[name] = value;
+      return this;
 		},
-    removeAttribute: function() {
+    removeAttribute: function(name) {
+      if (this.attributes[name]) {
+        delete this.attributes[name];
+        return this;
+      }
       
-    },
-    get innerHTML(){
-      return '<' + this.type + '></' + this.type + '>';
+      throw 'Attribute does not exist';
     }
 	};
 	return domElement;
 } ());
 
 
-var div = Object.create(domElement).init('div');
-console.log(div.toString());
-div.addAttribute('style', 'test');
-div.addAttribute('asty le', 'ztest');
-div.addAttribute('asty le', '1234');
-
+var root = Object.create(domElement)
+				.init('div')
+				.addAttribute('data-id', 'myid')
+        .addAttribute('adata-id', 'amyid');
