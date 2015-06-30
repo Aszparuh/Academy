@@ -60,83 +60,69 @@ Outputs:
 <html><head><meta charset="utf-8"></meta></head><body bgcolor="#012345" id="cuki"><div style="font-size: 42px">Hello, world!</div></body></html>
 */
 
-debugger;
-
+function solve() {
 	var domElement = (function () {
-    
-    function checkTypeName(value, itemToCheck) {
-      if (typeof value !== 'string') {
-        throw 'Type should be string';
-      }
-      if (value === '') {
-        throw 'Type should not be empty string';
-      }
-      if (itemToCheck === 'type') {
-          if (!(/^[a-zA-Z]+$/.test(value))) {
-            throw 'Type contains bad characters';
-          }
-      }
-      else {
-        if (/\d/.test(value)) {
-          throw 'Name contains digits';
-        }
-      }
-      
-      return true;
-    }
+
+		function checkTypeName(value, itemToCheck) {
+			if (typeof value !== 'string') {
+				throw 'Type should be string';
+			}
+			if (value === '') {
+				throw 'Type should not be empty string';
+			}
+			if (itemToCheck === 'type') {
+				if (!(/^[a-zA-Z]+$/.test(value))) {
+					throw 'Type contains bad characters';
+				}
+			}
+			else {
+				if (/\d/.test(value)) {
+					throw 'Name contains digits'
+				}
+			}
+		}
 
 		var domElement = {
-      //properties
-    get type(){
-      return this._type;
-    },
-    set type(value){
-      checkTypeName(value, 'type');
-      this._type = value;
-    },
-    get innerHTML(){
-      var html = '<' + this.type,
-          key,
-          keys = [];
-          
-      if(!(Object.getOwnPropertyNames(this.attributes).length === 0)){
-        for (key in this.attributes) {
-          if (this.attributes.hasOwnProperty(key)) {
-            keys[key] = this.attributes[key];
-          }
-        }
-      }
-      
-      
-    },
-    
-    //methods
-		init: function(type) {
-      this.type = type;
-      this.attributes = {};
-      return this;
-		},
-		appendChild: function(child) {
-		},
-		addAttribute: function(name, value) {
-      checkTypeName(name, 'name');
-      this.attributes[name] = value;
-      return this;
-		},
-    removeAttribute: function(name) {
-      if (this.attributes[name]) {
-        delete this.attributes[name];
-        return this;
-      }
-      
-      throw 'Attribute does not exist';
-    }
-	};
+			//Properties
+			get type() {
+				return this._type;
+			},
+			set type(value) {
+				checkTypeName(value, 'type');
+				this._type = value;
+			},
+			get innerHTML() {
+				return '<' + this.type + '></' + this.type + '>';
+			},
+			
+			//Methods
+			init: function (type) {
+				this.type = type;
+				this.attributes = {};
+				return this;
+			},
+			appendChild: function (child) {
+
+			},
+			addAttribute: function (name, value) {
+				checkTypeName(name, 'name');
+				this.attributes[name] = value;
+				return this;
+			},
+			removeAttribute: function (name) {
+				if (this.attributes[name]) {
+					delete this.attributes[name];
+					return this;
+				}
+				
+				throw 'Attribute does not exist';
+			}
+		};
+		
+		return domElement;
+	} ());
+
 	return domElement;
-} ());
+}
 
-
-var root = Object.create(domElement)
-				.init('div')
-				.addAttribute('data-id', 'myid')
-        .addAttribute('adata-id', 'amyid');
+//module.exports = solve;
