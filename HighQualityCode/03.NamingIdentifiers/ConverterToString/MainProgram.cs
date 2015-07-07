@@ -6,9 +6,8 @@
     {
         static void Main()
         {
-            Converter newConverter = new Converter();
-            Console.WriteLine(newConverter.ConvertBoolToString(true));
-            Console.WriteLine(newConverter.ConvertBoolToString(false));
+            Console.WriteLine(Converter.ConvertBoolToString(true));
+            Console.WriteLine(Converter.ConvertBoolToString(false));
         }
     }
 }

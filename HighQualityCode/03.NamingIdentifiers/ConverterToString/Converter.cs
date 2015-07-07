@@ -1,8 +1,8 @@
 ﻿namespace ConverterToString
 {
-    internal class Converter
+    internal static class Converter
     {
-        internal string ConvertBoolToString(bool value)
+        internal static string ConvertBoolToString(bool value)
         {
             return value.ToString();
         }
