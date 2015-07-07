@@ -2,7 +2,7 @@
 {
     using System;
 
-    class MainProgram
+    internal class MainProgram
     {
         static void Main()
         {
