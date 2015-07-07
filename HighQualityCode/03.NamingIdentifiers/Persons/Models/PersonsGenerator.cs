@@ -10,7 +10,7 @@
 
         public static Person CreatePerson(int numberIdToGenerateGenderOn)
         {
-            if (numberIdToGenerateGenderOn % 2 == 0)
+            if (numberIdToGenerateGenderOn % DividerForId == 0)
             {
                 return new Person(MaleName, Gender.Male);
             }
