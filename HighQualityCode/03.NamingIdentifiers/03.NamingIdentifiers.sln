@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.ConverterToString", "Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Persons", "Persons\02.Persons.csproj", "{10CFCA46-488F-402D-B440-28391459BB75}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.JavascriptTask", "03.JavascriptTask", "{21DC1EA4-637D-4D8C-94B0-448D153EBE42}"
+	ProjectSection(SolutionItems) = preProject
+		check-browser.js = check-browser.js
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
