@@ -1,11 +1,12 @@
 ﻿namespace Persons.Models
 {
     using Persons.Models.Enums;
+
     public static class PersonsGenerator
     {
         private const int DividerForId = 2;
-        const string FemaleName = "Jane Doe";
-        const string MaleName = "John Doe";
+        private const string FemaleName = "Jane Doe";
+        private const string MaleName = "John Doe";
 
         public static Person CreatePerson(int numberIdToGenerateGenderOn)
         {

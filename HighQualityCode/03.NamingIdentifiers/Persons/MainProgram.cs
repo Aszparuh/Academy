@@ -4,9 +4,9 @@
 
     using Persons.Models;
 
-    class MainProgram
+    public class MainProgram
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             int maleId = 222222;
             int femaleId = 222221;
