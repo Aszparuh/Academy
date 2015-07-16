@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.SizeOfRotatedRectangle", "SizeOfRotatedRectangle\01.SizeOfRotatedRectangle.csproj", "{0F261066-0308-4DFE-BA7C-7EE9ADA024D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.ArrayStatisticPrinter", "ArrayStatisticPrinter\02.ArrayStatisticPrinter.csproj", "{F0723967-22BE-466E-8D1A-F993918A7682}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0F261066-0308-4DFE-BA7C-7EE9ADA024D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F261066-0308-4DFE-BA7C-7EE9ADA024D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F261066-0308-4DFE-BA7C-7EE9ADA024D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0723967-22BE-466E-8D1A-F993918A7682}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0723967-22BE-466E-8D1A-F993918A7682}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0723967-22BE-466E-8D1A-F993918A7682}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0723967-22BE-466E-8D1A-F993918A7682}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
