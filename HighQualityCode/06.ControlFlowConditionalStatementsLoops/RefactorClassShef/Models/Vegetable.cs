@@ -4,45 +4,45 @@
     {
         public Vegetable()
         {
-            this.isPeeled = false;
-            this.isCut = false;
-            this.isRotten = false;
-            this.isCooked = false;
+            this.IsPeeled = false;
+            this.IsCut = false;
+            this.IsRotten = false;
+            this.IsCooked = false;
         }
 
-        public bool isPeeled { get; set; }
+        public bool IsPeeled { get; set; }
 
-        public bool isCut { get; set; }
+        public bool IsCut { get; set; }
 
-        public bool isRotten { get; set; }
+        public bool IsRotten { get; set; }
 
-        public bool isCooked { get; set; }
+        public bool IsCooked { get; set; }
 
         public void Peel()
         {
-            this.isPeeled = true;
+            this.IsPeeled = true;
         }
 
         public void Cut()
         {
-            this.isCut = true;
+            this.IsCut = true;
         }
 
         public void Rot()
         {
-            this.isRotten = true;
+            this.IsRotten = true;
         }
 
         public void Cook()
         {
-            this.isCooked = true;
+            this.IsCooked = true;
         }
 
         public override string ToString()
         {
             string typeVegetable = this.GetType().Name;
-            string peeled = this.isPeeled.ToString();
-            string cutState = this.isCut.ToString();
+            string peeled = this.IsPeeled.ToString();
+            string cutState = this.IsCut.ToString();
             return string.Format("{0} - Peeled:{1} - Cut:{2}", typeVegetable, peeled, cutState);
         }
     }

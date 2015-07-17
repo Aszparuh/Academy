@@ -2,9 +2,9 @@
 {
     using RefactorClassShef.Models;
 
-    class TestClassChef
+    public class TestClassChef
     {
-        static void Main()
+        public static void Main()
         {
             var chef = new Chef();
             var salad = chef.CookSalad();
