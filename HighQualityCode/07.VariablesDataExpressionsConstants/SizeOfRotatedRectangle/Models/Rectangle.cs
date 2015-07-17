@@ -51,8 +51,8 @@
 
         public Rectangle GetBoundingBox(double rotationAngle)
         {
-            double boxWidht = CalculateBoundingBoxSide(rotationAngle, this.Width, this.Height);
-            double boxHeight = CalculateBoundingBoxSide(rotationAngle, this.Height, this.Width);
+            double boxWidht = this.CalculateBoundingBoxSide(rotationAngle, this.Width, this.Height);
+            double boxHeight = this.CalculateBoundingBoxSide(rotationAngle, this.Height, this.Width);
             Rectangle boundingBox = new Rectangle(boxWidht, boxHeight);
 
             return boundingBox;

@@ -3,9 +3,9 @@
     using System;
     using SizeOfRotatedRectangle.Models;
 
-    class SizeCalculations
+    public class SizeCalculations
     {
-        static void Main()
+        public static void Main()
         {
             var testRectangle = new Rectangle(25.3, 37.5);
             Console.WriteLine(testRectangle);
