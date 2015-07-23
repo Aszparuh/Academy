@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MethodsTests.cs" />
+    <Compile Include="Models\Line.cs" />
+    <Compile Include="Models\Point.cs" />
     <Compile Include="Models\Printer.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\TriangleAreaCalculator.cs" />
