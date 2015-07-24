@@ -25,7 +25,7 @@
 
             set
             {
-                if (value >= 0)
+                if (value <= 0)
                 {
                     throw new ArgumentException(Rectangle.InvalidWidth);
                 }
@@ -43,7 +43,7 @@
 
             set
             {
-                if (value >= 0)
+                if (value <= 0)
                 {
                     throw new ArgumentException(Rectangle.InvalidHeight);
                 }
