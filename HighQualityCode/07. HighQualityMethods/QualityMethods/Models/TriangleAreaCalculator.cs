@@ -17,7 +17,7 @@
             }
 
             double semiperimeter = (sideA + sideB + sideC) / 2;
-            double area = Math.Sqrt(semiperimeter * (semiperimeter - sideA) * (semiperimeter - sideB) * (semiperimeter -sideC));
+            double area = Math.Sqrt(semiperimeter * (semiperimeter - sideA) * (semiperimeter - sideB) * (semiperimeter - sideC));
             return area;
         }
     }

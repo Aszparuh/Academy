@@ -22,6 +22,7 @@
             {
                 return this.firstName;
             }
+
             set 
             {
                 this.IsNullOrEmpty(value, "First name");
@@ -35,6 +36,7 @@
             {
                 return this.lastName;
             }
+
             set
             {
                 this.IsNullOrEmpty(value, "Last name");

@@ -16,7 +16,7 @@
 
         public double CalculateDistance(double x, double y)
         {
-            double distance = Math.Sqrt((x - this.X) * (x - this.X) + (y - this.Y) * (y - this.Y));
+            double distance = Math.Sqrt(((x - this.X) * (x - this.X)) + ((y - this.Y) * (y - this.Y)));
             return distance;
         }
     }

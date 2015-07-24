@@ -4,7 +4,7 @@
 
     public class Line : Point
     {
-        const double AcceptableDifference = 0.000001;
+        private const double AcceptableDifference = 0.000001;
 
         public Line(double x1, double y1, double x2, double y2)
             : base(x1, y1)

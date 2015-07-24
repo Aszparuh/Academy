@@ -23,7 +23,7 @@
         {
             string word = string.Empty;
 
-            switch(number)
+            switch (number)
             {
                 case 0: word = "zero";
                     break;
