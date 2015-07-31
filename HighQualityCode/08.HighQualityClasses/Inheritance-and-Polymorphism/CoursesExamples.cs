@@ -22,7 +22,7 @@ namespace InheritanceAndPolymorphism
             Console.WriteLine(localCourse);
 
             OffsiteCourse offsiteCourse = new OffsiteCourse(
-                "PHP and WordPress Development", "Mario Peshev", 
+                "PHP and WordPress Development", "Mario Peshev", "Burgas",
                 new List<string>() { "Thomas", "Ani", "Steve" });
             Console.WriteLine(offsiteCourse);
         }
