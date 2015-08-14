@@ -43,7 +43,9 @@
   <ItemGroup>
     <Compile Include="Models\Direction.cs" />
     <Compile Include="Models\Matrix.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Models\MatrixCell.cs" />
+    <Compile Include="Models\MatrixPatternFiller.cs" />
+    <Compile Include="EntryPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

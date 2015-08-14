@@ -1,6 +1,6 @@
 ﻿namespace RotatingWalkInMatrix.Models
 {
-    class Direction
+    public class Direction
     {
         public Direction(int onRow, int onCol)
         {
