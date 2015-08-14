@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Text;
 
     public class MatrixPatternFiller
     {
@@ -74,37 +75,45 @@
             }
         }
 
-        private void FillPatern(MatrixCell startingCell)
+        public override string ToString()
         {
-            var currentRow = startingCell.Row;
-            var currentCol = startingCell.Column;
-            int count = 0;
+            var sb = new StringBuilder();
 
-            while (true)
+            for (var i = 0; i < this.Rows; i++)
             {
-                this.matrix[currentRow, currentCol] = ++count;
-                currentRow += this.Directions[currentDirectionIndex].OnRow;
-                currentCol += this.Directions[currentDirectionIndex].OnCol;
-
-                if (CheckNextPostion(currentRow, currentCol))
+                for (var j = 0; j < this.Columns; j++)
                 {
-                    continue;    
+                    sb.Append(string.Format("{0,3}", this.matrix[i, j]));
                 }
-                else
+
+                if (i != this.Rows - 1)
                 {
-                    this.currentDirectionIndex = this.currentDirectionIndex + 1 % this.Directions.Count; 
+                    sb.Append(Environment.NewLine);
+                }
+            }
+
+            return sb.ToString();
+        }
+
+        public void FillPatern(MatrixCell startingCell)
+        {
+            var currentCell = startingCell;
+            int count = 0; 
+
+            while (currentCell != null)
+            {
+                this.matrix[currentCell.Row, currentCell.Column] = ++count;
+                currentCell = this.GetNextCell(currentCell);
+                if (currentCell == null)
+                {
+                    currentCell = this.FindFirstEmptyCell();
                 }
             }
         }
 
-        private bool CheckNextPostion(int row, int col)
+        private bool CheckNextPostion(MatrixCell cell)
         {
-            if (IsInRange(row, col))
-            {
-                return true;
-            }
-
-            if (IsEmptyCell(row, col))
+            if (this.IsInRange(cell.Row, cell.Column) && this.IsEmptyCell(cell.Row, cell.Column))
             {
                 return true;
             }
@@ -114,12 +123,12 @@
 
         private bool IsInRange(int row, int col)
         {
-            if (0 > row || row > this.Rows)
+            if (0 > row || row >= this.Rows)
             {
                 return false;
             }
 
-            if (0 > col || col > this.Columns)
+            if (0 > col || col >= this.Columns)
             {
                 return false;
             }
@@ -135,6 +144,43 @@
             }
 
             return false;
+        }
+
+        private MatrixCell GetNextCell(MatrixCell currentCell)
+        {
+            for (var i = this.currentDirectionIndex; i < this.directions.Count + this.currentDirectionIndex; i++)
+            {
+                var newCellRow = currentCell.Row + this.directions[i % this.directions.Count].OnRow;
+                var newCellColumn = currentCell.Column + this.directions[i % this.directions.Count].OnCol;
+                var nextCell = new MatrixCell(newCellRow, newCellColumn);
+
+                if (this.CheckNextPostion(nextCell))
+                {
+                    this.currentDirectionIndex = i % this.directions.Count;
+                    return nextCell;
+                }
+            }
+
+            return null;
+        }
+
+        private MatrixCell FindFirstEmptyCell()
+        {
+            var newCell = new MatrixCell(0, 0);
+            for (int row = 0; row < this.Rows; row++)
+            {
+                for (int col = 0; col < this.Columns; col++)
+                {
+                    if (this.matrix[row, col] == 0)
+                    {
+                        newCell.Row = row;
+                        newCell.Column = col;
+                        return newCell;
+                    }
+                }
+            }
+
+            return null;
         }
     }
 }
