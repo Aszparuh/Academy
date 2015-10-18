@@ -67,7 +67,6 @@
       <duration>3:47</duration>
     </song>
   </album>
-  
   <album>
     <name>World Painted Blood </name>
     <artist>Slayer</artist>
@@ -186,7 +185,6 @@
       <duration>3:47</duration>
     </song>
   </album>
-  
   <album>
     <name>World Painted Blood </name>
     <artist>Slayer</artist>
@@ -275,73 +273,6 @@
     <song>
       <title>Damage Inc </title>
       <duration>5:08</duration>
-    </song>
-  </album>
-  <album>
-    <name>Black Ice</name>
-    <artist>AC/DC</artist>
-    <year>2008</year>
-    <producer>Columbia Records</producer>
-    <price>21.99</price>
-    <song>
-      <title>Rock 'n Roll Train</title>
-      <duration>4:21</duration>
-    </song>
-    <song>
-      <title>Skies on Fire</title>
-      <duration>3:34</duration>
-    </song>
-    <song>
-      <title>Big Jack</title>
-      <duration>3:56</duration>
-    </song>
-    <song>
-      <title>Anything Goes</title>
-      <duration>3:22</duration>
-    </song>
-    <song>
-      <title>War Machine</title>
-      <duration>3:09</duration>
-    </song>
-    <song>
-      <title>Smash 'n' Grab</title>
-      <duration>4:06</duration>
-    </song>
-    <song>
-      <title>Spoilin' for a Fight</title>
-      <duration>3:16</duration>
-    </song>
-    <song>
-      <title>Wheels</title>
-      <duration>3:28</duration>
-    </song>
-    <song>
-      <title>Decibel</title>
-      <duration>3:33</duration>
-    </song>
-    <song>
-      <title>Stormy May Day</title>
-      <duration>3:10</duration>
-    </song>
-    <song>
-      <title>She Likes Rock 'n Roll</title>
-      <duration>3:52</duration>
-    </song>
-    <song>
-      <title>Money Made</title>
-      <duration>4:15</duration>
-    </song>
-    <song>
-      <title>Rock 'n' Roll Dream</title>
-      <duration>4:40</duration>
-    </song>
-    <song>
-      <title>Rocking All the Way</title>
-      <duration>3:22</duration>
-    </song>
-    <song>
-      <title>Black Ice</title>
-      <duration>3:24</duration>
     </song>
   </album>
 </catalogue>
