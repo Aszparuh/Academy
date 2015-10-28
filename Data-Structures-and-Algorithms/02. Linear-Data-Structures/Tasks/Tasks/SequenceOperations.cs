@@ -3,13 +3,14 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using Extesions;
 
     class SequenceOperations
     {
         static void Main()
         {
             Console.WriteLine("Enter numbers:");
-            var inputList = InputLogic.GetInputAsList();           
+            List<int> inputList = InputLogic.GetInputAsList();           
             var inputStack = new Stack<int>(inputList);
             var sum = inputList.Sum();
             var average = inputList.Average();
@@ -19,10 +20,13 @@
             Console.WriteLine("Collection reversed using Stack");
             Console.WriteLine(string.Join(" ,", inputStack));
 
-            inputList.Sort();
-            Console.WriteLine("Sorted list");
-            Console.WriteLine(string.Join(" ,", inputList));
 
+            var listToSort = new List<int>(inputList);
+            listToSort.Sort();
+            Console.WriteLine("Sorted list");
+            Console.WriteLine(string.Join(" ,", listToSort));
+
+            var longestSubsequence = inputList.GetLongestSubsequence();
         }
     }
 }
