@@ -1,49 +1,18 @@
 ﻿namespace Tasks
 {
     using System;
-    using System.Collections.Generic;
+    using System.Linq;
 
     class SequenceOperations
     {
-        public static List<int> GetInput()
-        {
-            List<int> input = new List<int>();
-            string inputLine;
-            int inputAsInteger;
-
-            while (true)
-            {
-                inputLine = Console.ReadLine();
-
-                if (String.IsNullOrEmpty(inputLine))
-                {
-                    break;
-                }
-
-                if (int.TryParse(inputLine, out inputAsInteger))
-                {
-                    if (inputAsInteger < 0)
-                    {
-                        throw new ArgumentException("You must enter only possitive numbers");
-                    }
-                    else
-                    {
-                        input.Add(inputAsInteger);
-                    }
-                }
-                else
-                {
-                    throw new ArgumentException("The program works with numbers only");
-                }
-
-            }
-
-            return input;
-        }
-
         static void Main()
         {
-            var inputCollection = GetInput();
+            Console.WriteLine("Enter numbers:");
+            var inputCollection = InputLogic.GetInput();
+            var sum = inputCollection.Sum();
+            var average = inputCollection.Average();
+            Console.WriteLine("The sum is: {0}", sum);
+            Console.WriteLine("The average is: {0}", average);
         }
     }
 }
