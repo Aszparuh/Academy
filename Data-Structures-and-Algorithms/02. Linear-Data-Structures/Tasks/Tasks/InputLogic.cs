@@ -15,7 +15,7 @@
             {
                 inputLine = Console.ReadLine();
 
-                if (String.IsNullOrEmpty(inputLine))
+                if (string.IsNullOrEmpty(inputLine))
                 {
                     break;
                 }
@@ -35,7 +35,6 @@
                 {
                     throw new ArgumentException("The program works with numbers only");
                 }
-
             }
 
             return input;

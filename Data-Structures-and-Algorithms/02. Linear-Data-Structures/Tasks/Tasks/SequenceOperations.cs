@@ -5,9 +5,9 @@
     using System.Linq;
     using Extesions;
 
-    class SequenceOperations
+    public class SequenceOperations
     {
-        static void Main()
+        public static void Main()
         {
             Console.WriteLine("Enter numbers:");
             List<int> inputList = InputLogic.GetInputAsList();           
@@ -19,7 +19,6 @@
             Console.WriteLine();
             Console.WriteLine("Collection reversed using Stack");
             Console.WriteLine(string.Join(" ,", inputStack));
-
 
             var listToSort = new List<int>(inputList);
             listToSort.Sort();
