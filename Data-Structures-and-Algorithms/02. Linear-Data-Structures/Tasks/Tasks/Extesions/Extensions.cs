@@ -13,30 +13,50 @@
                 return new List<int>();
             }
 
-            int subsequenceCounter = 1;
-            int subsequencePosition = 0;
-            int maxSubsequence = 0;
-            int maxSubsequencePosition = 0;
+            int value = list[0];
+            bool subsequenceExists = false;
 
-            for (int i = 0; i < length - 1; i++)
+            int currentSequenceStartIndex = 0;
+            int currentSequenceLength = 1;
+
+            int maxSequenceStartIndex = 0;
+            int maxSequenceLength = 1;
+
+            for (int i = 1; i < length; i++)
             {
-                if (list[i] == list[i + 1])
+                if (list[i] == value)
                 {
-                    subsequenceCounter++;
-                    subsequencePosition = i;
-                    if (subsequenceCounter > maxSubsequence)
-                    {
-                        maxSubsequence = subsequenceCounter;
-                        maxSubsequencePosition = subsequencePosition;
-                    }
+                    subsequenceExists = true;
+                    currentSequenceLength++;
+                    continue;
                 }
-                else
+
+                if (currentSequenceLength > maxSequenceLength)
                 {
-                    subsequencePosition = 0;
+                    maxSequenceLength = currentSequenceLength;
+                    maxSequenceStartIndex = currentSequenceStartIndex;
                 }
+
+                currentSequenceStartIndex = i;
+                currentSequenceLength = 1;
+                value = list[i];
             }
 
-            return list.GetRange(maxSubsequencePosition, maxSubsequence);
+            if (currentSequenceLength > maxSequenceLength)
+            {
+                maxSequenceLength = currentSequenceLength;
+                maxSequenceStartIndex = currentSequenceStartIndex;
+            }
+
+            if (subsequenceExists)
+            {
+                var result = list.GetRange(maxSequenceStartIndex, maxSequenceLength);
+                return result;
+            }
+            else
+            {
+                return new List<int>();
+            }
         }
     }
 }
