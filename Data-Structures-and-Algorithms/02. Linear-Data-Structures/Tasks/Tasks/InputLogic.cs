@@ -5,7 +5,7 @@
 
     public static class InputLogic
     {
-        public static List<int> GetInput()
+        public static List<int> GetInputAsList()
         {
             List<int> input = new List<int>();
             string inputLine;
