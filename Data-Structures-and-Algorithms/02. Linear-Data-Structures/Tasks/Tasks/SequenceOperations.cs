@@ -26,7 +26,7 @@
             Console.WriteLine(string.Join(" ,", listToSort));
 
             var longestSubsequence = inputList.GetLongestSubsequence();
-            Console.WriteLine("-------------");
+            Console.WriteLine("The longest subsequence is: ");
             Console.WriteLine(string.Join(" ,", longestSubsequence));
         }
     }

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks", "Tasks\Tasks.csproj", "{04FDC09C-3E9A-42DA-BE01-A04B49A8205D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-04Tasks", "Tasks\01-04Tasks.csproj", "{04FDC09C-3E9A-42DA-BE01-A04B49A8205D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{2459FE39-EBF9-4961-A06F-8E3A54F15DC4}"
 EndProject

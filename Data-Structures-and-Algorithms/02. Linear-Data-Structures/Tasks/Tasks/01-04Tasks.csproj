@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Extesions\Extensions.cs" />
     <Compile Include="InputLogic.cs" />
+    <Compile Include="InputLogicWithNegativeNumbers.cs" />
     <Compile Include="SequenceOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

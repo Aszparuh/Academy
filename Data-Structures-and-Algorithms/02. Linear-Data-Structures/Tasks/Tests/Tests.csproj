@@ -54,9 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Tasks\Tasks.csproj">
+    <ProjectReference Include="..\Tasks\01-04Tasks.csproj">
       <Project>{04fdc09c-3e9a-42da-be01-a04b49a8205d}</Project>
-      <Name>Tasks</Name>
+      <Name>01-04Tasks</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
