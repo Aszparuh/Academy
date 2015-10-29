@@ -9,7 +9,6 @@
     {
         public static void Main()
         {
-            Console.WriteLine("Enter numbers:");
             List<int> inputList = InputLogic.GetInputAsList();           
             var inputStack = new Stack<int>(inputList);
             var sum = inputList.Sum();
