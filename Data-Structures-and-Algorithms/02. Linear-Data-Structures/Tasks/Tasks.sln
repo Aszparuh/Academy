@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-04Tasks", "Tasks\01-04Tasks.csproj", "{04FDC09C-3E9A-42DA-BE01-A04B49A8205D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{2459FE39-EBF9-4961-A06F-8E3A54F15DC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.RemoveOddNumbers", "RemoveOddNumbers\05.RemoveOddNumbers.csproj", "{E04EC6D3-86D6-4E9D-BED2-BAECB8FB68D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2459FE39-EBF9-4961-A06F-8E3A54F15DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2459FE39-EBF9-4961-A06F-8E3A54F15DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2459FE39-EBF9-4961-A06F-8E3A54F15DC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E04EC6D3-86D6-4E9D-BED2-BAECB8FB68D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E04EC6D3-86D6-4E9D-BED2-BAECB8FB68D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E04EC6D3-86D6-4E9D-BED2-BAECB8FB68D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E04EC6D3-86D6-4E9D-BED2-BAECB8FB68D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

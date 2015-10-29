@@ -10,6 +10,7 @@
     {
         public static List<int> GetInputAsList()
         {
+            Console.WriteLine("Enter numbers: ");
             List<int> input = new List<int>();
             string inputLine;
             int inputAsInteger;
