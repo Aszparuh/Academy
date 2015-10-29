@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.OddNumberOccurraence", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.CountOccurencces", "CountOccurencces\07.CountOccurencces.csproj", "{29702F37-CB99-4800-99E2-A614293DFFCE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.FiftyMembersOfSequence", "FiftyMembersOfSequence\09.FiftyMembersOfSequence.csproj", "{898AC102-64C7-46A3-A813-2E86BFDCA718}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{29702F37-CB99-4800-99E2-A614293DFFCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29702F37-CB99-4800-99E2-A614293DFFCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29702F37-CB99-4800-99E2-A614293DFFCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{898AC102-64C7-46A3-A813-2E86BFDCA718}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{898AC102-64C7-46A3-A813-2E86BFDCA718}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{898AC102-64C7-46A3-A813-2E86BFDCA718}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{898AC102-64C7-46A3-A813-2E86BFDCA718}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
