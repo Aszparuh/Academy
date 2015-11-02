@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-04Tasks", "Tasks\01-04Tasks.csproj", "{04FDC09C-3E9A-42DA-BE01-A04B49A8205D}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.CountOccurencces", "CountOccurencces\07.CountOccurencces.csproj", "{29702F37-CB99-4800-99E2-A614293DFFCE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.FiftyMembersOfSequence", "FiftyMembersOfSequence\09.FiftyMembersOfSequence.csproj", "{898AC102-64C7-46A3-A813-2E86BFDCA718}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.ShortestSequence", "ShortestSequence\10.ShortestSequence.csproj", "{3355212A-BC88-4F25-B68D-9E16ABC594E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{898AC102-64C7-46A3-A813-2E86BFDCA718}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{898AC102-64C7-46A3-A813-2E86BFDCA718}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{898AC102-64C7-46A3-A813-2E86BFDCA718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3355212A-BC88-4F25-B68D-9E16ABC594E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3355212A-BC88-4F25-B68D-9E16ABC594E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3355212A-BC88-4F25-B68D-9E16ABC594E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3355212A-BC88-4F25-B68D-9E16ABC594E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
