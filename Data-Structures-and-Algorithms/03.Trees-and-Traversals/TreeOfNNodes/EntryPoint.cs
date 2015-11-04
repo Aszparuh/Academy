@@ -121,16 +121,15 @@
             }
 
             var root = GetRoot(treeCollection);
-           // Console.WriteLine("The root is {0}", root.Value);
-
-            //var allLeaves = new List<int>();
-            //var allMiddleLeaves = new List<int>();
-            //GetAllLeaves(root, allLeaves);
-            //Console.Write("All Leaves: ");
-            //Console.WriteLine(string.Join(" ,", allLeaves));
-            //Console.Write("All middle leaves: ");
-            //GetAllMiddleLeaves(root, allMiddleLeaves);
-            //Console.WriteLine(string.Join(" ,", allMiddleLeaves));
+            Console.WriteLine("The root is {0}", root.Value);
+            var allLeaves = new List<int>();
+            var allMiddleLeaves = new List<int>();
+            GetAllLeaves(root, allLeaves);
+            Console.Write("All Leaves: ");
+            Console.WriteLine(string.Join(" ,", allLeaves));
+            Console.Write("All middle leaves: ");
+            GetAllMiddleLeaves(root, allMiddleLeaves);
+            Console.WriteLine(string.Join(" ,", allMiddleLeaves));
             CalculateLongestPath(root, 0);
             Console.WriteLine("The longest path is {0}", longestPath);
         }

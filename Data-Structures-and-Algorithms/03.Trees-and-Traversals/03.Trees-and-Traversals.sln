@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tree", "Tree\Tree.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.TraverseDirectories", "TraverseDirectories\02.TraverseDirectories.csproj", "{BD760A9F-613A-48EF-A02D-C4171E88A019}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.BuildTreeFilesDirectories", "BuildTreeFilesDirectories\03.BuildTreeFilesDirectories.csproj", "{88E71DBB-E67A-4F6C-9034-A3C0FBEAEAAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BD760A9F-613A-48EF-A02D-C4171E88A019}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD760A9F-613A-48EF-A02D-C4171E88A019}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD760A9F-613A-48EF-A02D-C4171E88A019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88E71DBB-E67A-4F6C-9034-A3C0FBEAEAAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88E71DBB-E67A-4F6C-9034-A3C0FBEAEAAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88E71DBB-E67A-4F6C-9034-A3C0FBEAEAAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88E71DBB-E67A-4F6C-9034-A3C0FBEAEAAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
