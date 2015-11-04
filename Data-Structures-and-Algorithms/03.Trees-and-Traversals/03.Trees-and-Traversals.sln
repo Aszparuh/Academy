@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.TreeOfNNodes", "TreeOfNNodes\01.TreeOfNNodes.csproj", "{1511B0FA-36C9-4C8D-B2EA-6ACEB7B8FDE0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tree", "Tree\Tree.csproj", "{F9DAA435-6911-45A6-B52D-0AA28ADFE4B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.TraverseDirectories", "TraverseDirectories\02.TraverseDirectories.csproj", "{BD760A9F-613A-48EF-A02D-C4171E88A019}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F9DAA435-6911-45A6-B52D-0AA28ADFE4B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9DAA435-6911-45A6-B52D-0AA28ADFE4B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9DAA435-6911-45A6-B52D-0AA28ADFE4B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD760A9F-613A-48EF-A02D-C4171E88A019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD760A9F-613A-48EF-A02D-C4171E88A019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD760A9F-613A-48EF-A02D-C4171E88A019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD760A9F-613A-48EF-A02D-C4171E88A019}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

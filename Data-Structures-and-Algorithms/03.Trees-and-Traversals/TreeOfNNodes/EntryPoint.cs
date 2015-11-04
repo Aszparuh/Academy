@@ -7,6 +7,8 @@
 
     public class EntryPoint
     {
+        private static int longestPath;
+
         private static Node<int> GetRoot(Dictionary<int, Node<int>> tree)
         {
             foreach (var element in tree)
@@ -30,6 +32,33 @@
             foreach (var child in node.Children)
             {
                 GetAllLeaves(child, listOfLeaves);
+            }
+        }
+
+        private static void GetAllMiddleLeaves(Node<int> node, List<int> listOfLeaves)
+        {
+            if (node.Children.Count != 0 && node.Parent != null)
+            {
+                listOfLeaves.Add(node.Value);
+            }
+
+            foreach (var child in node.Children)
+            {
+                GetAllMiddleLeaves(child, listOfLeaves);
+            }
+        }
+
+        private static void CalculateLongestPath(Node<int> node, int path)
+        {
+            path++;
+            foreach (var child in node.Children)
+            {
+                CalculateLongestPath(child, path);
+            }
+
+            if (path > longestPath)
+            {
+                longestPath = path;
             }
 
         }
@@ -94,9 +123,16 @@
             var root = GetRoot(treeCollection);
            // Console.WriteLine("The root is {0}", root.Value);
 
-            var allLeaves = new List<int>();
-            GetAllLeaves(root, allLeaves);
-            Console.WriteLine(string.Join(" ,", allLeaves));
+            //var allLeaves = new List<int>();
+            //var allMiddleLeaves = new List<int>();
+            //GetAllLeaves(root, allLeaves);
+            //Console.Write("All Leaves: ");
+            //Console.WriteLine(string.Join(" ,", allLeaves));
+            //Console.Write("All middle leaves: ");
+            //GetAllMiddleLeaves(root, allMiddleLeaves);
+            //Console.WriteLine(string.Join(" ,", allMiddleLeaves));
+            CalculateLongestPath(root, 0);
+            Console.WriteLine("The longest path is {0}", longestPath);
         }
     }
 }
