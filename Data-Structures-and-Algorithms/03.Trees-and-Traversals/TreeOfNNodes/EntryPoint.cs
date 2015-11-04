@@ -7,6 +7,33 @@
 
     public class EntryPoint
     {
+        private static Node<int> GetRoot(Dictionary<int, Node<int>> tree)
+        {
+            foreach (var element in tree)
+            {
+                if (element.Value.Parent == null)
+                {
+                    return element.Value;
+                }
+            }
+
+            throw new ArgumentException("Root is missing");
+        }
+
+        private static void GetAllLeaves(Node<int> node, List<int> listOfLeaves)
+        {
+            if (node.Children.Count == 0)
+            {
+                listOfLeaves.Add(node.Value);
+            }
+
+            foreach (var child in node.Children)
+            {
+                GetAllLeaves(child, listOfLeaves);
+            }
+
+        }
+        
         public static void Main()
         {
             Console.WriteLine("Enter the input: ");
@@ -28,23 +55,48 @@
 
                     if (treeCollection.ContainsKey(parent))
                     {
-                        var childNode = new Node<int>(child);
+                        Node<int> childNode;
+                        if (treeCollection.ContainsKey(child))
+                        {
+                            childNode = treeCollection[child];
+                        }
+                        else
+                        {
+                            childNode = new Node<int>(child);
+                        }
+                        
                         childNode.Parent = treeCollection[parent];
+                        treeCollection[parent].Children.Add(childNode);
                         treeCollection[child] = childNode;
                     }
+                    
                     else
                     {
-                        var childNode = new Node<int>(child);
+                        Node<int> childNode;
+                        if (treeCollection.ContainsKey(child))
+                        {
+                            childNode = treeCollection[child];
+                        }
+                        else
+                        {
+                            childNode = new Node<int>(child);
+                        }
+                      
                         var parentNode = new Node<int>(parent);
-                        parentNode.Children.Add(childNode);
-                        childNode.Parent = parentNode;
                         treeCollection[parent] = parentNode;
+                        treeCollection[parent].Children.Add(childNode);
                         treeCollection[child] = childNode;
+                        treeCollection[child].Parent = treeCollection[parent];
                     }
                 }
             }
 
-            ///Console.WriteLine(treeCollection.Count);
+            var root = GetRoot(treeCollection);
+           // Console.WriteLine("The root is {0}", root.Value);
+
+            var allLeaves = new List<int>();
+            GetAllLeaves(root, allLeaves);
+            Console.WriteLine(string.Join(" ,", allLeaves));
         }
     }
 }

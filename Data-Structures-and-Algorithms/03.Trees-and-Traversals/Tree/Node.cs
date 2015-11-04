@@ -15,5 +15,10 @@
             this.Children = new List<Node<T>>();
             this.Value = value;
         }
+
+        public override string ToString()
+        {
+            return this.Value.ToString();
+        }
     }
 }
