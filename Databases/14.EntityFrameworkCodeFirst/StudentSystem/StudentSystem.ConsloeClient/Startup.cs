@@ -4,11 +4,15 @@
     using System.Linq;
     using StudentSystem.Data;
     using StudentSystem.Models;
+    using System.Data.Entity;
+    using StudentSystem.Data.Migrations;
 
     public class Startup
     {
         public static void Main()
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<StudentsDbContext, Configuration>());
+
             var db = new StudentsDbContext();
             var course = new Course
             {
