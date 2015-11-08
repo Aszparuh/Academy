@@ -47,6 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201511081833270_InitialCreate.cs" />
+    <Compile Include="Migrations\201511081833270_InitialCreate.Designer.cs">
+      <DependentUpon>201511081833270_InitialCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentsDbContext.cs" />
@@ -60,6 +64,11 @@
       <Project>{c1bff069-e6ab-4e27-8338-f1b35b83bd1a}</Project>
       <Name>StudentSystem.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201511081833270_InitialCreate.resx">
+      <DependentUpon>201511081833270_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
