@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{13AB5044-BDE7-47A6-A909-80E49BBE9435}</ProjectGuid>
+    <ProjectGuid>{1B52D5F3-33C1-4EEF-9E5E-EACF662151BF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CustomPriorityQueue</RootNamespace>
-    <AssemblyName>CustomPriorityQueue</AssemblyName>
+    <RootNamespace>FindSetOfWords</RootNamespace>
+    <AssemblyName>FindSetOfWords</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PowerCollections">
-      <HintPath>..\packages\XAct.Wintellect.PowerCollections.0.0.1\lib\net20\PowerCollections.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,7 +39,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PriorityQueue.cs" />
+    <Compile Include="Contracts\ITrie.cs" />
+    <Compile Include="Models\ConcurrentTrie.cs" />
+    <Compile Include="Models\ConcurrentTrieNode.cs" />
+    <Compile Include="Models\MatchKind.cs" />
+    <Compile Include="Models\SplitResult.cs" />
+    <Compile Include="Models\StringPartition.cs" />
+    <Compile Include="Models\SuffixTrie.cs" />
+    <Compile Include="Models\Trie.cs" />
+    <Compile Include="Models\TrieNode.cs" />
+    <Compile Include="Models\TrieNodeBase.cs" />
+    <Compile Include="Models\ZipResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
