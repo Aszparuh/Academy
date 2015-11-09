@@ -41,7 +41,7 @@
         {
             var newElement = new KeyValuePair<TPriority, TValue>(priority, value);
             this.heapBase.Add(newElement);
-            HeapifyFromEndToBeginning(this.heapBase.Count - 1);
+            this.HeapifyFromEndToBeginning(this.heapBase.Count - 1);
         }
 
         public KeyValuePair<TPriority, TValue> Dequeue()
@@ -53,7 +53,7 @@
             else
             {
                 var result = this.heapBase[0];
-                DeleteRoot();
+                this.DeleteRoot();
                 return result;
             }
         }
@@ -118,7 +118,7 @@
                     bool isParentGreater = this.comparer.Compare(this.heapBase[parentPosition].Key, this.heapBase[position].Key) > 0;
                     if (isParentGreater)
                     {
-                        ExchangeElements(parentPosition, position);
+                        this.ExchangeElements(parentPosition, position);
                         position = parentPosition;
                     }
                     else
@@ -140,8 +140,7 @@
             this.heapBase[0] = this.heapBase[this.heapBase.Count - 1];
             this.heapBase.RemoveAt(this.heapBase.Count - 1);
 
-            HeapifyFromBeginningToEnd(0);
+            this.HeapifyFromBeginningToEnd(0);
         }
-
     }
 }
