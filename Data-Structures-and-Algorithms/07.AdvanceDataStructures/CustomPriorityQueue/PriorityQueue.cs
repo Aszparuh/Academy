@@ -14,6 +14,11 @@
             this.heapBase = new List<KeyValuePair<TPriority, TValue>>();
         }
 
+        public PriorityQueue()
+            : this(Comparer<TPriority>.Default)
+        {
+        }    
+
         private IComparer<TPriority> Comparer 
         { 
             get
@@ -74,16 +79,14 @@
                     int leftChildPosition = (2 * position) + 1;
                     int rightChildPosition = (2 * position) + 2;
                     bool isLeftInRange = leftChildPosition < this.heapBase.Count;
-                    bool isRightInRange = rightChildPosition < this.heapBase.Count;
-                    bool isLeftSmaller = this.comparer.Compare(this.heapBase[smallestPosition].Key, this.heapBase[leftChildPosition].Key) > 0;
-                    bool isRightSmaller = this.comparer.Compare(this.heapBase[smallestPosition].Key, this.heapBase[rightChildPosition].Key) > 0;
+                    bool isRightInRange = rightChildPosition < this.heapBase.Count; 
 
-                    if (isLeftInRange && isLeftSmaller)
+                    if (isLeftInRange && this.comparer.Compare(this.heapBase[smallestPosition].Key, this.heapBase[leftChildPosition].Key) > 0)
                     {
                         smallestPosition = leftChildPosition;
                     }
 
-                    if (isRightInRange && isRightSmaller)
+                    if (isRightInRange && this.comparer.Compare(this.heapBase[smallestPosition].Key, this.heapBase[rightChildPosition].Key) > 0)
                     {
                         smallestPosition = rightChildPosition;
                     }
