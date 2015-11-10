@@ -38,8 +38,7 @@
                 var students = element.Value.OrderBy(st => st.LastName)
                                             .ThenBy(st => st.FirstName)
                                             .ToList();
-                Console.Write(course);
-                Console.Write(" ");
+                Console.Write(course + ": ");
                 Console.WriteLine(string.Join(", ", students));
             }
         }
