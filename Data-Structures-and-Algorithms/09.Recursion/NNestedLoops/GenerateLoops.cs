@@ -2,7 +2,7 @@
 {
     using System;
 
-    class Startup
+    class GenerateLoops
     {
         static void Main()
         {

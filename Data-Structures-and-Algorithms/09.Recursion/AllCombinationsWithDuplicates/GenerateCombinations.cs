@@ -2,11 +2,11 @@
 {
     using System;
 
-    class Startup
+    class GenerateCombinations
     {
         static void Main()
         {
-            int n = 4;
+            int n = 3;
             int k = 2;
             int[] allCombinations = new int[k];
             GenerateVariations(0, 1, n, k, allCombinations);
@@ -23,7 +23,7 @@
                 for (int i = start; i < n + 1; i++)
                 {
                     allCombinations[index] = i;
-                    GenerateVariations(index + 1, i + 1, n, k, allCombinations);
+                    GenerateVariations(index + 1, i, n, k, allCombinations);
                 }
             }
         }
