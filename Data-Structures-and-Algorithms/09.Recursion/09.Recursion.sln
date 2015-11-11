@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.NNestedLoops", "NNestedL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.AllCombinationsWithDuplicates", "AllCombinationsWithDuplicates\02.AllCombinationsWithDuplicates.csproj", "{19CE9AFB-3212-43F7-A6B5-ADF9CA9A1CB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllCombinationsWithoutDuplicates", "AllCombinationsWithoutDuplicates\AllCombinationsWithoutDuplicates.csproj", "{8EE9F916-3FAE-4F83-AB22-66A86BE1692A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.AllCombinationsWithoutDuplicates", "AllCombinationsWithoutDuplicates\03.AllCombinationsWithoutDuplicates.csproj", "{8EE9F916-3FAE-4F83-AB22-66A86BE1692A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
