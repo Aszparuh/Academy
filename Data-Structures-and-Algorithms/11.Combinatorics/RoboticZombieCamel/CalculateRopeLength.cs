@@ -1,72 +1,35 @@
 ﻿namespace RoboticZombieCamel
 {
     using System;
-    using System.Collections.Generic;
 
     public class CalculateRopeLength
     {
-        private static int length = 0;
         public static void Main()
         {
-            //Get the input;
-            int numberOfObelisc = int.Parse(Console.ReadLine());
-            var allObeliscs = new List<Obelisc>();
+            char[] separators = new char[] { ' ' };
+            int numberOfObeliscs = int.Parse(Console.ReadLine());
+            int[] distancesToCenter = new int[numberOfObeliscs];
 
-            for (int i = 0; i < numberOfObelisc; i++)
+            for (int i = 0; i < numberOfObeliscs; i++)
             {
                 string line = Console.ReadLine();
-                var allNumbersOnLine = line.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                int currentX = int.Parse(allNumbersOnLine[0]);
-                int currentY = int.Parse(allNumbersOnLine[1]);
-                var currentObelisc = new Obelisc(currentX, currentY);
-                allObeliscs.Add(currentObelisc);
+                var splitedLine = line.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+                int x = Math.Abs(int.Parse(splitedLine[0]));
+                int y = Math.Abs(int.Parse(splitedLine[1]));
+
+                distancesToCenter[i] = x + y;
             }
 
-            GetRopeLength(numberOfObelisc, allObeliscs);
-            Console.WriteLine(length);
-        }
+            int repetitions = (int)Math.Pow(2, numberOfObeliscs - 1);
+            ulong sum = 0;
 
-        private static void GetRopeLength(int numberOfObelisc, List<Obelisc> allObeliscs)
-        {
-            for (int k = 1; k <= allObeliscs.Count; k++)
+            for (int i = 0; i < numberOfObeliscs; i++)
             {
-                GenerateCombinationsWithoutRepetition(0, 0, allObeliscs, k, length);
+                sum += (ulong)distancesToCenter[i] * (ulong)repetitions;
+                sum %= ulong.MaxValue;
             }
-        }
 
-        private static void GenerateCombinationsWithoutRepetition(int index, int start, List<Obelisc> obelsics, int numberOfElements, int length)
-        {
-            if (index > numberOfElements)
-            {
-                return;
-            }
-            else
-            {
-                for (int i = start; i < numberOfElements; i++)
-                {
-                    length += obelsics[i].DistanceToCenter();
-                    GenerateCombinationsWithoutRepetition(index + 1, i, obelsics, numberOfElements, length);
-                    //length -= obelsics[i].DistanceToCenter();
-                }
-            }
-        }
-    }
-
-    public class Obelisc
-    {
-        public Obelisc(int x, int y)
-        {
-            this.X = x;
-            this.Y = y;
-        }
-
-        public int X { get; set; }
-
-        public int Y { get; set; }
-
-        public int DistanceToCenter()
-        {
-            return this.X + this.Y;
+            Console.WriteLine(sum);
         }
     }
 }
