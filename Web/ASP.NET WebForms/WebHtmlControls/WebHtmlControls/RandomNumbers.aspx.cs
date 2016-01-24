@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace WebHtmlControls
 {
-    public partial class About : Page
+    public partial class RandomNumber : Page
     {
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -64,6 +64,13 @@ namespace WebHtmlControls
 
         private int GenerateRandom(int from, int to)
         {
+            if (from > to)
+            {
+                int temp = to;
+                to = from;
+                from = temp;
+            }
+
             var Random = new Random();
             return Random.Next(from, to);
         }

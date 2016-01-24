@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Random Number" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RandomNumbers.aspx.cs" Inherits="WebHtmlControls.About" %>
+﻿<%@ Page Title="Random Number" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RandomNumbers.aspx.cs" Inherits="WebHtmlControls.RandomNumber" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>

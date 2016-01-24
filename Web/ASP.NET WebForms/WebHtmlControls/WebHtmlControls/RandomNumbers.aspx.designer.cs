@@ -10,7 +10,7 @@
 namespace WebHtmlControls {
     
     
-    public partial class About {
+    public partial class RandomNumber {
         
         /// <summary>
         /// from control.
