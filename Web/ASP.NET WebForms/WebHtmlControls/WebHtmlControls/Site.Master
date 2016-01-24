@@ -54,6 +54,7 @@
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/RandomNumbers">Random Number</a></li>
                         <li><a runat="server" href="~/Escaping">Escaping</a></li>
+                        <li><a runat="server" href="~/StudentSystem">Student System</a></li>
                     </ul>
                 </div>
             </div>

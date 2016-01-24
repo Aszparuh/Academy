@@ -2,8 +2,6 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>
-
-
     <div class="input-group">
         <span class="input-group-addon" id="tbForm">Enter Text</span>
         <asp:TextBox ID="tbUserInput" runat="server" CssClass="form-control"></asp:TextBox>
