@@ -29,12 +29,12 @@
         <div class="col-xs-6">
             <h3>Generate Number Web Controls</h3>
             <div class="input-group">
-                <span class="input-group-addon" id="tbForm">from</span>
+                <span class="input-group-addon" >from</span>
                 <asp:TextBox ID="tbFrom" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
             <br />
             <div class="input-group">
-                <span class="input-group-addon" id="tbTo">to</span>
+                <span class="input-group-addon">to</span>
                 <asp:TextBox ID="tbTo" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
             <br />
