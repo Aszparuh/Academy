@@ -9,7 +9,8 @@
     {
         protected void Application_Start()
         {
-            ViewEngineConfig.RegisterViewEngines();
+            ViewEnginesConfig.RegisterViewEngines(ViewEngines.Engines);
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

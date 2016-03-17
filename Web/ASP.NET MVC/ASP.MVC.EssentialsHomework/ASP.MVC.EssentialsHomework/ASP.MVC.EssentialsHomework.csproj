@@ -132,7 +132,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\ViewEngineConfig.cs" />
+    <Compile Include="App_Start\ViewEnginesConfig.cs" />
     <Compile Include="Areas\Calculator\CalculatorAreaRegistration.cs" />
     <Compile Include="Areas\Calculator\Controllers\CalculatorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
