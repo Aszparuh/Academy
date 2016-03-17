@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace System.Web.Mvc
+﻿namespace System.Web.Mvc
 {
     public class ViewEnginesConfig
     {
