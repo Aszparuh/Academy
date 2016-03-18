@@ -1,4 +1,6 @@
-﻿@{
+﻿@using ASP.MVC.EssentialsHomework.Areas.Calculator.Models
+@model BitCalculatorViewModel
+@{
     ViewBag.Title = "Bit Calculator";
 }
 <br />
@@ -11,4 +13,23 @@
             <h2>@ViewBag.Title</h2>
         </div>
     </div>      
+</div>
+<br />
+<div class="row">
+    <div class="col-xs-2 col-xs-offset-4">
+        @Html.LabelFor(m => m.Quantity)
+        @Html.TextBoxFor(m => m.Quantity, new { @class = "form-control", type = "number" })
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-2 col-xs-offset-4 btn-group">
+        @Html.LabelFor(m => m.Type)
+        @Html.EnumDropDownListFor(m => m.Type,
+        new
+        {
+            @class ="btn btn-default btn-md dropdown-toggle",
+            type ="button", data_toggle="dropdown",
+            aria_expanded="false"
+        })
+    </div>
 </div>

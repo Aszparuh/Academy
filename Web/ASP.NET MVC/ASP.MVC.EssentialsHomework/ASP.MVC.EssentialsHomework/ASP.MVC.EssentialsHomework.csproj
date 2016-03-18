@@ -136,7 +136,7 @@
     <Compile Include="Areas\Calculator\CalculatorAreaRegistration.cs" />
     <Compile Include="Areas\Calculator\Controllers\CalculatorController.cs" />
     <Compile Include="Areas\Calculator\Models\BitCalculatorViewModel.cs" />
-    <Compile Include="Areas\Calculator\Models\Type.cs" />
+    <Compile Include="Areas\Calculator\Models\UnitType.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">

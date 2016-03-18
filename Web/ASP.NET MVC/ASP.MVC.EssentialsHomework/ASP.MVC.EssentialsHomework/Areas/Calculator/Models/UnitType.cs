@@ -1,6 +1,6 @@
 ﻿namespace ASP.MVC.EssentialsHomework.Areas.Calculator.Models
 {
-    public enum Type
+    public enum UnitType
     {
        Bit,
        Byte,
