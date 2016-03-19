@@ -24,9 +24,15 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-2 col-xs-offset-4 btn-group">
+        <div class="col-xs-2 col-xs-offset-4">
             @Html.LabelFor(m => m.Type)
             @Html.EnumDropDownListFor(m => m.Type, new { @class = "form-control"})
         </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-xs-2 col-xs-offset-4">
+            <input type="submit" value="Go" class="btn-success" />
+        </div>       
     </div>
 }
