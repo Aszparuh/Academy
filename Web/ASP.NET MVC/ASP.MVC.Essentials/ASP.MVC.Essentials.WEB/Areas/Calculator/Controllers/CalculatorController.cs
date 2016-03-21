@@ -3,6 +3,7 @@
     using System.Diagnostics;
     using Models;
     using System.Web.Mvc;
+    using System.Collections.Generic;
 
     public class CalculatorController : Controller
     {
@@ -10,7 +11,13 @@
         [HttpGet]
         public ActionResult Index()
         {
-            return View();
+            var unitsList = new List<Unit>();
+            var firstUnit = new Unit { UnitType = UnitType.Byte, Value = "8" };
+            unitsList.Add(firstUnit);
+
+            var calcView = new BitCalculatorViewModel(unitsList);
+            calcView.Quantity = "1";
+            return View(calcView);
         }
 
         [HttpPost]

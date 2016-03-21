@@ -26,7 +26,7 @@
     <div class="row">
         <div class="col-xs-2 col-xs-offset-4">
             @Html.LabelFor(m => m.UnitType)
-            @Html.EnumDropDownListFor(m => m.UnitType, new { @class = "form-control"})
+            @Html.EnumDropDownListFor(m => m.UnitType, new { @class = "form-control" })
         </div>
     </div>
     <div class="row">
@@ -41,4 +41,18 @@
             <input type="submit" value="Go" class="btn-success" />
         </div>       
     </div>
+
+    <br />
+    foreach (var unit in Model.Units)
+    {
+        <hr />
+        <div class="row">
+            <div class="col-xs-2 col-xs-offset-4">
+                <strong>@unit.UnitType</strong>
+            </div>
+            <div class="col-xs-2">
+                @unit.Value
+            </div>
+        </div>
+    }
 }
