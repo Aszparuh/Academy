@@ -1,4 +1,4 @@
-﻿namespace ASP.MVC.EssentialsHomework
+﻿namespace ASP.MVC.Essentials.Web
 {
     using System.Web;
     using System.Web.Optimization;

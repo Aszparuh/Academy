@@ -1,4 +1,4 @@
-﻿namespace ASP.MVC.EssentialsHomework.Controllers
+﻿namespace ASP.MVC.Essentials.Web.Controllers
 {
     using System.Web.Mvc;
 

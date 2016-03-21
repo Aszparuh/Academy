@@ -1,4 +1,4 @@
-﻿namespace ASP.MVC.EssentialsHomework.Areas.Calculator
+﻿namespace ASP.MVC.Essentials.Web.Areas.Calculator
 {
     using System.Web.Mvc;
 

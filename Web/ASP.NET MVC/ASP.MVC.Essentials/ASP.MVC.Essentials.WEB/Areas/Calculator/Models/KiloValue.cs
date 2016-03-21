@@ -1,4 +1,4 @@
-﻿namespace ASP.MVC.EssentialsHomework.Areas.Calculator.Models
+﻿namespace ASP.MVC.Essentials.Web.Areas.Calculator.Models
 {
     using System.ComponentModel.DataAnnotations;
 

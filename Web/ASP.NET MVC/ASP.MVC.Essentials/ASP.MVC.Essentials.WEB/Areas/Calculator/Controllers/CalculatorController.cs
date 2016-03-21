@@ -1,4 +1,4 @@
-﻿namespace ASP.MVC.EssentialsHomework.Areas.Calculator.Controllers
+﻿namespace ASP.MVC.Essentials.Web.Areas.Calculator.Controllers
 {
     using System.Diagnostics;
     using Models;

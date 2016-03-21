@@ -1,5 +1,7 @@
-﻿namespace System.Web.Mvc
+﻿namespace ASP.MVC.Essentials.Web
 {
+    using System.Web.Mvc;
+
     public class ViewEnginesConfig
     {
         public static void RegisterViewEngines(ViewEngineCollection viewEngines)

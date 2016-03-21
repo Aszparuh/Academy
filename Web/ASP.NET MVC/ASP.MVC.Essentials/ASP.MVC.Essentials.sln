@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.MVC.Essentials.Web", "ASP.MVC.Essentials.WEB\ASP.MVC.Essentials.Web.csproj", "{D59A43BB-B9D7-475B-A47A-2774B427AB44}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.MVC.Essentials.Web", "ASP.MVC.Essentials.Web\ASP.MVC.Essentials.Web.csproj", "{D59A43BB-B9D7-475B-A47A-2774B427AB44}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.MVC.Infrastructure", "ASP.MVC.Infrastructure\ASP.MVC.Infrastructure.csproj", "{3972E7E2-F377-41AF-96F3-E0A4E4712A13}"
 EndProject
