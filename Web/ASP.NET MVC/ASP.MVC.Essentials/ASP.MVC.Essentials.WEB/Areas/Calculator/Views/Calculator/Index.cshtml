@@ -25,8 +25,14 @@
     </div>
     <div class="row">
         <div class="col-xs-2 col-xs-offset-4">
-            @Html.LabelFor(m => m.Type)
+            @Html.LabelFor(m => m.UnitType)
             @Html.EnumDropDownListFor(m => m.UnitType, new { @class = "form-control"})
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2 col-xs-offset-4">
+            @Html.LabelFor(m => m.KiloValue)
+            @Html.EnumDropDownListFor(m => m.KiloValue, new { @class = "form-control" })
         </div>
     </div>
     <br />

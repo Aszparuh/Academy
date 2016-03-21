@@ -2,8 +2,10 @@
 {
     public class BitCalculatorViewModel
     {
-        public int Quantity { get; set; }
+        public string Quantity { get; set; }
 
         public UnitType UnitType { get; set; }
+
+        public KiloValue KiloValue { get; set; }
     }
 }
