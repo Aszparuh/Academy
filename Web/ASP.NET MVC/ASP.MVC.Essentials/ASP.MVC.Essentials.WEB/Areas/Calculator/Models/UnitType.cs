@@ -23,7 +23,7 @@
         [Display(Name = "Terabit-Tb")]
         Terabit,
         [Display(Name = "Terabyte-TB")]
-        Tarabyte,
+        Terabyte,
         [Display(Name = "Petabit-Pb")]
         Petabit,
         [Display(Name = "Petabyte-PB")]

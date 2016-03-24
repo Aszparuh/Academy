@@ -28,6 +28,10 @@
             {
                 return this.units;
             }
+            set
+            {
+                this.units = value;
+            }
         }
     }
 }

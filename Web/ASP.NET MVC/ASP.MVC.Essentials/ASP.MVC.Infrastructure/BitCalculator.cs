@@ -77,6 +77,7 @@
         {
             BigDecimal result;
             BigDecimal quantityAsNumber = BigDecimal.Parse(quantity);
+            BigDecimal kilo = (BigDecimal)kiloValue;
 
             switch (type)
             {
@@ -86,71 +87,71 @@
                     break;
                 //case Byte-B
                 case 1:
-                    result = quantityAsNumber / 8;
+                    result = quantityAsNumber.Divide(8);
                     break;
                 //case Kilobit-Kb
                 case 2:
-                    result = quantityAsNumber / kiloValue;
+                    result = quantityAsNumber.Divide(kilo);
                     break;
                 //case Kilobyte-KB
                 case 3:
-                    result = (quantityAsNumber / kiloValue) / 8;
+                    result = (quantityAsNumber.Divide(kilo)).Divide(8) ;
                     break;
                 //case Megabit-Mb
                 case 4:
-                    result = quantityAsNumber / kiloValue * kiloValue;
+                    result = quantityAsNumber.Divide(Power(kilo, 2));
                     break;
                 //case Megabyte-MB
                 case 5:
-                    result = (quantityAsNumber / kiloValue * kiloValue) / 8;
+                    result = (quantityAsNumber.Divide(Power(kilo, 2))).Divide(8);
                     break;
                 //case Gigabit-Gb
                 case 6:
-                    result = quantityAsNumber / kiloValue * kiloValue * kiloValue;
+                    result = quantityAsNumber.Divide(Power(kilo, 3));
                     break;
                 //case Gigabyte-GB
                 case 7:
-                    result = (quantityAsNumber / kiloValue * kiloValue * kiloValue) / 8;
+                    result = (quantityAsNumber.Divide(Power(kilo, 3))).Divide(8);
                     break;
                 //case Terabit-Tb
                 case 8:
-                    result = quantityAsNumber / kiloValue * kiloValue * kiloValue * kiloValue;
+                    result = quantityAsNumber.Divide(Power(kilo, 4));
                     break;
                 //case Terabyte-TB
                 case 9:
-                    result = (quantityAsNumber / kiloValue * kiloValue * kiloValue * kiloValue) / 8;
+                    result = (quantityAsNumber.Divide(Power(kilo, 4))).Divide(8);
                     break;
                 //case Petabit-Pb
                 case 10:
-                    result = quantityAsNumber / kiloValue * kiloValue * kiloValue * kiloValue * kiloValue;
+                    result = quantityAsNumber.Divide(Power(kilo, 5));
                     break;
                 //case Petabyte-PB
                 case 11:
-                    result = (quantityAsNumber / kiloValue * kiloValue * kiloValue * kiloValue * kiloValue) / 8;
+                    result = (quantityAsNumber.Divide(Power(kilo, 5))).Divide(8);
                     break;
                 //case Exabit-Eb
                 case 12:
-                    result = quantityAsNumber / kiloValue * kiloValue * kiloValue * kiloValue * kiloValue * kiloValue;
+                    result = quantityAsNumber.Divide(Power(kilo, 6));
                     break;
                 //case Exabyte-EB
                 case 13:
-                    result = (quantityAsNumber / kiloValue * kiloValue * kiloValue * kiloValue * kiloValue * kiloValue) / 8;
+                    result = (quantityAsNumber.Divide(Power(kilo, 6))).Divide(8);
                     break;
                 //case Zettabit-Zb
                 case 14:
-                    result = quantityAsNumber / kiloValue * kiloValue * kiloValue * kiloValue * kiloValue * kiloValue * kiloValue;
+                    result = quantityAsNumber.Divide(Power(kilo, 7));
                     break;
                 //case Zettabyte-ZB
                 case 15:
-                    result = (quantityAsNumber / kiloValue * kiloValue * kiloValue * kiloValue * kiloValue * kiloValue * kiloValue) / 8;
+                    result = (quantityAsNumber.Divide(Power(kilo, 7))).Divide(8);
                     break;
                 //case Yottabit-Yb
                 case 16:
-                    result = quantityAsNumber / kiloValue * kiloValue * kiloValue * kiloValue * kiloValue * kiloValue * kiloValue * kiloValue;
+                    result = quantityAsNumber.Divide(Power(kilo, 8));
                     break;
                 //case Yottabyte-YB
                 case 17:
-                    result = (quantityAsNumber / kiloValue * kiloValue * kiloValue * kiloValue * kiloValue * kiloValue * kiloValue * kiloValue) / 8;
+                    result = (quantityAsNumber.Divide(Power(kilo, 8))).Divide(8);
                     break;
                 default:
                     throw new System.Exception();
@@ -160,7 +161,7 @@
             return result.ToString();
         }
 
-        private double Power(double a, int b)
+        private BigDecimal Power(BigDecimal a, int b)
         {
             if (b < 0)
             {
@@ -170,11 +171,11 @@
             if (a == 0) return 0;
             if (b % 2 == 0)
             {
-                return Power(a * a, b / 2);
+                return Power(a.Multiply(a), b / 2);
             }
             else if (b % 2 == 1)
             {
-                return a * Power(a * a, b / 2);
+                return a.Multiply(Power(a.Multiply(a), b / 2));
             }
             return 0;
         }
