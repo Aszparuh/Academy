@@ -17,7 +17,6 @@
             new Unit { UnitType = UnitType.Kilobyte },
             new Unit { UnitType = UnitType.Megabit },
             new Unit { UnitType = UnitType.Megabyte },
-            new Unit { UnitType = UnitType.Byte },
             new Unit { UnitType = UnitType.Gigabit },
             new Unit { UnitType = UnitType.Gigabyte },
             new Unit { UnitType = UnitType.Terabit },
@@ -38,10 +37,11 @@
         {
             var calculator = new BitCalculator();
             var calculatorViewModel = new BitCalculatorViewModel();
+            calculatorViewModel.Quantity = "1";
 
-            foreach (var item in Units)
+            foreach (var unit in Units)
             {
-                item.Value = calculator.Calculate((int)item.UnitType, 1024, "1");
+                unit.Value = calculator.Calculate((int)unit.UnitType, 1024, "1");
             }
 
             calculatorViewModel.Units = Units;
@@ -51,10 +51,17 @@
         [HttpPost]
         public ActionResult Index(BitCalculatorViewModel model)
         {
-            Trace.WriteLine(model.KiloValue.ToString());
-            Trace.WriteLine(model.UnitType.ToString());
-            Trace.WriteLine(model.KiloValue + 6);
-            return View();
+            var calculator = new BitCalculator();
+            var bits = calculator.ConvertToBits(model.Quantity, (int)model.UnitType, (int)model.KiloValue);
+
+            foreach (var unit in Units)
+            {
+                unit.Value = calculator.Calculate((int)unit.UnitType, (int)model.KiloValue, bits);
+            }
+
+            model.Units = Units;
+
+            return View(model);
         }
     }
 }
