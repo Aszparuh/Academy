@@ -46,11 +46,10 @@
 }
 @foreach (var unit in Model.Units)
 {
-    <hr />
     <div class="row">
         <div class="col-xs-7 col-xs-offset-4">
-            <strong>@unit.UnitType</strong>
             @unit.Value
+            <strong>@string.Format("{0}{1}", unit.UnitType, "s")</strong>
         </div>
     </div>
 }

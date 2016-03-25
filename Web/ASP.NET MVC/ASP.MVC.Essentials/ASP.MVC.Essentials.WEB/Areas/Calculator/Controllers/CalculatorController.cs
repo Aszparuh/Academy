@@ -1,6 +1,5 @@
 ﻿namespace ASP.MVC.Essentials.Web.Areas.Calculator.Controllers
 {
-    using System.Diagnostics;
     using Models;
     using System.Web.Mvc;
     using System.Collections.Generic;
@@ -41,7 +40,7 @@
 
             foreach (var unit in Units)
             {
-                unit.Value = calculator.Calculate((int)unit.UnitType, 1024, "1");
+                unit.Value = calculator.ConvertToBits((int)unit.UnitType, 0, "1");
             }
 
             calculatorViewModel.Units = Units;
@@ -52,11 +51,11 @@
         public ActionResult Index(BitCalculatorViewModel model)
         {
             var calculator = new BitCalculator();
-            var bits = calculator.ConvertToBits(model.Quantity, (int)model.UnitType, (int)model.KiloValue);
+            var bits = calculator.ConvertFromBits((int)model.UnitType, (int)model.KiloValue, model.Quantity);
 
             foreach (var unit in Units)
             {
-                unit.Value = calculator.Calculate((int)unit.UnitType, (int)model.KiloValue, bits);
+                unit.Value = calculator.ConvertToBits((int)unit.UnitType, (int)model.KiloValue, bits);
             }
 
             model.Units = Units;
