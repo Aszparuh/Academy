@@ -2,6 +2,8 @@
 {
     using System.Linq;
 
+    using Models;
+
     public interface IDbRepository<T> : IDbRepository<T, int>
         where T : BaseModel<int>
     {

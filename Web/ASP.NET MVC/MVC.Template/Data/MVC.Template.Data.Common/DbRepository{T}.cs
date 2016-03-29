@@ -1,7 +1,10 @@
 ﻿namespace MVC.Template.Data.Common
 {
     using System;
+    using System.Data.Entity;
     using System.Linq;
+
+    using MVC.Template.Data.Common.Models;
 
     public class DbRepository<T> : IDbRepository<T>
         where T : BaseModel<int>
