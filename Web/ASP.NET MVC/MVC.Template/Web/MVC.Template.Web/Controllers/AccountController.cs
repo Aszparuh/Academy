@@ -9,6 +9,7 @@
     using Microsoft.Owin.Security;
     using MVC.Template.Data.Models;
     using ViewModels.Account;
+
     [Authorize]
     public class AccountController : Controller
     {
