@@ -1,5 +1,6 @@
-﻿namespace MVC.Template.Web.App_Start
+﻿namespace MVC.Template.Web
 {
+    using System;
     using System.Reflection;
     using System.Web.Mvc;
     using Autofac;
@@ -37,7 +38,7 @@
 
         private static void RegisterServices(ContainerBuilder builder)
         {
-            
+            throw new NotImplementedException();
         }
     }
 }

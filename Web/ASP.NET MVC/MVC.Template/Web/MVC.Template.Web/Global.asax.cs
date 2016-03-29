@@ -10,6 +10,7 @@
         protected void Application_Start()
         {
             ViewEnginesConfig.RegisterViewEngines(ViewEngines.Engines);
+            AutofacConfig.RegisterAutofac();
 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
