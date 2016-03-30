@@ -1,5 +1,8 @@
 ﻿namespace MVC.Template.Web
 {
+    using Data;
+    using Data.Migrations;
+    using System.Data.Entity;
     using System.Web;
     using System.Web.Mvc;
     using System.Web.Optimization;
@@ -11,6 +14,7 @@
         {
             ViewEnginesConfig.RegisterViewEngines(ViewEngines.Engines);
             AutofacConfig.RegisterAutofac();
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>());
 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

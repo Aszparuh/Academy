@@ -2,7 +2,7 @@ namespace MVC.Template.Data.Migrations
 {
     using System.Data.Entity.Migrations;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<MVC.Template.Data.ApplicationDbContext>
+    public sealed class Configuration : DbMigrationsConfiguration<MVC.Template.Data.ApplicationDbContext>
     {
         public Configuration()
         {
