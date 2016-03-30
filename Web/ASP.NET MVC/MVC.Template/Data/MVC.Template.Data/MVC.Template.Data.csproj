@@ -58,6 +58,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Migrations\201603301000207_Initial Create.cs" />
+    <Compile Include="Migrations\201603301000207_Initial Create.Designer.cs">
+      <DependentUpon>201603301000207_Initial Create.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -74,6 +78,11 @@
       <Project>{e9d8ce04-fe41-4a95-863f-8ba412b1c377}</Project>
       <Name>MVC.Template.Data.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201603301000207_Initial Create.resx">
+      <DependentUpon>201603301000207_Initial Create.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
