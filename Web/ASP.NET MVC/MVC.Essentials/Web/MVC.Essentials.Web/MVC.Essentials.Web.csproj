@@ -302,9 +302,9 @@
     <Content Include="Content\bootstrap-theme.css.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Data\MVC.Essentials.Data.Common\MVC.Essentials.Common.csproj">
+    <ProjectReference Include="..\..\Data\MVC.Essentials.Data.Common\MVC.Essentials.Data.Common.csproj">
       <Project>{d7302d8f-711c-4e6e-8105-8817e4cb4b35}</Project>
-      <Name>MVC.Essentials.Common</Name>
+      <Name>MVC.Essentials.Data.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Data\MVC.Essentials.Data.Models\MVC.Essentials.Data.Models.csproj">
       <Project>{e9d8ce04-fe41-4a95-863f-8ba412b1c377}</Project>

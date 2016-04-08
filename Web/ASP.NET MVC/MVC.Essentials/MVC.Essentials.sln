@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC.Essentials.Data", "Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC.Essentials.Data.Models", "Data\MVC.Essentials.Data.Models\MVC.Essentials.Data.Models.csproj", "{E9D8CE04-FE41-4A95-863F-8BA412B1C377}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC.Essentials.Common", "Data\MVC.Essentials.Data.Common\MVC.Essentials.Common.csproj", "{D7302D8F-711C-4E6E-8105-8817E4CB4B35}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC.Essentials.Data.Common", "Data\MVC.Essentials.Data.Common\MVC.Essentials.Data.Common.csproj", "{D7302D8F-711C-4E6E-8105-8817E4CB4B35}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC.Essentials.Web.Infrastructure", "Web\MVC.Essentials.Web.Infrastructure\MVC.Essentials.Web.Infrastructure.csproj", "{2B79B9A5-E651-4C5C-9CE6-47CD8CDDDAA6}"
 EndProject
