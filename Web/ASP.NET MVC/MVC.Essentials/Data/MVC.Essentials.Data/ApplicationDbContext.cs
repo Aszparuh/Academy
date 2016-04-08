@@ -15,6 +15,12 @@
         {
         }
 
+        public IDbSet<NewsArticle> NewsArticles { get; set; }
+
+        public IDbSet<NewsCategory> Categories { get; set; }
+
+        public IDbSet<Region> Regions { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
