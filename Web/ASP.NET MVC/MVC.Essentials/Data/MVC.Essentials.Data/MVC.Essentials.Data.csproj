@@ -60,9 +60,6 @@
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
     <Compile Include="Migrations\201603311614307_InitialCreate.cs" />
-    <Compile Include="Migrations\201603311614307_InitialCreate.Designer.cs">
-      <DependentUpon>201603311614307_InitialCreate.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -79,11 +76,6 @@
       <Project>{e9d8ce04-fe41-4a95-863f-8ba412b1c377}</Project>
       <Name>MVC.Essentials.Data.Models</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201603311614307_InitialCreate.resx">
-      <DependentUpon>201603311614307_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\Newtonsoft.Json.dll" />
