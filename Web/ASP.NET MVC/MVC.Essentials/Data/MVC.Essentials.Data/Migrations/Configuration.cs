@@ -11,7 +11,7 @@
     {
         public Configuration()
         {
-            this.AutomaticMigrationsEnabled = false;
+            this.AutomaticMigrationsEnabled = true;
             this.AutomaticMigrationDataLossAllowed = false;
         }
 
@@ -50,7 +50,7 @@
                 {
                     var newUser = new ApplicationUser()
                     {
-                        UserName = "admin",
+                        UserName = "admin@admin.bg",
                         Email = "admin@admin.bg",
                         PhoneNumber = "5551234567",
                     };
