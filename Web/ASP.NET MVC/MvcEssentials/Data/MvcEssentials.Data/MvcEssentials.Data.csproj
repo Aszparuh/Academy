@@ -66,6 +66,10 @@
     <Compile Include="Migrations\201604121019221_AddVisit.Designer.cs">
       <DependentUpon>201604121019221_AddVisit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604121059469_AddConnection.cs" />
+    <Compile Include="Migrations\201604121059469_AddConnection.Designer.cs">
+      <DependentUpon>201604121059469_AddConnection.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -91,6 +95,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201604121019221_AddVisit.resx">
       <DependentUpon>201604121019221_AddVisit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604121059469_AddConnection.resx">
+      <DependentUpon>201604121059469_AddConnection.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

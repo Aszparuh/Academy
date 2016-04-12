@@ -25,6 +25,10 @@
 
         public virtual Region Region { get; set; }
 
+        public string ApplicationUserId { get; set; }
+
+        public virtual ApplicationUser Author { get; set; }
+
         public virtual ICollection<Visit> Visits
         {
             get { return this.visits; }
