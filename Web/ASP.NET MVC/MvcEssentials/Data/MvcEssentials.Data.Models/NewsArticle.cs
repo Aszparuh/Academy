@@ -14,6 +14,10 @@
         }
 
         [Required]
+        [MaxLength(300)]
+        public string Title { get; set; }
+
+        [Required]
         [MaxLength(3000)]
         public string Content { get; set; }
 

@@ -59,6 +59,11 @@
                     userManager.AddToRole(newUser.Id, "Admin");
                 }
             }
+
+            if (!context.NewsArticles.Any())
+            {
+
+            }
         }
     }
 }
