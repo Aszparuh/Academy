@@ -21,6 +21,8 @@
 
         public IDbSet<Region> Regions { get; set; }
 
+        public IDbSet<Visit> Visits { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
