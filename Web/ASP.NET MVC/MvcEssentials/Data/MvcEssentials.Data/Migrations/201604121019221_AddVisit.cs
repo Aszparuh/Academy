@@ -1,13 +1,13 @@
-namespace MvcEssentials.Data.Migrations
+﻿namespace MvcEssentials.Data.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class AddVisit : DbMigration
     {
         public override void Up()
         {
-            CreateTable(
+            this.CreateTable(
                 "dbo.NewsCategories",
                 c => new
                     {
@@ -20,8 +20,8 @@ namespace MvcEssentials.Data.Migrations
                     })
                 .PrimaryKey(t => t.Id)
                 .Index(t => t.IsDeleted);
-            
-            CreateTable(
+
+            this.CreateTable(
                 "dbo.NewsArticles",
                 c => new
                     {
@@ -40,8 +40,8 @@ namespace MvcEssentials.Data.Migrations
                 .Index(t => t.CategoryId)
                 .Index(t => t.RegionId)
                 .Index(t => t.IsDeleted);
-            
-            CreateTable(
+
+            this.CreateTable(
                 "dbo.Regions",
                 c => new
                     {
@@ -54,8 +54,8 @@ namespace MvcEssentials.Data.Migrations
                     })
                 .PrimaryKey(t => t.Id)
                 .Index(t => t.IsDeleted);
-            
-            CreateTable(
+
+            this.CreateTable(
                 "dbo.AspNetRoles",
                 c => new
                     {
@@ -64,8 +64,8 @@ namespace MvcEssentials.Data.Migrations
                     })
                 .PrimaryKey(t => t.Id)
                 .Index(t => t.Name, unique: true, name: "RoleNameIndex");
-            
-            CreateTable(
+
+            this.CreateTable(
                 "dbo.AspNetUserRoles",
                 c => new
                     {
@@ -77,8 +77,8 @@ namespace MvcEssentials.Data.Migrations
                 .ForeignKey("dbo.AspNetUsers", t => t.UserId, cascadeDelete: true)
                 .Index(t => t.UserId)
                 .Index(t => t.RoleId);
-            
-            CreateTable(
+
+            this.CreateTable(
                 "dbo.AspNetUsers",
                 c => new
                     {
@@ -101,8 +101,8 @@ namespace MvcEssentials.Data.Migrations
                     })
                 .PrimaryKey(t => t.Id)
                 .Index(t => t.UserName, unique: true, name: "UserNameIndex");
-            
-            CreateTable(
+
+            this.CreateTable(
                 "dbo.AspNetUserClaims",
                 c => new
                     {
@@ -114,8 +114,8 @@ namespace MvcEssentials.Data.Migrations
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.AspNetUsers", t => t.UserId, cascadeDelete: true)
                 .Index(t => t.UserId);
-            
-            CreateTable(
+
+            this.CreateTable(
                 "dbo.AspNetUserLogins",
                 c => new
                     {
@@ -126,8 +126,8 @@ namespace MvcEssentials.Data.Migrations
                 .PrimaryKey(t => new { t.LoginProvider, t.ProviderKey, t.UserId })
                 .ForeignKey("dbo.AspNetUsers", t => t.UserId, cascadeDelete: true)
                 .Index(t => t.UserId);
-            
-            CreateTable(
+
+            this.CreateTable(
                 "dbo.Visits",
                 c => new
                     {
@@ -142,40 +142,39 @@ namespace MvcEssentials.Data.Migrations
                 .ForeignKey("dbo.NewsArticles", t => t.NewsArticleId, cascadeDelete: true)
                 .Index(t => t.NewsArticleId)
                 .Index(t => t.IsDeleted);
-            
         }
-        
+
         public override void Down()
         {
-            DropForeignKey("dbo.Visits", "NewsArticleId", "dbo.NewsArticles");
-            DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
-            DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
-            DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
-            DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
-            DropForeignKey("dbo.NewsArticles", "RegionId", "dbo.Regions");
-            DropForeignKey("dbo.NewsArticles", "CategoryId", "dbo.NewsCategories");
-            DropIndex("dbo.Visits", new[] { "IsDeleted" });
-            DropIndex("dbo.Visits", new[] { "NewsArticleId" });
-            DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
-            DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
-            DropIndex("dbo.AspNetUsers", "UserNameIndex");
-            DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
-            DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
-            DropIndex("dbo.AspNetRoles", "RoleNameIndex");
-            DropIndex("dbo.Regions", new[] { "IsDeleted" });
-            DropIndex("dbo.NewsArticles", new[] { "IsDeleted" });
-            DropIndex("dbo.NewsArticles", new[] { "RegionId" });
-            DropIndex("dbo.NewsArticles", new[] { "CategoryId" });
-            DropIndex("dbo.NewsCategories", new[] { "IsDeleted" });
-            DropTable("dbo.Visits");
-            DropTable("dbo.AspNetUserLogins");
-            DropTable("dbo.AspNetUserClaims");
-            DropTable("dbo.AspNetUsers");
-            DropTable("dbo.AspNetUserRoles");
-            DropTable("dbo.AspNetRoles");
-            DropTable("dbo.Regions");
-            DropTable("dbo.NewsArticles");
-            DropTable("dbo.NewsCategories");
+            this.DropForeignKey("dbo.Visits", "NewsArticleId", "dbo.NewsArticles");
+            this.DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
+            this.DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
+            this.DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
+            this.DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
+            this.DropForeignKey("dbo.NewsArticles", "RegionId", "dbo.Regions");
+            this.DropForeignKey("dbo.NewsArticles", "CategoryId", "dbo.NewsCategories");
+            this.DropIndex("dbo.Visits", new[] { "IsDeleted" });
+            this.DropIndex("dbo.Visits", new[] { "NewsArticleId" });
+            this.DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
+            this.DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
+            this.DropIndex("dbo.AspNetUsers", "UserNameIndex");
+            this.DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
+            this.DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
+            this.DropIndex("dbo.AspNetRoles", "RoleNameIndex");
+            this.DropIndex("dbo.Regions", new[] { "IsDeleted" });
+            this.DropIndex("dbo.NewsArticles", new[] { "IsDeleted" });
+            this.DropIndex("dbo.NewsArticles", new[] { "RegionId" });
+            this.DropIndex("dbo.NewsArticles", new[] { "CategoryId" });
+            this.DropIndex("dbo.NewsCategories", new[] { "IsDeleted" });
+            this.DropTable("dbo.Visits");
+            this.DropTable("dbo.AspNetUserLogins");
+            this.DropTable("dbo.AspNetUserClaims");
+            this.DropTable("dbo.AspNetUsers");
+            this.DropTable("dbo.AspNetUserRoles");
+            this.DropTable("dbo.AspNetRoles");
+            this.DropTable("dbo.Regions");
+            this.DropTable("dbo.NewsArticles");
+            this.DropTable("dbo.NewsCategories");
         }
     }
 }

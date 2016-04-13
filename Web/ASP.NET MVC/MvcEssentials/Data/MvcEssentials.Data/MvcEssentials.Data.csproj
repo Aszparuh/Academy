@@ -63,25 +63,10 @@
     <Compile Include="Migrations\201604081344128_AddNews.cs" />
     <Compile Include="Migrations\201604081359107_SecondAddNews.cs" />
     <Compile Include="Migrations\201604121019221_AddVisit.cs" />
-    <Compile Include="Migrations\201604121019221_AddVisit.Designer.cs">
-      <DependentUpon>201604121019221_AddVisit.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201604121059469_AddConnection.cs" />
-    <Compile Include="Migrations\201604121059469_AddConnection.Designer.cs">
-      <DependentUpon>201604121059469_AddConnection.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201604121253315_AddRelations.cs" />
-    <Compile Include="Migrations\201604121253315_AddRelations.Designer.cs">
-      <DependentUpon>201604121253315_AddRelations.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201604131122117_NewsCategory.cs" />
-    <Compile Include="Migrations\201604131122117_NewsCategory.Designer.cs">
-      <DependentUpon>201604131122117_NewsCategory.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201604131129575_AllowNull.cs" />
-    <Compile Include="Migrations\201604131129575_AllowNull.Designer.cs">
-      <DependentUpon>201604131129575_AllowNull.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -103,23 +88,6 @@
     <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\Newtonsoft.Json.dll" />
     <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
     <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201604121019221_AddVisit.resx">
-      <DependentUpon>201604121019221_AddVisit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604121059469_AddConnection.resx">
-      <DependentUpon>201604121059469_AddConnection.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604121253315_AddRelations.resx">
-      <DependentUpon>201604121253315_AddRelations.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604131122117_NewsCategory.resx">
-      <DependentUpon>201604131122117_NewsCategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604131129575_AllowNull.resx">
-      <DependentUpon>201604131129575_AllowNull.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

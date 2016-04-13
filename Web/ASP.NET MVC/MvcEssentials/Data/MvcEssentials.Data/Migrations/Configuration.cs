@@ -98,8 +98,7 @@
 
                 throw new DbEntityValidationException(
                     "Entity Validation Failed - errors follow:\n" +
-                    sb.ToString(), ex
-                );
+                    sb.ToString(), ex);
             }
         }
     }
