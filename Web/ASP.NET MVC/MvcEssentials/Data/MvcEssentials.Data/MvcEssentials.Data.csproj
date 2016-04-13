@@ -74,6 +74,14 @@
     <Compile Include="Migrations\201604121253315_AddRelations.Designer.cs">
       <DependentUpon>201604121253315_AddRelations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604131122117_NewsCategory.cs" />
+    <Compile Include="Migrations\201604131122117_NewsCategory.Designer.cs">
+      <DependentUpon>201604131122117_NewsCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604131129575_AllowNull.cs" />
+    <Compile Include="Migrations\201604131129575_AllowNull.Designer.cs">
+      <DependentUpon>201604131129575_AllowNull.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -105,6 +113,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604121253315_AddRelations.resx">
       <DependentUpon>201604121253315_AddRelations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604131122117_NewsCategory.resx">
+      <DependentUpon>201604131122117_NewsCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604131129575_AllowNull.resx">
+      <DependentUpon>201604131129575_AllowNull.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

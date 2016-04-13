@@ -9,7 +9,7 @@
 
     using MvcEssentials.Data.Models;
 
-    public sealed class Configuration : DbMigrationsConfiguration<MvcEssentials.Data.ApplicationDbContext>
+    public sealed class Configuration : DbMigrationsConfiguration<ApplicationDbContext>
     {
         public Configuration()
         {
