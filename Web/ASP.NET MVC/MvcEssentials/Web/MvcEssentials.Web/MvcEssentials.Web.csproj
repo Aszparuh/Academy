@@ -206,6 +206,9 @@
     <Compile Include="ViewModels\Account\VerifyCodeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\Home\NewsArticleViewModel.cs" />
+    <Compile Include="ViewModels\Home\NewsCategoryViewModel.cs" />
+    <Compile Include="ViewModels\Home\RegionViewModel.cs" />
     <Compile Include="ViewModels\Manage\AddPhoneNumberViewModel.cs" />
     <Compile Include="ViewModels\Manage\ChangePasswordViewModel.cs" />
     <Compile Include="ViewModels\Manage\ConfigureTwoFactorViewModel.cs" />
@@ -313,6 +316,10 @@
     <ProjectReference Include="..\..\Data\MvcEssentials.Data\MvcEssentials.Data.csproj">
       <Project>{948c534e-0b81-475b-8cf8-ab307a7865cf}</Project>
       <Name>MvcEssentials.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcEssentials.Web.Infrastructure\MvcEssentials.Web.Infrastructure.csproj">
+      <Project>{2b79b9a5-e651-4c5c-9ce6-47cd8cdddaa6}</Project>
+      <Name>MvcEssentials.Web.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
