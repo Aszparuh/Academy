@@ -8,6 +8,8 @@
     using Data;
     using Data.Common;
 
+    using Services.Data;
+
     public static class AutofacConfig
     {
         public static void RegisterAutofac()
@@ -47,6 +49,9 @@
             builder.RegisterGeneric(typeof(DbRepository<>))
                 .As(typeof(IDbRepository<>))
                 .InstancePerRequest();
+
+            var servicesAssembly = Assembly.GetAssembly(typeof(INewsService));
+            builder.RegisterAssemblyTypes(servicesAssembly).AsImplementedInterfaces();
         }
     }
 }
