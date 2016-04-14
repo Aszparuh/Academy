@@ -318,6 +318,10 @@
       <Project>{948c534e-0b81-475b-8cf8-ab307a7865cf}</Project>
       <Name>MvcEssentials.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Services\MvcEssentials.Services.Data\MvcEssentials.Services.Data.csproj">
+      <Project>{36619b18-418f-4386-a44a-0fde1385a917}</Project>
+      <Name>MvcEssentials.Services.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MvcEssentials.Web.Infrastructure\MvcEssentials.Web.Infrastructure.csproj">
       <Project>{2b79b9a5-e651-4c5c-9ce6-47cd8cdddaa6}</Project>
       <Name>MvcEssentials.Web.Infrastructure</Name>
