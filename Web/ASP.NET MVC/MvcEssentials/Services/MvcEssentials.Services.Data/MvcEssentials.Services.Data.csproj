@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="INewsCategoryService.cs" />
     <Compile Include="INewsService.cs" />
     <Compile Include="IRegionsService.cs" />
+    <Compile Include="NewsCategoryService.cs" />
     <Compile Include="NewsService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegionsService.cs" />
