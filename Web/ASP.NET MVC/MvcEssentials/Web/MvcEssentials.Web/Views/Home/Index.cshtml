@@ -9,17 +9,16 @@
     <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 
-
-<div class="row">
-    @foreach (var article in Model.Articles)
-    {
-        <div class="col-md-4">
+@foreach (var article in Model.Articles)
+{
+    <div class="row">
+        <div>
             <h2>@article.Title</h2>
             <p>@article.Content</p>
         </div>
-    }
-</div>
-
+    </div>
+}
+        
 <div class="row">
     <div class="col-md-4">
         <h2>Getting started</h2>
