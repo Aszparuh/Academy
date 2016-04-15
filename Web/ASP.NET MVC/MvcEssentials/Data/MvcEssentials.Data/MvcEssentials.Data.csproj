@@ -67,6 +67,8 @@
     <Compile Include="Migrations\201604121253315_AddRelations.cs" />
     <Compile Include="Migrations\201604131122117_NewsCategory.cs" />
     <Compile Include="Migrations\201604131129575_AllowNull.cs" />
+    <Compile Include="Migrations\201604151240567_TopNews.cs" />
+    <Compile Include="Migrations\201604151302504_Top.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

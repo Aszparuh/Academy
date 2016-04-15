@@ -21,6 +21,8 @@
         [MaxLength(3000)]
         public string Content { get; set; }
 
+        public bool? IsTop { get; set; }
+
         public int? NewsCategoryId { get; set; }
 
         public virtual NewsCategory Category { get; set; }
