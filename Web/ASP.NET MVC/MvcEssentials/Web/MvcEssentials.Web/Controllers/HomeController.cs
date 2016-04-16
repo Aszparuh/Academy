@@ -36,6 +36,11 @@
             return this.View(viewModel);
         }
 
+        public string News(int id, string name)
+        {
+            return id.ToString() + " " + name;
+        }
+
         public ActionResult About()
         {
             this.ViewBag.Message = "Your application description page.";
