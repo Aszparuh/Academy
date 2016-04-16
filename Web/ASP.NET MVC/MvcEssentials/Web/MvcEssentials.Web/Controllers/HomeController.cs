@@ -1,6 +1,8 @@
 ﻿namespace MvcEssentials.Web.Controllers
 {
     using System.Linq;
+    using System.Net;
+    using System.Web;
     using System.Web.Mvc;
 
     using Infrastructure.Mapping;
@@ -36,9 +38,19 @@
             return this.View(viewModel);
         }
 
-        public string News(int id, string name)
+        public ActionResult News(int id, string name)
         {
-            return id.ToString() + " " + name;
+            var article = this.newsArticles.GetAllNew().Where(a => a.Id == id).To<NewsArticleViewModel>().FirstOrDefault();
+
+            if (article.Title == name)
+            {
+                return this.View(article);
+            }
+            else
+            {
+                HttpStatusCode statusCode = HttpStatusCode.NotFound;
+                throw new HttpException((int)statusCode, statusCode.ToString());
+            }
         }
 
         public ActionResult About()
