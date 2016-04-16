@@ -42,14 +42,13 @@
         {
             var article = this.newsArticles.GetAllNew().Where(a => a.Id == id).To<NewsArticleViewModel>().FirstOrDefault();
 
-            if (article.Title == name)
+            if (article != null && article.Title == name)
             {
                 return this.View(article);
             }
             else
             {
-                HttpStatusCode statusCode = HttpStatusCode.NotFound;
-                throw new HttpException((int)statusCode, statusCode.ToString());
+                return new HttpNotFoundResult("Article not found");
             }
         }
 
