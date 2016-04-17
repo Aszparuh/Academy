@@ -7,7 +7,7 @@
     using Services.Data;
     using ViewModels.Home;
 
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private readonly INewsService newsArticles;
         private readonly INewsCategoryService newsCategories;
@@ -36,13 +36,14 @@
             return this.View(viewModel);
         }
 
-        public ActionResult News(int id, string name)
+        public ActionResult Details(int id, string name)
         {
-            var article = this.newsArticles.GetAllNew().Where(a => a.Id == id).To<NewsArticleViewModel>().FirstOrDefault();
+            var article = this.newsArticles.GetById(id);
 
             if (article != null && article.Title == name)
             {
-                return this.View(article);
+                var viewModel = this.Mapper.Map<NewsArticleViewModel>(article);
+                return this.View(viewModel);
             }
             else
             {

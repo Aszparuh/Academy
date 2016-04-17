@@ -6,5 +6,7 @@
     public interface INewsService
     {
         IQueryable<NewsArticle> GetAllNew();
+
+        NewsArticle GetById(int id);
     }
 }
