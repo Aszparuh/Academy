@@ -36,21 +36,6 @@
             return this.View(viewModel);
         }
 
-        public ActionResult Details(int id, string name)
-        {
-            var article = this.newsArticles.GetById(id);
-
-            if (article != null && article.Title == name)
-            {
-                var viewModel = this.Mapper.Map<NewsArticleViewModel>(article);
-                return this.View(viewModel);
-            }
-            else
-            {
-                return new HttpNotFoundResult("Article not found");
-            }
-        }
-
         public ActionResult About()
         {
             this.ViewBag.Message = "Your application description page.";
