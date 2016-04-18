@@ -29,5 +29,11 @@
                 return new HttpNotFoundResult("Article not found");
             }
         }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return this.View();
+        }
     }
 }
