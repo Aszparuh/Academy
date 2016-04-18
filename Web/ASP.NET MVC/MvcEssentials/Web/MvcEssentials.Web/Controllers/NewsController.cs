@@ -35,5 +35,11 @@
         {
             return this.View();
         }
+
+        [HttpPost]
+        public ActionResult Create(NewsArticleViewModel model)
+        {
+            return this.RedirectToAction("Index", "Home");
+        }
     }
 }
