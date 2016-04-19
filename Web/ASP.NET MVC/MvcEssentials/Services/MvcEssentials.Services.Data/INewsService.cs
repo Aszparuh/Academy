@@ -8,5 +8,7 @@
         IQueryable<NewsArticle> GetAllNew();
 
         NewsArticle GetById(int id);
+
+        void Add(NewsArticle article);
     }
 }

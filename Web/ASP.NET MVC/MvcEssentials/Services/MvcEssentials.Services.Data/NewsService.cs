@@ -14,6 +14,12 @@
             this.articles = articles;
         }
 
+        public void Add(NewsArticle article)
+        {
+            this.articles.Add(article);
+            this.articles.Save();
+        }
+
         public IQueryable<NewsArticle> GetAllNew()
         {
             return this.articles

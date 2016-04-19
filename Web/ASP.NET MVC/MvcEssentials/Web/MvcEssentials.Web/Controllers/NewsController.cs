@@ -38,13 +38,14 @@
         }
 
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = "Admin, Journalist")]
         [ValidateAntiForgeryToken]
         public ActionResult Create(NewsArticleViewModel input)
         {
             if (this.ModelState.IsValid)
             {
                 var modelToSave = this.Mapper.Map<NewsArticle>(input);
+                this.newsArticles.Add(modelToSave);
 
                 return this.RedirectToAction("Index", "Home");
             }
