@@ -2,6 +2,7 @@
 {
     using System.Web.Mvc;
 
+    using Data.Models;
     using Services.Data;
     using ViewModels.Home;
 
@@ -37,9 +38,18 @@
         }
 
         [HttpPost]
-        public ActionResult Create(NewsArticleViewModel model)
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(NewsArticleViewModel input)
         {
-            return this.RedirectToAction("Index", "Home");
+            if (this.ModelState.IsValid)
+            {
+                var modelToSave = this.Mapper.Map<NewsArticle>(input);
+
+                return this.RedirectToAction("Index", "Home");
+            }
+
+            return this.View(input);
         }
     }
 }
