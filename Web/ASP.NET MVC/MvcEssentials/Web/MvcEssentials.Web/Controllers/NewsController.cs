@@ -32,6 +32,7 @@
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin, Journalist")]
         public ActionResult Create()
         {
             return this.View();
