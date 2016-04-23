@@ -35,6 +35,10 @@
 
         public virtual ApplicationUser Author { get; set; }
 
+        public int? FileId { get; set; }
+
+        public virtual File File { get; set; }
+
         public virtual ICollection<Visit> Visits
         {
             get { return this.visits; }

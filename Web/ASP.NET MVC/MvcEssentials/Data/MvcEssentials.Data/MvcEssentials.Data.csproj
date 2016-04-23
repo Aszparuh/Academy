@@ -68,6 +68,10 @@
     <Compile Include="Migrations\201604131122117_NewsCategory.cs" />
     <Compile Include="Migrations\201604131129575_AllowNull.cs" />
     <Compile Include="Migrations\201604151302504_Top.cs" />
+    <Compile Include="Migrations\201604231049543_AddFile.cs" />
+    <Compile Include="Migrations\201604231049543_AddFile.Designer.cs">
+      <DependentUpon>201604231049543_AddFile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -89,6 +93,11 @@
     <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\Newtonsoft.Json.dll" />
     <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
     <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201604231049543_AddFile.resx">
+      <DependentUpon>201604231049543_AddFile.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -23,6 +23,8 @@
 
         public IDbSet<Visit> Visits { get; set; }
 
+        public IDbSet<File> Files { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
