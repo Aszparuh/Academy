@@ -1,7 +1,6 @@
 ﻿namespace MvcEssentials.Web.ViewModels.Home
 {
     using System.Web.Mvc;
-
     using Infrastructure.Mapping;
     using MvcEssentials.Data.Models;
 

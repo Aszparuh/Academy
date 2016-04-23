@@ -18,6 +18,5 @@
 
         [Required]
         public virtual NewsArticle NewsArticle { get; set; }
-
     }
 }

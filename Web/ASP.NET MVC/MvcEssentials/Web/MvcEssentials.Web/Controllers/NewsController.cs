@@ -1,18 +1,22 @@
 ﻿namespace MvcEssentials.Web.Controllers
 {
+    using System.Linq;
     using System.Web.Mvc;
 
     using Data.Models;
     using Services.Data;
     using ViewModels.Home;
+    using ViewModels.News;
 
     public class NewsController : BaseController
     {
         private readonly INewsService newsArticles;
+        private readonly INewsCategoryService newsCategories;
 
-        public NewsController(INewsService newsArticles)
+        public NewsController(INewsService newsArticles, INewsCategoryService newsCategories)
         {
             this.newsArticles = newsArticles;
+            this.newsCategories = newsCategories;
         }
 
         // GET: News
@@ -35,7 +39,10 @@
         [Authorize(Roles = "Admin, Journalist")]
         public ActionResult Create()
         {
-            return this.View();
+            var model = new CreateNewsViewModel();
+            var list = this.newsCategories.GetAll().Select(c => new SelectListItem() { Text = c.Name, Value = c.Id.ToString() }).ToList();
+            model.Categories = list;
+            return this.View(model);
         }
 
         [HttpPost]
