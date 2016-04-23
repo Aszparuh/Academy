@@ -1,13 +1,13 @@
-namespace MvcEssentials.Data.Migrations
+﻿namespace MvcEssentials.Data.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class AddFile : DbMigration
     {
         public override void Up()
         {
-            CreateTable(
+            this.CreateTable(
                 "dbo.Files",
                 c => new
                     {
@@ -25,17 +25,17 @@ namespace MvcEssentials.Data.Migrations
                 .ForeignKey("dbo.NewsArticles", t => t.Id)
                 .Index(t => t.Id)
                 .Index(t => t.IsDeleted);
-            
-            AddColumn("dbo.NewsArticles", "FileId", c => c.Int());
+
+            this.AddColumn("dbo.NewsArticles", "FileId", c => c.Int());
         }
-        
+
         public override void Down()
         {
-            DropForeignKey("dbo.Files", "Id", "dbo.NewsArticles");
-            DropIndex("dbo.Files", new[] { "IsDeleted" });
-            DropIndex("dbo.Files", new[] { "Id" });
-            DropColumn("dbo.NewsArticles", "FileId");
-            DropTable("dbo.Files");
+            this.DropForeignKey("dbo.Files", "Id", "dbo.NewsArticles");
+            this.DropIndex("dbo.Files", new[] { "IsDeleted" });
+            this.DropIndex("dbo.Files", new[] { "Id" });
+            this.DropColumn("dbo.NewsArticles", "FileId");
+            this.DropTable("dbo.Files");
         }
     }
 }

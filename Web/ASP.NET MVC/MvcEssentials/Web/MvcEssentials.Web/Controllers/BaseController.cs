@@ -6,7 +6,6 @@
 
     public abstract class BaseController : Controller
     {
-
         protected IMapper Mapper
         {
             get
