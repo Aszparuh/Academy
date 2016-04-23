@@ -1,5 +1,6 @@
 ﻿namespace MvcEssentials.Data.Migrations
 {
+    using System.Collections.Generic;
     using System.Data.Entity.Migrations;
     using System.Data.Entity.Validation;
     using System.Linq;
@@ -60,6 +61,23 @@
                     userManager.SetLockoutEnabled(newUser.Id, false);
                     userManager.AddToRole(newUser.Id, "Admin");
                 }
+            }
+
+            if (!context.Categories.Any())
+            {
+                var categoriesList = new List<Models.NewsCategory>()
+                {
+                    new Models.NewsCategory() { Name = "Spors" },
+                    new Models.NewsCategory() { Name = "Crime" },
+                    new Models.NewsCategory() { Name = "Entertainment" }
+                };
+
+                foreach (var category in categoriesList)
+                {
+                    context.Categories.Add(category);
+                }
+
+                context.SaveChanges();
             }
 
             try

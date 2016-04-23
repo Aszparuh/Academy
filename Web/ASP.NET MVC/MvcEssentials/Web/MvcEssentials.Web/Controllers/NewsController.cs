@@ -48,7 +48,7 @@
         [HttpPost]
         [Authorize(Roles = "Admin, Journalist")]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(NewsArticleViewModel input)
+        public ActionResult Create(CreateNewsViewModel input)
         {
             if (this.ModelState.IsValid)
             {
