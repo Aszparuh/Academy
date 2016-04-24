@@ -13,11 +13,13 @@
     {
         private readonly INewsService newsArticles;
         private readonly INewsCategoryService newsCategories;
+        private readonly IRegionsService newsRegions;
 
-        public NewsController(INewsService newsArticles, INewsCategoryService newsCategories)
+        public NewsController(INewsService newsArticles, INewsCategoryService newsCategories, IRegionsService newsRegions)
         {
             this.newsArticles = newsArticles;
             this.newsCategories = newsCategories;
+            this.newsRegions = newsRegions;
         }
 
         // GET: News
@@ -41,8 +43,11 @@
         public ActionResult Create()
         {
             var model = new CreateNewsViewModel();
-            var list = this.newsCategories.GetAll().Select(c => new SelectListItem() { Text = c.Name, Value = c.Id.ToString() }).ToList();
-            model.NewsCategories = list;
+            var categoriesList = this.newsCategories.GetAll().Select(c => new SelectListItem() { Text = c.Name, Value = c.Id.ToString() }).ToList();
+            var regionsList = this.newsRegions.GetAll().Select(r => new SelectListItem() { Text = r.Name, Value = r.Id.ToString() }).ToList();
+
+            model.NewsCategories = categoriesList;
+            model.Regions = regionsList;
             return this.View(model);
         }
 

@@ -89,6 +89,13 @@
                     new Region() { Name = "World" },
                     new Region() { Name = "Local" }
                 };
+
+                foreach (var region in regions)
+                {
+                    context.Regions.Add(region);
+                }
+
+                context.SaveChanges();
             }
 
             try

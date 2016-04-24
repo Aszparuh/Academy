@@ -11,10 +11,15 @@
     {
         public string Title { get; set; }
 
+        [DisplayName("Category")]
         public int NewsCategoryId { get; set; }
 
-        [DisplayName("Category")]
         public IEnumerable<SelectListItem> NewsCategories { get; set; }
+
+        [DisplayName("Region")]
+        public int RegionId { get; set; }
+
+        public IEnumerable<SelectListItem> Regions { get; set; }
 
         public string ApplicationUserId { get; set; }
 
