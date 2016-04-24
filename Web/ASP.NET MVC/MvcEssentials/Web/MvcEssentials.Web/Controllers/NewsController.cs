@@ -41,7 +41,7 @@
         {
             var model = new CreateNewsViewModel();
             var list = this.newsCategories.GetAll().Select(c => new SelectListItem() { Text = c.Name, Value = c.Id.ToString() }).ToList();
-            model.Categories = list;
+            model.NewsCategories = list;
             return this.View(model);
         }
 

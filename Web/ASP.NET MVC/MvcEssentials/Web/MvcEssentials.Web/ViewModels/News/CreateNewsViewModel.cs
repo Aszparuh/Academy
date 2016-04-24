@@ -10,7 +10,9 @@
     {
         public string Title { get; set; }
 
-        public IEnumerable<SelectListItem> Categories { get; set; }
+        public int NewsCategoryId { get; set; }
+
+        public IEnumerable<SelectListItem> NewsCategories { get; set; }
 
         [AllowHtml]
         public string Content { get; set; }
