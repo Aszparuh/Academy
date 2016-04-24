@@ -63,6 +63,7 @@
                 }
             }
 
+            // seed Categories
             if (!context.Categories.Any())
             {
                 var categoriesList = new List<Models.NewsCategory>()
@@ -78,6 +79,16 @@
                 }
 
                 context.SaveChanges();
+            }
+
+            // seed regions
+            if (!context.Regions.Any())
+            {
+                var regions = new List<Region>()
+                {
+                    new Region() { Name = "World" },
+                    new Region() { Name = "Local" }
+                };
             }
 
             try
