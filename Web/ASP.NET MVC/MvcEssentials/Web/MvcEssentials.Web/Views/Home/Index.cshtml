@@ -17,6 +17,10 @@
                 <a href="Details/@article.Id?name=@article.Title">@article.Title</a>
             </h2>
             <p>@article.Content</p>
+            @if (article.UserName != null)
+            {
+                <p>by @article.UserName</p>
+            }           
         </div>
     </div>
 }

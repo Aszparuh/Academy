@@ -41,7 +41,6 @@
         public ActionResult Create()
         {
             var model = new CreateNewsViewModel();
-            model.ApplicationUserId = this.User.Identity.GetUserId();
             var list = this.newsCategories.GetAll().Select(c => new SelectListItem() { Text = c.Name, Value = c.Id.ToString() }).ToList();
             model.NewsCategories = list;
             return this.View(model);
@@ -55,6 +54,7 @@
             if (this.ModelState.IsValid)
             {
                 var modelToSave = this.Mapper.Map<NewsArticle>(input);
+                modelToSave.ApplicationUserId = this.User.Identity.GetUserId();
                 this.newsArticles.Add(modelToSave);
 
                 return this.RedirectToAction("Index", "Home");
