@@ -25,7 +25,7 @@
                 @Html.LabelFor(model => model.NewsCategories, new { @class = "control-label" })
             </div>
             <div class="col-md-3">
-                @Html.DropDownListFor(model => model.NewsCategoryId, Model.NewsCategories, new { @class = "form-control btn btn-default" })
+                @Html.DropDownListFor(model => model.NewsCategoryId, Model.NewsCategories, string.Empty, new { @class = "form-control btn btn-default" })
                 @Html.ValidationMessageFor(model => model.NewsCategoryId, "", new { @class = "text-danger" })
             </div>
         </div>
