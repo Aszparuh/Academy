@@ -42,7 +42,6 @@
             {
                 throw ex;
             }
-
         }
 
         private void ApplyAuditInfoRules()

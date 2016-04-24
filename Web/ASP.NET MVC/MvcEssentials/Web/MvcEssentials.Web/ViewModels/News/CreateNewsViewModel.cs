@@ -1,6 +1,7 @@
 ﻿namespace MvcEssentials.Web.ViewModels.News
 {
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.Web.Mvc;
 
     using Data.Models;
@@ -12,7 +13,10 @@
 
         public int NewsCategoryId { get; set; }
 
+        [DisplayName("Category")]
         public IEnumerable<SelectListItem> NewsCategories { get; set; }
+
+        public string ApplicationUserId { get; set; }
 
         [AllowHtml]
         public string Content { get; set; }

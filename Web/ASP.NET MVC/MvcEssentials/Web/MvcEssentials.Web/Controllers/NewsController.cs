@@ -4,6 +4,7 @@
     using System.Web.Mvc;
 
     using Data.Models;
+    using Microsoft.AspNet.Identity;
     using Services.Data;
     using ViewModels.Home;
     using ViewModels.News;
@@ -40,6 +41,7 @@
         public ActionResult Create()
         {
             var model = new CreateNewsViewModel();
+            model.ApplicationUserId = this.User.Identity.GetUserId();
             var list = this.newsCategories.GetAll().Select(c => new SelectListItem() { Text = c.Name, Value = c.Id.ToString() }).ToList();
             model.NewsCategories = list;
             return this.View(model);
