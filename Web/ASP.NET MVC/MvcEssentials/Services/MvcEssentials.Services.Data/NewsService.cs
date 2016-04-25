@@ -28,6 +28,11 @@
                 .ThenByDescending(a => a.CreatedOn);
         }
 
+        public IQueryable<NewsArticle> GetAll()
+        {
+            return this.articles.All();
+        }
+
         public NewsArticle GetById(int id)
         {
             return this.articles.GetById(id);

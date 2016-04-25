@@ -7,6 +7,8 @@
     {
         IQueryable<NewsArticle> GetAllNew();
 
+        IQueryable<NewsArticle> GetAll();
+
         NewsArticle GetById(int id);
 
         void Add(NewsArticle article);
