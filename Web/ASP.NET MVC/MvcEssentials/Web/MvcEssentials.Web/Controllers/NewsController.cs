@@ -1,6 +1,7 @@
 ﻿namespace MvcEssentials.Web.Controllers
 {
     using System.Linq;
+    using System.Web;
     using System.Web.Mvc;
 
     using Data.Models;
@@ -54,7 +55,7 @@
         [HttpPost]
         [Authorize(Roles = "Admin, Journalist")]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(CreateNewsViewModel input)
+        public ActionResult Create(CreateNewsViewModel input, HttpPostedFileBase upload)
         {
             if (this.ModelState.IsValid)
             {
