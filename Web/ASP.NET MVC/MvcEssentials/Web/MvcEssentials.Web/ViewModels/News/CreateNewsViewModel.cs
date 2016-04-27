@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.Web;
     using System.Web.Mvc;
 
     using Data.Models;
@@ -27,5 +28,7 @@
         public string Content { get; set; }
 
         public File Image { get; set; }
+
+        public HttpPostedFileBase Upload { get; set; }
     }
 }
