@@ -4,7 +4,7 @@
 
     using MvcEssentials.Data.Common.Models;
 
-    public class File : BaseModel<int>
+    public class Image : BaseModel<int>
     {
         [StringLength(255)]
         public string FileName { get; set; }

@@ -7,6 +7,7 @@
     public class NewsArticle : BaseModel<int>
     {
         private ICollection<Visit> visits;
+        private ICollection<Image> images;
 
         public NewsArticle()
         {
@@ -35,9 +36,15 @@
 
         public virtual ApplicationUser Author { get; set; }
 
-        public int? FileId { get; set; }
+        public int? ImageId { get; set; }
 
-        public virtual File File { get; set; }
+        public virtual Image Image { get; set; }
+
+        public virtual ICollection<Image> Images
+        {
+            get { return this.images; }
+            set { this.images = value; }
+        }
 
         public virtual ICollection<Visit> Visits
         {
