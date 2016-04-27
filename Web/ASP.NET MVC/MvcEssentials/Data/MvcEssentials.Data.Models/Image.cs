@@ -12,6 +12,8 @@
         [StringLength(100)]
         public string ContentType { get; set; }
 
+        public ImageType Type { get; set; }
+
         public byte[] Content { get; set; }
 
         public int NewsArticleId { get; set; }
