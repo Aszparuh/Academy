@@ -59,13 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
-    <Compile Include="Migrations\201604271543554_InitialCreate.cs" />
-    <Compile Include="Migrations\201604271543554_InitialCreate.Designer.cs">
-      <DependentUpon>201604271543554_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604271801558_AddImages.cs" />
-    <Compile Include="Migrations\201604271801558_AddImages.Designer.cs">
-      <DependentUpon>201604271801558_AddImages.cs</DependentUpon>
+    <Compile Include="Migrations\201604271815500_InitialCreate.cs" />
+    <Compile Include="Migrations\201604271815500_InitialCreate.Designer.cs">
+      <DependentUpon>201604271815500_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,11 +86,8 @@
     <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201604271543554_InitialCreate.resx">
-      <DependentUpon>201604271543554_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604271801558_AddImages.resx">
-      <DependentUpon>201604271801558_AddImages.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201604271815500_InitialCreate.resx">
+      <DependentUpon>201604271815500_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

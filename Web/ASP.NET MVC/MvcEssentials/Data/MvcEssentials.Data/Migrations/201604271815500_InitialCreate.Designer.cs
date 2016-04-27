@@ -13,7 +13,7 @@ namespace MvcEssentials.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201604271543554_InitialCreate"; }
+            get { return "201604271815500_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

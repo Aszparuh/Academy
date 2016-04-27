@@ -32,7 +32,7 @@
                         NewsCategoryId = c.Int(),
                         RegionId = c.Int(),
                         ApplicationUserId = c.String(maxLength: 128),
-                        FileId = c.Int(),
+                        ImageId = c.Int(),
                         CreatedOn = c.DateTime(nullable: false),
                         ModifiedOn = c.DateTime(),
                         IsDeleted = c.Boolean(nullable: false),
@@ -41,10 +41,12 @@
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.AspNetUsers", t => t.ApplicationUserId)
                 .ForeignKey("dbo.NewsCategories", t => t.NewsCategoryId)
+                .ForeignKey("dbo.Images", t => t.ImageId)
                 .ForeignKey("dbo.Regions", t => t.RegionId)
                 .Index(t => t.NewsCategoryId)
                 .Index(t => t.RegionId)
                 .Index(t => t.ApplicationUserId)
+                .Index(t => t.ImageId)
                 .Index(t => t.IsDeleted);
 
             this.CreateTable(
@@ -110,23 +112,27 @@
                 .Index(t => t.RoleId);
 
             this.CreateTable(
-                "dbo.Files",
+                "dbo.Images",
                 c => new
                     {
-                        Id = c.Int(nullable: false),
+                        Id = c.Int(nullable: false, identity: true),
                         FileName = c.String(maxLength: 255),
                         ContentType = c.String(maxLength: 100),
+                        Type = c.Int(nullable: false),
                         Content = c.Binary(),
                         NewsArticleId = c.Int(nullable: false),
                         CreatedOn = c.DateTime(nullable: false),
                         ModifiedOn = c.DateTime(),
                         IsDeleted = c.Boolean(nullable: false),
                         DeletedOn = c.DateTime(),
+                        NewsArticle_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.NewsArticles", t => t.Id)
-                .Index(t => t.Id)
-                .Index(t => t.IsDeleted);
+                .ForeignKey("dbo.NewsArticles", t => t.NewsArticleId, cascadeDelete: true)
+                .ForeignKey("dbo.NewsArticles", t => t.NewsArticle_Id)
+                .Index(t => t.NewsArticleId)
+                .Index(t => t.IsDeleted)
+                .Index(t => t.NewsArticle_Id);
 
             this.CreateTable(
                 "dbo.Regions",
@@ -174,7 +180,9 @@
             this.DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
             this.DropForeignKey("dbo.Visits", "NewsArticleId", "dbo.NewsArticles");
             this.DropForeignKey("dbo.NewsArticles", "RegionId", "dbo.Regions");
-            this.DropForeignKey("dbo.Files", "Id", "dbo.NewsArticles");
+            this.DropForeignKey("dbo.Images", "NewsArticle_Id", "dbo.NewsArticles");
+            this.DropForeignKey("dbo.NewsArticles", "ImageId", "dbo.Images");
+            this.DropForeignKey("dbo.Images", "NewsArticleId", "dbo.NewsArticles");
             this.DropForeignKey("dbo.NewsArticles", "NewsCategoryId", "dbo.NewsCategories");
             this.DropForeignKey("dbo.NewsArticles", "ApplicationUserId", "dbo.AspNetUsers");
             this.DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
@@ -184,14 +192,16 @@
             this.DropIndex("dbo.Visits", new[] { "IsDeleted" });
             this.DropIndex("dbo.Visits", new[] { "NewsArticleId" });
             this.DropIndex("dbo.Regions", new[] { "IsDeleted" });
-            this.DropIndex("dbo.Files", new[] { "IsDeleted" });
-            this.DropIndex("dbo.Files", new[] { "Id" });
+            this.DropIndex("dbo.Images", new[] { "NewsArticle_Id" });
+            this.DropIndex("dbo.Images", new[] { "IsDeleted" });
+            this.DropIndex("dbo.Images", new[] { "NewsArticleId" });
             this.DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             this.DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             this.DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             this.DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             this.DropIndex("dbo.AspNetUsers", "UserNameIndex");
             this.DropIndex("dbo.NewsArticles", new[] { "IsDeleted" });
+            this.DropIndex("dbo.NewsArticles", new[] { "ImageId" });
             this.DropIndex("dbo.NewsArticles", new[] { "ApplicationUserId" });
             this.DropIndex("dbo.NewsArticles", new[] { "RegionId" });
             this.DropIndex("dbo.NewsArticles", new[] { "NewsCategoryId" });
@@ -199,7 +209,7 @@
             this.DropTable("dbo.AspNetRoles");
             this.DropTable("dbo.Visits");
             this.DropTable("dbo.Regions");
-            this.DropTable("dbo.Files");
+            this.DropTable("dbo.Images");
             this.DropTable("dbo.AspNetUserRoles");
             this.DropTable("dbo.AspNetUserLogins");
             this.DropTable("dbo.AspNetUserClaims");
