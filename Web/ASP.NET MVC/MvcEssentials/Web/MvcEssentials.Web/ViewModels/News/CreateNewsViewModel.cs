@@ -1,10 +1,10 @@
 ﻿namespace MvcEssentials.Web.ViewModels.News
 {
+    using System;
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.Web;
     using System.Web.Mvc;
-
     using Data.Models;
     using Infrastructure.Mapping;
 
@@ -26,8 +26,6 @@
 
         [AllowHtml]
         public string Content { get; set; }
-
-        public File Image { get; set; }
 
         public HttpPostedFileBase Upload { get; set; }
     }

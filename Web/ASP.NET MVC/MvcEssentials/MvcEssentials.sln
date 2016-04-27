@@ -21,6 +21,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{09
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcEssentials.Services.Data", "Services\MvcEssentials.Services.Data\MvcEssentials.Services.Data.csproj", "{36619B18-418F-4386-A44A-0FDE1385A917}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcEssentials.Services.Logic", "Services\MvcEssentials.Services.Logic\MvcEssentials.Services.Logic.csproj", "{51C1BF67-76E0-4796-A561-2E395C665665}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcEssentials.Services.Common", "Services\MvcEssentials.Services.Common\MvcEssentials.Services.Common.csproj", "{0DDF3EA8-41F1-4F0C-BB72-EDC93E89A361}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{36619B18-418F-4386-A44A-0FDE1385A917}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36619B18-418F-4386-A44A-0FDE1385A917}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36619B18-418F-4386-A44A-0FDE1385A917}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51C1BF67-76E0-4796-A561-2E395C665665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51C1BF67-76E0-4796-A561-2E395C665665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51C1BF67-76E0-4796-A561-2E395C665665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51C1BF67-76E0-4796-A561-2E395C665665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DDF3EA8-41F1-4F0C-BB72-EDC93E89A361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DDF3EA8-41F1-4F0C-BB72-EDC93E89A361}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DDF3EA8-41F1-4F0C-BB72-EDC93E89A361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DDF3EA8-41F1-4F0C-BB72-EDC93E89A361}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,5 +74,7 @@ Global
 		{D7302D8F-711C-4E6E-8105-8817E4CB4B35} = {7B62F548-3758-40DE-9DA1-6C8578988D45}
 		{2B79B9A5-E651-4C5C-9CE6-47CD8CDDDAA6} = {06B1FDE9-7FD3-451D-BB36-90E761E3D211}
 		{36619B18-418F-4386-A44A-0FDE1385A917} = {09C042E3-C4FC-42EB-B5B2-7F78042EC151}
+		{51C1BF67-76E0-4796-A561-2E395C665665} = {09C042E3-C4FC-42EB-B5B2-7F78042EC151}
+		{0DDF3EA8-41F1-4F0C-BB72-EDC93E89A361} = {09C042E3-C4FC-42EB-B5B2-7F78042EC151}
 	EndGlobalSection
 EndGlobal
