@@ -7,6 +7,7 @@
     using Services.Data;
     using ViewModels.Home;
     using ViewModels.Partials;
+
     public class HomeController : BaseController
     {
         private readonly INewsService newsArticles;

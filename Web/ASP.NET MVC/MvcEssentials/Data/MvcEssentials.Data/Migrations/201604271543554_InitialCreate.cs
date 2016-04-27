@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
 
-    public partial class AddVisit : DbMigration
+    public partial class InitialCreate : DbMigration
     {
         public override void Up()
         {
@@ -26,57 +26,26 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        Title = c.String(nullable: false, maxLength: 300),
                         Content = c.String(nullable: false, maxLength: 3000),
-                        CategoryId = c.Int(nullable: false),
-                        RegionId = c.Int(nullable: false),
+                        IsTop = c.Boolean(),
+                        NewsCategoryId = c.Int(),
+                        RegionId = c.Int(),
+                        ApplicationUserId = c.String(maxLength: 128),
+                        FileId = c.Int(),
                         CreatedOn = c.DateTime(nullable: false),
                         ModifiedOn = c.DateTime(),
                         IsDeleted = c.Boolean(nullable: false),
                         DeletedOn = c.DateTime(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.NewsCategories", t => t.CategoryId, cascadeDelete: true)
-                .ForeignKey("dbo.Regions", t => t.RegionId, cascadeDelete: true)
-                .Index(t => t.CategoryId)
+                .ForeignKey("dbo.AspNetUsers", t => t.ApplicationUserId)
+                .ForeignKey("dbo.NewsCategories", t => t.NewsCategoryId)
+                .ForeignKey("dbo.Regions", t => t.RegionId)
+                .Index(t => t.NewsCategoryId)
                 .Index(t => t.RegionId)
+                .Index(t => t.ApplicationUserId)
                 .Index(t => t.IsDeleted);
-
-            this.CreateTable(
-                "dbo.Regions",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false, maxLength: 50),
-                        CreatedOn = c.DateTime(nullable: false),
-                        ModifiedOn = c.DateTime(),
-                        IsDeleted = c.Boolean(nullable: false),
-                        DeletedOn = c.DateTime(),
-                    })
-                .PrimaryKey(t => t.Id)
-                .Index(t => t.IsDeleted);
-
-            this.CreateTable(
-                "dbo.AspNetRoles",
-                c => new
-                    {
-                        Id = c.String(nullable: false, maxLength: 128),
-                        Name = c.String(nullable: false, maxLength: 256),
-                    })
-                .PrimaryKey(t => t.Id)
-                .Index(t => t.Name, unique: true, name: "RoleNameIndex");
-
-            this.CreateTable(
-                "dbo.AspNetUserRoles",
-                c => new
-                    {
-                        UserId = c.String(nullable: false, maxLength: 128),
-                        RoleId = c.String(nullable: false, maxLength: 128),
-                    })
-                .PrimaryKey(t => new { t.UserId, t.RoleId })
-                .ForeignKey("dbo.AspNetRoles", t => t.RoleId, cascadeDelete: true)
-                .ForeignKey("dbo.AspNetUsers", t => t.UserId, cascadeDelete: true)
-                .Index(t => t.UserId)
-                .Index(t => t.RoleId);
 
             this.CreateTable(
                 "dbo.AspNetUsers",
@@ -128,6 +97,52 @@
                 .Index(t => t.UserId);
 
             this.CreateTable(
+                "dbo.AspNetUserRoles",
+                c => new
+                    {
+                        UserId = c.String(nullable: false, maxLength: 128),
+                        RoleId = c.String(nullable: false, maxLength: 128),
+                    })
+                .PrimaryKey(t => new { t.UserId, t.RoleId })
+                .ForeignKey("dbo.AspNetUsers", t => t.UserId, cascadeDelete: true)
+                .ForeignKey("dbo.AspNetRoles", t => t.RoleId, cascadeDelete: true)
+                .Index(t => t.UserId)
+                .Index(t => t.RoleId);
+
+            this.CreateTable(
+                "dbo.Files",
+                c => new
+                    {
+                        Id = c.Int(nullable: false),
+                        FileName = c.String(maxLength: 255),
+                        ContentType = c.String(maxLength: 100),
+                        Content = c.Binary(),
+                        NewsArticleId = c.Int(nullable: false),
+                        CreatedOn = c.DateTime(nullable: false),
+                        ModifiedOn = c.DateTime(),
+                        IsDeleted = c.Boolean(nullable: false),
+                        DeletedOn = c.DateTime(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.NewsArticles", t => t.Id)
+                .Index(t => t.Id)
+                .Index(t => t.IsDeleted);
+
+            this.CreateTable(
+                "dbo.Regions",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(nullable: false, maxLength: 50),
+                        CreatedOn = c.DateTime(nullable: false),
+                        ModifiedOn = c.DateTime(),
+                        IsDeleted = c.Boolean(nullable: false),
+                        DeletedOn = c.DateTime(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .Index(t => t.IsDeleted);
+
+            this.CreateTable(
                 "dbo.Visits",
                 c => new
                     {
@@ -142,37 +157,53 @@
                 .ForeignKey("dbo.NewsArticles", t => t.NewsArticleId, cascadeDelete: true)
                 .Index(t => t.NewsArticleId)
                 .Index(t => t.IsDeleted);
+
+            this.CreateTable(
+                "dbo.AspNetRoles",
+                c => new
+                    {
+                        Id = c.String(nullable: false, maxLength: 128),
+                        Name = c.String(nullable: false, maxLength: 256),
+                    })
+                .PrimaryKey(t => t.Id)
+                .Index(t => t.Name, unique: true, name: "RoleNameIndex");
         }
 
         public override void Down()
         {
+            this.DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
             this.DropForeignKey("dbo.Visits", "NewsArticleId", "dbo.NewsArticles");
+            this.DropForeignKey("dbo.NewsArticles", "RegionId", "dbo.Regions");
+            this.DropForeignKey("dbo.Files", "Id", "dbo.NewsArticles");
+            this.DropForeignKey("dbo.NewsArticles", "NewsCategoryId", "dbo.NewsCategories");
+            this.DropForeignKey("dbo.NewsArticles", "ApplicationUserId", "dbo.AspNetUsers");
             this.DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
             this.DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             this.DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
-            this.DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
-            this.DropForeignKey("dbo.NewsArticles", "RegionId", "dbo.Regions");
-            this.DropForeignKey("dbo.NewsArticles", "CategoryId", "dbo.NewsCategories");
+            this.DropIndex("dbo.AspNetRoles", "RoleNameIndex");
             this.DropIndex("dbo.Visits", new[] { "IsDeleted" });
             this.DropIndex("dbo.Visits", new[] { "NewsArticleId" });
+            this.DropIndex("dbo.Regions", new[] { "IsDeleted" });
+            this.DropIndex("dbo.Files", new[] { "IsDeleted" });
+            this.DropIndex("dbo.Files", new[] { "Id" });
+            this.DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
+            this.DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             this.DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             this.DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             this.DropIndex("dbo.AspNetUsers", "UserNameIndex");
-            this.DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
-            this.DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
-            this.DropIndex("dbo.AspNetRoles", "RoleNameIndex");
-            this.DropIndex("dbo.Regions", new[] { "IsDeleted" });
             this.DropIndex("dbo.NewsArticles", new[] { "IsDeleted" });
+            this.DropIndex("dbo.NewsArticles", new[] { "ApplicationUserId" });
             this.DropIndex("dbo.NewsArticles", new[] { "RegionId" });
-            this.DropIndex("dbo.NewsArticles", new[] { "CategoryId" });
+            this.DropIndex("dbo.NewsArticles", new[] { "NewsCategoryId" });
             this.DropIndex("dbo.NewsCategories", new[] { "IsDeleted" });
+            this.DropTable("dbo.AspNetRoles");
             this.DropTable("dbo.Visits");
+            this.DropTable("dbo.Regions");
+            this.DropTable("dbo.Files");
+            this.DropTable("dbo.AspNetUserRoles");
             this.DropTable("dbo.AspNetUserLogins");
             this.DropTable("dbo.AspNetUserClaims");
             this.DropTable("dbo.AspNetUsers");
-            this.DropTable("dbo.AspNetUserRoles");
-            this.DropTable("dbo.AspNetRoles");
-            this.DropTable("dbo.Regions");
             this.DropTable("dbo.NewsArticles");
             this.DropTable("dbo.NewsCategories");
         }

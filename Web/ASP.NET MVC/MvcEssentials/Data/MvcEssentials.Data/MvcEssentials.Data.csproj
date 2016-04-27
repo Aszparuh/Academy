@@ -59,18 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
-    <Compile Include="Migrations\201603311614307_InitialCreate.cs" />
-    <Compile Include="Migrations\201604081344128_AddNews.cs" />
-    <Compile Include="Migrations\201604081359107_SecondAddNews.cs" />
-    <Compile Include="Migrations\201604121019221_AddVisit.cs" />
-    <Compile Include="Migrations\201604121059469_AddConnection.cs" />
-    <Compile Include="Migrations\201604121253315_AddRelations.cs" />
-    <Compile Include="Migrations\201604131122117_NewsCategory.cs" />
-    <Compile Include="Migrations\201604131129575_AllowNull.cs" />
-    <Compile Include="Migrations\201604151302504_Top.cs" />
-    <Compile Include="Migrations\201604231049543_AddFile.cs" />
-    <Compile Include="Migrations\201604231049543_AddFile.Designer.cs">
-      <DependentUpon>201604231049543_AddFile.cs</DependentUpon>
+    <Compile Include="Migrations\201604271543554_InitialCreate.cs" />
+    <Compile Include="Migrations\201604271543554_InitialCreate.Designer.cs">
+      <DependentUpon>201604271543554_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,8 +86,8 @@
     <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201604231049543_AddFile.resx">
-      <DependentUpon>201604231049543_AddFile.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201604271543554_InitialCreate.resx">
+      <DependentUpon>201604271543554_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
