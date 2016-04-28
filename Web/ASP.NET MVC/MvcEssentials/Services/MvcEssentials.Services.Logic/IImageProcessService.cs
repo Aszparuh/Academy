@@ -6,6 +6,6 @@
     {
         byte[] ToByteArray(HttpPostedFileBase upload);
 
-        byte[] Resize(byte[] originalImage, int width);
+        byte[] Resize(byte[] originalImage, int width, int height);
     }
 }

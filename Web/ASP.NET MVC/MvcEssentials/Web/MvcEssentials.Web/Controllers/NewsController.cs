@@ -66,8 +66,8 @@
                 modelToSave.ApplicationUserId = this.User.Identity.GetUserId();
 
                 var originalImageContent = this.imageProcessService.ToByteArray(input.Upload);
-                var thumbnailImageContent = this.imageProcessService.Resize(originalImageContent, 260);
-                var qualityImageContent = this.imageProcessService.Resize(originalImageContent, 1360);
+                var thumbnailImageContent = this.imageProcessService.Resize(originalImageContent, 260, 180);
+                var qualityImageContent = this.imageProcessService.Resize(originalImageContent, 1360, 0);
                 var name = input.Upload.FileName;
                 var contentType = input.Upload.ContentType;
 

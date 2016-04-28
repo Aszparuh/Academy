@@ -11,7 +11,7 @@
 
     public class ImageProcessService : IImageProcessService
     {
-        public byte[] Resize(byte[] originalImage, int width)
+        public byte[] Resize(byte[] originalImage, int width, int height)
         {
             using (var originalImageStream = new MemoryStream(originalImage))
             {
@@ -25,7 +25,7 @@
                         if (createdImage.Image.Width > width)
                         {
                             createdImage = createdImage
-                                .Resize(new ResizeLayer(new Size(width, 0), ResizeMode.Max));
+                                .Resize(new ResizeLayer(new Size(width, height), ResizeMode.Pad));
                         }
 
                         createdImage
