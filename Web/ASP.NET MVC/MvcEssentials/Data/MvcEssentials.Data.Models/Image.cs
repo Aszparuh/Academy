@@ -18,7 +18,6 @@
 
         public int NewsArticleId { get; set; }
 
-        [Required]
         public virtual NewsArticle NewsArticle { get; set; }
     }
 }

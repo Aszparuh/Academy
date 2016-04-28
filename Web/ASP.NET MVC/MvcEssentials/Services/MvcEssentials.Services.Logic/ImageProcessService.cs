@@ -9,7 +9,7 @@
     using Common;
     using System.Web;
 
-    public class ImageProcessService
+    public class ImageProcessService : IImageProcessService
     {
         public byte[] Resize(byte[] originalImage, int width)
         {

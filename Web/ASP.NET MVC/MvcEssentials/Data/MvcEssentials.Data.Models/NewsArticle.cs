@@ -12,6 +12,7 @@
         public NewsArticle()
         {
             this.visits = new HashSet<Visit>();
+            this.images = new HashSet<Image>();
         }
 
         [Required]
