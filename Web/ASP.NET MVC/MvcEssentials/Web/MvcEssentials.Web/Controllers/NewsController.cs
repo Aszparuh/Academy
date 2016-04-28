@@ -7,6 +7,7 @@
     using Data.Models;
     using Microsoft.AspNet.Identity;
     using Services.Data;
+    using Services.Logic;
     using ViewModels.Home;
     using ViewModels.News;
 
@@ -15,12 +16,14 @@
         private readonly INewsService newsArticles;
         private readonly INewsCategoryService newsCategories;
         private readonly IRegionsService newsRegions;
+        private readonly IImageProcessService imageProcessService;
 
-        public NewsController(INewsService newsArticles, INewsCategoryService newsCategories, IRegionsService newsRegions)
+        public NewsController(INewsService newsArticles, INewsCategoryService newsCategories, IRegionsService newsRegions, IImageProcessService imageProcessService)
         {
             this.newsArticles = newsArticles;
             this.newsCategories = newsCategories;
             this.newsRegions = newsRegions;
+            this.imageProcessService = imageProcessService;
         }
 
         // GET: News
@@ -61,6 +64,40 @@
             {
                 var modelToSave = this.Mapper.Map<NewsArticle>(input);
                 modelToSave.ApplicationUserId = this.User.Identity.GetUserId();
+
+                var originalImageContent = this.imageProcessService.ToByteArray(input.Upload);
+                var thumbnailImageContent = this.imageProcessService.Resize(originalImageContent, 260);
+                var qualityImageContent = this.imageProcessService.Resize(originalImageContent, 1360);
+                var name = input.Upload.FileName;
+                var contentType = input.Upload.ContentType;
+
+                modelToSave.Images.Add(
+                    new Image()
+                    {
+                        FileName = name,
+                        ContentType = contentType,
+                        Content = originalImageContent,
+                        Type = ImageType.Original
+                    });
+
+                modelToSave.Images.Add(
+                    new Image()
+                    {
+                        FileName = name,
+                        ContentType = "image/jpeg",
+                        Content = thumbnailImageContent,
+                        Type = ImageType.Thumbnail
+                    });
+
+                modelToSave.Images.Add(
+                    new Image()
+                    {
+                        FileName = name,
+                        ContentType = "image/jpeg",
+                        Content = qualityImageContent,
+                        Type = ImageType.Normal
+                    });
+
                 this.newsArticles.Add(modelToSave);
 
                 return this.RedirectToAction("Index", "Home");

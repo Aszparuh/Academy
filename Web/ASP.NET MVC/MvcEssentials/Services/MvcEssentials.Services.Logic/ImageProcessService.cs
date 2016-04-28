@@ -7,6 +7,7 @@
     using ImageProcessor.Imaging;
     using ImageProcessor.Imaging.Formats;
     using Common;
+    using System.Web;
 
     public class ImageProcessService
     {
@@ -36,5 +37,18 @@
                 }
             }
         }
+
+        public byte[] ToByteArray(HttpPostedFileBase upload)
+        {
+            byte[] resultArray = null;
+
+            using (var binaryReader = new BinaryReader(upload.InputStream))
+            {
+                resultArray = binaryReader.ReadBytes(upload.ContentLength);
+            }
+
+            return resultArray;
+        }
+
     }
 }
