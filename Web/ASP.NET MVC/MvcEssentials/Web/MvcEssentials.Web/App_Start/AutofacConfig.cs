@@ -9,6 +9,7 @@
     using Data.Common;
 
     using Services.Data;
+    using Services.Logic;
 
     public static class AutofacConfig
     {
@@ -52,6 +53,9 @@
 
             var servicesAssembly = Assembly.GetAssembly(typeof(INewsService));
             builder.RegisterAssemblyTypes(servicesAssembly).AsImplementedInterfaces();
+
+            var anotherServicesAssembly = Assembly.GetAssembly(typeof(IImageProcessService));
+            builder.RegisterAssemblyTypes(anotherServicesAssembly).AsImplementedInterfaces();
         }
     }
 }
