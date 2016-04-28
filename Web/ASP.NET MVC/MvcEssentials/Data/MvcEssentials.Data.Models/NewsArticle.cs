@@ -36,10 +36,6 @@
 
         public virtual ApplicationUser Author { get; set; }
 
-        public int? ImageId { get; set; }
-
-        public virtual Image Image { get; set; }
-
         public virtual ICollection<Image> Images
         {
             get { return this.images; }
