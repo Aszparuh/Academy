@@ -13,19 +13,23 @@
         @foreach (var article in Model.Articles)
         {
             <div class="row">
-                @if (@article.ThumbnailId != null)
-                {
-                    <img src="~/File?id=@article.ThumbnailId"  class="thumbnail"/>
-                }
-                <h2>
-                    <a href="Details/@article.Id?name=@article.Title">@article.Title</a>
-                </h2>
-                <p>@article.Content</p>
-                @if (article.UserName != null)
-                {
-                    <p>by @article.UserName</p>
-                }
-            </div>
+                <div class="col-md-5">
+                    @if (article.ThumbnailId != null)
+                    {
+                        <img src="~/File?id=@article.ThumbnailId" class="thumbnail" />
+                    }
+                </div>
+                <div class="col-md-5">
+                    <h2>
+                        <a href="Details/@article.Id?name=@article.Title">@article.Title</a>
+                    </h2>
+                    <p>@article.Content</p>
+                    @if (article.UserName != null)
+                    {
+                        <p>by @article.UserName</p>
+                    }
+                </div>
+            </div>            
         }
     </div>
     @Html.Partial("_AsidePartial", Model.Aside)
