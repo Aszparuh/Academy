@@ -12,33 +12,29 @@
     <div class="col-md-8">
         @foreach (var article in Model.Articles)
         {
-            <div class="row well-sm">
-                <div class="col-md-4">                   
+            <div class="row well-sm">              
                     @if (article.ThumbnailId != null)
                     {
-                        <div class="pull-right">
-                            <a href="/Details/@article.Id?name=@article.Title">
-                                <img src="~/File?id=@article.ThumbnailId" class="thumbnail" />
-                            </a>
-                        </div>                       
-                    }                       
-                </div>
-                <div class="col-md-8">
-                    <a href="/Details/@article.Id?name=@article.Title">
-                        <h4>
-                            @article.Title
-                        </h4>
-                    </a>
-
-                    <p>@Html.Raw(article.Content)</p>
-                    @if (article.UserName != null)
-                    {
-                        <p>by @article.UserName</p>
+                        <a href="/Details/@article.Id?name=@article.Title" class="media-left">
+                            <img src="~/File?id=@article.ThumbnailId" class="thumbnail" />
+                        </a>                     
                     }
-                </div>
+
+                    <div class="media-body">
+                        <a href="/Details/@article.Id?name=@article.Title">
+                            <h4>
+                                @article.Title
+                            </h4>
+                        </a>
+
+                        <p>@Html.Raw(article.Content)</p>
+                        @if (article.UserName != null)
+                        {
+                            <p>by @article.UserName</p>
+                        }
+                    </div>                    
             </div>
         }
-
     </div>
     @Html.Partial("_AsidePartial", Model.Aside)
 </div>
