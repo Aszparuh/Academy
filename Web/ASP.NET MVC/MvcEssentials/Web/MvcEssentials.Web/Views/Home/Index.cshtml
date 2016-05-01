@@ -12,34 +12,33 @@
     <div class="col-md-8">
         @foreach (var article in Model.Articles)
         {
-            <div class="row">
-                <a href="/Details/@article.Id?name=@article.Title">
-                    <div class="col-md-5">
-                        @if (article.ThumbnailId != null)
-                        {
-                            <img src="~/File?id=@article.ThumbnailId" class="thumbnail" />
-                        }
-                    </div>
-                </a>
-                <div class="col-md-7">
-                    <div class="row">
-                        <a href="/Details/@article.Id?name=@article.Title">
-                            <h4>
-                                @article.Title
-                            </h4>
-                        </a>
-                    </div>
-                    <div class="row">
-                        <p>@Html.Raw(article.Content)</p>
-                        @if (article.UserName != null)
-                        {
-                            <p>by @article.UserName</p>
-                        }
-                    </div>
+            <div class="row well-sm">
+                <div class="col-md-4">                   
+                    @if (article.ThumbnailId != null)
+                    {
+                        <div class="pull-right">
+                            <a href="/Details/@article.Id?name=@article.Title">
+                                <img src="~/File?id=@article.ThumbnailId" class="thumbnail" />
+                            </a>
+                        </div>                       
+                    }                       
+                </div>
+                <div class="col-md-8">
+                    <a href="/Details/@article.Id?name=@article.Title">
+                        <h4>
+                            @article.Title
+                        </h4>
+                    </a>
+
+                    <p>@Html.Raw(article.Content)</p>
+                    @if (article.UserName != null)
+                    {
+                        <p>by @article.UserName</p>
+                    }
                 </div>
             </div>
-            <hr />
         }
+
     </div>
     @Html.Partial("_AsidePartial", Model.Aside)
 </div>
