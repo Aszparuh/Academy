@@ -226,6 +226,7 @@
     <Compile Include="ViewModels\Manage\SetPasswordViewModel.cs" />
     <Compile Include="ViewModels\Manage\VerifyPhoneNumberViewModel.cs" />
     <Compile Include="ViewModels\News\CreateNewsViewModel.cs" />
+    <Compile Include="ViewModels\News\DetailsViewModel.cs" />
     <Compile Include="ViewModels\Partials\AsideViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

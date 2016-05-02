@@ -1,11 +1,12 @@
-﻿@model MvcEssentials.Web.ViewModels.Home.NewsArticleViewModel
+﻿@model MvcEssentials.Web.ViewModels.News.DetailsViewModel
 
 @{
     ViewBag.Title = "News";
 }
 
 <h2>@Model.Title</h2>
+<img src="~/File?id=@Model.ImageId"/>
 <p>
-    @Model.Content
+    @Html.Raw(Model.Content)
 </p>
 
