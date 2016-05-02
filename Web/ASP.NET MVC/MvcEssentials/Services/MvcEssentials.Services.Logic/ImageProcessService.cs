@@ -25,7 +25,7 @@
                         if (createdImage.Image.Width > width)
                         {
                             createdImage = createdImage
-                                .Resize(new ResizeLayer(new Size(width, height), ResizeMode.Pad));
+                                .Resize(new ResizeLayer(new Size(width, height), ResizeMode.Crop));
                         }
 
                         createdImage
