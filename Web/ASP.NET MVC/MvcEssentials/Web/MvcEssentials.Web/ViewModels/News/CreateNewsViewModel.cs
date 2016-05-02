@@ -12,6 +12,9 @@
     {
         public string Title { get; set; }
 
+        [DisplayName("Check if the news is breaking")]
+        public bool IsTop { get; set; }
+
         [DisplayName("Category")]
         public int NewsCategoryId { get; set; }
 
