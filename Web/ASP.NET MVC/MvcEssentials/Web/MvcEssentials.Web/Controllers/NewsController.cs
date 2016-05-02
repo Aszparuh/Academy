@@ -68,6 +68,7 @@
                 var originalImageContent = this.imageProcessService.ToByteArray(input.Upload);
                 var thumbnailImageContent = this.imageProcessService.Resize(originalImageContent, 260, 180);
                 var qualityImageContent = this.imageProcessService.Resize(originalImageContent, 1360, 0);
+                var asideThumbnailImageContent = this.imageProcessService.Resize(originalImageContent, 141, 106);
                 var name = input.Upload.FileName;
                 var contentType = input.Upload.ContentType;
 
@@ -96,6 +97,15 @@
                         ContentType = "image/jpeg",
                         Content = qualityImageContent,
                         Type = ImageType.Normal
+                    });
+
+                modelToSave.Images.Add(
+                    new Image()
+                    {
+                        FileName = name,
+                        ContentType = "image/jpeg",
+                        Content = asideThumbnailImageContent,
+                        Type = ImageType.AsideThumbnail
                     });
 
                 this.newsArticles.Add(modelToSave);

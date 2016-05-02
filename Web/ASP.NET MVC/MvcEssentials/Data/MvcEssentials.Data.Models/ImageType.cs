@@ -4,6 +4,7 @@
     {
         Thumbnail,
         Normal,
-        Original
+        Original,
+        AsideThumbnail
     }
 }
