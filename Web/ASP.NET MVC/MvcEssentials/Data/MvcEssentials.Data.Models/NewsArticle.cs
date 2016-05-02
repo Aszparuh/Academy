@@ -23,6 +23,10 @@
         [MaxLength(3000)]
         public string Content { get; set; }
 
+        [Required]
+        [MaxLength(1000)]
+        public string SampleContent { get; set; }
+
         public bool? IsTop { get; set; }
 
         public int? NewsCategoryId { get; set; }

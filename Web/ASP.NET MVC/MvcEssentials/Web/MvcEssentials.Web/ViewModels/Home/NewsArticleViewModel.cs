@@ -15,6 +15,8 @@
         [AllowHtml]
         public string Content { get; set; }
 
+        public string SampleContent { get; set; }
+
         public string UserName { get; set; }
 
         public int? ThumbnailId { get; set; }

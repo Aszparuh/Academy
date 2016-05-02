@@ -27,6 +27,9 @@
         [AllowHtml]
         public string Content { get; set; }
 
+        [DisplayName("Sample Content")]
+        public string SampleContent { get; set; }
+
         public HttpPostedFileBase Upload { get; set; }
     }
 }
