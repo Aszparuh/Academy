@@ -1,6 +1,7 @@
 ﻿namespace MvcEssentials.Web.ViewModels.Home
 {
     using System.Collections.Generic;
+    using News;
     using Partials;
 
     public class IndexViewModel
@@ -12,5 +13,7 @@
         public IEnumerable<RegionViewModel> Regions { get; set; }
 
         public AsideViewModel Aside { get; set; }
+
+        public IEnumerable<DetailsViewModel> TopNews { get; set; }
     }
 }

@@ -6,6 +6,7 @@
     using Infrastructure.Mapping;
     using Services.Data;
     using ViewModels.Home;
+    using ViewModels.News;
     using ViewModels.Partials;
 
     public class HomeController : BaseController
@@ -26,6 +27,7 @@
             var news = this.newsArticles.GetAllNew().To<NewsArticleIndexViewModel>().ToList();
             var categories = this.newsCategories.GetAll().To<NewsCategoryViewModel>().ToList();
             var regions = this.regions.GetAll().To<RegionViewModel>().ToList();
+            var topNews = this.newsArticles.GetAllNew().To<DetailsViewModel>().Take(4).ToList();
             var aside = new AsideViewModel();
 
             aside.MostVisitedArticles = this.newsArticles.GetAll()
@@ -45,7 +47,8 @@
                 Articles = news,
                 Categories = categories,
                 Regions = regions,
-                Aside = aside
+                Aside = aside,
+                TopNews = topNews
             };
 
             return this.View(viewModel);
