@@ -33,7 +33,7 @@
 
             if (article != null && article.Title == name)
             {
-                var viewModel = this.Mapper.Map<NewsArticleViewModel>(article);
+                var viewModel = this.Mapper.Map<NewsArticleIndexViewModel>(article);
                 return this.View(viewModel);
             }
             else

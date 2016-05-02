@@ -5,7 +5,7 @@
 
     public class IndexViewModel
     {
-        public IEnumerable<NewsArticleViewModel> Articles { get; set; }
+        public IEnumerable<NewsArticleIndexViewModel> Articles { get; set; }
 
         public IEnumerable<NewsCategoryViewModel> Categories { get; set; }
 

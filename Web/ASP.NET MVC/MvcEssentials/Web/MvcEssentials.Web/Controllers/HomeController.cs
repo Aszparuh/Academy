@@ -23,7 +23,7 @@
 
         public ActionResult Index()
         {
-            var news = this.newsArticles.GetAllNew().To<NewsArticleViewModel>().ToList();
+            var news = this.newsArticles.GetAllNew().To<NewsArticleIndexViewModel>().ToList();
             var categories = this.newsCategories.GetAll().To<NewsCategoryViewModel>().ToList();
             var regions = this.regions.GetAll().To<RegionViewModel>().ToList();
             var aside = new AsideViewModel();
@@ -31,13 +31,13 @@
             aside.MostVisitedArticles = this.newsArticles.GetAll()
                 .OrderByDescending(a => a.Visits.Count)
                 .Take(10)
-                .To<NewsArticleViewModel>()
+                .To<NewsArticleIndexViewModel>()
                 .ToList();
 
             aside.RecentArticles = this.newsArticles.GetAll()
                 .OrderByDescending(a => a.CreatedOn)
                 .Take(10)
-                .To<NewsArticleViewModel>()
+                .To<NewsArticleIndexViewModel>()
                 .ToList();
 
             var viewModel = new IndexViewModel()
