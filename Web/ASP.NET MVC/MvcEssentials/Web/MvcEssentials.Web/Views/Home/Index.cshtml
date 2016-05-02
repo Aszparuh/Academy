@@ -4,7 +4,7 @@
 }
 
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-7">
         @foreach (var article in Model.Articles)
         {
             <div class="row well-sm">              
@@ -38,7 +38,9 @@
             </div>
         }
     </div>
-    @Html.Partial("_AsidePartial", Model.Aside)
+    <div class="col-md-4 col-lg-offset-1">
+        @Html.Partial("_AsidePartial", Model.Aside)
+    </div>
 </div>
 
 <div class="row">

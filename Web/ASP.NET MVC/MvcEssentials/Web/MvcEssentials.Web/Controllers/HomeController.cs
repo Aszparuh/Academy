@@ -31,13 +31,13 @@
             aside.MostVisitedArticles = this.newsArticles.GetAll()
                 .OrderByDescending(a => a.Visits.Count)
                 .Take(10)
-                .To<NewsArticleIndexViewModel>()
+                .To<NewsArticleAsideViewModel>()
                 .ToList();
 
             aside.RecentArticles = this.newsArticles.GetAll()
                 .OrderByDescending(a => a.CreatedOn)
                 .Take(10)
-                .To<NewsArticleIndexViewModel>()
+                .To<NewsArticleAsideViewModel>()
                 .ToList();
 
             var viewModel = new IndexViewModel()

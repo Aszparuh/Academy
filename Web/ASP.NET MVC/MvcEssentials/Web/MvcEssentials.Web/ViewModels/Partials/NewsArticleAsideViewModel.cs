@@ -19,8 +19,8 @@
         public void CreateMappings(IMapperConfiguration configuration)
         {
             configuration.CreateMap<NewsArticle, NewsArticleAsideViewModel>()
-                .ForMember(x => x.ImageId, opt => opt.MapFrom(
-                    x => x.Images.Where(img => img.Type == ImageType.Normal)
+                .ForMember(x => x.SmallThumbnailId, opt => opt.MapFrom(
+                    x => x.Images.Where(img => img.Type == ImageType.AsideThumbnail)
                     .FirstOrDefault().Id));
         }
     }

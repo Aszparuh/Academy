@@ -228,6 +228,7 @@
     <Compile Include="ViewModels\News\CreateNewsViewModel.cs" />
     <Compile Include="ViewModels\News\DetailsViewModel.cs" />
     <Compile Include="ViewModels\Partials\AsideViewModel.cs" />
+    <Compile Include="ViewModels\Partials\NewsArticleAsideViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />

@@ -6,8 +6,8 @@
 
     public class AsideViewModel
     {
-        public IEnumerable<NewsArticleIndexViewModel> RecentArticles { get; set; }
+        public IEnumerable<NewsArticleAsideViewModel> RecentArticles { get; set; }
 
-        public IEnumerable<NewsArticleIndexViewModel> MostVisitedArticles { get; set; }
+        public IEnumerable<NewsArticleAsideViewModel> MostVisitedArticles { get; set; }
     }
 }
