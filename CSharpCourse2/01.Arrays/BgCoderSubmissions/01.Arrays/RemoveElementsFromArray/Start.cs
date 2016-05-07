@@ -1,7 +1,6 @@
 ﻿namespace RemoveElementsFromArray
 {
     using System;
-    using System.Collections.Generic;
 
     class Start
     {
@@ -9,6 +8,9 @@
         {
             int n = int.Parse(Console.ReadLine());
             var array = GetInput(n);
+            int maxLength = FindLongestNonConsequtiveSequenceLenght(array);
+            //Console.WriteLine(maxLength);
+            Console.WriteLine(array.Length - maxLength);
         }
 
         static int[] GetInput(int n)
@@ -23,28 +25,46 @@
             return resultArr;
         }
 
-        static int FindLongestSequence(int[] array)
+        static int FindLongestNonConsequtiveSequenceLenght(int[] array)
         {
-            int counter = 1;
-            int maxSequence = 0;
+            int[] helperArray = new int[array.Length];
 
-            for (int i = 0; i < array.Length - 1; i++)
+            for (int i = 0; i < helperArray.Length; i++)
             {
-                if (array[i] < array[i + 1])
+                helperArray[i] = 1;
+            }
+
+            for (int i = 1; i < array.Length; i++)
+            {
+                for (int j = 0; j < i; j++)
                 {
-                    counter++;
-                    if (maxSequence < counter)
+                    if (array[i] >= array[j])
                     {
-                        maxSequence = counter;
+                        if (helperArray[j] + 1 > helperArray[i])
+                        {
+                            helperArray[i] = helperArray[j] + 1;
+                        }
                     }
-                }
-                else
-                {
-                    counter = 1;
                 }
             }
 
-            return maxSequence;
+            int max = FindMax(helperArray);
+            return max;
+        }
+
+        static int FindMax(int[] array)
+        {
+            int max = array[0];
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] > max)
+                {
+                    max = array[i];
+                }
+            }
+
+            return max;
         }
     }
 }
