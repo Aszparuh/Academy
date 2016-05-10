@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AA8F20DE-4D1E-4AAE-8FC5-AF79F9C3BE5E}</ProjectGuid>
+    <ProjectGuid>{8755B039-4705-4079-A05B-514CC7AB2B48}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FillTheMatrix</RootNamespace>
