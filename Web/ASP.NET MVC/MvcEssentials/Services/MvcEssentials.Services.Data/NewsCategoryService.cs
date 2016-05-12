@@ -1,9 +1,8 @@
 ﻿namespace MvcEssentials.Services.Data
 {
     using System.Linq;
-
-    using MvcEssentials.Data.Models;
     using MvcEssentials.Data.Common;
+    using MvcEssentials.Data.Models;
 
     public class NewsCategoryService : INewsCategoryService
     {

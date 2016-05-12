@@ -1,7 +1,7 @@
 ﻿namespace MvcEssentials.Services.Data
 {
-    using MvcEssentials.Data.Models;
     using System.Linq;
+    using MvcEssentials.Data.Models;
 
     public interface IRegionsService
     {

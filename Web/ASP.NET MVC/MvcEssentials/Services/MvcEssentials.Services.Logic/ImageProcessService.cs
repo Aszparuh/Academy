@@ -1,13 +1,13 @@
 ﻿namespace MvcEssentials.Services.Logic
 {
-    using System.IO;
     using System.Drawing;
+    using System.IO;
+    using System.Web;
 
+    using Common;
     using ImageProcessor;
     using ImageProcessor.Imaging;
     using ImageProcessor.Imaging.Formats;
-    using Common;
-    using System.Web;
 
     public class ImageProcessService : IImageProcessService
     {
@@ -49,6 +49,5 @@
 
             return resultArray;
         }
-
     }
 }
