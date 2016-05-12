@@ -20,11 +20,13 @@
 
             string snake = Console.ReadLine();
             var shotParameters = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            int inpactRow = int.Parse(shotParameters[0]);
-            int inpactCol = int.Parse(shotParameters[1]);
-            int inpactRadius = int.Parse(shotParameters[2]);
+            int impactRow = int.Parse(shotParameters[0]);
+            int impactCol = int.Parse(shotParameters[1]);
+            int impactRadius = int.Parse(shotParameters[2]);
             FillMatrix(rows, cols, snake);
+            Shoot(impactRow, impactCol, impactRadius);
             PrintMatrix();
+
             
         }
 
@@ -88,6 +90,24 @@
                 }
 
                 Console.WriteLine();
+            }
+        }
+
+        static void Shoot(int impactRow, int impactCol, int Radius)
+        {
+            
+            for (int row = 0; row < matrix.GetLength(0); row++)
+            {
+                for (int col = 0; col < matrix.GetLength(1); col++)
+                {
+                    int x = row - impactRow;
+                    int y = col - impactCol;
+
+                    if ((x * x) + (y * y) <= Radius * Radius)
+                    {
+                        matrix[row, col] = ' ';
+                    }
+                }
             }
         }
     }
