@@ -25,6 +25,7 @@
             int impactRadius = int.Parse(shotParameters[2]);
             FillMatrix(rows, cols, snake);
             Shoot(impactRow, impactCol, impactRadius);
+            MoveZeroes();
             PrintMatrix();
 
             
@@ -78,15 +79,8 @@
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
-                {
-                    if (j == matrix.GetLength(1) - 1)
-                    {
-                        Console.Write(matrix[i, j]);
-                    }
-                    else
-                    {
-                        Console.Write(matrix[i, j] + " ");
-                    }
+                {    
+                    Console.Write(matrix[i, j]);                  
                 }
 
                 Console.WriteLine();
@@ -106,6 +100,24 @@
                     if ((x * x) + (y * y) <= Radius * Radius)
                     {
                         matrix[row, col] = ' ';
+                    }
+                }
+            }
+        }
+
+        static void MoveZeroes()
+        {
+            for (int col = matrix.GetLength(1) - 1; col >= 0; col--)
+            {
+                int index = matrix.GetLength(0) - 1;
+                for (int row = matrix.GetLength(0) - 1; row >= 0; row--)
+                {
+                    if (matrix[row, col] != ' ')
+                    {
+                        char tmp = matrix[index, col];
+                        matrix[index, col] = matrix[row, col];
+                        matrix[row, col] = tmp;
+                        index--;
                     }
                 }
             }
