@@ -35,7 +35,7 @@
             for (int i = 0; i < shorterArray.Length; i++)
             {
                 
-                int sum = longerArray[i] + shorterArray[i] + residue;
+                int sum = shorterArray[i] + longerArray[i] + residue;
                 if (sum > 9)
                 {
                     residue = 1;
