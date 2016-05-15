@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BunkerBuster", "BunkerBuster\BunkerBuster.csproj", "{ED2C9B56-55C8-46A0-BE30-1ED59CF084D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.BunkerBuster", "BunkerBuster\01.BunkerBuster.csproj", "{ED2C9B56-55C8-46A0-BE30-1ED59CF084D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.ArraySlider", "ArraySlider\02.ArraySlider.csproj", "{15F9E1F9-D968-4806-ACC5-90F23FFAD859}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{ED2C9B56-55C8-46A0-BE30-1ED59CF084D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED2C9B56-55C8-46A0-BE30-1ED59CF084D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED2C9B56-55C8-46A0-BE30-1ED59CF084D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15F9E1F9-D968-4806-ACC5-90F23FFAD859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15F9E1F9-D968-4806-ACC5-90F23FFAD859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15F9E1F9-D968-4806-ACC5-90F23FFAD859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15F9E1F9-D968-4806-ACC5-90F23FFAD859}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
