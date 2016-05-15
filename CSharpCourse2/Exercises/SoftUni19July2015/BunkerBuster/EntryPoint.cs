@@ -1,5 +1,6 @@
 ﻿namespace BunkerBuster
 {
+    //100/100 SoftUni Judge https://judge.softuni.bg/Contests/Practice/Index/92#0
     using System;
     using System.Linq;
 
@@ -28,17 +29,17 @@
                 var bomb = bombLine.Split(separator, StringSplitOptions.RemoveEmptyEntries);
                 int impactRow = int.Parse(bomb[0]);
                 int impactCol = int.Parse(bomb[1]);
-                int power = (int)bomb[2].ToArray()[0];
+                int power = bomb[2].ToArray()[0];
                 CalculateImpact(impactRow, impactCol, power, matrix);
                 bombLine = Console.ReadLine();
             }
 
             //PrintMatrix(matrix);
             int numberOfDestroyedCells = GetNumberOfDestroyedCells(matrix);
-            float percentage = numberOfDestroyedCells / (float)rows * cols;
+            double percentage = Math.Round((double)numberOfDestroyedCells / (rows * cols) * 100, 1, MidpointRounding.AwayFromZero);
 
-            Console.WriteLine(numberOfDestroyedCells);
-            Console.WriteLine(percentage);
+            Console.WriteLine("Destroyed bunkers: {0}", numberOfDestroyedCells);
+            Console.WriteLine("Damage done: {0:0.0} %", percentage);
         }
 
         static void CalculateImpact(int row, int col, int power, int[,] matrix)
@@ -53,7 +54,7 @@
                 {
                     for (int j = col - 1; j <= col + 1; j++)
                     {
-                        if (j < 0 || j > matrix.GetLength(0) - 1)
+                        if (j < 0 || j > matrix.GetLength(1) - 1)
                         {
                             continue;
                         }
