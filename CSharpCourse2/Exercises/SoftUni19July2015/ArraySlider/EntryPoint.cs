@@ -2,6 +2,7 @@
 {
     using System;
     using System.Linq;
+    using System.Numerics;
 
     class EntryPoint
     {
@@ -9,7 +10,7 @@
         {
             char[] separator = new char[] { ' ', '\t' };
             var inputArray = Console.ReadLine().Split(separator, StringSplitOptions.RemoveEmptyEntries)
-                .Select(n => ulong.Parse(n))
+                .Select(n => BigInteger.Parse(n))
                 .ToArray();
 
             int index = 0;
