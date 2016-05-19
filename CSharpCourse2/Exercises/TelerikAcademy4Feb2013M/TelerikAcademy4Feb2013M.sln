@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.KaspichanNumbers", "KaspichanNumbers\01.KaspichanNumbers.csproj", "{B123A7D6-8B78-46C1-AE7F-EB9ED4EA9E98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.GreedyDwarf", "GreedyDwarf\02.GreedyDwarf.csproj", "{FE914916-37CE-483F-89F2-B3E5BCFED433}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B123A7D6-8B78-46C1-AE7F-EB9ED4EA9E98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B123A7D6-8B78-46C1-AE7F-EB9ED4EA9E98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B123A7D6-8B78-46C1-AE7F-EB9ED4EA9E98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE914916-37CE-483F-89F2-B3E5BCFED433}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE914916-37CE-483F-89F2-B3E5BCFED433}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE914916-37CE-483F-89F2-B3E5BCFED433}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE914916-37CE-483F-89F2-B3E5BCFED433}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
