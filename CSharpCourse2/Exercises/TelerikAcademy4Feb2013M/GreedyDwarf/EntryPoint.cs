@@ -2,7 +2,8 @@
 {
     using System;
     using System.Linq;
-
+    
+    //100/100 BgCoder
     class EntryPoint
     {
         static void Main()
@@ -35,17 +36,17 @@
                 {
                     collectedCoins += valley[positionOnValley];
                     visited[positionOnValley] = true;
-                    if (collectedCoins > maxCollectedCoins)
-                    {
-                        maxCollectedCoins = collectedCoins;
-                    }
-
                     positionOnValley += pattern[positionOnPattern];
                     positionOnPattern++;
                     if (positionOnPattern > pattern.Length - 1)
                     {
                         positionOnPattern = 0;
                     }
+                }
+
+                if (collectedCoins > maxCollectedCoins)
+                {
+                    maxCollectedCoins = collectedCoins;
                 }
             }
 
