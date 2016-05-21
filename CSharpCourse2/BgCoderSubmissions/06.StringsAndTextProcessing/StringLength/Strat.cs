@@ -20,6 +20,7 @@
 
         static string FillWithAsterisks(string anyString)
         {
+            anyString = anyString.Replace(@"\", string.Empty);
             StringBuilder sb = new StringBuilder(anyString);
 
             while (sb.Length < 20)
