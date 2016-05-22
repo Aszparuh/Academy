@@ -2,33 +2,39 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Text;
 
     class Start
     {
+        static char[] ExtractNonLetterSeparators(string input)
+        {
+            char[] separators = input.Where(c => !char.IsLetter(c))
+                                     .Distinct()
+                                     .ToArray();
+            return separators;
+        }
         static void Main()
         {
             string word = Console.ReadLine();
             string text = Console.ReadLine();
 
-            var sentences = ExtractSentences(text);
-     
-        }
+            string[] splitted = text.Split(new char[] { '.', '?', '!' }, StringSplitOptions.RemoveEmptyEntries);
+            char[] separators = ExtractNonLetterSeparators(text);
 
-        static List<string> ExtractSentences(string text)
-        {
-            List<string> sentences = new List<string>();
-            int indexOfNextEnd = 0;
-            int indexOfLastEnd = 0;
-
-            while (indexOfNextEnd != -1)
+            foreach (var sent in splitted)
             {
-                indexOfNextEnd = text.IndexOf(".", indexOfLastEnd + 1);
-                sentences.Add(text.Substring(indexOfLastEnd + 1, indexOfNextEnd - indexOfLastEnd + 1));
-                indexOfLastEnd = indexOfNextEnd;
-            }
+                string[] words = sent.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 
-            return sentences;
+                for (int i = 0; i < words.Length; i++)
+                {
+                    if (word.ToLower() == words[i].ToLower().Trim())
+                    {
+                        Console.Write(sent + ".");
+                        break;
+                    }
+                }
+            }
         }
     }
 }
