@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.TRES4Numbers", "TRES4Numbers\01.TRES4Numbers.csproj", "{790D2E2D-5D60-49C9-A188-3F7D2E107024}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.BunnyFactory", "BunnyFactory\02.BunnyFactory.csproj", "{FEB5DCCA-1A38-4D36-8C9A-42F48954DA9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{790D2E2D-5D60-49C9-A188-3F7D2E107024}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{790D2E2D-5D60-49C9-A188-3F7D2E107024}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{790D2E2D-5D60-49C9-A188-3F7D2E107024}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEB5DCCA-1A38-4D36-8C9A-42F48954DA9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEB5DCCA-1A38-4D36-8C9A-42F48954DA9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEB5DCCA-1A38-4D36-8C9A-42F48954DA9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEB5DCCA-1A38-4D36-8C9A-42F48954DA9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
