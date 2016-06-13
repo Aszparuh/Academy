@@ -21,7 +21,7 @@
         [Range(1, 120, ErrorMessage = "Actor age should be between 1 and 120 years")]
         public int Age { get; set; }
 
-        ICollection<Movie> Movies
+        public ICollection<Movie> Movies
         {
             get
             {
