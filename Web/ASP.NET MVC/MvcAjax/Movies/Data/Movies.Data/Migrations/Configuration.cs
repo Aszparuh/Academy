@@ -1,4 +1,4 @@
-namespace Movies.Data.Migrations
+﻿namespace Movies.Data.Migrations
 {
     using System.Data.Entity.Migrations;
 
@@ -14,7 +14,7 @@ namespace Movies.Data.Migrations
         {
             // This method will be called after migrating to the latest version.
 
-            // You can use the DbSet<T>.AddOrUpdate() helper extension method 
+            // You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data. E.g.
             //
             //    context.People.AddOrUpdate(
@@ -23,7 +23,6 @@ namespace Movies.Data.Migrations
             //      new Person { FullName = "Brice Lambson" },
             //      new Person { FullName = "Rowan Miller" }
             //    );
-            //
         }
     }
 }

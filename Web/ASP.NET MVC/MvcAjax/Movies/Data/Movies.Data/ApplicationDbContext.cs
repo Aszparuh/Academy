@@ -14,6 +14,10 @@
         {
         }
 
+        public IDbSet<Actor> Actors { get; set; }
+
+        public IDbSet<Movie> Movies { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
