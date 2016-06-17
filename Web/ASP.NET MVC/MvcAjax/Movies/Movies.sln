@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Data.Models", "Data\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Web.Infrastructure", "Web\Movies.Web.Infrastructure\Movies.Web.Infrastructure.csproj", "{2798CE50-AF40-46DC-91F9-6AEEF70B19AF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{69E98DC3-198F-4DA9-B2E8-0F0B935D1A26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Services.Data", "Services\Movies.Services.Data\Movies.Services.Data.csproj", "{67AE4987-83BF-4B6D-AEBA-0900C724E2F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,10 @@ Global
 		{2798CE50-AF40-46DC-91F9-6AEEF70B19AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2798CE50-AF40-46DC-91F9-6AEEF70B19AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2798CE50-AF40-46DC-91F9-6AEEF70B19AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67AE4987-83BF-4B6D-AEBA-0900C724E2F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67AE4987-83BF-4B6D-AEBA-0900C724E2F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67AE4987-83BF-4B6D-AEBA-0900C724E2F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67AE4987-83BF-4B6D-AEBA-0900C724E2F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,5 +61,6 @@ Global
 		{EE64578D-5EC9-4430-AB4D-2F578D41BD54} = {E8777B30-514D-4A4C-A1A6-2BFF7BC7C480}
 		{E8CD3D5F-4DF5-4466-8BC0-C325D6E09614} = {E8777B30-514D-4A4C-A1A6-2BFF7BC7C480}
 		{2798CE50-AF40-46DC-91F9-6AEEF70B19AF} = {3855E255-AAE2-47CA-83DC-848D7AD4065E}
+		{67AE4987-83BF-4B6D-AEBA-0900C724E2F7} = {69E98DC3-198F-4DA9-B2E8-0F0B935D1A26}
 	EndGlobalSection
 EndGlobal
