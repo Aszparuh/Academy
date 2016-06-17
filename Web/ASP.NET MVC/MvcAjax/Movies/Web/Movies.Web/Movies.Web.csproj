@@ -219,6 +219,7 @@
     <Compile Include="ViewModels\ApplicationDbContext.cs" />
     <Compile Include="ViewModels\ApplicationUser.cs" />
     <Compile Include="ViewModels\Account\LoginViewModel.cs" />
+    <Compile Include="ViewModels\Home\MovieViewModel.cs" />
     <Compile Include="ViewModels\Manage\AddPhoneNumberViewModel.cs" />
     <Compile Include="ViewModels\Manage\ChangePasswordViewModel.cs" />
     <Compile Include="ViewModels\Manage\ConfigureTwoFactorViewModel.cs" />

@@ -63,6 +63,14 @@
     <Compile Include="Migrations\201606131433204_InitialCreate.Designer.cs">
       <DependentUpon>201606131433204_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606171314221_AddsDescribtion.cs" />
+    <Compile Include="Migrations\201606171314221_AddsDescribtion.Designer.cs">
+      <DependentUpon>201606171314221_AddsDescribtion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606171322000_AddDescription.cs" />
+    <Compile Include="Migrations\201606171322000_AddDescription.Designer.cs">
+      <DependentUpon>201606171322000_AddDescription.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -88,6 +96,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201606131433204_InitialCreate.resx">
       <DependentUpon>201606131433204_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606171314221_AddsDescribtion.resx">
+      <DependentUpon>201606171314221_AddsDescribtion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606171322000_AddDescription.resx">
+      <DependentUpon>201606171322000_AddDescription.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
