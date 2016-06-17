@@ -27,6 +27,10 @@
         [Display(Name = "Studio address")]
         public string StudioAddress { get; set; }
 
+        [Display(Name = "Describtion")]
+        [StringLength(2000, ErrorMessage = "Describtion has to be less than 2000 symbols.")]
+        public string MovieDescibtion { get; set; }
+
         public ICollection<Actor> Actors
         {
             get
