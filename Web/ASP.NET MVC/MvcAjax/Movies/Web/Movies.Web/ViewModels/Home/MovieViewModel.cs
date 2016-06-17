@@ -5,15 +5,10 @@
     using Data.Models;
     using Infrastructure.Mappings;
 
-    public class MovieViewModel : IMapFrom<Movie>, IHaveCustomMappings
+    public class MovieViewModel : IMapFrom<Movie>
     {
         public int Id { get; set; }
 
         public string Title { get; set; }
-
-        public void CreateMappings(IMapperConfiguration configuration)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
