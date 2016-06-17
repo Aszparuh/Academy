@@ -16,22 +16,25 @@
 
         public void Add(Movie movie)
         {
-            throw new NotImplementedException();
+            this.movies.Add(movie);
+            this.movies.Save();
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var movieToDelete = this.movies.GetById(id);
+            this.movies.Delete(movieToDelete);
+            this.movies.Save();
         }
 
         public IQueryable<Movie> GetAll()
         {
-            throw new NotImplementedException();
+            return this.movies.All();
         }
 
         public Movie GetById(int id)
         {
-            throw new NotImplementedException();
+            return this.movies.GetById(id);
         }
 
         public void Update(int id)
