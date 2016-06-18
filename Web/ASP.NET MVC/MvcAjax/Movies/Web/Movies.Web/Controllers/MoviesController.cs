@@ -5,10 +5,9 @@
     public class MoviesController : Controller
     {
         [HttpGet]
-        [ChildActionOnly]
         public ActionResult Create()
         {
-            return this.PartialView();
+            return this.PartialView("_Create");
         }
     }
 }
