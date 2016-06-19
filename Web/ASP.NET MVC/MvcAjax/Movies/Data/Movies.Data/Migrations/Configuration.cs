@@ -28,7 +28,6 @@
             //      new Person { FullName = "Brice Lambson" },
             //      new Person { FullName = "Rowan Miller" }
             //    );
-
             if (!context.Users.Any())
             {
                 var roleStore = new RoleStore<IdentityRole>(context);

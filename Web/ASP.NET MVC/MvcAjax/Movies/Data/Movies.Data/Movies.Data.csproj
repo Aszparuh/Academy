@@ -71,6 +71,10 @@
     <Compile Include="Migrations\201606171322000_AddDescription.Designer.cs">
       <DependentUpon>201606171322000_AddDescription.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606191137392_Add Gender.cs" />
+    <Compile Include="Migrations\201606191137392_Add Gender.Designer.cs">
+      <DependentUpon>201606191137392_Add Gender.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -102,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606171322000_AddDescription.resx">
       <DependentUpon>201606171322000_AddDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606191137392_Add Gender.resx">
+      <DependentUpon>201606191137392_Add Gender.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
