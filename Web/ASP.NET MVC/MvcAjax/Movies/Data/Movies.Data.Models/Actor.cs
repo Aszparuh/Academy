@@ -21,6 +21,8 @@
         [Range(1, 120, ErrorMessage = "Actor age should be between 1 and 120 years")]
         public int Age { get; set; }
 
+        public GenderEnum Gender { get; set; }
+
         public ICollection<Movie> Movies
         {
             get

@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Actor.cs" />
     <Compile Include="ApplicationUser.cs" />
+    <Compile Include="GenderEnum.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
