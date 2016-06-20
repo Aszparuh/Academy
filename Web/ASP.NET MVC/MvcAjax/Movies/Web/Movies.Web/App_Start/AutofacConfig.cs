@@ -7,6 +7,7 @@
     using Autofac.Integration.Mvc;
     using Data;
     using Data.Common;
+    using Services.Data.Contracts;
 
     public class AutofacConfig
     {
@@ -47,6 +48,10 @@
             builder.RegisterGeneric(typeof(DbRepository<>))
                 .As(typeof(IDbRepository<>))
                 .InstancePerRequest();
+
+            var servicesAssembly = Assembly.GetAssembly(typeof(IMovieService));
+            builder.RegisterAssemblyTypes(servicesAssembly).AsImplementedInterfaces();
+
         }
     }
 }

@@ -335,6 +335,10 @@
       <Project>{187e8997-fef3-40e0-9e9b-d4651c45952e}</Project>
       <Name>Movies.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Services\Movies.Services.Data\Movies.Services.Data.csproj">
+      <Project>{67ae4987-83bf-4b6d-aeba-0900c724e2f7}</Project>
+      <Name>Movies.Services.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Movies.Web.Infrastructure\Movies.Web.Infrastructure.csproj">
       <Project>{2798ce50-af40-46dc-91f9-6aeef70b19af}</Project>
       <Name>Movies.Web.Infrastructure</Name>
