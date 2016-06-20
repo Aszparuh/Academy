@@ -60,7 +60,7 @@
             }
 
             // Seed Actors and Movies
-            if (context.Actors.Any())
+            if (!context.Actors.Any())
             {
                 var firstMovieActors = new HashSet<Actor>()
                     {
@@ -78,9 +78,12 @@
                     Actors = firstMovieActors
                 };
 
+                firstMovie.Actors = firstMovieActors;
+
                 foreach (var actor in firstMovieActors)
                 {
                     actor.Movies.Add(firstMovie);
+                    context.Actors.Add(actor);
                 }
 
                 var secondMovieActors = new HashSet<Actor>()
@@ -99,9 +102,12 @@
                     Actors = secondMovieActors
                 };
 
+                secondMovie.Actors = secondMovieActors;
+
                 foreach (var actor in secondMovieActors)
                 {
                     actor.Movies.Add(secondMovie);
+                    context.Actors.Add(actor);
                 }
 
                 context.SaveChanges();
