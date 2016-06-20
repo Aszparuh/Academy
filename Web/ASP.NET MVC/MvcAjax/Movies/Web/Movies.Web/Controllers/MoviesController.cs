@@ -2,10 +2,11 @@
 {
     using System.Linq;
     using System.Web.Mvc;
+    using Data.Models;
     using Services.Data.Contracts;
     using ViewModels.Movies;
 
-    public class MoviesController : Controller
+    public class MoviesController : BaseController
     {
         private readonly IActorService actors;
         private readonly IMovieService movies;
@@ -23,6 +24,17 @@
             viewModel.FemaleActors = this.actors.GetAllFemale().Select(a => new SelectListItem() { Text = a.Name, Value = a.Id.ToString() });
             viewModel.MaleActors = this.actors.GetAllMale().Select(a => new SelectListItem() { Text = a.Name, Value = a.Id.ToString() });
             return this.PartialView("_Create", viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Create(CreateMovieViewModel input)
+        {
+            if (this.ModelState.IsValid)
+            {
+                var modelToSave = this.Mapper.Map<Movie>(input);
+            }
+
+            return this.PartialView("_Create", input);
         }
     }
 }
