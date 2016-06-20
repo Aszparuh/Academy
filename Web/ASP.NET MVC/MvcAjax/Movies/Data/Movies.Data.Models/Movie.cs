@@ -13,22 +13,24 @@
             this.actors = new HashSet<Actor>();
         }
 
-        [Display(Name = "Title")]
-        [StringLength(200, MinimumLength = 1, ErrorMessage = "Movie title should be between 1 and 200 chars.")]
+        [Required]
+        [MaxLength(200, ErrorMessage = "Movie title should be between 1 and 200 chars.")]
         public string Title { get; set; }
 
-        [Display(Name = "Year")]
+        [Required]
         [Range(1900, 2016, ErrorMessage = "Movie year should be after 1900 year.")]
         public int Year { get; set; }
 
-        [Display(Name = "Studio name")]
+        [Required]
+        [MaxLength(200, ErrorMessage = "Studio name should not be longer that 200 chars")]
         public string StudioName { get; set; }
 
-        [Display(Name = "Studio address")]
+        [Required]
+        [MaxLength(500, ErrorMessage = "Studio address should not be longer that 500 chars")]
         public string StudioAddress { get; set; }
 
-        [Display(Name = "Description")]
-        [StringLength(2000, ErrorMessage = "Describtion has to be less than 2000 symbols.")]
+        [Required]
+        [MaxLength(2000, ErrorMessage = "Description has to be less than 2000 symbols.")]
         public string MovieDesciption { get; set; }
 
         public ICollection<Actor> Actors

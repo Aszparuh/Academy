@@ -75,6 +75,10 @@
     <Compile Include="Migrations\201606191137392_Add Gender.Designer.cs">
       <DependentUpon>201606191137392_Add Gender.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606201236111_RequiredFields.cs" />
+    <Compile Include="Migrations\201606201236111_RequiredFields.Designer.cs">
+      <DependentUpon>201606201236111_RequiredFields.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -109,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606191137392_Add Gender.resx">
       <DependentUpon>201606191137392_Add Gender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606201236111_RequiredFields.resx">
+      <DependentUpon>201606201236111_RequiredFields.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

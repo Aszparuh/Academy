@@ -2,11 +2,13 @@
     ViewBag.Title = "Home Page";
 }
 
-@Ajax.ActionLink("Create Movie", "Create", "Movies", null, new AjaxOptions
+<div>
+    @Ajax.ActionLink("Create Movie", "Create", "Movies", null, new AjaxOptions
 {
     UpdateTargetId = "create",
     HttpMethod = "GET",
-    InsertionMode = InsertionMode.ReplaceWith,
-})
+    InsertionMode = InsertionMode.Replace,
+}, new { @class = "btn btn-primary" })
+</div>
 
 <div id="create"></div>
