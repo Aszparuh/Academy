@@ -7,6 +7,10 @@
     {
         IQueryable<Actor> GetAll();
 
+        IQueryable<Actor> GetAllFemale();
+
+        IQueryable<Actor> GetAllMale();
+
         Actor GetById(int id);
 
         void Add(Actor actor);

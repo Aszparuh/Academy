@@ -1,4 +1,5 @@
 ﻿namespace Movies.Services.Data.Contracts
+{
     using System.Linq;
     using Movies.Data.Models;
 

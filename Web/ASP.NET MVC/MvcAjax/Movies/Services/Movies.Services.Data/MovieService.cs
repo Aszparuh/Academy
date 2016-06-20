@@ -2,6 +2,7 @@
 {
     using System;
     using System.Linq;
+    using Contracts;
     using Movies.Data.Common;
     using Movies.Data.Models;
 

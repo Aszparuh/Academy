@@ -17,14 +17,14 @@
         [StringLength(2000, ErrorMessage = "Describtion has to be less than 2000 symbols.")]
         public string MovieDesciption { get; set; }
 
-        [Display(Name = "Female Actors")]
         public IEnumerable<SelectListItem> FemaleActors { get; set; }
 
+        [Display(Name = "Actress")]
         public int FemaleActorId { get; set; }
 
-        [Display(Name = "Male Actors")]
         public IEnumerable<SelectListItem> MaleActors { get; set; }
 
+        [Display(Name = "Actor")]
         public int MaleActorId { get; set; }
     }
 }

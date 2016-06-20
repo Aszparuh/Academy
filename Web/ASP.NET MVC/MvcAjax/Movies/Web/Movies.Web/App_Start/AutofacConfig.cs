@@ -51,7 +51,6 @@
 
             var servicesAssembly = Assembly.GetAssembly(typeof(IMovieService));
             builder.RegisterAssemblyTypes(servicesAssembly).AsImplementedInterfaces();
-
         }
     }
 }

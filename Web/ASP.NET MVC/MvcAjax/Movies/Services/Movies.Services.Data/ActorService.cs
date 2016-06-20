@@ -26,6 +26,16 @@
             return this.actors.All();
         }
 
+        public IQueryable<Actor> GetAllFemale()
+        {
+            return this.actors.All().Where(a => a.Gender == GenderEnum.Female);
+        }
+
+        public IQueryable<Actor> GetAllMale()
+        {
+            return this.actors.All().Where(a => a.Gender == GenderEnum.Male);
+        }
+
         public Actor GetById(int id)
         {
             return this.actors.GetById(id);
