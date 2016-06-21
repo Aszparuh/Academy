@@ -1,5 +1,6 @@
 ﻿namespace Movies.Web.Controllers
 {
+    using System.Data.Entity;
     using System.Linq;
     using System.Web.Mvc;
     using Data.Models;
@@ -31,7 +32,25 @@
         {
             if (this.ModelState.IsValid)
             {
-                var modelToSave = this.Mapper.Map<Movie>(input);
+                var movieToSave = this.Mapper.Map<Movie>(input);
+
+                var maleActor = this.actors
+                    .GetAllMale()
+                    .Include(a => a.Movies)
+                    .FirstOrDefault(a => a.Id == input.MaleActorId);
+                var femaleActor = this.actors
+                    .GetAllFemale()
+                    .Include(a => a.Movies)
+                    .FirstOrDefault(a => a.Id == input.FemaleActorId);
+
+                movieToSave.Actors.Add(maleActor);
+                movieToSave.Actors.Add(femaleActor);
+
+                maleActor.Movies.Add(movieToSave);
+                femaleActor.Movies.Add(movieToSave);
+
+                this.movies.Add(movieToSave);
+                return this.RedirectToAction("Index", "Home");
             }
 
             return this.PartialView("_Create", input);
