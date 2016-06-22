@@ -34,21 +34,24 @@
             {
                 var movieToSave = this.Mapper.Map<Movie>(input);
 
-                var maleActor = this.actors
-                    .GetAllMale()
-                    .Include(a => a.Movies)
-                    .FirstOrDefault(a => a.Id == input.MaleActorId);
-                var femaleActor = this.actors
-                    .GetAllFemale()
-                    .Include(a => a.Movies)
-                    .FirstOrDefault(a => a.Id == input.FemaleActorId);
+                // var maleActor = this.actors
+                //    .GetAllMale()
+                //    .Include(a => a.Movies)
+                //    .FirstOrDefault(a => a.Id == input.MaleActorId);
+
+                // var femaleActor = this.actors
+                //    .GetAllFemale()
+                //    .Include(a => a.Movies)
+                //    .FirstOrDefault(a => a.Id == input.FemaleActorId);
+                var maleActor = this.actors.GetById(input.MaleActorId);
+                var femaleActor = this.actors.GetById(input.FemaleActorId);
 
                 movieToSave.Actors.Add(maleActor);
                 movieToSave.Actors.Add(femaleActor);
 
-                maleActor.Movies.Add(movieToSave);
-                femaleActor.Movies.Add(movieToSave);
-
+                // this also works
+                // maleActor.Movies.Add(movieToSave);
+                // femaleActor.Movies.Add(movieToSave);
                 this.movies.Add(movieToSave);
                 return this.RedirectToAction("Index", "Home");
             }
