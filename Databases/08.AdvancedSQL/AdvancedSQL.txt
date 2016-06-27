@@ -226,25 +226,139 @@ GO
 
 1.	Write SQL statements to insert several records in the `Users` and `Groups` tables.
 
+USE TelerikAcademy
+
+INSERT INTO Groups
+VALUES
+('FirstGroup'),
+('SecondGroup'),
+('ThirdGroup'),
+('FourthGroup')
+GO
+
+INSERT INTO Users
+VALUES
+('Name1', '12345', 'Some Name1', GETDATE(), 2),
+('Name2', '12345', 'Some Name1', GETDATE(), 3),
+('Name3', '12345', 'Some Name1', GETDATE(), 4),
+('Name4', '12345', 'Some Name1', GETDATE(), 5),
+('Name5', '12345', 'Some Name1', GETDATE(), 2),
+('Name6', '12345', 'Some Name1', GETDATE(), 3),
+('Name7', '12345', 'Some Name1', GETDATE(), 4)
+GO
 
 
 1.	Write SQL statements to update some of the records in the `Users` and `Groups` tables.
+
+USE TelerikAcademy
+
+UPDATE Users
+SET Username = 'New Name1', Password = '23456'
+WHERE Username = 'Name1'
+
+UPDATE Groups
+SET Name = 'Last Group'
+WHERE Name = '1'
+
+
+
 1.	Write SQL statements to delete some of the records from the `Users` and `Groups` tables.
+
+USE TelerikAcademy
+
+DELETE FROM Users
+WHERE GroupId = 2
+
+DELETE FROM Groups
+WHERE Id = 2
+
 1.	Write SQL statements to insert in the `Users` table the names of all employees from the `Employees` table.
 	*	Combine the first and last names as a full name.
 	*	For username use the first letter of the first name + the last name (in lowercase).
 	*	Use the same for the password, and `NULL` for last login time.
+
+USE TelerikAcademy
+
+INSERT INTO Users
+([Full Name], [Username], [Password], [Last Login])
+SELECT FirstName + ' ' + LastName, LOWER(LEFT(FirstName, 1)) + LOWER(LastName) + LEFT(CONVERT(VARCHAR, HireDate), 1), LOWER(LEFT(FirstName, 1)) + LOWER(LastName) + 'pass', GETDATE() 
+FROM Employees
+
+
 1.	Write a SQL statement that changes the password to `NULL` for all users that have not been in the system since 10.03.2010.
+
+USE TelerikAcademy
+
+ALTER TABLE Users
+ALTER COLUMN [Password] NVARCHAR(50) NULL
+
+UPDATE Users
+SET Password = NULL
+WHERE DATEDIFF(DAY, [Last Login], '03.10.2010 00:00:00:000') > 0
+
+
 1.	Write a SQL statement that deletes all users without passwords (`NULL` password).
+
+USE TelerikAcademy
+
+DELETE 
+FROM Users
+WHERE Password IS NULL
+
 1.	Write a SQL query to display the average employee salary by department and job title.
+
+USE TelerikAcademy
+
+SELECT AVG(Salary) AS [Average Salary], d.Name, e.JobTitle
+FROM Employees e
+JOIN Departments d
+ON e.DepartmentID = d.DepartmentID
+GROUP BY d.Name, e.JobTitle
+
 1.	Write a SQL query to display the minimal employee salary by department and job title along with the name of some of the employees that take it.
+
+USE TelerikAcademy
+
+SELECT e.Firstname, e.LastName, AVG(e.Salary) AS [Average Salary], d.Name, e.JobTitle
+FROM Employees e
+JOIN Departments d
+ON e.DepartmentID = d.DepartmentID
+GROUP BY d.Name, e.JobTitle, e.FirstName, e.LastName
+ORDER BY d.Name
+
 1.	Write a SQL query to display the town where maximal number of employees work.
+
+SELECT TOP 1 t.Name AS Town, COUNT(*) AS EmployeesCount
+FROM Employees e
+	JOIN Addresses a
+		ON e.AddressID = a.AddressID
+	JOIN Towns t
+		ON a.TownID = t.TownID
+GROUP BY t.Name
+ORDER BY EmployeesCount DESC
+
 1.	Write a SQL query to display the number of managers from each town.
+
+USE TelerikAcademy
+
+SELECT COUNT(DISTINCT m.ManagerID) AS [Manager Count], t.Name
+FROM Employees m
+JOIN Addresses a
+ON m.AddressID = a.AddressID
+JOIN Towns t
+ON t.TownID = a.TownID
+GROUP BY t.Name
+ORDER BY [Manager Count]
+
+
 1.	Write a SQL to create table `WorkHours` to store work reports for each employee (employee id, date, task, hours, comments).
 	*	Don't forget to define  identity, primary key and appropriate foreign key. 
 	*	Issue few SQL statements to insert, update and delete of some data in the table.
 	*	Define a table `WorkHoursLogs` to track all changes in the `WorkHours` table with triggers.
 		*	For each change keep the old record data, the new record data and the command (insert / update / delete).
+
+
+
 1.	Start a database transaction, delete all employees from the '`Sales`' department along with all dependent records from the pother tables.
 	*	At the end rollback the transaction.
 1.	Start a database transaction and drop the table `EmployeesProjects`.
