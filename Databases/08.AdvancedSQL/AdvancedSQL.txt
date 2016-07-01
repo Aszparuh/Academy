@@ -357,11 +357,144 @@ ORDER BY [Manager Count]
 	*	Define a table `WorkHoursLogs` to track all changes in the `WorkHours` table with triggers.
 		*	For each change keep the old record data, the new record data and the command (insert / update / delete).
 
+USE TelerikAcademy
+
+CREATE Table WorkHours (
+	[Id] INT IDENTITY PRIMARY KEY,
+	[EmployeeId] INT NOT NULL,
+	[Date] DATETIME NOT NULL,
+	[Task] NVARCHAR(100) NOT NULL,
+	[Hours] INT NOT NULL,
+	[Comments] NVARCHAR(200),
+	CONSTRAINT FK_WorkHours_Employees 
+		FOREIGN KEY (EmployeeId) 
+		REFERENCES Employees(EmployeeID)
+)
+
+INSERT INTO WorkHours (EmployeeId, Date, Task, Hours)
+VALUES
+(2, GETDATE(), 'Some task1', 5),
+(3, GETDATE(), 'Some task2', 3),
+(4, GETDATE(), 'Some task3', 1),
+(5, GETDATE(), 'Some task4', 8),
+(6, GETDATE(), 'Some task5', 6),
+(7, GETDATE(), 'Some task6', 1),
+(8, GETDATE(), 'Some task7', 3),
+(9, GETDATE(), 'Some task8', 4),
+(10, GETDATE(), 'Some task9', 7)
+
+DELETE
+FROM WorkHours
+WHERE Hours = 2
+GO
+
+UPDATE WorkHours
+SET Task = 'Updated Task Name'
+WHERE Hours < 7
+GO
+
+USE TelerikAcademy
+
+CREATE Table WorkHoursLogs (
+	[Id] INT IDENTITY PRIMARY KEY,
+	[EmployeeId] INT NOT NULL,
+	[Date] DATETIME NOT NULL,
+	[Task] NVARCHAR(100) NOT NULL,
+	[Hours] INT NOT NULL,
+	[Comments] NVARCHAR(200),
+	[Action] NVARCHAR(13)
+	CONSTRAINT FK_Employees_WorkHoursLogs
+	FOREIGN KEY (EmployeeId)
+	REFERENCES Employees(EmployeeID),
+	CONSTRAINT [chk_WorkReportsLogs] CHECK ([Action] IN ('Insert', 'Delete', 'DeleteUpdate', 'InsertUpdate'))
+)
+GO
+
+
+
+CREATE TRIGGER TR_InsertWorkReports ON WorkHours FOR INSERT
+AS
+INSERT INTO WorkHoursLogs(EmployeeId, Date, Task, Hours, Comments, Action)
+SELECT EmployeeID, Date, Task, Hours, Comments, 'Insert'
+FROM inserted
+GO
+
+CREATE TRIGGER TR_DeleteWorkReports ON WorkHours FOR DELETE
+AS
+INSERT INTO WorkHoursLogs(EmployeeId, Date, Task, [Hours], Comments, [Action])
+SELECT EmployeeID, Date, Task, [Hours], Comments, 'Delete'
+FROM deleted
+GO
+
+CREATE TRIGGER TR_UpdateWorkReports ON WorkHours FOR UPDATE
+AS
+INSERT INTO WorkHoursLogs(EmployeeId, Date, Task, [Hours], Comments, [Action])
+SELECT EmployeeID, Date, Task, [Hours], Comments, 'InsertUpdate'
+FROM inserted
+INSERT INTO WorkHoursLogs( EmployeeId, Date, Task, [Hours], Comments, [Action])
+SELECT EmployeeID, Date, Task, [Hours], Comments, 'DeleteUpdate'
+FROM deleted
+GO
+
+
+INSERT INTO WorkHours(EmployeeId, Date, Task, Hours)
+VALUES (3, GETDATE(), 'New Task', 4)
+
+UPDATE WorkHours
+SET Comments = 'Updated work hours'
+WHERE EmployeeId = 2
+
+DELETE
+FROM WorkHours
+WHERE EmployeeId = 2
 
 
 1.	Start a database transaction, delete all employees from the '`Sales`' department along with all dependent records from the pother tables.
 	*	At the end rollback the transaction.
+
+BEGIN TRAN
+ALTER TABLE Departments
+DROP CONSTRAINT FK_Departments_Employees
+GO
+DELETE FROM e 
+FROM Employees e
+JOIN Departments d
+ON e.DepartmentID = d.DepartmentID
+WHERE d.Name = 'Sales'
+ROLLBACK TRAN
+
+
 1.	Start a database transaction and drop the table `EmployeesProjects`.
 	*	Now how you could restore back the lost table data?
+
+BEGIN TRAN
+	DROP TABLE EmployeesProjects
+ROLLBACK TRAN
+
+
 1.	Find how to use temporary tables in SQL Server.
 	*	Using temporary tables backup all records from `EmployeesProjects` and restore them back after dropping and re-creating the table.
+CREATE TABLE #TemporaryTable (
+	EmployeeId INT,
+	ProjectId INT
+)
+
+INSERT INTO #TemporaryTable
+SELECT EmployeeId, ProjectId
+FROM EmployeesProjects
+
+DROP TABLE EmployeesProjects
+
+CREATE TABLE EmployeesProjects (
+	EmployeeId INT,
+	ProjectId INT,
+	CONSTRAINT PK_EmployeesProjects PRIMARY KEY(EmployeeID, ProjectID),
+	CONSTRAINT FK_EmployeesProjects_Employees FOREIGN KEY(EmployeeID) 
+	REFERENCES Employees(EmployeeID),
+	CONSTRAINT FK_EmployeesProjects_Projects FOREIGN KEY(ProjectID) 
+	REFERENCES Projects(ProjectID)
+)
+
+INSERT INTO EmployeesProjects
+SELECT EmployeeId, ProjectId
+FROM #TemporaryTable
