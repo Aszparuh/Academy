@@ -164,10 +164,44 @@ GO
 EXEC usp_AddMonthlyInterest 1, 4.0
 EXEC usp_WidrawMoney 2, 300
 ```
-
-
 1.	Define a function in the database `TelerikAcademy` that returns all Employee's names (first or middle or last name) and all town's names that are comprised of given set of letters.
 	*	_Example_: '`oistmiahf`' will return '`Sofia`', '`Smith`', � but not '`Rob`' and '`Guy`'.
+```sql
+CREATE FUNCTION ufn_CheckIfNameContainsSymbols (@name NVARCHAR(50), @letters NVARCHAR(50)) RETURNS INT
+AS
+BEGIN
+	DECLARE @i INT = 1
+	DECLARE @currentCharacter NVARCHAR(1)
+	WHILE @i <= LEN(@name)
+		BEGIN
+			SET @currentCharacter = SUBSTRING(@name, @i, 1)
+			IF( CHARINDEX(LOWER(@currentCharacter), LOWER(@letters)) <= 0)
+				BEGIN
+					RETURN 0
+				END
+			SET @i = @i + 1
+		END
+	RETURN 1
+END
+GO 
+
+
+SELECT f.FirstName AS 'Names'
+FROM Employees f
+WHERE dbo.ufn_CheckIfNameContainsSymbols(f.FirstName, 'oistmiahf') = 1
+UNION
+SELECT l.LastName
+FROM Employees l
+WHERE dbo.ufn_CheckIfNameContainsSymbols(l.LastName, 'oistmiahf') = 1
+UNION
+SELECT m.MiddleName
+FROM Employees m
+WHERE dbo.ufn_CheckIfNameContainsSymbols(m.MiddleName, 'oistmiahf') = 1
+UNION
+SELECT t.Name
+FROM Towns t
+WHERE dbo.ufn_CheckIfNameContainsSymbols(t.Name, 'oistmiahf') = 1
+```
 1.	Using database cursor write a T-SQL script that scans all employees and their addresses and prints all pairs of employees that live in the same town.
 1.	*Write a T-SQL script that shows for each town a list of all employees that live in it.
 	*	_Sample output_:	
