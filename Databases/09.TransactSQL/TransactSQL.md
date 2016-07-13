@@ -203,6 +203,44 @@ FROM Towns t
 WHERE dbo.ufn_CheckIfNameContainsSymbols(t.Name, 'oistmiahf') = 1
 ```
 1.	Using database cursor write a T-SQL script that scans all employees and their addresses and prints all pairs of employees that live in the same town.
+
+```sql
+--CREATE TYPE EmployeeTable AS TABLE (
+--	TownName VARCHAR(50),
+--	FirstName VARCHAR(50),
+--	LastName VARCHAR(50)
+--)
+
+
+DECLARE townCursor CURSOR READ_ONLY FOR
+SELECT t.Name FROM Towns t
+
+OPEN townCursor
+DECLARE @name NVARCHAR(50)
+FETCH NEXT FROM townCursor INTO @name
+
+WHILE @@FETCH_STATUS = 0
+	BEGIN
+		PRINT @name
+		DECLARE @tempTable dbo.EmployeeTable
+		INSERT INTO @tempTable
+		SELECT @name, e.FirstName, e.LastName 
+		FROM Employees e
+		JOIN Addresses a
+		ON a.AddressID = e.AddressID
+		JOIN Towns t
+		ON t.TownID = a.TownID
+		WHERE @name = t.Name
+
+
+		DELETE 
+		FROM  @tempTable
+		FETCH NEXT FROM townCursor INTO @name
+	END
+CLOSE townCursor
+DEALLOCATE townCursor
+
+```
 1.	*Write a T-SQL script that shows for each town a list of all employees that live in it.
 	*	_Sample output_:	
 ```sql
