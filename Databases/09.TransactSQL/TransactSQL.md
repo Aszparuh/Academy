@@ -213,15 +213,14 @@ DECLARE @name NVARCHAR(50)
 FETCH NEXT FROM townCursor INTO @name
 
 CREATE TABLE #tempTable (
+			Id INT IDENTITY NOT NULL PRIMARY KEY,
 			Town NVARCHAR(50),
 			FirstName NVARCHAR(50),
 			LastName NVARCHAR(50)
 		)
 
 WHILE @@FETCH_STATUS = 0
-	BEGIN 
-		
-
+	BEGIN 		
 		INSERT INTO #tempTable
 		SELECT @name, e.FirstName, e.LastName
 		FROM Employees e
@@ -230,16 +229,12 @@ WHILE @@FETCH_STATUS = 0
 		JOIN Towns t
 		ON t.TownID = a.TownID
 		WHERE @name = t.Name
-		
-
 
 		SELECT x.FirstName + ' ' + x.LastName AS FirstEmployee, y.FirstName + ' ' + y.LastName AS SecondEmployee, x.Town
 		FROM #tempTable x
 		JOIN #tempTable y
-		ON x.FirstName < y.FirstName
-		AND x.LastName < y.LastName
-		ORDER BY x.FirstName
-
+		ON x.Id > y.Id
+		ORDER BY x.Id
 
 		DELETE 
 		FROM  #tempTable
