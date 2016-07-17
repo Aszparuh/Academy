@@ -248,8 +248,47 @@ DROP TABLE #tempTable
 1.	*Write a T-SQL script that shows for each town a list of all employees that live in it.
 	*	_Sample output_:	
 ```sql
-Sofia -> Martin Kulov, George Denchev
-Ottawa -> Jose Saraiva
+--Sofia -> Martin Kulov, George Denchev
+--Ottawa -> Jose Saraiva
+USE TelerikAcademy
+
+DECLARE empCursor CURSOR READ_ONLY FOR
+SELECT t.Name AS [Town Name], e.FirstName + ' ' + e.LastName AS [Full Name]
+FROM Employees e
+JOIN Addresses a
+ON e.AddressID = a.AddressID
+JOIN Towns t 
+ON t.TownID = a.TownID
+ORDER BY t.Name
+
+OPEN empCursor
+DECLARE @employeeFullName NVARCHAR(100),
+		@townName NVARCHAR(50),
+		@employeesFromTown NVARCHAR(4000),
+		@previousTownName NVARCHAR(50)
+
+FETCH NEXT FROM empCursor INTO @townName, @employeeFullName
+
+WHILE @@FETCH_STATUS = 0
+BEGIN
+	IF(@previousTownName = @townName)
+	BEGIN
+		SET @employeesFromTown = @employeesFromTown + ', ' + @employeeFullName
+	END
+	ELSE
+	BEGIN
+		PRINT @previousTownName + ' -> ' + @employeesFromTown
+		SET @previousTownName = @townName
+		SET @employeesFromTown = @employeeFullName
+	END
+	FETCH NEXT FROM empCursor INTO @townName, @employeeFullName	
+END
+
+PRINT @previousTownName + ' -> ' + @employeesFromTown
+CLOSE empCursor
+DEALLOCATE empCursor
+GO
+
 �
 ```
 
