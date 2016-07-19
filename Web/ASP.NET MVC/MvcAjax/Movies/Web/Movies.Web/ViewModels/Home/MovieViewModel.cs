@@ -1,7 +1,5 @@
 ﻿namespace Movies.Web.ViewModels.Home
 {
-    using System;
-    using AutoMapper;
     using Data.Models;
     using Infrastructure.Mappings;
 
@@ -10,5 +8,7 @@
         public int Id { get; set; }
 
         public string Title { get; set; }
+
+        public string Year { get; set; }
     }
 }
