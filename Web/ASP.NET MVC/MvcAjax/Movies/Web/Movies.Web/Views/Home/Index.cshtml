@@ -1,7 +1,10 @@
-﻿@{
+﻿@model Movies.Web.ViewModels.Home.PagableListMovieViewModel
+
+@{
     ViewBag.Title = "Home Page";
 }
 
+<h1>@ViewBag.Title, Page: @Model.CurrentPage</h1>
 <div>
     @Ajax.ActionLink("Create Movie", "Create", "Movies", null, new AjaxOptions
 {
@@ -12,3 +15,8 @@
 </div>
 
 <div id="create"></div>
+
+@foreach(var movie in Model.Movies)
+{
+    <h2>@movie.Title</h2>
+}
