@@ -24,7 +24,7 @@
             var viewModel = new CreateMovieViewModel();
             viewModel.FemaleActors = this.actors.GetAllFemale().Select(a => new SelectListItem() { Text = a.Name, Value = a.Id.ToString() });
             viewModel.MaleActors = this.actors.GetAllMale().Select(a => new SelectListItem() { Text = a.Name, Value = a.Id.ToString() });
-            return this.PartialView("_Create", viewModel);
+            return this.PartialView("_CreateMovie", viewModel);
         }
 
         [HttpPost]
