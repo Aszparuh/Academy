@@ -79,6 +79,10 @@
     <Compile Include="Migrations\201606201236111_RequiredFields.Designer.cs">
       <DependentUpon>201606201236111_RequiredFields.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607241216587_StudiosMigration.cs" />
+    <Compile Include="Migrations\201607241216587_StudiosMigration.Designer.cs">
+      <DependentUpon>201607241216587_StudiosMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -116,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606201236111_RequiredFields.resx">
       <DependentUpon>201606201236111_RequiredFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607241216587_StudiosMigration.resx">
+      <DependentUpon>201607241216587_StudiosMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

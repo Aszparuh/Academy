@@ -18,6 +18,8 @@
 
         public IDbSet<Movie> Movies { get; set; }
 
+        public IDbSet<Studio> Studios { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

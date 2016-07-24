@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
     using Movies.Data.Common.Models;
 
     public class Movie : BaseModel<int>
@@ -22,16 +23,13 @@
         public int Year { get; set; }
 
         [Required]
-        [MaxLength(200, ErrorMessage = "Studio name should not be longer that 200 chars")]
-        public string StudioName { get; set; }
-
-        [Required]
-        [MaxLength(500, ErrorMessage = "Studio address should not be longer that 500 chars")]
-        public string StudioAddress { get; set; }
-
-        [Required]
         [MaxLength(2000, ErrorMessage = "Description has to be less than 2000 symbols.")]
         public string MovieDesciption { get; set; }
+
+        public int StudioId { get; set; }
+
+        [ForeignKey("StudioId")]
+        public virtual Studio Studio { get; set; }
 
         public ICollection<Actor> Actors
         {
