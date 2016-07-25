@@ -11,11 +11,13 @@
     {
         private readonly IActorService actors;
         private readonly IMovieService movies;
+        private readonly IStudioService studios;
 
-        public MoviesController(IActorService actors, IMovieService movies)
+        public MoviesController(IActorService actors, IMovieService movies, IStudioService studios)
         {
             this.actors = actors;
             this.movies = movies;
+            this.studios = studios;
         }
 
         [HttpGet]
@@ -24,6 +26,7 @@
             var viewModel = new CreateMovieViewModel();
             viewModel.FemaleActors = this.actors.GetAllFemale().Select(a => new SelectListItem() { Text = a.Name, Value = a.Id.ToString() });
             viewModel.MaleActors = this.actors.GetAllMale().Select(a => new SelectListItem() { Text = a.Name, Value = a.Id.ToString() });
+            viewModel.Studios = this.studios.GetAll().Select(s => new SelectListItem() { Text = s.StudioName, Value = s.Id.ToString() });
             return this.PartialView("_CreateMovie", viewModel);
         }
 

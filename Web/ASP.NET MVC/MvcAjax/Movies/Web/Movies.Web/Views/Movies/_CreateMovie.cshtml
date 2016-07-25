@@ -32,17 +32,10 @@
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(model => model.StudioName, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.StudioId, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.StudioName, new { htmlAttributes = new { @class = "form-control"} })
-                @Html.ValidationMessageFor(model => model.StudioName, "", new { @class = "text-danger" })
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.StudioAddress, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextAreaFor(model => model.StudioAddress, new { htmlAttributes = new { @class = "form-control", style = "width: 100%; max-width: 100%"} })
-                @Html.ValidationMessageFor(model => model.StudioAddress, "", new { @class = "text-danger" })
+                @Html.DropDownListFor(model => model.StudioId, Model.Studios, string.Empty, new { @class = "form-control btn btn-default" })
+                @Html.ValidationMessageFor(model => model.StudioId, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">

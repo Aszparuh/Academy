@@ -30,5 +30,10 @@
 
         [Display(Name = "Actor")]
         public int MaleActorId { get; set; }
+
+        public IEnumerable<SelectListItem> Studios { get; set; }
+
+        [Display(Name = "Studio")]
+        public int StudioId { get; set; }
     }
 }
