@@ -21,6 +21,12 @@
             this.actors.Save();
         }
 
+        public void Delete(int id)
+        {
+            var actorToDelete = this.GetById(id);
+            this.actors.Delete(actorToDelete);
+        }
+
         public IQueryable<Actor> GetAll()
         {
             return this.actors.All();

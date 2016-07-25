@@ -44,6 +44,8 @@
     <Compile Include="ActorService.cs" />
     <Compile Include="Contracts\IActorService.cs" />
     <Compile Include="Contracts\IMovieService.cs" />
+    <Compile Include="Contracts\IStudioService.cs" />
+    <Compile Include="Contracts\StudioService.cs" />
     <Compile Include="MovieService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
