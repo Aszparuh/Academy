@@ -56,7 +56,7 @@
                 return this.RedirectToAction("Index", "Home");
             }
 
-            return this.PartialView("_Create", input);
+            return this.PartialView("_CreateMovie", input);
         }
     }
 }

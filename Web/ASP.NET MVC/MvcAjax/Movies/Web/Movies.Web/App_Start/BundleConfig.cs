@@ -27,6 +27,12 @@
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/reparse").Include(
+                "~/Scripts/reparse.unobtrusive.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/validate-form").Include(
+                "~/Scripts/validate.form.js"));
         }
     }
 }
