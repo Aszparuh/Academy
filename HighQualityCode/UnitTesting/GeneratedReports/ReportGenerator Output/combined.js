@@ -314,7 +314,7 @@ var assemblies = [
   {
     "name" : "SchoolSystem",
     "classes" : [
-    {  "name" : "SchoolSystem.Course", "reportPath" : "SchoolSystem_Course.htm", "coveredLines" : 0, "uncoveredLines" : 44, "coverableLines" : 44, "totalLines" : 79, "coverageType" : "LineCoverage", "methodCoverage" : "-", "coveredBranches" : 0, "totalBranches" : 14, "lineCoverageHistory" : [], "branchCoverageHistory" : [] },
+    {  "name" : "SchoolSystem.Course", "reportPath" : "SchoolSystem_Course.htm", "coveredLines" : 13, "uncoveredLines" : 31, "coverableLines" : 44, "totalLines" : 79, "coverageType" : "LineCoverage", "methodCoverage" : "-", "coveredBranches" : 2, "totalBranches" : 14, "lineCoverageHistory" : [], "branchCoverageHistory" : [] },
     {  "name" : "SchoolSystem.School", "reportPath" : "SchoolSystem_School.htm", "coveredLines" : 0, "uncoveredLines" : 38, "coverableLines" : 38, "totalLines" : 69, "coverageType" : "LineCoverage", "methodCoverage" : "-", "coveredBranches" : 0, "totalBranches" : 10, "lineCoverageHistory" : [], "branchCoverageHistory" : [] },
     {  "name" : "SchoolSystem.Student", "reportPath" : "SchoolSystem_Student.htm", "coveredLines" : 31, "uncoveredLines" : 0, "coverableLines" : 31, "totalLines" : 66, "coverageType" : "LineCoverage", "methodCoverage" : "-", "coveredBranches" : 4, "totalBranches" : 4, "lineCoverageHistory" : [], "branchCoverageHistory" : [] },
   ]},
