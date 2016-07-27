@@ -34,7 +34,12 @@ REM
 
 REM *** MSTest Test Runner (VS2013, will need to change 12.0 to 14.0 for VS2015)
 REM *** PROGRAMFILES(X86) For x64 Systems
-SET TestRunnerExe=%PROGRAMFILES%\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe
+SET ProgFiles86Root=%ProgramFiles(x86)%
+IF NOT "%ProgFiles86Root%"=="" GOTO win64
+SET ProgFiles86Root=%ProgramFiles%
+:win64
+
+SET TestRunnerExe=%ProgFiles86Root%\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe
 
 REM Get OpenCover Executable (done this way so we dont have to change 
 REM the code when the version number changes)
