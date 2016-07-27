@@ -38,6 +38,15 @@
         }
 
         [TestMethod]
+        public void NameShouldReturn_CorrectName()
+        {
+            string name = "John Dow";
+            var student = new Student(name);
+
+            Assert.AreEqual(student.Name, name);
+        }
+
+        [TestMethod]
         public void StudentMustHaveUniqueIds()
         {
             var firstStudent = new Student("Pesho");
