@@ -13,7 +13,7 @@
         public Course(string name)
         {
             this.Name = name;
-            this.enrolledStudents = new List<Student>();
+            this.EnrolledStudents = new List<Student>();
         }
 
         public string Name
@@ -36,7 +36,20 @@
             }
         }
 
-        public void EnrolleStudent(Student student)
+        public IList<Student> EnrolledStudents
+        {
+            get
+            {
+                return this.enrolledStudents;
+            }
+
+            private set
+            {
+                this.enrolledStudents = value;
+            }
+        }
+
+        public void EnrollStudent(Student student)
         {
             if (student == null)
             {
