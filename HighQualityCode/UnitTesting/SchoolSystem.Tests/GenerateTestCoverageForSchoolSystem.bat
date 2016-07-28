@@ -13,7 +13,7 @@ REM  Andrew Newton -
 REM   http://www.nootn.com.au/2014/01/code-coverage-with-opencover-example.html#.VxiNn_krLDc
 
 
-SET DllContainingTests=%~dp0SchoolSystem.Tests\bin\Debug\SchoolSystem.Tests.dll
+SET DllContainingTests=%~dp0bin\Debug\SchoolSystem.Tests.dll
 REM *** SET DllContainingTests=%~dp0WebApp.Tests\bin\Debug\WebApp.Tests.dll
 REM *** D:\Git\Academy\HighQualityCode\UnitTesting\SchoolSystem.Tests\bin\Debug\SchoolSystem.Tests.dll
 
@@ -43,11 +43,11 @@ SET TestRunnerExe=%ProgFiles86Root%\Microsoft Visual Studio 14.0\Common7\IDE\Com
 
 REM Get OpenCover Executable (done this way so we dont have to change 
 REM the code when the version number changes)
-for /R "%~dp0packages" %%a in (*) do if /I "%%~nxa"=="OpenCover.Console.exe" SET OpenCoverExe=%%~dpnxa
+for /R "%~dp0..\packages" %%a in (*) do if /I "%%~nxa"=="OpenCover.Console.exe" SET OpenCoverExe=%%~dpnxa
 
 REM Get Report Generator (done this way so we dont have to change the code 
 REM when the version number changes)
-for /R "%~dp0packages" %%a in (*) do if /I "%%~nxa"=="ReportGenerator.exe" SET ReportGeneratorExe=%%~dpnxa
+for /R "%~dp0..\packages" %%a in (*) do if /I "%%~nxa"=="ReportGenerator.exe" SET ReportGeneratorExe=%%~dpnxa
 
 REM Create a 'GeneratedReports' folder if it does not exist
 if not exist "%~dp0GeneratedReports" mkdir "%~dp0GeneratedReports"
