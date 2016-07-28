@@ -22,5 +22,13 @@
 
             Assert.Throws<InternalGameException>(() => deck.GetNextCard());
         }
+
+        [Test]
+        public void DeckTrumpCard_ShouldNotBeNull()
+        {
+            var deck = new Deck();
+
+            Assert.IsNotNull(deck.GetTrumpCard);
+        }
     }
 }
