@@ -107,7 +107,7 @@
     <Module skippedDueTo="MissingPdb" hash="">
       <ModulePath>RefEmit_InMemoryManifestModule</ModulePath>
       <ModuleTime>0001-01-01T00:00:00</ModuleTime>
-      <ModuleName>MetadataViewProxies_75e9b10c-f1a1-498b-a153-1cc3da1f1af7</ModuleName>
+      <ModuleName>MetadataViewProxies_eabfd850-1c59-4f7a-bb5a-ecfef03a46ec</ModuleName>
       <Classes />
     </Module>
     <Module skippedDueTo="MissingPdb" hash="77-3F-B8-8B-2D-48-59-24-D3-A5-45-41-FC-FE-4D-D9-C8-D1-FF-B6">
@@ -212,9 +212,9 @@
       <ModuleName>Microsoft.VisualStudio.TestTools.CppUnitTestFramework.CppUnitTestExtension</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="80-D1-F0-8D-2C-35-44-89-A5-5C-8D-E3-C0-61-5A-39-3B-83-33-4F">
+    <Module skippedDueTo="Filter" hash="49-B2-8B-EA-7A-94-8B-D0-FE-34-99-1F-72-59-16-95-1C-03-E6-F3">
       <ModulePath>D:\Git\Academy\HighQualityCode\UnitTesting\SchoolSystem.Tests\bin\Debug\SchoolSystem.Tests.dll</ModulePath>
-      <ModuleTime>2016-07-28T11:41:37.1029411Z</ModuleTime>
+      <ModuleTime>2016-07-28T13:09:42.8079706Z</ModuleTime>
       <ModuleName>SchoolSystem.Tests</ModuleName>
       <Classes />
     </Module>
@@ -254,6 +254,12 @@
       <ModuleName>System.Drawing</ModuleName>
       <Classes />
     </Module>
+    <Module skippedDueTo="Filter" hash="66-8F-81-00-CC-D9-27-C9-22-47-0B-A0-34-B5-72-8F-A6-D4-B3-6A">
+      <ModulePath>C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll</ModulePath>
+      <ModuleTime>2015-10-30T05:45:51.111512Z</ModuleTime>
+      <ModuleName>System.Windows.Forms</ModuleName>
+      <Classes />
+    </Module>
     <Module skippedDueTo="MissingPdb" hash="EB-B8-9D-4D-76-59-EF-77-B6-58-A8-6A-D0-0D-BA-0E-AD-86-9F-4C">
       <ModulePath>C:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\PrivateAssemblies\Newtonsoft.Json.dll</ModulePath>
       <ModuleTime>2015-05-29T17:54:40Z</ModuleTime>
@@ -278,22 +284,16 @@
       <ModuleName>System.Xml.Linq</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="66-8F-81-00-CC-D9-27-C9-22-47-0B-A0-34-B5-72-8F-A6-D4-B3-6A">
-      <ModulePath>C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll</ModulePath>
-      <ModuleTime>2015-10-30T05:45:51.111512Z</ModuleTime>
-      <ModuleName>System.Windows.Forms</ModuleName>
-      <Classes />
-    </Module>
     <Module skippedDueTo="MissingPdb" hash="89-B1-9F-59-36-B7-0E-73-CB-19-60-E3-AC-53-EB-FD-31-B6-43-E4">
       <ModulePath>C:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\msdia140typelib_clr0200.dll</ModulePath>
       <ModuleTime>2015-06-26T15:57:46Z</ModuleTime>
       <ModuleName>msdia140typelib_clr0200</ModuleName>
       <Classes />
     </Module>
-    <Module hash="6A-0A-0A-5A-CE-56-85-F9-7F-4A-99-63-BE-CC-37-33-5E-F9-0D-3E">
+    <Module hash="F7-F0-D0-D0-34-E0-51-75-41-66-EC-A1-62-B5-90-3A-59-DE-30-55">
       <Summary numSequencePoints="122" visitedSequencePoints="122" numBranchPoints="48" visitedBranchPoints="48" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="4" minCyclomaticComplexity="1" visitedClasses="3" numClasses="3" visitedMethods="20" numMethods="20" />
       <ModulePath>D:\Git\Academy\HighQualityCode\UnitTesting\SchoolSystem.Tests\bin\Debug\SchoolSystem.dll</ModulePath>
-      <ModuleTime>2016-07-28T11:41:36.7539208Z</ModuleTime>
+      <ModuleTime>2016-07-28T13:09:42.0331191Z</ModuleTime>
       <ModuleName>SchoolSystem</ModuleName>
       <Files>
         <File uid="1" fullPath="D:\Git\Academy\HighQualityCode\UnitTesting\SchoolSystem\Course.cs" />
@@ -696,16 +696,16 @@
       <ModuleName>Microsoft.ApplicationInsights.UniversalTelemetryChannel</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="MissingPdb" hash="B0-FE-35-97-50-85-CF-C7-CC-82-01-B4-CD-C0-59-08-EC-BF-C0-4E">
-      <ModulePath>C:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\PrivateAssemblies\Microsoft.ApplicationInsights.PersistenceChannel.dll</ModulePath>
-      <ModuleTime>2016-02-16T18:45:42Z</ModuleTime>
-      <ModuleName>Microsoft.ApplicationInsights.PersistenceChannel</ModuleName>
-      <Classes />
-    </Module>
     <Module skippedDueTo="MissingPdb" hash="25-F8-06-95-90-B1-47-24-F2-8E-6A-04-B8-A4-2E-4E-F4-A8-56-2D">
       <ModulePath>C:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\PrivateAssemblies\Microsoft.Threading.Tasks.dll</ModulePath>
       <ModuleTime>2015-06-10T16:13:44Z</ModuleTime>
       <ModuleName>Microsoft.Threading.Tasks</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="B0-FE-35-97-50-85-CF-C7-CC-82-01-B4-CD-C0-59-08-EC-BF-C0-4E">
+      <ModulePath>C:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\PrivateAssemblies\Microsoft.ApplicationInsights.PersistenceChannel.dll</ModulePath>
+      <ModuleTime>2016-02-16T18:45:42Z</ModuleTime>
+      <ModuleName>Microsoft.ApplicationInsights.PersistenceChannel</ModuleName>
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="F5-60-6B-AD-8D-F6-AE-33-0B-82-DC-5F-7D-DA-19-9A-AB-05-04-E2">
