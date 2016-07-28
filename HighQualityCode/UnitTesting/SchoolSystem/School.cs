@@ -34,6 +34,14 @@
             }
         }
 
+        public IEnumerable<Course> Courses
+        {
+            get
+            {
+                return this.courses;
+            }
+        }
+
         public void AddCourse(Course course)
         {
             if (course == null)
