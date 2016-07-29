@@ -67,7 +67,7 @@ REM *** to check for test coverage
 "%OpenCoverExe%" ^
  -target:"%TestRunnerExe%" ^
  -targetargs:"\"%DllContainingTests%\"" ^
- -filter:"+[*]*" ^
+ -filter:"+[*]* -[*.Tests*]*" ^
  -mergebyhash ^
  -skipautoprops ^
  -register:user ^
