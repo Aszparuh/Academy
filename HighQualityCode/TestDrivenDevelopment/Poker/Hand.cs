@@ -6,6 +6,8 @@
 
     public class Hand : IHand
     {
+        private List<Card> cardList;
+
         public Hand(IList<ICard> cards)
         {
             this.Cards = cards;
