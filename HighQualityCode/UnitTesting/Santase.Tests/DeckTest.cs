@@ -1,4 +1,4 @@
-﻿namespace Deck.Tests
+﻿namespace Santase.Tests
 {
     using System.Collections.Generic;
     using System.Linq;

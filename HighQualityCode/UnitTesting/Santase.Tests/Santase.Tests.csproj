@@ -7,8 +7,8 @@
     <ProjectGuid>{56F1971C-0606-46AD-B4C7-879DAC378391}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Deck.Tests</RootNamespace>
-    <AssemblyName>Deck.Tests</AssemblyName>
+    <RootNamespace>Santase.Tests</RootNamespace>
+    <AssemblyName>Santase.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -75,6 +75,7 @@
   <ItemGroup>
     <Compile Include="DeckTest.cs" />
     <Compile Include="Extensions\EnumerableExtension.cs" />
+    <Compile Include="PlayerValidaterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

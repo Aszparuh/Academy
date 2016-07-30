@@ -14,7 +14,7 @@ REM  Andrew Newton -
 REM   http://www.nootn.com.au/2014/01/code-coverage-with-opencover-example.html#.VxiNn_krLDc
 
 
-SET DllContainingTests=%~dp0bin\Debug\Deck.Tests.dll
+SET DllContainingTests=%~dp0bin\Debug\Santase.Tests.dll
 
 
 REM *** IMPORTANT - Change DllContainingTests variable (above) to point to the DLL 

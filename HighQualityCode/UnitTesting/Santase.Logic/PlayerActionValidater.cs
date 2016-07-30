@@ -33,7 +33,29 @@ namespace Santase.Logic
                         action.Announce = Announce.None;
                     }
 
-                    // TODO: Check for another card
+                    // TODO: Check for another card -- Done
+                    if (action.Card.Type == CardType.Queen)
+                    {
+                        var kingCard = new Card(action.Card.Suit, CardType.King);
+                        if (!playerCards.Contains(kingCard))
+                        {
+                            action.Announce = Announce.None;
+                        }
+                    }
+
+                    if (action.Card.Type == CardType.King)
+                    {
+                        var queenCard = new Card(action.Card.Suit, CardType.Queen);
+                        if (!playerCards.Contains(queenCard))
+                        {
+                            action.Announce = Announce.None;
+                        }
+                    }
+
+                    if (!context.State.CanAnnounce20Or40)
+                    {
+                        action.Announce = Announce.None;
+                    }
                 }
 
                 if (context.State.ShouldObserveRules)
