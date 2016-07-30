@@ -1,6 +1,5 @@
 ﻿namespace Poker
 {
-    using System;
     using Poker.Contracts;
 
     public class Card : ICard
@@ -17,7 +16,7 @@
 
         public override string ToString()
         {
-            throw new NotImplementedException();
+            return $"{this.Face} of {this.Suit}";
         }
     }
 }

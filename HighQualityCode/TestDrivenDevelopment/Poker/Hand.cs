@@ -1,13 +1,11 @@
 ﻿namespace Poker
 {
-    using System;
     using System.Collections.Generic;
+    using System.Linq;
     using Poker.Contracts;
 
     public class Hand : IHand
     {
-        private List<Card> cardList;
-
         public Hand(IList<ICard> cards)
         {
             this.Cards = cards;
@@ -17,7 +15,13 @@
 
         public override string ToString()
         {
-            throw new NotImplementedException();
+            var cards = this.SortCards();
+            return string.Join(", ", cards);
+        }
+
+        private IList<ICard> SortCards()
+        {
+            return this.Cards.OrderByDescending(c => c.Suit).ThenBy(c => c.Face).ToList();
         }
     }
 }

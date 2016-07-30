@@ -1,7 +1,6 @@
 ﻿namespace Poker.Tests
 {
     using NUnit.Framework;
-    using Poker;
 
     [TestFixture]
     public class CardTest

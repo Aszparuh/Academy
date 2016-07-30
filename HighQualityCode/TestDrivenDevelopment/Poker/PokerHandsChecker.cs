@@ -1,13 +1,32 @@
 ﻿namespace Poker
 {
     using System;
+    using System.Linq;
+    using Extensions;
     using Poker.Contracts;
 
     public class PokerHandsChecker : IPokerHandsChecker
     {
+        private const int ValidHandCardsCount = 5;
+
         public bool IsValidHand(IHand hand)
         {
-            throw new NotImplementedException();
+            if (hand == null)
+            {
+                throw new ArgumentNullException();
+            }
+
+            if (hand.Cards.Count != ValidHandCardsCount)
+            {
+                return false;
+            }
+
+            if (hand.Cards.DistinctBy(c => new { c.Suit, c.Face }).Count() != ValidHandCardsCount)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         public bool IsStraightFlush(IHand hand)

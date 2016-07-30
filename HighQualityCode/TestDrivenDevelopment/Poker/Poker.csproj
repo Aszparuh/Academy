@@ -50,6 +50,7 @@
     <Compile Include="Contracts\ICard.cs" />
     <Compile Include="Contracts\IHand.cs" />
     <Compile Include="Contracts\IPokerHandsChecker.cs" />
+    <Compile Include="Extensions\EnumerableExtension.cs" />
     <Compile Include="Hand.cs" />
     <Compile Include="PokerExample.cs" />
     <Compile Include="PokerHandsChecker.cs" />
