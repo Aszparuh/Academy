@@ -52,6 +52,7 @@
     <Compile Include="Contracts\IPokerHandsChecker.cs" />
     <Compile Include="Extensions\EnumerableExtension.cs" />
     <Compile Include="Hand.cs" />
+    <Compile Include="HandType.cs" />
     <Compile Include="PokerExample.cs" />
     <Compile Include="PokerHandsChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
