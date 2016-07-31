@@ -1,6 +1,6 @@
 ﻿namespace Poker
 {
-    public enum Type
+    public enum HandType
     {
         HighCard = 0,
         OnePair = 1,

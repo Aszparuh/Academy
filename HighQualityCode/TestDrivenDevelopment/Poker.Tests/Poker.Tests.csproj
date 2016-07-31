@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CardTest.cs" />
+    <Compile Include="HandsCompareTest.cs" />
     <Compile Include="HandTest.cs" />
     <Compile Include="PokerHandCheckerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
