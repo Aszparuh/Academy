@@ -1,6 +1,7 @@
 ﻿namespace Cars.Tests
 {
     using System;
+    using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
     using Cars.Contracts;
@@ -13,7 +14,6 @@
     [TestFixture]
     public class CarsControllerTests
     {
-
         [Test]
         public void IndexShouldReturnAllCars()
         {
@@ -131,6 +131,108 @@
             var returnedList = (List<Car>)viewModel.Model;
 
             Assert.AreEqual(list.Count, returnedList.Count);
+        }
+
+        [Test]
+        public void SearchShouldReturnAllTheCarsWithSearchedTermModel()
+        {
+            var list = new List<Car>()
+            {
+                new Car()
+                {
+                    Model = "303"
+                },
+                new Car()
+                {
+                    Model = "303"
+                },
+                new Car()
+                {
+                    Model = "Clio"
+                }
+            };
+            var expectedList = new List<Car>()
+            {
+                new Car()
+                {
+                    Model = "303"
+                },
+                new Car()
+                {
+                    Model = "303"
+                }
+            };
+            var mock = new Mock<ICarsRepository>();
+            mock.Setup(x => x.Search(It.IsAny<string>())).Returns((string st) =>
+            {
+                return list.Where(c => c.Make == st || c.Model == st).ToList();
+            });
+            var controller = new CarsController(mock.Object);
+            var searchTerm = "303";
+
+            var returnedList = (IEnumerable<Car>)controller.Search(searchTerm).Model;
+
+            Assert.AreEqual(true, returnedList.All(c => c.Model == searchTerm));
+        }
+
+        [Test]
+        public void SortByMakeSholdReturnSortedByMake()
+        {
+            var list = new List<Car>()
+            {
+                new Car()
+                {
+                    Make = "BMW",
+                    Year = 2000
+                },
+                new Car()
+                {
+                    Make = "Mercedes",
+                    Year = 1996
+                },
+                new Car()
+                {
+                    Make = "Renault",
+                    Year = 1982
+                }
+            };
+            var mock = new Mock<ICarsRepository>();
+            mock.Setup(x => x.SortedByMake()).Returns(list.OrderBy(c => c.Make).ToList());
+            var controller = new CarsController(mock.Object);
+
+            var viewModel = controller.Sort("make");
+
+            CollectionAssert.AreEqual(list.OrderBy(c => c.Make), (List<Car>)viewModel.Model);
+        }
+
+        [Test]
+        public void SortByYearSholdReturnSortedByYear()
+        {
+            var list = new List<Car>()
+            {
+                new Car()
+                {
+                    Make = "BMW",
+                    Year = 2000
+                },
+                new Car()
+                {
+                    Make = "Mercedes",
+                    Year = 1996
+                },
+                new Car()
+                {
+                    Make = "Renault",
+                    Year = 1982
+                }
+            };
+            var mock = new Mock<ICarsRepository>();
+            mock.Setup(x => x.SortedByYear()).Returns(list.OrderBy(c => c.Year).ToList());
+            var controller = new CarsController(mock.Object);
+
+            var viewModel = controller.Sort("year");
+
+            CollectionAssert.AreEqual(list.OrderBy(c => c.Year), (List<Car>)viewModel.Model);
         }
     }
 }
