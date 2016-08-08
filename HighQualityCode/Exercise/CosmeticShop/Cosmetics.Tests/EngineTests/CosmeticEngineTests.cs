@@ -1,4 +1,4 @@
-﻿namespace Cosmetics.Tests
+﻿namespace Cosmetics.Tests.EngineTests
 {
     using System.Collections.Generic;
     using Contracts;

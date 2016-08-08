@@ -97,8 +97,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="CommandTests.cs" />
-    <Compile Include="CosmeticEngineTests.cs" />
+    <Compile Include="EngineTests\CommandTests.cs" />
+    <Compile Include="EngineTests\CosmeticEngineTests.cs" />
+    <Compile Include="EngineTests\CosmeticFactoryTests.cs" />
     <Compile Include="Mocked\MockedEngine.cs" />
     <Compile Include="ValidatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
