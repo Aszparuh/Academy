@@ -8,7 +8,6 @@
     [TestFixture]
     public class CommandTests
     {
-
         [Test]
         public void Parse_ShouldReturnNewCommandWhen_TheInputStringIsInTheRequiredValidFormat()
         {
