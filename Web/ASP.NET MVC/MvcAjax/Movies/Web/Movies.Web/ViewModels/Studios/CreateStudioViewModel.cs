@@ -1,4 +1,4 @@
-﻿namespace Movies.Web.ViewModels.Movies
+﻿namespace Movies.Web.ViewModels.Studios
 {
     using System.ComponentModel.DataAnnotations;
     using Data.Models;

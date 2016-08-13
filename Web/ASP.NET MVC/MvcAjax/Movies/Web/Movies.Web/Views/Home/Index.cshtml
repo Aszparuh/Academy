@@ -6,7 +6,14 @@
 
 <h1>@ViewBag.Title, Page: @Model.CurrentPage</h1>
 <div>
-    @Ajax.ActionLink("Create Movie", "Create", "Movies", null, new AjaxOptions
+    @Ajax.ActionLink("Add Movie", "Create", "Movies", null, new AjaxOptions
+{
+    UpdateTargetId = "create",
+    HttpMethod = "GET",
+    InsertionMode = InsertionMode.Replace,
+}, new { @class = "btn btn-primary" })
+
+    @Ajax.ActionLink("Add Studio", "CreateStudio", "Studios", null, new AjaxOptions
 {
     UpdateTargetId = "create",
     HttpMethod = "GET",
