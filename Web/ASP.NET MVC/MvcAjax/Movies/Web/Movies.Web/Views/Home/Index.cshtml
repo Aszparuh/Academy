@@ -4,16 +4,24 @@
     ViewBag.Title = "Home Page";
 }
 
-<h1>@ViewBag.Title, Page: @Model.CurrentPage</h1>
+<h2>@ViewBag.Title, Page: @Model.CurrentPage</h2>
 <div>
-    @Ajax.ActionLink("Add Movie", "Create", "Movies", null, new AjaxOptions
+    @Ajax.ActionLink("Add Movie", "CreateMovie", "Movies", null, new AjaxOptions
 {
     UpdateTargetId = "create",
     HttpMethod = "GET",
     InsertionMode = InsertionMode.Replace,
 }, new { @class = "btn btn-primary" })
 
+    
     @Ajax.ActionLink("Add Studio", "CreateStudio", "Studios", null, new AjaxOptions
+{
+    UpdateTargetId = "create",
+    HttpMethod = "GET",
+    InsertionMode = InsertionMode.Replace,
+}, new { @class = "btn btn-primary" })
+
+    @Ajax.ActionLink("Add Actor", "CreateActor", "Actors", null, new AjaxOptions
 {
     UpdateTargetId = "create",
     HttpMethod = "GET",

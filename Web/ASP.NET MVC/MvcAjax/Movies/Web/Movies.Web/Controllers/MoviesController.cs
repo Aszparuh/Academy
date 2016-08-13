@@ -21,7 +21,7 @@
         }
 
         [HttpGet]
-        public ActionResult Create()
+        public ActionResult CreateMovie()
         {
             var viewModel = new CreateMovieViewModel();
             viewModel.FemaleActors = this.actors.GetAllFemale().Select(a => new SelectListItem() { Text = a.Name, Value = a.Id.ToString() });
@@ -31,7 +31,7 @@
         }
 
         [HttpPost]
-        public ActionResult Create(CreateMovieViewModel input)
+        public ActionResult CreateMovie(CreateMovieViewModel input)
         {
             if (this.ModelState.IsValid)
             {

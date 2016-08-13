@@ -14,12 +14,6 @@
             this.studios = studios;
         }
 
-        // GET: Studios
-        public ActionResult Index()
-        {
-            return this.View();
-        }
-
         [HttpGet]
         public ActionResult CreateStudio()
         {

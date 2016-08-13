@@ -207,6 +207,7 @@
     <Compile Include="App_Start\SmsService.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ActorsController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -220,6 +221,7 @@
     <Compile Include="ViewModels\Account\ForgotPasswordViewModel.cs" />
     <Compile Include="ViewModels\Account\ForgotViewModel.cs" />
     <Compile Include="ViewModels\Account\LoginViewModel.cs" />
+    <Compile Include="ViewModels\Actors\CreateActorViewModel.cs" />
     <Compile Include="ViewModels\Home\MovieViewModel.cs" />
     <Compile Include="ViewModels\Home\PagableListMovieViewModel.cs" />
     <Compile Include="ViewModels\Manage\AddPhoneNumberViewModel.cs" />
@@ -312,6 +314,7 @@
     <Content Include="Views\Movies\_CreateMovie.cshtml" />
     <Content Include="Scripts\validate.form.js" />
     <Content Include="Views\Studios\_CreateStudio.cshtml" />
+    <Content Include="Views\Actors\_CreateActor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

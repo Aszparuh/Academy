@@ -25,6 +25,7 @@
         {
             var actorToDelete = this.GetById(id);
             this.actors.Delete(actorToDelete);
+            this.actors.Save();
         }
 
         public IQueryable<Actor> GetAll()
