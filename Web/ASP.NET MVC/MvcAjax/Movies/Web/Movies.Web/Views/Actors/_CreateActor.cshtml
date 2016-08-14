@@ -39,5 +39,8 @@
         </div>
     </div>
 }
-
-@Scripts.Render("~/bundles/reparse")
+<script>
+    $("form").data("unobtrusiveValidation", null);
+    $("form").data("validator", null);
+    $.validator.unobtrusive.parse($("form"));
+</script>

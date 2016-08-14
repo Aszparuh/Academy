@@ -271,7 +271,6 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Scripts\reparse.unobtrusive.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
@@ -312,7 +311,6 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Movies\_CreateMovie.cshtml" />
-    <Content Include="Scripts\validate.form.js" />
     <Content Include="Views\Studios\_CreateStudio.cshtml" />
     <Content Include="Views\Actors\_CreateActor.cshtml" />
   </ItemGroup>
