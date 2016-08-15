@@ -31,12 +31,28 @@
 
 <div id="create"></div>
 
-@foreach(var movie in Model.Movies)
-{
-    <h2>@movie.Title</h2>
-    <div>@movie.Year</div>
-    <div>@movie.Id</div>
-}
+<div class="container">
+    <h2>Movies</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Year</th>
+                <th>Movie</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var movie in Model.Movies)
+            {
+                <tr>
+                    <td>@movie.Id</td>
+                    <td>@movie.Year</td>
+                    <td>@movie.Title</td>
+                </tr>                
+            }
+        </tbody>
+    </table>
+</div>
 
 <nav>
     <ul class="pagination">
