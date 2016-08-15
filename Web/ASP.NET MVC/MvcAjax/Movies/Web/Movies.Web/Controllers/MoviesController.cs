@@ -1,6 +1,5 @@
 ﻿namespace Movies.Web.Controllers
 {
-    using System.Data.Entity;
     using System.Linq;
     using System.Web.Mvc;
     using Data.Models;
@@ -60,6 +59,12 @@
             }
 
             return this.PartialView("_CreateMovie", input);
+        }
+
+        public ActionResult Details(int id)
+        {
+            var movieDetails = this.movies.GetById(id);
+            return this.Content(movieDetails.MovieDesciption);
         }
     }
 }

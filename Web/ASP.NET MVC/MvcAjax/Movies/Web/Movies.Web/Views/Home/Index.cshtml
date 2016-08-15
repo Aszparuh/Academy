@@ -13,7 +13,7 @@
     InsertionMode = InsertionMode.Replace,
 }, new { @class = "btn btn-primary" })
 
-    
+
     @Ajax.ActionLink("Add Studio", "CreateStudio", "Studios", null, new AjaxOptions
 {
     UpdateTargetId = "create",
@@ -31,7 +31,7 @@
 
 <div id="create"></div>
 
-<div class="container">
+<div class="container-fluid">
     <h2>Movies</h2>
     <table class="table">
         <thead>
@@ -39,16 +39,44 @@
                 <th>#</th>
                 <th>Year</th>
                 <th>Movie</th>
+                <th>Options</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var movie in Model.Movies)
             {
+                string idForOptions = "movie" + movie.Id;
+
                 <tr>
                     <td>@movie.Id</td>
                     <td>@movie.Year</td>
                     <td>@movie.Title</td>
-                </tr>                
+                    <td>
+                        @Ajax.ActionLink("Details", "Details", "Movies", new {id = movie.Id }, new AjaxOptions
+                   {
+                       UpdateTargetId = idForOptions,
+                       HttpMethod = "GET",
+                       InsertionMode = InsertionMode.Replace,
+                   }, new { @class = "btn btn-primary" })
+
+                        @Ajax.ActionLink("Update", "CreateActor", "Actors", null, new AjaxOptions
+                   {
+                       UpdateTargetId = idForOptions,
+                       HttpMethod = "GET",
+                       InsertionMode = InsertionMode.Replace,
+                   }, new { @class = "btn btn-success" })
+
+                        @Ajax.ActionLink("Delete", "CreateActor", "Actors", null, new AjaxOptions
+                   {
+                       UpdateTargetId = idForOptions,
+                       HttpMethod = "GET",
+                       InsertionMode = InsertionMode.Replace,
+                   }, new { @class = "btn btn-danger" })
+                    </td>
+                </tr>
+                <tr>
+                    <td id=@idForOptions colspan="4"></td>
+                </tr>
             }
         </tbody>
     </table>
@@ -64,7 +92,7 @@
                 </a>
             </li>
         }
-        
+
         @for (int i = 1; i <= Model.TotalPages; i++)
         {
             var className = string.Empty;
@@ -75,7 +103,7 @@
 
             <li class="@className"><a href="/Home/Index/@i">@i</a></li>
         }
-        
+
         @if (Model.CurrentPage < Model.TotalPages)
         {
             <li>
@@ -84,6 +112,6 @@
                 </a>
             </li>
         }
-        
+
     </ul>
 </nav>
