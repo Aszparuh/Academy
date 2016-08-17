@@ -315,6 +315,7 @@
     <Content Include="Views\Studios\_CreateStudio.cshtml" />
     <Content Include="Views\Actors\_CreateActor.cshtml" />
     <Content Include="Views\Movies\_DetailsMovie.cshtml" />
+    <Content Include="Views\Movies\_UpdateMovie.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

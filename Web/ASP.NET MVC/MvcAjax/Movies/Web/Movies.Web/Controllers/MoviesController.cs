@@ -1,11 +1,12 @@
 ﻿namespace Movies.Web.Controllers
 {
+    using System.Data.Entity;
     using System.Linq;
     using System.Web.Mvc;
     using Data.Models;
+    using Infrastructure.Mappings;
     using Services.Data.Contracts;
     using ViewModels.Movies;
-    using System.Data.Entity;
 
     public class MoviesController : BaseController
     {
@@ -64,9 +65,20 @@
 
         public ActionResult Details(int id)
         {
-            var movie = this.movies.GetAll().Where(x => x.Id == id).Include(x => x.Actors).FirstOrDefault();
-            var movieDetailsModel = this.Mapper.Map<MovieDetailsViewModel>(movie);
-            return this.PartialView("_DetailsMovie", movieDetailsModel);
+            var movie = this.movies.GetAll().Where(x => x.Id == id).To<MovieDetailsViewModel>().FirstOrDefault();
+            return this.PartialView("_DetailsMovie", movie);
+        }
+
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+
+        }
+
+        [HttpPost]
+        public ActionResult Edit(CreateMovieViewModel model)
+        {
+
         }
     }
 }
