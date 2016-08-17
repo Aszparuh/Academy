@@ -5,82 +5,80 @@
 }
 
 <h2>@ViewBag.Title, Page: @Model.CurrentPage</h2>
-<div>
-    @Ajax.ActionLink("Add Movie", "CreateMovie", "Movies", null, new AjaxOptions
-{
-    UpdateTargetId = "create",
-    HttpMethod = "GET",
-    InsertionMode = InsertionMode.Replace,
-}, new { @class = "btn btn-primary" })
+
+<div class="container">
+    <div class="row">
+        <div>
+            @Ajax.ActionLink("Add Movie", "CreateMovie", "Movies", null, new AjaxOptions
+       {
+           UpdateTargetId = "create",
+           HttpMethod = "GET",
+           InsertionMode = InsertionMode.Replace,
+       }, new { @class = "btn btn-primary" })
 
 
-    @Ajax.ActionLink("Add Studio", "CreateStudio", "Studios", null, new AjaxOptions
-{
-    UpdateTargetId = "create",
-    HttpMethod = "GET",
-    InsertionMode = InsertionMode.Replace,
-}, new { @class = "btn btn-primary" })
+            @Ajax.ActionLink("Add Studio", "CreateStudio", "Studios", null, new AjaxOptions
+       {
+           UpdateTargetId = "create",
+           HttpMethod = "GET",
+           InsertionMode = InsertionMode.Replace,
+       }, new { @class = "btn btn-primary" })
 
-    @Ajax.ActionLink("Add Actor", "CreateActor", "Actors", null, new AjaxOptions
-{
-    UpdateTargetId = "create",
-    HttpMethod = "GET",
-    InsertionMode = InsertionMode.Replace,
-}, new { @class = "btn btn-primary" })
-</div>
+            @Ajax.ActionLink("Add Actor", "CreateActor", "Actors", null, new AjaxOptions
+       {
+           UpdateTargetId = "create",
+           HttpMethod = "GET",
+           InsertionMode = InsertionMode.Replace,
+       }, new { @class = "btn btn-primary" })
+            <div id="create"></div>
+        </div>
+    </div>
 
-<div id="create"></div>
-
-<div class="container-fluid">
-    <h2>Movies</h2>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Year</th>
-                <th>Movie</th>
-                <th>Options</th>
-            </tr>
-        </thead>
-        <tbody>
+    <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item active">Movies</li>
             @foreach (var movie in Model.Movies)
             {
                 string idForOptions = "movie" + movie.Id;
 
-                <tr>
-                    <td>@movie.Id</td>
-                    <td>@movie.Year</td>
-                    <td>@movie.Title</td>
-                    <td>
-                        @Ajax.ActionLink("Details", "Details", "Movies", new {id = movie.Id }, new AjaxOptions
-                   {
-                       UpdateTargetId = idForOptions,
-                       HttpMethod = "GET",
-                       InsertionMode = InsertionMode.Replace,
-                   }, new { @class = "btn btn-primary" })
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            @movie.Title, @movie.Year
+                        </div>
+                        <div class="col-sm-6">
+                            @Ajax.ActionLink("Details", "Details", "Movies", new { id = movie.Id }, new AjaxOptions
+                            {
+                                UpdateTargetId = idForOptions,
+                                HttpMethod = "GET",
+                                InsertionMode = InsertionMode.Replace,
+                            }, new { @class = "btn btn-primary" })
 
-                        @Ajax.ActionLink("Update", "CreateActor", "Actors", null, new AjaxOptions
-                   {
-                       UpdateTargetId = idForOptions,
-                       HttpMethod = "GET",
-                       InsertionMode = InsertionMode.Replace,
-                   }, new { @class = "btn btn-success" })
+                            @Ajax.ActionLink("Update", "CreateActor", "Actors", null, new AjaxOptions
+                            {
+                                UpdateTargetId = idForOptions,
+                                HttpMethod = "GET",
+                                InsertionMode = InsertionMode.Replace,
+                            }, new { @class = "btn btn-success" })
 
-                        @Ajax.ActionLink("Delete", "CreateActor", "Actors", null, new AjaxOptions
-                   {
-                       UpdateTargetId = idForOptions,
-                       HttpMethod = "GET",
-                       InsertionMode = InsertionMode.Replace,
-                   }, new { @class = "btn btn-danger" })
-                    </td>
-                </tr>
-                <tr>
-                    <td id=@idForOptions colspan="4"></td>
-                </tr>
+                            @Ajax.ActionLink("Delete", "CreateActor", "Actors", null, new AjaxOptions
+                            {
+                                UpdateTargetId = idForOptions,
+                                HttpMethod = "GET",
+                                InsertionMode = InsertionMode.Replace,
+                            }, new { @class = "btn btn-danger" })
+                        </div>
+                    </div>
+                    <div id="@idForOptions">
+                        
+                    </div>
+                </li>
             }
-        </tbody>
-    </table>
+        </ul>
+    </div>
+
 </div>
+
 
 <nav>
     <ul class="pagination">
