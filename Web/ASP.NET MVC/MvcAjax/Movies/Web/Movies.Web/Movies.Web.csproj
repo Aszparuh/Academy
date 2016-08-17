@@ -239,6 +239,7 @@
     <Compile Include="ViewModels\Manage\SetPasswordViewModel.cs" />
     <Compile Include="ViewModels\Manage\VerifyPhoneNumberViewModel.cs" />
     <Compile Include="ViewModels\Movies\CreateMovieViewModel.cs" />
+    <Compile Include="ViewModels\Movies\MovieDetailsViewModel.cs" />
     <Compile Include="ViewModels\Studios\CreateStudioViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -313,6 +314,7 @@
     <Content Include="Views\Movies\_CreateMovie.cshtml" />
     <Content Include="Views\Studios\_CreateStudio.cshtml" />
     <Content Include="Views\Actors\_CreateActor.cshtml" />
+    <Content Include="Views\Movies\_DetailsMovie.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

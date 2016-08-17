@@ -5,6 +5,7 @@
     using Data.Models;
     using Services.Data.Contracts;
     using ViewModels.Movies;
+    using System.Data.Entity;
 
     public class MoviesController : BaseController
     {
@@ -63,8 +64,9 @@
 
         public ActionResult Details(int id)
         {
-            var movieDetails = this.movies.GetById(id);
-            return this.Content(movieDetails.MovieDesciption);
+            var movie = this.movies.GetAll().Where(x => x.Id == id).Include(x => x.Actors).FirstOrDefault();
+            var movieDetailsModel = this.Mapper.Map<MovieDetailsViewModel>(movie);
+            return this.PartialView("_DetailsMovie", movieDetailsModel);
         }
     }
 }
