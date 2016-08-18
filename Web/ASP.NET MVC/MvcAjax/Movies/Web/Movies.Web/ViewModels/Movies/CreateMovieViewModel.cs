@@ -1,13 +1,18 @@
 ﻿namespace Movies.Web.ViewModels.Movies
 {
+    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.Linq;
     using System.Web.Mvc;
+    using AutoMapper;
     using Data.Models;
     using Infrastructure.Mappings;
 
-    public class CreateMovieViewModel : IMapTo<Movie>
+    public class CreateMovieViewModel : IMapTo<Movie>, IMapFrom<Movie>, IHaveCustomMappings
     {
+        public int Id { get; set; }
+
         [Required]
         [Display(Name = "Title")]
         [StringLength(200, MinimumLength = 1, ErrorMessage = "Movie title should be between 1 and 200 chars.")]
@@ -35,5 +40,12 @@
 
         [Display(Name = "Studio")]
         public int StudioId { get; set; }
+
+        public void CreateMappings(IMapperConfiguration configuration)
+        {
+            configuration.CreateMap<Movie, CreateMovieViewModel>()
+                .ForMember(a => a.FemaleActorId, opt => opt.MapFrom(a => a.Actors.Where(x => x.Gender == GenderEnum.Female).FirstOrDefault().Id))
+                .ForMember(a => a.MaleActorId, opt => opt.MapFrom(a => a.Actors.Where(x => x.Gender == GenderEnum.Male).FirstOrDefault().Id));
+        }
     }
 }

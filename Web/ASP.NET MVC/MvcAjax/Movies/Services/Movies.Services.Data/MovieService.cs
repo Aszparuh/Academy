@@ -38,9 +38,9 @@
             return this.movies.GetById(id);
         }
 
-        public void Update(int id)
+        public void Save()
         {
-            throw new NotImplementedException();
+            this.movies.Save();
         }
     }
 }

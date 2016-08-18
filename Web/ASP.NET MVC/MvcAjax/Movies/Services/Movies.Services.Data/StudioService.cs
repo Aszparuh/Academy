@@ -37,10 +37,5 @@
         {
             return this.studios.GetById(id);
         }
-
-        public void Update(int id)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

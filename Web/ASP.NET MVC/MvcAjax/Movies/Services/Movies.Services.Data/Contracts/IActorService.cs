@@ -15,8 +15,6 @@
 
         void Add(Actor actor);
 
-        void Update(int id);
-
         void Delete(int id);
     }
 }

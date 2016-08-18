@@ -12,7 +12,5 @@
         void Add(Studio studio);
 
         void Delete(int id);
-
-        void Update(int id);
     }
 }

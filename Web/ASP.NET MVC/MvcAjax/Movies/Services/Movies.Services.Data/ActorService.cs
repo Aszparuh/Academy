@@ -47,10 +47,5 @@
         {
             return this.actors.GetById(id);
         }
-
-        public void Update(int id)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
