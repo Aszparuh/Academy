@@ -1,6 +1,7 @@
 ﻿namespace Movies.Services.Data
 {
-    using System;
+    using System.Collections.Generic;
+    using System.Data.Entity;
     using System.Linq;
     using Contracts;
     using Movies.Data.Common;
@@ -28,6 +29,13 @@
             this.movies.Save();
         }
 
+        public void Edit(Movie movie, IEnumerable<Actor> newActors)
+        {
+            movie.Actors = new List<Actor>(newActors);
+            this.movies.Update(movie);
+            this.movies.Save();
+        }
+
         public IQueryable<Movie> GetAll()
         {
             return this.movies.All();
@@ -36,6 +44,16 @@
         public Movie GetById(int id)
         {
             return this.movies.GetById(id);
+        }
+
+        public Movie GetByIdWithActors(int id)
+        {
+            return this.GetAll().Where(m => m.Id == id).Include(m => m.Actors).FirstOrDefault();
+        }
+
+        public IQueryable GetByIdWithActorsAsQueryable(int id)
+        {
+            return this.GetAll().Where(m => m.Id == id).Include(m => m.Actors);
         }
 
         public void Save()

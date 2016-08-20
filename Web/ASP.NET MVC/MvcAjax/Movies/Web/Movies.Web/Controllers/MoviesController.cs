@@ -7,7 +7,6 @@
     using Infrastructure.Mappings;
     using Services.Data.Contracts;
     using ViewModels.Movies;
-    using System.Collections.Generic;
 
     public class MoviesController : BaseController
     {
@@ -71,7 +70,7 @@
                 return this.HttpNotFound();
             }
 
-            var movie = this.movies.GetAll().Where(x => x.Id == id).To<MovieDetailsViewModel>().FirstOrDefault();
+            var movie = this.movies.GetByIdWithActorsAsQueryable((int)id).To<MovieDetailsViewModel>().FirstOrDefault();
             return this.PartialView("_DetailsMovie", movie);
         }
 
@@ -98,16 +97,20 @@
         {
             if (this.ModelState.IsValid)
             {
-                var movieToEdit = this.movies.GetAll().Where(m => m.Id == model.Id).Include(m => m.Actors).FirstOrDefault();
+                // var movieToEdit = this.movies.GetAll().Where(m => m.Id == model.Id).Include(m => m.Actors).FirstOrDefault();
+                // var actors = this.actors.GetAll().Where(x => x.Id == model.MaleActorId || x.Id == model.FemaleActorId);
+
+                // movieToEdit.Title = model.Title;
+                // movieToEdit.MovieDesciption = model.MovieDesciption;
+                // movieToEdit.Year = model.Year;
+                // movieToEdit.Actors = new List<Actor>(actors);
+                // movieToEdit.StudioId = model.StudioId;
+
+                // this.movies.Save();
+                var existingMovie = this.movies.GetByIdWithActors(model.Id);
+                var movieToEdit = this.Mapper.Map<CreateMovieViewModel, Movie>(model, existingMovie);
                 var actors = this.actors.GetAll().Where(x => x.Id == model.MaleActorId || x.Id == model.FemaleActorId);
-
-                movieToEdit.Title = model.Title;
-                movieToEdit.MovieDesciption = model.MovieDesciption;
-                movieToEdit.Year = model.Year;
-                movieToEdit.Actors = new List<Actor>(actors);
-                movieToEdit.StudioId = model.StudioId;
-
-                this.movies.Save();
+                this.movies.Edit(movieToEdit, actors);
 
                 return this.RedirectToAction("Index", "Home");
             }

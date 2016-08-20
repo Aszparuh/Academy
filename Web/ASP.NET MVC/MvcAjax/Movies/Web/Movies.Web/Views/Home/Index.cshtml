@@ -54,7 +54,7 @@
                                 InsertionMode = InsertionMode.Replace,
                             }, new { @class = "btn btn-primary" })
 
-                            @Ajax.ActionLink("Update", "Edit", "Movies", new { id = movie.Id }, new AjaxOptions
+                            @Ajax.ActionLink("Edit", "Edit", "Movies", new { id = movie.Id }, new AjaxOptions
                             {
                                 UpdateTargetId = idForOptions,
                                 HttpMethod = "GET",
