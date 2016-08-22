@@ -1,5 +1,6 @@
 ﻿namespace Movies.Services.Data
 {
+    using System;
     using System.Collections.Generic;
     using System.Data.Entity;
     using System.Linq;
@@ -54,6 +55,17 @@
         public IQueryable GetByIdWithActorsAsQueryable(int id)
         {
             return this.GetAll().Where(m => m.Id == id).Include(m => m.Actors);
+        }
+
+        public void Hide(int id)
+        {
+            var movie = this.GetById(id);
+
+            if (movie != null)
+            {
+                this.movies.Delete(movie);
+                this.movies.Save();
+            }
         }
 
         public void Save()

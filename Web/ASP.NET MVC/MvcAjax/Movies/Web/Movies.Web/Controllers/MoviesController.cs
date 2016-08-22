@@ -82,14 +82,13 @@
                 return this.HttpNotFound();
             }
 
-            var movie = this.movies.GetAll().Where(m => m.Id == id).Include(m => m.Actors).To<CreateMovieViewModel>().FirstOrDefault();
+            var movie = this.movies.GetByIdWithActorsAsQueryable((int)id).To<CreateMovieViewModel>().FirstOrDefault();
 
             movie.FemaleActors = this.actors.GetAllFemale().Select(a => new SelectListItem() { Text = a.Name, Value = a.Id.ToString() });
             movie.MaleActors = this.actors.GetAllMale().Select(a => new SelectListItem() { Text = a.Name, Value = a.Id.ToString() });
             movie.Studios = this.studios.GetAll().Select(s => new SelectListItem() { Text = s.StudioName, Value = s.Id.ToString() });
 
             return this.PartialView("_UpdateMovie", movie);
-
         }
 
         [HttpPost]
@@ -116,6 +115,20 @@
             }
 
             return this.PartialView("_UpdateMovie", model);
+        }
+
+        [HttpGet]
+        public ActionResult Delete(int? id)
+        {
+            if (id != null)
+            {
+                this.movies.Hide((int)id);
+                return this.RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                return this.HttpNotFound();
+            }
         }
     }
 }

@@ -18,6 +18,8 @@
 
         void Delete(int id);
 
+        void Hide(int id);
+
         void Save();
 
         void Edit(Movie movie, IEnumerable<Actor> actors);
