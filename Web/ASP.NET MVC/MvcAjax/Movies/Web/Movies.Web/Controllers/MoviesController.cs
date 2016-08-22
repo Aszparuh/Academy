@@ -32,6 +32,7 @@
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult CreateMovie(CreateMovieViewModel input)
         {
             if (this.ModelState.IsValid)
@@ -92,6 +93,7 @@
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Edit(CreateMovieViewModel model)
         {
             if (this.ModelState.IsValid)
