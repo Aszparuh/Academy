@@ -1,11 +1,12 @@
 ﻿namespace Twitter.Web
 {
     using System;
+    using Data;
+    using Data.Models;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin;
-    using ViewModels;
 
     public class ApplicationUserManager : UserManager<ApplicationUser>
     {
