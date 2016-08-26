@@ -14,6 +14,8 @@
         {
         }
 
+        public virtual IDbSet<Tweet> Tweets { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
