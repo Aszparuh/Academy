@@ -54,19 +54,19 @@
                                 InsertionMode = InsertionMode.Replace,
                             }, new { @class = "btn btn-primary" })
 
-                            @Ajax.ActionLink("Update", "Edit", "Movies", new { id = movie.Id }, new AjaxOptions
+                            @Ajax.ActionLink("Edit", "Edit", "Movies", new { id = movie.Id }, new AjaxOptions
                             {
                                 UpdateTargetId = idForOptions,
                                 HttpMethod = "GET",
                                 InsertionMode = InsertionMode.Replace,
                             }, new { @class = "btn btn-success" })
 
-                            @Ajax.ActionLink("Delete", "CreateActor", "Actors", null, new AjaxOptions
+                            @*@Ajax.ActionLink("Delete", "Delete","Movies", new { id = movie.Id }, new AjaxOptions
                             {
-                                UpdateTargetId = idForOptions,
                                 HttpMethod = "GET",
-                                InsertionMode = InsertionMode.Replace,
-                            }, new { @class = "btn btn-danger" })
+                            }, new { @class = "btn btn-danger" })*@
+
+                            @Html.ActionLink("Delete", "Delete", "Movies", new { id = movie.Id }, new { @class = "btn btn-danger"})
                         </div>
                     </div>
                     <div id="@idForOptions">
