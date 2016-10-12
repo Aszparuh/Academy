@@ -1,0 +1,37 @@
+﻿Bottleneck description: --------------------
+ private void WriteLine(string m)
+        {
+            var p = m.Split();
+            var s = string.Join(" ", p);
+            for (double i = 0; i < 0x105; i++)
+            {
+                try
+                {
+                    Console.Write(s[int.Parse(i.ToString())]);
+                }
+                catch (Exception)
+                {
+                    // who cares?
+                }
+            }
+
+            Console.Write("\n");
+            Thread.Sleep(350);
+        }
+--------------------------------------------
+private void WriteLine(string m)
+        {
+            Console.WriteLine(m);
+        }
+
+#1:In WriteLine Method in Engine. It must be just Console.WriteLine and Thread.Sleep should be removed also.
+
+
+Bug reports: --------------------
+Format: #Bug number - Class name - Bug description
+Example: #1 - PartnerBankingService - The variable "money" at line 36 overflows when you try to add more than 2.1 billion dollars.
+--------
+#1 - ListMarks() in Student should return "This student has no marks." if Student has no marks.
+#2 - In TeacherAddMarkCommand  in Execute() teacherId and studentId are changed.
+#3 - In Student ListMarks the phrase "The student has these marks:" is missing.
+#4 - Grades is supposed to have more values like first, second, third - in test number four there is sixth grade.
