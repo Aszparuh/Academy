@@ -1,0 +1,6 @@
+# What does the XML language represent? What is it used for?
+XML stands for Extensible Markup Language. It si series of rules for formatting a document. XML data is known as self-describing or self-defining, meaning that the structure of the data is embedded with the data, thus when the data arrives there is no need to pre-build the structure to store the data; it is dynamically understood within the XML. The XML format can be used by any individual or group of individuals or companies that want to share information in a consistent way. XML is actually a simpler and easier-to-use subset of the Standard Generalized Markup Language (SGML), which is the standard to create a document structure.
+# What do namespaces represent in an XML document? What are they used for?
+XML namespaces provide a simple method for qualifying element and attribute names used in Extensible Markup Language documents by associating them with namespaces identified by URI references.
+
+## When you start the project navigate to localhost:{port}/students.xml to see the rest of the tasks
