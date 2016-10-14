@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="students-style.xsl"?>
 <school xmlns="urn:students">
   <student>
     <faculty_number>001</faculty_number>
@@ -44,7 +45,7 @@
       </exam>
     </exams>
   </student>
-<student>
+  <student>
     <faculty_number>003</faculty_number>
     <name>Tania</name>
     <gender>Female</gender>
