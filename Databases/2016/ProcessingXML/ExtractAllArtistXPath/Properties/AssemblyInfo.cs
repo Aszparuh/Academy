@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ExtractAllArtists")]
+[assembly: AssemblyTitle("ExtractAllArtistXPath")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ExtractAllArtists")]
+[assembly: AssemblyProduct("ExtractAllArtistXPath")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b6e4c4ad-32ba-4251-bdca-e27f0016a7bd")]
+[assembly: Guid("d373eafe-af42-41eb-9a80-7c49feca5f9c")]
 
 // Version information for an assembly consists of the following four values:
 //
