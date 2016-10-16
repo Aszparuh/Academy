@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ExtractAlbumInfo")]
+[assembly: AssemblyTitle("ExtractPriceLinq")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ExtractAlbumInfo")]
+[assembly: AssemblyProduct("ExtractPriceLinq")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e783faab-46b9-436b-bd62-72544338fd20")]
+[assembly: Guid("b8e8ea66-657b-47c4-955b-0f1516d78b14")]
 
 // Version information for an assembly consists of the following four values:
 //
