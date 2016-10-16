@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DocumentsXML", "DocumentsXM
 	ProjectSection(SolutionItems) = preProject
 		DocumentsXML\catalogue.xml = DocumentsXML\catalogue.xml
 		DocumentsXML\cheap-catalogue.xml = DocumentsXML\cheap-catalogue.xml
+		DocumentsXML\persons.txt = DocumentsXML\persons.txt
+		DocumentsXML\persons.xml = DocumentsXML\persons.xml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.ExtractAllArtists", "ExtractAllArtists\01.ExtractAllArtists.csproj", "{B6E4C4AD-32BA-4251-BDCA-E27F0016A7BD}"
@@ -18,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.ExtractAllSongTitles", "ExtractAllSongTitles\04.ExtractAllSongTitles.csproj", "{4C5533EB-2695-42E4-AC9A-E60FE9BBAEF3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.ExtractAllSongTitlesXDocument", "ExtractAllSongTitlesXDocument\05.ExtractAllSongTitlesXDocument.csproj", "{51C7CAC7-C0AF-4EF4-9ED5-737C875828B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.TransformToXML", "TransformToXML\06.TransformToXML.csproj", "{D18ED9C8-A24B-4E2C-B762-931F515EEEF0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,10 @@ Global
 		{51C7CAC7-C0AF-4EF4-9ED5-737C875828B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51C7CAC7-C0AF-4EF4-9ED5-737C875828B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51C7CAC7-C0AF-4EF4-9ED5-737C875828B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D18ED9C8-A24B-4E2C-B762-931F515EEEF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D18ED9C8-A24B-4E2C-B762-931F515EEEF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D18ED9C8-A24B-4E2C-B762-931F515EEEF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D18ED9C8-A24B-4E2C-B762-931F515EEEF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
