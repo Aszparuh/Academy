@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<albums>
+	<album>
+		<name>Blackstar</name>
+		<artist>David Bowie</artist>
+	</album>
+	<album>
+		<name>Hunky Dory</name>
+		<artist>David Bowie</artist>
+	</album>
+	<album>
+		<name>Wonderful Crazy Night</name>
+		<artist>Elton John</artist>
+	</album>
+	<album>
+		<name>Madman Across the Water</name>
+		<artist>Elton John</artist>
+	</album>
+	<album>
+		<name>Midwest Farmer's Daughter</name>
+		<artist>Margo Price</artist>
+	</album>
+	<album>
+		<name>The Ghosts of Highway 20</name>
+		<artist>Lucinda Williams</artist>
+	</album>
+	<album>
+		<name>Livin' on a High Note</name>
+		<artist>Mavis Staples</artist>
+	</album>
+	<album>
+		<name>Stranger to Stranger</name>
+		<artist>Paul Simon</artist>
+	</album>
+	<album>
+		<name>Human Ceremony</name>
+		<artist>Sunflower Bean</artist>
+	</album>
+</albums>
