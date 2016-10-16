@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.PriceOverTwenty", "Price
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.ExtractAllSongTitles", "ExtractAllSongTitles\04.ExtractAllSongTitles.csproj", "{4C5533EB-2695-42E4-AC9A-E60FE9BBAEF3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.ExtractAllSongTitlesXDocument", "ExtractAllSongTitlesXDocument\05.ExtractAllSongTitlesXDocument.csproj", "{51C7CAC7-C0AF-4EF4-9ED5-737C875828B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4C5533EB-2695-42E4-AC9A-E60FE9BBAEF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C5533EB-2695-42E4-AC9A-E60FE9BBAEF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C5533EB-2695-42E4-AC9A-E60FE9BBAEF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51C7CAC7-C0AF-4EF4-9ED5-737C875828B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51C7CAC7-C0AF-4EF4-9ED5-737C875828B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51C7CAC7-C0AF-4EF4-9ED5-737C875828B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51C7CAC7-C0AF-4EF4-9ED5-737C875828B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
