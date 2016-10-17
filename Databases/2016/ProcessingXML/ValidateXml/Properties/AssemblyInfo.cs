@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TrasformToHtml")]
+[assembly: AssemblyTitle("ValidateXml")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TrasformToHtml")]
+[assembly: AssemblyProduct("ValidateXml")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("c0e12ec5-cbfc-47f3-ae72-f7724aace758")]
+[assembly: Guid("2b1f6818-eb78-480c-9fbc-a4129b1b427c")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -8,9 +8,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DocumentsXML", "DocumentsXM
 		DocumentsXML\albums.xml = DocumentsXML\albums.xml
 		DocumentsXML\catalogue.html = DocumentsXML\catalogue.html
 		DocumentsXML\catalogue.xml = DocumentsXML\catalogue.xml
+		DocumentsXML\catalogue.xsd = DocumentsXML\catalogue.xsd
 		DocumentsXML\cheap-catalogue.xml = DocumentsXML\cheap-catalogue.xml
 		DocumentsXML\directories.xml = DocumentsXML\directories.xml
 		DocumentsXML\directoriesX.xml = DocumentsXML\directoriesX.xml
+		DocumentsXML\invalid-catalogue.xml = DocumentsXML\invalid-catalogue.xml
 		DocumentsXML\persons.txt = DocumentsXML\persons.txt
 		DocumentsXML\persons.xml = DocumentsXML\persons.xml
 		DocumentsXML\style-catalogue.xslt = DocumentsXML\style-catalogue.xslt
@@ -39,6 +41,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.ExtractPriceLinq", "ExtractPriceLinq\11.ExtractPriceLinq.csproj", "{B8E8EA66-657B-47C4-955B-0F1516D78B14}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.TrasformToHtml", "TrasformToHtml\12.TrasformToHtml.csproj", "{C0E12EC5-CBFC-47F3-AE72-F7724AACE758}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.ValidateXml", "ValidateXml\13.ValidateXml.csproj", "{2B1F6818-EB78-480C-9FBC-A4129B1B427C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -94,6 +98,10 @@ Global
 		{C0E12EC5-CBFC-47F3-AE72-F7724AACE758}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0E12EC5-CBFC-47F3-AE72-F7724AACE758}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0E12EC5-CBFC-47F3-AE72-F7724AACE758}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B1F6818-EB78-480C-9FBC-A4129B1B427C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B1F6818-EB78-480C-9FBC-A4129B1B427C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B1F6818-EB78-480C-9FBC-A4129B1B427C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B1F6818-EB78-480C-9FBC-A4129B1B427C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
