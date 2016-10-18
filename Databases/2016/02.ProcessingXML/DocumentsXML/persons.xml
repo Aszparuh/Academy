@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<persons>
+  <person>
+    <name>John Dow</name>
+    <address>New York 34</address>
+    <phone>089976463234</phone>
+  </person>
+  <person>
+    <name>Jane Dow</name>
+    <address>Chicago 25</address>
+    <phone>089934343434</phone>
+  </person>
+  <person>
+    <name>Peter Dow</name>
+    <address>San Fransico</address>
+    <phone>098765454324</phone>
+  </person>
+  <person>
+    <name>Stoian Dow</name>
+    <address>Maiami 23</address>
+    <phone>088888888888</phone>
+  </person>
+</persons>
