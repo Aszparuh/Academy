@@ -6,12 +6,13 @@ using Northwind.Data;
 
 namespace NorthwindConsoleApplication
 {
-    public class Program
+    public class Startup
     {
         public static void Main()
         {
-            var context = new CustomersDAO(new NorthwindEntities());
-            var customers = context.GetAll();
+            var context = new NorthwindEntities();
+            var customersDb = new CustomersDAO(context);
+            var customers = customersDb.GetAll();
             
 
             var newCustomer = new Customer()
@@ -31,7 +32,7 @@ namespace NorthwindConsoleApplication
 
             try
             {
-                context.InsertCustomer(newCustomer);
+                customersDb.InsertCustomer(newCustomer);
             }
             catch (DbEntityValidationException e)
             {
@@ -48,9 +49,9 @@ namespace NorthwindConsoleApplication
                 throw;
             }
 
-            var customer = context.GetAll().Where(c => c.CustomerID == "22222").Single();
+            var customer = customersDb.GetAll().Where(c => c.CustomerID == "22222").Single();
             customer.ContactTitle = "Чистач";
-            context.ModifyCustomer(customer);
+            customersDb.ModifyCustomer(customer);
         }
     }
 }
