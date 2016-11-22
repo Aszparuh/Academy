@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryPasswords", "BinaryPasswords\BinaryPasswords.csproj", "{B4F619F8-6241-45FE-B3C3-2F3C3C435AF1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorRabbits", "ColorRabbits\ColorRabbits.csproj", "{121D8306-6652-4D0B-AC93-57B5C0C03771}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B4F619F8-6241-45FE-B3C3-2F3C3C435AF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4F619F8-6241-45FE-B3C3-2F3C3C435AF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4F619F8-6241-45FE-B3C3-2F3C3C435AF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{121D8306-6652-4D0B-AC93-57B5C0C03771}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{121D8306-6652-4D0B-AC93-57B5C0C03771}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{121D8306-6652-4D0B-AC93-57B5C0C03771}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{121D8306-6652-4D0B-AC93-57B5C0C03771}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
