@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Divisors
 {
@@ -20,11 +21,36 @@ namespace Divisors
 
             PermuteRep(digits, 0, digits.Length);
 
-            foreach (var item in list)
+            var allDivisors = FindNumberOfDivisors(list);
+            var minValue = allDivisors.Min(x => x.Value);
+            var result = allDivisors.Where(x => x.Value == minValue).Min(y => y.Key);
+            Console.WriteLine(result);
+        }
+
+        static Dictionary<int, int> FindNumberOfDivisors(IEnumerable<int> list)
+        {
+            var result = new Dictionary<int, int>();
+            foreach (var number in list)
             {
-                Console.WriteLine(item);
+                int max = (int)Math.Sqrt(number);
+                for (int i = 1; i <= max; i++)
+                {
+                    if (number % i == 0)
+                    {
+                        if (result.ContainsKey(number))
+                        {
+                            result[number] += 1;
+                        }
+                        else
+                        {
+                            result.Add(number, 0);
+                        }
+                    }
+                }
             }
-           
+            
+
+            return result;
         }
 
         static int ConvertArrayToNumber(int[] arr)
