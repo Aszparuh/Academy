@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divisors", "Divisors\Diviso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorBallsRow", "ColorBallsRow\ColorBallsRow.csproj", "{40DE92BA-E1E9-4398-9D57-9171BA1635E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZigzagRows", "ZigzagRows\ZigzagRows.csproj", "{7C233433-FA0A-4D73-BAD3-3B853437A7D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{40DE92BA-E1E9-4398-9D57-9171BA1635E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40DE92BA-E1E9-4398-9D57-9171BA1635E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40DE92BA-E1E9-4398-9D57-9171BA1635E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C233433-FA0A-4D73-BAD3-3B853437A7D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C233433-FA0A-4D73-BAD3-3B853437A7D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C233433-FA0A-4D73-BAD3-3B853437A7D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C233433-FA0A-4D73-BAD3-3B853437A7D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
