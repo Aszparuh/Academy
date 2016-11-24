@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorRabbits", "ColorRabbit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divisors", "Divisors\Divisors.csproj", "{6E51C70F-D3E0-4185-919A-FA43DED66E09}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorBallsRow", "ColorBallsRow\ColorBallsRow.csproj", "{40DE92BA-E1E9-4398-9D57-9171BA1635E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6E51C70F-D3E0-4185-919A-FA43DED66E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E51C70F-D3E0-4185-919A-FA43DED66E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E51C70F-D3E0-4185-919A-FA43DED66E09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40DE92BA-E1E9-4398-9D57-9171BA1635E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40DE92BA-E1E9-4398-9D57-9171BA1635E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40DE92BA-E1E9-4398-9D57-9171BA1635E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40DE92BA-E1E9-4398-9D57-9171BA1635E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
