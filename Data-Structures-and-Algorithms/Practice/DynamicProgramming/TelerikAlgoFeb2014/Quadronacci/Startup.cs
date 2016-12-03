@@ -23,7 +23,20 @@ namespace Quadronacci
                 list.Add(list[i - 1] + list[i - 2] + list[i - 3] + list[i - 4]);
             }
 
-            Console.WriteLine(string.Join(", ", list));
+            //Console.WriteLine(string.Join(", ", list));
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (i % c != 0)
+                {
+                    Console.Write(list[i]);
+                    Console.Write(" ");
+                }
+                else
+                {
+                    Console.WriteLine(list[i]);
+                }
+            }
         }
     }
 }
