@@ -15,7 +15,7 @@ namespace FindNumber
 
 
             var input = Console.ReadLine().Split(' ');
-            List<string> result = InsertionSort(input.ToList());
+            List<string> result = QuickSort(input.ToList());
             Console.WriteLine(result[k]);
             //Console.WriteLine(string.Join(" ", result));
         }
@@ -27,12 +27,7 @@ namespace FindNumber
                 return input;
             }
 
-            if (input.Count < 10)
-            {
-                return InsertionSort(input);
-            }
-
-            int pivotIndex = input.Count / 2;
+            int pivotIndex = (input.Count / 2);
             string pivot = input[pivotIndex];
 
             var left = new List<string>();
@@ -62,12 +57,12 @@ namespace FindNumber
                 }
             }
 
-            List<string> sortedLeft = null;
-            List<string> sortedRight = null;
+            List<string> sortedLeft = QuickSort(left);
+            List<string> sortedRight = QuickSort(right);
 
-            Task leftTask = Task.Run(() => sortedLeft = QuickSort(left));
-            Task rightTask = Task.Run(() => sortedRight = QuickSort(right));
-            Task.WaitAll(leftTask, rightTask);
+            //Task leftTask = Task.Run(() => sortedLeft = QuickSort(left));
+            //Task rightTask = Task.Run(() => sortedRight = QuickSort(right));
+            //Task.WaitAll(leftTask, rightTask);
 
             var result = new List<string>();
             result.AddRange(sortedLeft);
@@ -76,27 +71,6 @@ namespace FindNumber
 
             return result;
         }
-
-        public static List<string> InsertionSort(List<string> input)
-        {
-            for (int i = 1; i < input.Count; i++)
-            {
-                int j = i;
-                while (j > 0 && string.Compare(input[j], input[j - 1]) < 0)
-                {
-                    Swap(input, j, j - 1);
-                    j--;
-                }
-            }
-
-            return input;
-        }
-
-        public static void Swap<T>(List<T> input, int firstIndex, int secondIndex)
-        {
-            T temp = input[firstIndex];
-            input[firstIndex] = input[secondIndex];
-            input[secondIndex] = temp;
-        }
     }
 }
+
