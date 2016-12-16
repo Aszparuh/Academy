@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiameterV3", "DiameterV3\DiameterV3.csproj", "{945B4D11-F51B-47F7-A73A-1E410C23FF2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiameterV4", "DiameterV4\DiameterV4.csproj", "{9AF217FE-6784-4C38-B122-88918575D48F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{945B4D11-F51B-47F7-A73A-1E410C23FF2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{945B4D11-F51B-47F7-A73A-1E410C23FF2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{945B4D11-F51B-47F7-A73A-1E410C23FF2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AF217FE-6784-4C38-B122-88918575D48F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AF217FE-6784-4C38-B122-88918575D48F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AF217FE-6784-4C38-B122-88918575D48F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AF217FE-6784-4C38-B122-88918575D48F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
