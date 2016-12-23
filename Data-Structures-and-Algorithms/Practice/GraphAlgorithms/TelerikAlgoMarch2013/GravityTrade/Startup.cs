@@ -16,6 +16,43 @@ namespace GravityTrade
                 var input = Console.ReadLine().Split(',').Select(x => int.Parse(x)).ToArray();
                 edges[i] = new Edge(input[0], input[1], input[2]);
             }
+
+            //Bellman-Ford algoritm
+            var distances = new int[numberOfVerices];
+            for (int i = 0; i < distances.Length; i++)
+            {
+                distances[i] = int.MaxValue;
+            }
+
+            distances[0] = 0;
+            bool changed = true;
+
+            for (int v = 0; (v < numberOfVerices - 1) && changed; v++)
+            {
+                for (int e = 0; e < edges.Length; e++)
+                {
+                    if (distances[edges[e].StartVertex] != int.MaxValue)
+                    {
+                        if (distances[edges[e].EndVertex] > distances[edges[e].StartVertex] + edges[e].Weight)
+                        {
+                            distances[edges[e].EndVertex] = distances[edges[e].StartVertex] + edges[e].Weight;
+                            changed = true;
+                        }
+                    }
+                }
+            }
+
+            for (int i = 0; i < distances.Length; i++)
+            {
+                if (distances[i] == int.MaxValue)
+                {
+                    Console.WriteLine("Unreachable!");
+                }
+                else
+                {
+                    Console.WriteLine(distances[i]);
+                }
+            }
         }
     }
 
