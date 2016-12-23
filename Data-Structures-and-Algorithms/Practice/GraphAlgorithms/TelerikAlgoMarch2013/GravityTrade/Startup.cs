@@ -17,7 +17,7 @@ namespace GravityTrade
                 edges[i] = new Edge(input[0], input[1], input[2]);
             }
 
-            //Bellman-Ford algoritm
+            //Bellman-Ford algorithm
             var distances = new int[numberOfVerices];
             for (int i = 0; i < distances.Length; i++)
             {
