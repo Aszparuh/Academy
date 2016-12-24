@@ -75,10 +75,7 @@ namespace WalkInThePark
                 while (tempPath.Count > 0)
                 {
                     finalPath.Push(tempPath.Pop());
-                }
-
-
-                
+                }               
             }
         }
     }
