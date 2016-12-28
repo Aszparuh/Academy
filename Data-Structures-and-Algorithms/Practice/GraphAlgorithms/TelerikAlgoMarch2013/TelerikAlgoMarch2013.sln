@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GravityTrade", "GravityTrad
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarryingCapacity", "CarryingCapacity\CarryingCapacity.csproj", "{F38EAF5F-C480-48D2-9CCA-B505FC150735}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{A2B4CE33-D7C1-4CE1-B538-A10871643030}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F38EAF5F-C480-48D2-9CCA-B505FC150735}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F38EAF5F-C480-48D2-9CCA-B505FC150735}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F38EAF5F-C480-48D2-9CCA-B505FC150735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2B4CE33-D7C1-4CE1-B538-A10871643030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2B4CE33-D7C1-4CE1-B538-A10871643030}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2B4CE33-D7C1-4CE1-B538-A10871643030}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2B4CE33-D7C1-4CE1-B538-A10871643030}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
