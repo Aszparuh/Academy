@@ -6,227 +6,139 @@ namespace CarryingCapacity
 {
     public class Startup
     {
+        public const int Inf = int.MaxValue;
+        public const int Uninitialized = -1;
+        public static int numberOfVertices;
+        public static int[,] capacities;
+        public static int[,] flowPassed;
+        public static Dictionary<int, List<int>> graph;
+        public static int[] parentList;
+        public static int[] currentPathCapacity;
+
         public static void Main()
         {
-            var numberOfVerices = int.Parse(Console.ReadLine());
+            numberOfVertices = int.Parse(Console.ReadLine());
             var numberOfEdges = int.Parse(Console.ReadLine());
-            Dictionary<int, Node> nodes = new Dictionary<int, Node>();
+            var sourceAndSink = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            var source = sourceAndSink[0];
+            var sink = sourceAndSink[1];
+
+            capacities = new int[numberOfVertices, numberOfVertices];
+            flowPassed = new int[numberOfVertices, numberOfVertices];
+            graph = new Dictionary<int, List<int>>();
+
+            currentPathCapacity = new int[numberOfVertices];
 
             for (int i = 0; i < numberOfEdges; i++)
             {
-                var input = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray();
-                var fromNode = input[0];
-                var toNode = input[1];
-                var weight = input[2];
-                Node first;
-                Node second;
+                var input = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+                var firstNode = input[0];
+                var secondNode = input[1];
+                var capacity = input[2];
 
-                if (!nodes.ContainsKey(fromNode))
+                capacities[firstNode, secondNode] = capacity;
+
+                if (!graph.ContainsKey(firstNode))
                 {
-                    first = new Node();
-                    nodes.Add(fromNode, first);
-                }
-                else
-                {
-                    first = nodes[fromNode];
+                    graph[firstNode] = new List<int>();
                 }
 
-                if (!nodes.ContainsKey(toNode))
+                if (!graph.ContainsKey(secondNode))
                 {
-                    second = new Node();
-                    nodes.Add(toNode, second);
-                }
-                else
-                {
-                    second = nodes[toNode];
+                    graph[secondNode] = new List<int>();
                 }
 
-                first.Edges.Add(new Edge(weight, second));
-                second.Edges.Add(new Edge(weight, first));
+                graph[firstNode].Add(secondNode);
+                graph[secondNode].Add(firstNode);
             }
+
+            for (int i = 0; i < numberOfVertices; i++)
+            {
+                var max = EdmondsKarp(0, i);
+                //capacities = new int[numberOfVertices, numberOfVertices];
+                flowPassed = new int[numberOfVertices, numberOfVertices];
+                Console.WriteLine(max);
+            }
+            
         }
 
-        private static void DijkstraAlgorithm(Dictionary<int, Node> graph, Node source)
+        public static int Bfs(int startNode, int endNode)
         {
-            var queue = new PriorityQueue<Node>();
-
-            foreach (var node in graph)
+            parentList = new int[numberOfVertices];
+            for (int i = 0; i < numberOfVertices; i++)
             {
-                node.Value.DijkstraDistance = int.MaxValue;
+                parentList[i] = Uninitialized;
             }
 
-            source.DijkstraDistance = 0;
-            queue.Enqueue(source);
+            currentPathCapacity = new int[numberOfVertices];
 
-            while (queue.Count != 0)
+            var q = new Queue<int>();
+            q.Enqueue(startNode);
+
+            parentList[startNode] = -2;
+            currentPathCapacity[startNode] = Inf;
+
+            while (q.Count != 0)
             {
-                var currentNode = queue.Dequeue();
+                int currentNode = q.Dequeue();
 
-                if (currentNode.DijkstraDistance == int.MaxValue)
+                for (int i = 0; i < graph[currentNode].Count; i++)
                 {
-                    break;
-                }
+                    var to = graph[currentNode][i];
 
-                foreach (var neighbour in currentNode.Edges)
-                {
-                    var potDistance = currentNode.DijkstraDistance + neighbour.Weigth;
-                    if (potDistance < neighbour.ToNode.DijkstraDistance)
+                    if (parentList[to] == Uninitialized)
                     {
-                        neighbour.ToNode.DijkstraDistance = potDistance;
-                        queue.Enqueue(neighbour.ToNode);
+                        if (capacities[currentNode, to] - flowPassed[currentNode, to] > 0)
+                        {
+                            // we update the parent of the future node to be the current node
+                            parentList[to] = currentNode;
+
+                            // we check which is the minimum flow so far
+                            currentPathCapacity[to] = Math.Min(currentPathCapacity[currentNode], capacities[currentNode, to] - flowPassed[currentNode, to]);
+
+                            if (to == endNode)
+                            {
+                                return currentPathCapacity[endNode];
+                            }
+
+                            q.Enqueue(to);
+                        }
                     }
                 }
             }
-        }
-    }
 
-    public class Node : IComparable
-    {
-        public Node()
-        {
-            this.Edges = new List<Edge>();
-            this.DijkstraDistance = int.MaxValue;
+            return 0;
         }
 
-        public int DijkstraDistance { get; set; }
-
-        public List<Edge> Edges { get; private set; }
-
-        public int CompareTo(object obj)
+        public static int EdmondsKarp(int startNode, int endNode)
         {
-            if (!(obj is Node))
-            {
-                return -1;
-            }
-
-            return this.DijkstraDistance.CompareTo((obj as Node).DijkstraDistance);
-        }
-    }
-
-    public class Edge
-    {
-        public Edge(int weight, Node toNode)
-        {
-            this.Weigth = weight;
-            this.ToNode = toNode;
-        }
-
-        public int Weigth { get; set; }
-
-        public Node ToNode { get; set; }
-    }
-
-    public class PriorityQueue<T> where T : IComparable
-    {
-        private T[] heap;
-        private int index;
-
-        public PriorityQueue()
-        {
-            this.heap = new T[16];
-            this.index = 1;
-        }
-
-        public int Count
-        {
-            get
-            {
-                return this.index - 1;
-            }
-        }
-
-        public void Enqueue(T element)
-        {
-            if (this.index >= this.heap.Length)
-            {
-                this.IncreaseArray();
-            }
-
-            this.heap[this.index] = element;
-
-            int childIndex = this.index;
-            int parentIndex = childIndex / 2;
-            this.index++;
-
-            while (parentIndex >= 1 && this.heap[childIndex].CompareTo(this.heap[parentIndex]) < 0) //change to > maxQueue
-            {
-                T swapValue = this.heap[parentIndex];
-                this.heap[parentIndex] = this.heap[childIndex];
-                this.heap[childIndex] = swapValue;
-
-                childIndex = parentIndex;
-                parentIndex = childIndex / 2;
-            }
-        }
-
-        public T Dequeue()
-        {
-            T result = this.heap[1];
-
-            this.heap[1] = this.heap[this.Count];
-            this.index--;
-
-            int rootIndex = 1;
+            int maxFlow = 0;
 
             while (true)
             {
-                int leftChildIndex = rootIndex * 2;
-                int rightChildIndex = (rootIndex * 2) + 1;
+                int flow = Bfs(startNode, endNode);
 
-                if (leftChildIndex > this.index)
+                //Console.WriteLine(flow);
+
+                if (flow == 0)
                 {
                     break;
                 }
 
-                int minChild;
-                if (rightChildIndex > this.index)
-                {
-                    minChild = leftChildIndex;
-                }
-                else
-                {
-                    if (this.heap[leftChildIndex].CompareTo(this.heap[rightChildIndex]) < 0) //change to > maxQueue
-                    {
-                        minChild = leftChildIndex;
-                    }
-                    else
-                    {
-                        minChild = rightChildIndex;
-                    }
-                }
+                maxFlow += flow;
+                int currentNode = endNode;
 
-                if (this.heap[minChild].CompareTo(this.heap[rootIndex]) < 0) //change to > maxQueue
+                while (currentNode != startNode)
                 {
-                    T swapValue = this.heap[rootIndex];
-                    this.heap[rootIndex] = this.heap[minChild];
-                    this.heap[minChild] = swapValue;
+                    int previousNode = parentList[currentNode];
+                    flowPassed[previousNode, currentNode] += flow;
+                    flowPassed[currentNode, previousNode] -= flow;
 
-                    rootIndex = minChild;
-                }
-                else
-                {
-                    break;
+                    currentNode = previousNode;
                 }
             }
 
-            return result;
-        }
-
-        public T Peek()
-        {
-            return this.heap[1];
-        }
-
-        private void IncreaseArray()
-        {
-            var copiedHeap = new T[this.heap.Length * 2];
-
-            for (int i = 0; i < this.heap.Length; i++)
-            {
-                copiedHeap[i] = this.heap[i];
-            }
-
-            this.heap = copiedHeap;
+            return maxFlow;
         }
     }
 }
