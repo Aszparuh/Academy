@@ -54,7 +54,7 @@ namespace Labyrinth3D
             {
                 var pos = queue.Dequeue();
 
-                //Left
+                // Left
                 if (pos.Column > 0)
                 {
                     if (visited[pos.Level, pos.Row, pos.Column - 1] == false)
@@ -65,7 +65,7 @@ namespace Labyrinth3D
                     }
                 }
 
-                //Right
+                // Right
                 if (pos.Column < matrix.GetLength(2) - 1)
                 {
                     if (visited[pos.Level, pos.Row, pos.Column + 1] == false)
@@ -76,7 +76,7 @@ namespace Labyrinth3D
                     }
                 }
 
-                //Front
+                // Front
                 if (pos.Row > 0)
                 {
                     if (visited[pos.Level, pos.Row - 1, pos.Column] == false)
@@ -87,7 +87,7 @@ namespace Labyrinth3D
                     }
                 }
 
-                //Back
+                // Back
                 if (pos.Row < matrix.GetLength(1) - 1)
                 {
                     if (visited[pos.Level, pos.Row + 1, pos.Column] == false)
@@ -98,7 +98,7 @@ namespace Labyrinth3D
                     }
                 }
 
-                //Up
+                // Up
                 if (matrix[pos.Level, pos.Row, pos.Column] == 'U')
                 {
                     if (pos.Level == matrix.GetLength(0) - 1)
@@ -117,7 +117,7 @@ namespace Labyrinth3D
                     }
                 }
 
-                //Down
+                // Down
                 if (matrix[pos.Level, pos.Row, pos.Column] == 'D')
                 {
                     if (pos.Level == 0)
