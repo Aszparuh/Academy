@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swaping", "Swaping\Swaping.csproj", "{42EA03F6-7C77-45BF-9ACE-79BB7CAE8182}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guards", "Guards\Guards.csproj", "{ABA3C168-764B-4BCF-A58D-8BE773FCA59C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{E41773CC-FB1D-4877-871B-9FBDB9F26A06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42EA03F6-7C77-45BF-9ACE-79BB7CAE8182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42EA03F6-7C77-45BF-9ACE-79BB7CAE8182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42EA03F6-7C77-45BF-9ACE-79BB7CAE8182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42EA03F6-7C77-45BF-9ACE-79BB7CAE8182}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABA3C168-764B-4BCF-A58D-8BE773FCA59C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABA3C168-764B-4BCF-A58D-8BE773FCA59C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABA3C168-764B-4BCF-A58D-8BE773FCA59C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABA3C168-764B-4BCF-A58D-8BE773FCA59C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E41773CC-FB1D-4877-871B-9FBDB9F26A06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E41773CC-FB1D-4877-871B-9FBDB9F26A06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E41773CC-FB1D-4877-871B-9FBDB9F26A06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E41773CC-FB1D-4877-871B-9FBDB9F26A06}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
