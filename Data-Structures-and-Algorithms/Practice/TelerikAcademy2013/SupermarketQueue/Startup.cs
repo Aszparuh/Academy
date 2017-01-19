@@ -19,12 +19,42 @@ namespace SupermarketQueue
                 switch (command.Name)
                 {
                     case "Append":
+                        supermarketQueue.Append(command.Arguments[0]);
+                        result.AppendLine("OK");
                         break;
+
                     case "Serve":
+
+                        try
+                        {
+                            var clients = supermarketQueue.Serve(int.Parse(command.Arguments[0]));
+                            result.AppendLine(string.Join(" ", clients));
+                            supermarketQueue.RemoveRange(int.Parse(command.Arguments[0]));
+                        }
+                        catch (Exception)
+                        {
+                            result.AppendLine("Error");
+                        }
+
                         break;
                     case "Find":
+
+                        var number = supermarketQueue.Find(command.Arguments[0]);
+                        result.AppendLine(number.ToString());
+
                         break;
                     case "Insert":
+
+                        try
+                        {
+                            supermarketQueue.Insert(int.Parse(command.Arguments[0]), command.Arguments[1]);
+                            result.AppendLine("OK");
+                        }
+                        catch (Exception)
+                        {
+                            result.AppendLine("Error");
+                        }
+
                         break;
                     default:
                         throw new ArgumentException();
@@ -32,6 +62,8 @@ namespace SupermarketQueue
 
                 line = Console.ReadLine();
             }
+
+            Console.WriteLine(result.ToString());
         }
 
         public class Command
@@ -107,6 +139,23 @@ namespace SupermarketQueue
                 {
                     return this.ByName[name];
                 }
+            }
+
+            public IEnumerable<string> Serve(int number)
+            {
+                var clients = this.ListOfClients.Range(0, number);
+
+                foreach (var item in clients)
+                {
+                    this.ByName[item] -= 1;
+                }
+
+                return clients;
+            }
+
+            public void RemoveRange(int number)
+            {
+                this.ListOfClients.RemoveRange(0, number);
             }
         }
     }
