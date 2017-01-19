@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Wintellect.PowerCollections;
 
@@ -29,7 +30,6 @@ namespace SupermarketQueue
                         {
                             var clients = supermarketQueue.Serve(int.Parse(command.Arguments[0]));
                             result.AppendLine(string.Join(" ", clients));
-                            supermarketQueue.RemoveRange(int.Parse(command.Arguments[0]));
                         }
                         catch (Exception)
                         {
@@ -143,7 +143,8 @@ namespace SupermarketQueue
 
             public IEnumerable<string> Serve(int number)
             {
-                var clients = this.ListOfClients.Range(0, number);
+                var clients = this.ListOfClients.Range(0, number).ToList();
+                this.ListOfClients.RemoveRange(0, number);
 
                 foreach (var item in clients)
                 {
@@ -151,11 +152,6 @@ namespace SupermarketQueue
                 }
 
                 return clients;
-            }
-
-            public void RemoveRange(int number)
-            {
-                this.ListOfClients.RemoveRange(0, number);
             }
         }
     }
