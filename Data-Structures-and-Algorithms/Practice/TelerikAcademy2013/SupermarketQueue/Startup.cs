@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Wintellect.PowerCollections;
 
 namespace SupermarketQueue
 {
@@ -62,7 +63,51 @@ namespace SupermarketQueue
 
         public class SupermarketQueue
         {
+            public SupermarketQueue()
+            {
+                this.ListOfClients = new BigList<string>();
+                this.ByName = new Dictionary<string, int>();
+            }
 
+            public BigList<string> ListOfClients { get; private set; }
+
+            public IDictionary<string, int> ByName { get; private set; }
+
+            public void Append(string name)
+            {
+                this.ListOfClients.Add(name);
+
+                if (!this.ByName.ContainsKey(name))
+                {
+                    this.ByName.Add(name, 0);
+                }
+
+                this.ByName[name] += 1;
+            }
+
+            public void Insert(int position, string name)
+            {
+                this.ListOfClients.Insert(position, name);
+
+                if (!this.ByName.ContainsKey(name))
+                {
+                    this.ByName.Add(name, 0);
+                }
+
+                this.ByName[name] += 1;
+            }
+
+            public int Find(string name)
+            {
+                if (!this.ByName.ContainsKey(name))
+                {
+                    return 0;
+                }
+                else
+                {
+                    return this.ByName[name];
+                }
+            }
         }
     }
 }
